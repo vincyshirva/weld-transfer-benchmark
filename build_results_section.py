@@ -1421,7 +1421,10 @@ CONFIRM = {
                    "Create it, set REPO_URL and REPO_LIVE, and rebuild; until "
                    "then the text says the code will be released on "
                    "acceptance."),
-    "twoclass_fork": (False,
+    # Closed 9 October 2026: the fork page now credits kaid Al2 and links
+    # the upstream project, CC BY 4.0 and this study's repository. Vincent
+    # confirmed that no label was changed in the fork.
+    "twoclass_fork": (True,
                       "The twoclass copy used here is a public fork in your "
                       "Roboflow workspace whose page credits no upstream. CC "
                       "BY 4.0 requires crediting kaid Al2. Add the credit to "
