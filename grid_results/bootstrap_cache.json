@@ -1,0 +1,869 @@
+{
+ "key": "2000:20260904",
+ "entries": {
+  "ref_twoclass__faster_rcnn__seed0": {
+   "twoclass": {
+    "Geometric defect": {
+     "unit": "split_block",
+     "n_clusters": 6,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.511299129292753,
+      "lo": 0.02566764567975803,
+      "hi": 0.6923620933521923
+     },
+     "map50_95": {
+      "point": 0.23603825825569347,
+      "lo": 0.0038165588897786985,
+      "hi": 0.3329026334778622
+     }
+    },
+    "Non-fusion defect": {
+     "unit": "split_block",
+     "n_clusters": 6,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.7881657860029603,
+      "lo": 0.008403361344537813,
+      "hi": 0.8556999400799916
+     },
+     "map50_95": {
+      "point": 0.29921830915027325,
+      "lo": 0.0016806722689075627,
+      "hi": 0.3418389416751138
+     }
+    }
+   }
+  },
+  "ref_twoclass__faster_rcnn__seed1": {
+   "twoclass": {
+    "Geometric defect": {
+     "unit": "split_block",
+     "n_clusters": 6,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.48448351840873516,
+      "lo": 0.01984592436346671,
+      "hi": 0.6417641764176417
+     },
+     "map50_95": {
+      "point": 0.22264163885395355,
+      "lo": 0.004417159218808938,
+      "hi": 0.3401766563041796
+     }
+    },
+    "Non-fusion defect": {
+     "unit": "split_block",
+     "n_clusters": 6,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.7667391959528872,
+      "lo": 0.00411522633744856,
+      "hi": 0.8376115885504991
+     },
+     "map50_95": {
+      "point": 0.32743551860961295,
+      "lo": 0.0019096499745688265,
+      "hi": 0.39613729090250505
+     }
+    }
+   }
+  },
+  "ref_twoclass__faster_rcnn__seed2": {
+   "twoclass": {
+    "Geometric defect": {
+     "unit": "split_block",
+     "n_clusters": 6,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.5814495971118254,
+      "lo": 0.1360936093609361,
+      "hi": 0.7536753675367537
+     },
+     "map50_95": {
+      "point": 0.2601026415750747,
+      "lo": 0.03785112431948041,
+      "hi": 0.4046502982358982
+     }
+    },
+    "Non-fusion defect": {
+     "unit": "split_block",
+     "n_clusters": 6,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.7193387661177651,
+      "lo": 0.0,
+      "hi": 0.8083401281304596
+     },
+     "map50_95": {
+      "point": 0.26802320034997945,
+      "lo": 0.0,
+      "hi": 0.342813780661199
+     }
+    }
+   }
+  },
+  "ref_twoclass__rtdetr_l__seed0": {
+   "twoclass": {
+    "Geometric defect": {
+     "unit": "split_block",
+     "n_clusters": 6,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.38445725125625596,
+      "lo": 0.011492667494337966,
+      "hi": 0.6434932391414365
+     },
+     "map50_95": {
+      "point": 0.14746930375568276,
+      "lo": 0.0022720824777961043,
+      "hi": 0.395450115765585
+     }
+    },
+    "Non-fusion defect": {
+     "unit": "split_block",
+     "n_clusters": 6,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.34019073695608193,
+      "lo": 0.0,
+      "hi": 0.8191201195591257
+     },
+     "map50_95": {
+      "point": 0.11865867286844427,
+      "lo": 0.0,
+      "hi": 0.30621587397686406
+     }
+    }
+   }
+  },
+  "ref_twoclass__rtdetr_l__seed1": {
+   "twoclass": {
+    "Geometric defect": {
+     "unit": "split_block",
+     "n_clusters": 6,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.5423077115896756,
+      "lo": 0.008295656155210895,
+      "hi": 0.7543512934346711
+     },
+     "map50_95": {
+      "point": 0.25765399745261097,
+      "lo": 0.0019332744406932154,
+      "hi": 0.4951866068109211
+     }
+    },
+    "Non-fusion defect": {
+     "unit": "split_block",
+     "n_clusters": 6,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.4926501639166937,
+      "lo": 0.19624497889429807,
+      "hi": 1.0
+     },
+     "map50_95": {
+      "point": 0.2063183891753758,
+      "lo": 0.08698714015715042,
+      "hi": 0.4624510377867055
+     }
+    }
+   }
+  },
+  "ref_twoclass__rtdetr_l__seed2": {
+   "twoclass": {
+    "Geometric defect": {
+     "unit": "split_block",
+     "n_clusters": 6,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.436174823615477,
+      "lo": 0.0032980155569212006,
+      "hi": 0.6275442410628823
+     },
+     "map50_95": {
+      "point": 0.2119673247191664,
+      "lo": 0.000641358581172304,
+      "hi": 0.40633663366336636
+     }
+    },
+    "Non-fusion defect": {
+     "unit": "split_block",
+     "n_clusters": 6,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.6046225980167664,
+      "lo": 0.441242688183511,
+      "hi": 1.0
+     },
+     "map50_95": {
+      "point": 0.22260036270043396,
+      "lo": 0.14322077773929232,
+      "hi": 0.3815610429107893
+     }
+    }
+   }
+  },
+  "ref_twoclass__yolo11n__seed0": {
+   "twoclass": {
+    "Geometric defect": {
+     "unit": "split_block",
+     "n_clusters": 6,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.4217969670741193,
+      "lo": 0.014377166672341077,
+      "hi": 0.7015773301468077
+     },
+     "map50_95": {
+      "point": 0.1703330668223463,
+      "lo": 0.003791066151387968,
+      "hi": 0.25020136864179854
+     }
+    },
+    "Non-fusion defect": {
+     "unit": "split_block",
+     "n_clusters": 6,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.7283278141142491,
+      "lo": 0.19999999999999996,
+      "hi": 0.9944880605707626
+     },
+     "map50_95": {
+      "point": 0.28372421423167693,
+      "lo": 0.09999999999999998,
+      "hi": 0.34573040360514457
+     }
+    }
+   }
+  },
+  "ref_twoclass__yolo11n__seed1": {
+   "twoclass": {
+    "Geometric defect": {
+     "unit": "split_block",
+     "n_clusters": 6,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.4747602385316303,
+      "lo": 0.0033074091845914657,
+      "hi": 0.6653051224556928
+     },
+     "map50_95": {
+      "point": 0.2340205483493473,
+      "lo": 0.0005943905028619435,
+      "hi": 0.3642511302180953
+     }
+    },
+    "Non-fusion defect": {
+     "unit": "split_block",
+     "n_clusters": 6,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.6930453277772418,
+      "lo": 0.0,
+      "hi": 0.8403465346534653
+     },
+     "map50_95": {
+      "point": 0.2564014264164617,
+      "lo": 0.0,
+      "hi": 0.36604122969989894
+     }
+    }
+   }
+  },
+  "ref_twoclass__yolo11n__seed2": {
+   "twoclass": {
+    "Geometric defect": {
+     "unit": "split_block",
+     "n_clusters": 6,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.5245281758977502,
+      "lo": 0.06789804015844932,
+      "hi": 0.6697562326744025
+     },
+     "map50_95": {
+      "point": 0.20665125870338116,
+      "lo": 0.009608190085398798,
+      "hi": 0.32025079160545633
+     }
+    },
+    "Non-fusion defect": {
+     "unit": "split_block",
+     "n_clusters": 6,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.8303289041725199,
+      "lo": 0.7094238514518474,
+      "hi": 1.0
+     },
+     "map50_95": {
+      "point": 0.321354165426022,
+      "lo": 0.2,
+      "hi": 0.43712871287128713
+     }
+    }
+   }
+  },
+  "ref_twoclass__yolo11s__seed0": {
+   "twoclass": {
+    "Geometric defect": {
+     "unit": "split_block",
+     "n_clusters": 6,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.4413859213957786,
+      "lo": 0.0033040188773977,
+      "hi": 0.6122536594227821
+     },
+     "map50_95": {
+      "point": 0.22278191873152225,
+      "lo": 0.0006389413429050319,
+      "hi": 0.3370023393108447
+     }
+    },
+    "Non-fusion defect": {
+     "unit": "split_block",
+     "n_clusters": 6,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.44356530812889056,
+      "lo": 0.09090909090909097,
+      "hi": 0.7945544554455446
+     },
+     "map50_95": {
+      "point": 0.12847413074591874,
+      "lo": 0.045454545454545484,
+      "hi": 0.325
+     }
+    }
+   }
+  },
+  "ref_twoclass__yolo11s__seed1": {
+   "twoclass": {
+    "Geometric defect": {
+     "unit": "split_block",
+     "n_clusters": 6,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.5709559643637545,
+      "lo": 0.05705610561056105,
+      "hi": 0.7617472925010953
+     },
+     "map50_95": {
+      "point": 0.23982954160498732,
+      "lo": 0.012118811881188117,
+      "hi": 0.3603068704436367
+     }
+    },
+    "Non-fusion defect": {
+     "unit": "split_block",
+     "n_clusters": 6,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.6171160783603458,
+      "lo": 0.0,
+      "hi": 1.0
+     },
+     "map50_95": {
+      "point": 0.2024040823755649,
+      "lo": 0.0,
+      "hi": 0.37905940594059406
+     }
+    }
+   }
+  },
+  "ref_twoclass__yolo11s__seed2": {
+   "twoclass": {
+    "Geometric defect": {
+     "unit": "split_block",
+     "n_clusters": 6,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.48394889792975,
+      "lo": 0.015269761520918678,
+      "hi": 0.6512406827605025
+     },
+     "map50_95": {
+      "point": 0.23024280187169804,
+      "lo": 0.0029113058100681865,
+      "hi": 0.3357694075055345
+     }
+    },
+    "Non-fusion defect": {
+     "unit": "split_block",
+     "n_clusters": 6,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.423731198004593,
+      "lo": 0.14026402640264027,
+      "hi": 1.0
+     },
+     "map50_95": {
+      "point": 0.1537294593179062,
+      "lo": 0.04574897788286291,
+      "hi": 0.4
+     }
+    }
+   }
+  },
+  "weld_surface_v2__faster_rcnn__seed0": {
+   "weld_surface_v2": {
+    "Burn Through-BT": {
+     "unit": "split_block",
+     "n_clusters": 88,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.9290554238290499,
+      "lo": 0.8117136108667657,
+      "hi": 0.993983692486896
+     },
+     "map50_95": {
+      "point": 0.5955013554365152,
+      "lo": 0.4714539871927807,
+      "hi": 0.6991621708788573
+     }
+    },
+    "Surface Crack-SC": {
+     "unit": "split_block",
+     "n_clusters": 88,
+     "resamples": 2000,
+     "map50": {
+      "point": 1.0,
+      "lo": 1.0,
+      "hi": 1.0
+     },
+     "map50_95": {
+      "point": 0.72167865706549,
+      "lo": 0.6780140695390708,
+      "hi": 0.7746662827241102
+     }
+    }
+   },
+   "kaggle_v2": {},
+   "lohi_weld": {},
+   "visual": {},
+   "twoclass": {}
+  },
+  "weld_surface_v2__faster_rcnn__seed1": {
+   "weld_surface_v2": {
+    "Burn Through-BT": {
+     "unit": "split_block",
+     "n_clusters": 88,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.9369900630897504,
+      "lo": 0.8463602607559343,
+      "hi": 0.9983951942491543
+     },
+     "map50_95": {
+      "point": 0.5903742689624536,
+      "lo": 0.4742117127896339,
+      "hi": 0.694011794799881
+     }
+    },
+    "Surface Crack-SC": {
+     "unit": "split_block",
+     "n_clusters": 88,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.9695153725898905,
+      "lo": 0.9056264155827347,
+      "hi": 1.0
+     },
+     "map50_95": {
+      "point": 0.6906810751359542,
+      "lo": 0.6064773349154633,
+      "hi": 0.7649993335497076
+     }
+    }
+   },
+   "kaggle_v2": {},
+   "lohi_weld": {},
+   "visual": {},
+   "twoclass": {}
+  },
+  "weld_surface_v2__faster_rcnn__seed2": {
+   "weld_surface_v2": {
+    "Burn Through-BT": {
+     "unit": "split_block",
+     "n_clusters": 88,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.9143790560383147,
+      "lo": 0.8002246571041741,
+      "hi": 0.9929367043847239
+     },
+     "map50_95": {
+      "point": 0.6048805656773995,
+      "lo": 0.48462197526791134,
+      "hi": 0.7025007849417104
+     }
+    },
+    "Surface Crack-SC": {
+     "unit": "split_block",
+     "n_clusters": 88,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.9702970297029703,
+      "lo": 0.9108910891089109,
+      "hi": 1.0
+     },
+     "map50_95": {
+      "point": 0.7052009711726841,
+      "lo": 0.6364396219973696,
+      "hi": 0.7767999800397274
+     }
+    }
+   },
+   "kaggle_v2": {},
+   "lohi_weld": {},
+   "visual": {},
+   "twoclass": {}
+  },
+  "weld_surface_v2__rtdetr_l__seed0": {
+   "weld_surface_v2": {
+    "Burn Through-BT": {
+     "unit": "split_block",
+     "n_clusters": 88,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.7567452234195722,
+      "lo": 0.4949800516882291,
+      "hi": 0.9625030168731695
+     },
+     "map50_95": {
+      "point": 0.5025163259291375,
+      "lo": 0.3039867326571405,
+      "hi": 0.6819252735042023
+     }
+    },
+    "Surface Crack-SC": {
+     "unit": "split_block",
+     "n_clusters": 88,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.9912981981427955,
+      "lo": 0.968751225416907,
+      "hi": 1.0
+     },
+     "map50_95": {
+      "point": 0.6067410684750416,
+      "lo": 0.5366490828972202,
+      "hi": 0.6809371560158582
+     }
+    }
+   },
+   "kaggle_v2": {},
+   "lohi_weld": {},
+   "visual": {},
+   "twoclass": {}
+  },
+  "weld_surface_v2__rtdetr_l__seed1": {
+   "weld_surface_v2": {
+    "Burn Through-BT": {
+     "unit": "split_block",
+     "n_clusters": 88,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.8896732251098626,
+      "lo": 0.7751729181139949,
+      "hi": 0.9834709878852447
+     },
+     "map50_95": {
+      "point": 0.5547812382933754,
+      "lo": 0.4108740314881224,
+      "hi": 0.6884991061081184
+     }
+    },
+    "Surface Crack-SC": {
+     "unit": "split_block",
+     "n_clusters": 88,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.9582399006451167,
+      "lo": 0.9039887920337668,
+      "hi": 1.0
+     },
+     "map50_95": {
+      "point": 0.6281372732036621,
+      "lo": 0.5488879079776587,
+      "hi": 0.7151002944881615
+     }
+    }
+   },
+   "kaggle_v2": {},
+   "lohi_weld": {},
+   "visual": {},
+   "twoclass": {}
+  },
+  "weld_surface_v2__rtdetr_l__seed2": {
+   "weld_surface_v2": {
+    "Burn Through-BT": {
+     "unit": "split_block",
+     "n_clusters": 88,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.8926457046164814,
+      "lo": 0.7598656042352003,
+      "hi": 0.990981551265246
+     },
+     "map50_95": {
+      "point": 0.5912074307006253,
+      "lo": 0.44859308655654007,
+      "hi": 0.7126309150108361
+     }
+    },
+    "Surface Crack-SC": {
+     "unit": "split_block",
+     "n_clusters": 88,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.9495910191394371,
+      "lo": 0.8937170763408389,
+      "hi": 1.0
+     },
+     "map50_95": {
+      "point": 0.5980549936079518,
+      "lo": 0.5184348380004843,
+      "hi": 0.6926136932120054
+     }
+    }
+   },
+   "kaggle_v2": {},
+   "lohi_weld": {},
+   "visual": {},
+   "twoclass": {}
+  },
+  "weld_surface_v2__yolo11n__seed0": {
+   "weld_surface_v2": {
+    "Burn Through-BT": {
+     "unit": "split_block",
+     "n_clusters": 88,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.9354395782282776,
+      "lo": 0.8539769237469654,
+      "hi": 0.9837571440070838
+     },
+     "map50_95": {
+      "point": 0.6217132936184292,
+      "lo": 0.470939900034947,
+      "hi": 0.7358625406704042
+     }
+    },
+    "Surface Crack-SC": {
+     "unit": "split_block",
+     "n_clusters": 88,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.9963894885729172,
+      "lo": 0.9874039338077029,
+      "hi": 1.0
+     },
+     "map50_95": {
+      "point": 0.6288975950409307,
+      "lo": 0.568798414779323,
+      "hi": 0.6912901774422338
+     }
+    }
+   },
+   "kaggle_v2": {},
+   "lohi_weld": {},
+   "visual": {},
+   "twoclass": {}
+  },
+  "weld_surface_v2__yolo11n__seed1": {
+   "weld_surface_v2": {
+    "Burn Through-BT": {
+     "unit": "split_block",
+     "n_clusters": 88,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.9259168625797352,
+      "lo": 0.8199636034112012,
+      "hi": 0.9961929055128312
+     },
+     "map50_95": {
+      "point": 0.5525242610849826,
+      "lo": 0.4362129780955817,
+      "hi": 0.6411887871910353
+     }
+    },
+    "Surface Crack-SC": {
+     "unit": "split_block",
+     "n_clusters": 88,
+     "resamples": 2000,
+     "map50": {
+      "point": 1.0,
+      "lo": 1.0,
+      "hi": 1.0
+     },
+     "map50_95": {
+      "point": 0.593369412628584,
+      "lo": 0.5271174415124877,
+      "hi": 0.6679692975516465
+     }
+    }
+   },
+   "kaggle_v2": {},
+   "lohi_weld": {},
+   "visual": {},
+   "twoclass": {}
+  },
+  "weld_surface_v2__yolo11n__seed2": {
+   "weld_surface_v2": {
+    "Burn Through-BT": {
+     "unit": "split_block",
+     "n_clusters": 88,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.929119376463404,
+      "lo": 0.831576860656956,
+      "hi": 0.9943448787387447
+     },
+     "map50_95": {
+      "point": 0.5800399290553123,
+      "lo": 0.4336715474195587,
+      "hi": 0.6969794451042195
+     }
+    },
+    "Surface Crack-SC": {
+     "unit": "split_block",
+     "n_clusters": 88,
+     "resamples": 2000,
+     "map50": {
+      "point": 1.0,
+      "lo": 1.0,
+      "hi": 1.0
+     },
+     "map50_95": {
+      "point": 0.6058514440111531,
+      "lo": 0.5491699345257655,
+      "hi": 0.6761834541719249
+     }
+    }
+   },
+   "kaggle_v2": {},
+   "lohi_weld": {},
+   "visual": {},
+   "twoclass": {}
+  },
+  "weld_surface_v2__yolo11s__seed0": {
+   "weld_surface_v2": {
+    "Burn Through-BT": {
+     "unit": "split_block",
+     "n_clusters": 88,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.8976464980067741,
+      "lo": 0.7744337193257925,
+      "hi": 0.9762783422882853
+     },
+     "map50_95": {
+      "point": 0.5470021301455652,
+      "lo": 0.42071865339034775,
+      "hi": 0.6480525467318754
+     }
+    },
+    "Surface Crack-SC": {
+     "unit": "split_block",
+     "n_clusters": 88,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.971988436812032,
+      "lo": 0.9238172087570808,
+      "hi": 1.0
+     },
+     "map50_95": {
+      "point": 0.62392197207521,
+      "lo": 0.5692631721352649,
+      "hi": 0.6900286456065644
+     }
+    }
+   },
+   "kaggle_v2": {},
+   "lohi_weld": {},
+   "visual": {},
+   "twoclass": {}
+  },
+  "weld_surface_v2__yolo11s__seed1": {
+   "weld_surface_v2": {
+    "Burn Through-BT": {
+     "unit": "split_block",
+     "n_clusters": 88,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.9068586549379593,
+      "lo": 0.792178189499077,
+      "hi": 0.9852569217603435
+     },
+     "map50_95": {
+      "point": 0.5777685177347985,
+      "lo": 0.4417564065005894,
+      "hi": 0.6896572019722886
+     }
+    },
+    "Surface Crack-SC": {
+     "unit": "split_block",
+     "n_clusters": 88,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.996430432516936,
+      "lo": 0.987822823505755,
+      "hi": 1.0
+     },
+     "map50_95": {
+      "point": 0.6490626533805379,
+      "lo": 0.5958877990299344,
+      "hi": 0.7250202765413865
+     }
+    }
+   },
+   "kaggle_v2": {},
+   "lohi_weld": {},
+   "visual": {},
+   "twoclass": {}
+  },
+  "weld_surface_v2__yolo11s__seed2": {
+   "weld_surface_v2": {
+    "Burn Through-BT": {
+     "unit": "split_block",
+     "n_clusters": 88,
+     "resamples": 2000,
+     "map50": {
+      "point": 0.9513822740738066,
+      "lo": 0.8687174224888963,
+      "hi": 0.9963503590015772
+     },
+     "map50_95": {
+      "point": 0.5393239401157714,
+      "lo": 0.4175479933987667,
+      "hi": 0.6567894372555071
+     }
+    },
+    "Surface Crack-SC": {
+     "unit": "split_block",
+     "n_clusters": 88,
+     "resamples": 2000,
+     "map50": {
+      "point": 1.0,
+      "lo": 1.0,
+      "hi": 1.0
+     },
+     "map50_95": {
+      "point": 0.5624380205331838,
+      "lo": 0.5054017566840521,
+      "hi": 0.6323425827486621
+     }
+    }
+   },
+   "kaggle_v2": {},
+   "lohi_weld": {},
+   "visual": {},
+   "twoclass": {}
+  }
+ }
+}

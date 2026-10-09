@@ -1,0 +1,21 @@
+Data licence
+
+Copyright (c) 2026 Vincent Linish Dsouza
+
+The source code in this repository, every .py, .sh, .slurm and .cron file, is
+released under the MIT licence in LICENSE.
+
+Everything else in this repository is released under the Creative Commons
+Attribution 4.0 International licence, CC BY 4.0:
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+That covers the frozen split files, their sha256 hashes, the lineage manifest,
+the label mappings, the audit outputs, the box geometry, the measured
+throughput, the fabricated test fixtures, the resolved reference list, and the
+generated tables and figures.
+
+Neither licence covers the source images. They are not in this repository.
+Each source dataset remains under its creators' own licence, listed in
+README.md: CC0 1.0 for kaggle_v2, CC BY 4.0 for weld_surface_v2, twoclass and
+visual, and free use with citation for LoHi-WELD. The split files name those
+images by their original filenames only.

@@ -1,0 +1,1666 @@
+{
+  "schema_version": 3,
+  "seed": 20260903,
+  "t_copy": 0.96,
+  "t_scene": 0.9,
+  "scene_candidate_thumb": 32,
+  "scene_confirmation_thumb": 128,
+  "scene_confirmation": "ncc_at_128_after_ncc_at_32",
+  "copy_selection": "maximum_independent_set_at_threshold",
+  "copy_chain_diagnostic": "complete_linkage",
+  "scene_linkage": "complete",
+  "split_method": "mixed_integer_multilabel_group_balancing",
+  "output_folder": "clean_candidate",
+  "split_fractions": {
+    "train": 0.7,
+    "valid": 0.15,
+    "test": 0.15
+  },
+  "excluded": {
+    "Weld Surface Defect Detection.v1i.yolov8": "superseded by v2, 53,600 matching pairs, identical split counts",
+    "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset": "subset of The Welding Defect Dataset - v2, 2,047 matching pairs",
+    "LoHi-WELD weld-dataset/weld-dataset/kfold_high, kfold_low": "supplied k-folds, ignored so this study does its own splitting"
+  },
+  "datasets": {
+    "weld_surface_v2": {
+      "dataset": "weld_surface_v2",
+      "names": [
+        "Burn Through-BT",
+        "Contamination-CN",
+        "Lack of Fusion-LOF",
+        "Normal Weld-NW",
+        "Spatter-SR",
+        "Surface Crack-SC",
+        "Undercut-UC"
+      ],
+      "before": {
+        "images": 17195,
+        "boxes": 17445,
+        "per_class": {
+          "Burn Through-BT": 2664,
+          "Contamination-CN": 2627,
+          "Lack of Fusion-LOF": 2575,
+          "Normal Weld-NW": 2229,
+          "Spatter-SR": 2369,
+          "Surface Crack-SC": 2533,
+          "Undercut-UC": 2448
+        },
+        "splits": {
+          "train": 15045,
+          "valid": 1435,
+          "test": 715
+        }
+      },
+      "after": {
+        "images": 2963,
+        "boxes": 3009,
+        "per_class": {
+          "Burn Through-BT": 282,
+          "Contamination-CN": 590,
+          "Lack of Fusion-LOF": 472,
+          "Normal Weld-NW": 415,
+          "Spatter-SR": 530,
+          "Surface Crack-SC": 254,
+          "Undercut-UC": 466
+        },
+        "splits": {
+          "train": 2074,
+          "valid": 444,
+          "test": 445
+        },
+        "per_class_by_split": {
+          "test": {
+            "Burn Through-BT": 42,
+            "Contamination-CN": 88,
+            "Lack of Fusion-LOF": 71,
+            "Normal Weld-NW": 62,
+            "Spatter-SR": 80,
+            "Surface Crack-SC": 38,
+            "Undercut-UC": 70
+          },
+          "train": {
+            "Burn Through-BT": 198,
+            "Contamination-CN": 413,
+            "Lack of Fusion-LOF": 330,
+            "Normal Weld-NW": 291,
+            "Spatter-SR": 371,
+            "Surface Crack-SC": 178,
+            "Undercut-UC": 326
+          },
+          "valid": {
+            "Burn Through-BT": 42,
+            "Contamination-CN": 89,
+            "Lack of Fusion-LOF": 71,
+            "Normal Weld-NW": 62,
+            "Spatter-SR": 79,
+            "Surface Crack-SC": 38,
+            "Undercut-UC": 70
+          }
+        },
+        "per_class_images_by_split": {
+          "test": {
+            "Burn Through-BT": 41,
+            "Contamination-CN": 83,
+            "Lack of Fusion-LOF": 71,
+            "Normal Weld-NW": 62,
+            "Spatter-SR": 80,
+            "Surface Crack-SC": 38,
+            "Undercut-UC": 70
+          },
+          "train": {
+            "Burn Through-BT": 193,
+            "Contamination-CN": 385,
+            "Lack of Fusion-LOF": 330,
+            "Normal Weld-NW": 291,
+            "Spatter-SR": 371,
+            "Surface Crack-SC": 178,
+            "Undercut-UC": 326
+          },
+          "valid": {
+            "Burn Through-BT": 41,
+            "Contamination-CN": 83,
+            "Lack of Fusion-LOF": 71,
+            "Normal Weld-NW": 62,
+            "Spatter-SR": 79,
+            "Surface Crack-SC": 38,
+            "Undercut-UC": 70
+          }
+        },
+        "scene_groups_by_split": {
+          "train": 423,
+          "valid": 91,
+          "test": 90
+        }
+      },
+      "scene_groups": 604,
+      "largest_scene_group": 131,
+      "split_blocks": 515,
+      "largest_split_block": 150,
+      "copy_groups": 2963,
+      "copy_complete_linkage_groups": 2967,
+      "copy_components_split_by_complete_linkage": 65,
+      "copy_input_component_min_pairwise_ncc": 0.774053,
+      "content_scene_groups": 2948,
+      "direct_scene_candidate_pairs": 365,
+      "identity_compatible_scene_candidates": 365,
+      "confirmed_content_scene_pairs": 26,
+      "scene_components_split_by_complete_linkage": 3,
+      "scene_input_component_min_pairwise_ncc": 0.0,
+      "frame_run_links": 2355,
+      "frame_run_scene_links": 2355,
+      "frame_run_scope": "scene_and_split",
+      "specimen_links": 0,
+      "split_balance": {
+        "optimizer_status": 1,
+        "optimizer_message": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+        "objective": 0.04607559057145055,
+        "features": {
+          "images": {
+            "total": 2963,
+            "largest_group_contribution": 150,
+            "granularity_pp": 5.062,
+            "splits": {
+              "train": {
+                "count": 2074,
+                "share": 0.699966,
+                "deviation_pp": -0.003
+              },
+              "valid": {
+                "count": 444,
+                "share": 0.149848,
+                "deviation_pp": -0.015
+              },
+              "test": {
+                "count": 445,
+                "share": 0.150186,
+                "deviation_pp": 0.019
+              }
+            }
+          },
+          "groups": {
+            "total": 604,
+            "largest_group_contribution": 6,
+            "granularity_pp": 0.993,
+            "splits": {
+              "train": {
+                "count": 423,
+                "share": 0.700331,
+                "deviation_pp": 0.033
+              },
+              "valid": {
+                "count": 91,
+                "share": 0.150662,
+                "deviation_pp": 0.066
+              },
+              "test": {
+                "count": 90,
+                "share": 0.149007,
+                "deviation_pp": -0.099
+              }
+            }
+          },
+          "boxes:Burn Through-BT": {
+            "total": 282,
+            "largest_group_contribution": 34,
+            "granularity_pp": 12.057,
+            "splits": {
+              "train": {
+                "count": 198,
+                "share": 0.702128,
+                "deviation_pp": 0.213
+              },
+              "valid": {
+                "count": 42,
+                "share": 0.148936,
+                "deviation_pp": -0.106
+              },
+              "test": {
+                "count": 42,
+                "share": 0.148936,
+                "deviation_pp": -0.106
+              }
+            }
+          },
+          "boxes:Contamination-CN": {
+            "total": 590,
+            "largest_group_contribution": 45,
+            "granularity_pp": 7.627,
+            "splits": {
+              "train": {
+                "count": 413,
+                "share": 0.7,
+                "deviation_pp": 0.0
+              },
+              "valid": {
+                "count": 89,
+                "share": 0.150847,
+                "deviation_pp": 0.085
+              },
+              "test": {
+                "count": 88,
+                "share": 0.149153,
+                "deviation_pp": -0.085
+              }
+            }
+          },
+          "boxes:Lack of Fusion-LOF": {
+            "total": 472,
+            "largest_group_contribution": 131,
+            "granularity_pp": 27.754,
+            "splits": {
+              "train": {
+                "count": 330,
+                "share": 0.699153,
+                "deviation_pp": -0.085
+              },
+              "valid": {
+                "count": 71,
+                "share": 0.150424,
+                "deviation_pp": 0.042
+              },
+              "test": {
+                "count": 71,
+                "share": 0.150424,
+                "deviation_pp": 0.042
+              }
+            }
+          },
+          "boxes:Normal Weld-NW": {
+            "total": 415,
+            "largest_group_contribution": 81,
+            "granularity_pp": 19.518,
+            "splits": {
+              "train": {
+                "count": 291,
+                "share": 0.701205,
+                "deviation_pp": 0.12
+              },
+              "valid": {
+                "count": 62,
+                "share": 0.149398,
+                "deviation_pp": -0.06
+              },
+              "test": {
+                "count": 62,
+                "share": 0.149398,
+                "deviation_pp": -0.06
+              }
+            }
+          },
+          "boxes:Spatter-SR": {
+            "total": 530,
+            "largest_group_contribution": 63,
+            "granularity_pp": 11.887,
+            "splits": {
+              "train": {
+                "count": 371,
+                "share": 0.7,
+                "deviation_pp": 0.0
+              },
+              "valid": {
+                "count": 79,
+                "share": 0.149057,
+                "deviation_pp": -0.094
+              },
+              "test": {
+                "count": 80,
+                "share": 0.150943,
+                "deviation_pp": 0.094
+              }
+            }
+          },
+          "boxes:Surface Crack-SC": {
+            "total": 254,
+            "largest_group_contribution": 4,
+            "granularity_pp": 1.575,
+            "splits": {
+              "train": {
+                "count": 178,
+                "share": 0.700787,
+                "deviation_pp": 0.079
+              },
+              "valid": {
+                "count": 38,
+                "share": 0.149606,
+                "deviation_pp": -0.039
+              },
+              "test": {
+                "count": 38,
+                "share": 0.149606,
+                "deviation_pp": -0.039
+              }
+            }
+          },
+          "boxes:Undercut-UC": {
+            "total": 466,
+            "largest_group_contribution": 150,
+            "granularity_pp": 32.189,
+            "splits": {
+              "train": {
+                "count": 326,
+                "share": 0.699571,
+                "deviation_pp": -0.043
+              },
+              "valid": {
+                "count": 70,
+                "share": 0.150215,
+                "deviation_pp": 0.021
+              },
+              "test": {
+                "count": 70,
+                "share": 0.150215,
+                "deviation_pp": 0.021
+              }
+            }
+          },
+          "images_with:Burn Through-BT": {
+            "total": 275,
+            "largest_group_contribution": 34,
+            "granularity_pp": 12.364,
+            "splits": {
+              "train": {
+                "count": 193,
+                "share": 0.701818,
+                "deviation_pp": 0.182
+              },
+              "valid": {
+                "count": 41,
+                "share": 0.149091,
+                "deviation_pp": -0.091
+              },
+              "test": {
+                "count": 41,
+                "share": 0.149091,
+                "deviation_pp": -0.091
+              }
+            }
+          },
+          "images_with:Contamination-CN": {
+            "total": 551,
+            "largest_group_contribution": 41,
+            "granularity_pp": 7.441,
+            "splits": {
+              "train": {
+                "count": 385,
+                "share": 0.69873,
+                "deviation_pp": -0.127
+              },
+              "valid": {
+                "count": 83,
+                "share": 0.150635,
+                "deviation_pp": 0.064
+              },
+              "test": {
+                "count": 83,
+                "share": 0.150635,
+                "deviation_pp": 0.064
+              }
+            }
+          },
+          "images_with:Lack of Fusion-LOF": {
+            "total": 472,
+            "largest_group_contribution": 131,
+            "granularity_pp": 27.754,
+            "splits": {
+              "train": {
+                "count": 330,
+                "share": 0.699153,
+                "deviation_pp": -0.085
+              },
+              "valid": {
+                "count": 71,
+                "share": 0.150424,
+                "deviation_pp": 0.042
+              },
+              "test": {
+                "count": 71,
+                "share": 0.150424,
+                "deviation_pp": 0.042
+              }
+            }
+          },
+          "images_with:Normal Weld-NW": {
+            "total": 415,
+            "largest_group_contribution": 81,
+            "granularity_pp": 19.518,
+            "splits": {
+              "train": {
+                "count": 291,
+                "share": 0.701205,
+                "deviation_pp": 0.12
+              },
+              "valid": {
+                "count": 62,
+                "share": 0.149398,
+                "deviation_pp": -0.06
+              },
+              "test": {
+                "count": 62,
+                "share": 0.149398,
+                "deviation_pp": -0.06
+              }
+            }
+          },
+          "images_with:Spatter-SR": {
+            "total": 530,
+            "largest_group_contribution": 63,
+            "granularity_pp": 11.887,
+            "splits": {
+              "train": {
+                "count": 371,
+                "share": 0.7,
+                "deviation_pp": 0.0
+              },
+              "valid": {
+                "count": 79,
+                "share": 0.149057,
+                "deviation_pp": -0.094
+              },
+              "test": {
+                "count": 80,
+                "share": 0.150943,
+                "deviation_pp": 0.094
+              }
+            }
+          },
+          "images_with:Surface Crack-SC": {
+            "total": 254,
+            "largest_group_contribution": 4,
+            "granularity_pp": 1.575,
+            "splits": {
+              "train": {
+                "count": 178,
+                "share": 0.700787,
+                "deviation_pp": 0.079
+              },
+              "valid": {
+                "count": 38,
+                "share": 0.149606,
+                "deviation_pp": -0.039
+              },
+              "test": {
+                "count": 38,
+                "share": 0.149606,
+                "deviation_pp": -0.039
+              }
+            }
+          },
+          "images_with:Undercut-UC": {
+            "total": 466,
+            "largest_group_contribution": 150,
+            "granularity_pp": 32.189,
+            "splits": {
+              "train": {
+                "count": 326,
+                "share": 0.699571,
+                "deviation_pp": -0.043
+              },
+              "valid": {
+                "count": 70,
+                "share": 0.150215,
+                "deviation_pp": 0.021
+              },
+              "test": {
+                "count": 70,
+                "share": 0.150215,
+                "deviation_pp": 0.021
+              }
+            }
+          }
+        },
+        "max_abs_deviation_pp": 0.213
+      }
+    },
+    "kaggle_v2": {
+      "dataset": "kaggle_v2",
+      "names": [
+        "Bad Weld",
+        "Good Weld",
+        "Defect"
+      ],
+      "before": {
+        "images": 2028,
+        "boxes": 5686,
+        "per_class": {
+          "Bad Weld": 1378,
+          "Good Weld": 2348,
+          "Defect": 1960
+        },
+        "splits": {
+          "train": 1619,
+          "valid": 283,
+          "test": 126
+        }
+      },
+      "after": {
+        "images": 938,
+        "boxes": 3014,
+        "per_class": {
+          "Bad Weld": 737,
+          "Good Weld": 1213,
+          "Defect": 1064
+        },
+        "splits": {
+          "train": 656,
+          "valid": 141,
+          "test": 141
+        },
+        "per_class_by_split": {
+          "test": {
+            "Bad Weld": 110,
+            "Good Weld": 182,
+            "Defect": 159
+          },
+          "train": {
+            "Bad Weld": 516,
+            "Good Weld": 849,
+            "Defect": 745
+          },
+          "valid": {
+            "Bad Weld": 111,
+            "Good Weld": 182,
+            "Defect": 160
+          }
+        },
+        "per_class_images_by_split": {
+          "test": {
+            "Bad Weld": 75,
+            "Good Weld": 93,
+            "Defect": 72
+          },
+          "train": {
+            "Bad Weld": 349,
+            "Good Weld": 435,
+            "Defect": 337
+          },
+          "valid": {
+            "Bad Weld": 75,
+            "Good Weld": 93,
+            "Defect": 72
+          }
+        },
+        "scene_groups_by_split": {
+          "train": 649,
+          "valid": 139,
+          "test": 139
+        }
+      },
+      "scene_groups": 927,
+      "largest_scene_group": 3,
+      "split_blocks": 359,
+      "largest_split_block": 110,
+      "copy_groups": 938,
+      "copy_complete_linkage_groups": 938,
+      "copy_components_split_by_complete_linkage": 1,
+      "copy_input_component_min_pairwise_ncc": 0.958013,
+      "content_scene_groups": 927,
+      "direct_scene_candidate_pairs": 34,
+      "identity_compatible_scene_candidates": 34,
+      "confirmed_content_scene_pairs": 14,
+      "scene_components_split_by_complete_linkage": 1,
+      "scene_input_component_min_pairwise_ncc": 0.0,
+      "frame_run_links": 569,
+      "frame_run_scene_links": 0,
+      "frame_run_scope": "split_only",
+      "specimen_links": 0,
+      "split_balance": {
+        "optimizer_status": 1,
+        "optimizer_message": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+        "objective": 0.016716444939433507,
+        "features": {
+          "images": {
+            "total": 938,
+            "largest_group_contribution": 110,
+            "granularity_pp": 11.727,
+            "splits": {
+              "train": {
+                "count": 656,
+                "share": 0.69936,
+                "deviation_pp": -0.064
+              },
+              "valid": {
+                "count": 141,
+                "share": 0.15032,
+                "deviation_pp": 0.032
+              },
+              "test": {
+                "count": 141,
+                "share": 0.15032,
+                "deviation_pp": 0.032
+              }
+            }
+          },
+          "groups": {
+            "total": 927,
+            "largest_group_contribution": 110,
+            "granularity_pp": 11.866,
+            "splits": {
+              "train": {
+                "count": 649,
+                "share": 0.700108,
+                "deviation_pp": 0.011
+              },
+              "valid": {
+                "count": 139,
+                "share": 0.149946,
+                "deviation_pp": -0.005
+              },
+              "test": {
+                "count": 139,
+                "share": 0.149946,
+                "deviation_pp": -0.005
+              }
+            }
+          },
+          "boxes:Bad Weld": {
+            "total": 737,
+            "largest_group_contribution": 174,
+            "granularity_pp": 23.609,
+            "splits": {
+              "train": {
+                "count": 516,
+                "share": 0.700136,
+                "deviation_pp": 0.014
+              },
+              "valid": {
+                "count": 111,
+                "share": 0.150611,
+                "deviation_pp": 0.061
+              },
+              "test": {
+                "count": 110,
+                "share": 0.149254,
+                "deviation_pp": -0.075
+              }
+            }
+          },
+          "boxes:Good Weld": {
+            "total": 1213,
+            "largest_group_contribution": 251,
+            "granularity_pp": 20.692,
+            "splits": {
+              "train": {
+                "count": 849,
+                "share": 0.699918,
+                "deviation_pp": -0.008
+              },
+              "valid": {
+                "count": 182,
+                "share": 0.150041,
+                "deviation_pp": 0.004
+              },
+              "test": {
+                "count": 182,
+                "share": 0.150041,
+                "deviation_pp": 0.004
+              }
+            }
+          },
+          "boxes:Defect": {
+            "total": 1064,
+            "largest_group_contribution": 252,
+            "granularity_pp": 23.684,
+            "splits": {
+              "train": {
+                "count": 745,
+                "share": 0.700188,
+                "deviation_pp": 0.019
+              },
+              "valid": {
+                "count": 160,
+                "share": 0.150376,
+                "deviation_pp": 0.038
+              },
+              "test": {
+                "count": 159,
+                "share": 0.149436,
+                "deviation_pp": -0.056
+              }
+            }
+          },
+          "images_with:Bad Weld": {
+            "total": 499,
+            "largest_group_contribution": 84,
+            "granularity_pp": 16.834,
+            "splits": {
+              "train": {
+                "count": 349,
+                "share": 0.699399,
+                "deviation_pp": -0.06
+              },
+              "valid": {
+                "count": 75,
+                "share": 0.150301,
+                "deviation_pp": 0.03
+              },
+              "test": {
+                "count": 75,
+                "share": 0.150301,
+                "deviation_pp": 0.03
+              }
+            }
+          },
+          "images_with:Good Weld": {
+            "total": 621,
+            "largest_group_contribution": 96,
+            "granularity_pp": 15.459,
+            "splits": {
+              "train": {
+                "count": 435,
+                "share": 0.700483,
+                "deviation_pp": 0.048
+              },
+              "valid": {
+                "count": 93,
+                "share": 0.149758,
+                "deviation_pp": -0.024
+              },
+              "test": {
+                "count": 93,
+                "share": 0.149758,
+                "deviation_pp": -0.024
+              }
+            }
+          },
+          "images_with:Defect": {
+            "total": 481,
+            "largest_group_contribution": 97,
+            "granularity_pp": 20.166,
+            "splits": {
+              "train": {
+                "count": 337,
+                "share": 0.700624,
+                "deviation_pp": 0.062
+              },
+              "valid": {
+                "count": 72,
+                "share": 0.149688,
+                "deviation_pp": -0.031
+              },
+              "test": {
+                "count": 72,
+                "share": 0.149688,
+                "deviation_pp": -0.031
+              }
+            }
+          }
+        },
+        "max_abs_deviation_pp": 0.075
+      }
+    },
+    "twoclass": {
+      "dataset": "twoclass",
+      "names": [
+        "Geometric defect",
+        "Non-fusion defect"
+      ],
+      "before": {
+        "images": 1682,
+        "boxes": 2777,
+        "per_class": {
+          "Geometric defect": 1541,
+          "Non-fusion defect": 1236
+        },
+        "splits": {
+          "train": 1254,
+          "valid": 333,
+          "test": 95
+        }
+      },
+      "after": {
+        "images": 304,
+        "boxes": 499,
+        "per_class": {
+          "Geometric defect": 302,
+          "Non-fusion defect": 197
+        },
+        "splits": {
+          "valid": 46,
+          "train": 213,
+          "test": 45
+        },
+        "per_class_by_split": {
+          "test": {
+            "Geometric defect": 43,
+            "Non-fusion defect": 30
+          },
+          "train": {
+            "Geometric defect": 213,
+            "Non-fusion defect": 138
+          },
+          "valid": {
+            "Geometric defect": 46,
+            "Non-fusion defect": 29
+          }
+        },
+        "per_class_images_by_split": {
+          "test": {
+            "Geometric defect": 30,
+            "Non-fusion defect": 20
+          },
+          "train": {
+            "Geometric defect": 135,
+            "Non-fusion defect": 110
+          },
+          "valid": {
+            "Geometric defect": 29,
+            "Non-fusion defect": 29
+          }
+        },
+        "scene_groups_by_split": {
+          "valid": 6,
+          "train": 23,
+          "test": 6
+        }
+      },
+      "scene_groups": 35,
+      "largest_scene_group": 47,
+      "split_blocks": 34,
+      "largest_split_block": 47,
+      "copy_groups": 304,
+      "copy_complete_linkage_groups": 304,
+      "copy_components_split_by_complete_linkage": 1,
+      "copy_input_component_min_pairwise_ncc": 0.934589,
+      "content_scene_groups": 303,
+      "direct_scene_candidate_pairs": 90,
+      "identity_compatible_scene_candidates": 90,
+      "confirmed_content_scene_pairs": 1,
+      "scene_components_split_by_complete_linkage": 0,
+      "scene_input_component_min_pairwise_ncc": 1.0,
+      "frame_run_links": 269,
+      "frame_run_scene_links": 269,
+      "frame_run_scope": "scene_and_split",
+      "specimen_links": 0,
+      "split_balance": {
+        "optimizer_status": 0,
+        "optimizer_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "objective": 0.18149176670901532,
+        "features": {
+          "images": {
+            "total": 304,
+            "largest_group_contribution": 47,
+            "granularity_pp": 15.461,
+            "splits": {
+              "train": {
+                "count": 213,
+                "share": 0.700658,
+                "deviation_pp": 0.066
+              },
+              "valid": {
+                "count": 46,
+                "share": 0.151316,
+                "deviation_pp": 0.132
+              },
+              "test": {
+                "count": 45,
+                "share": 0.148026,
+                "deviation_pp": -0.197
+              }
+            }
+          },
+          "groups": {
+            "total": 35,
+            "largest_group_contribution": 2,
+            "granularity_pp": 5.714,
+            "splits": {
+              "train": {
+                "count": 23,
+                "share": 0.657143,
+                "deviation_pp": -4.286
+              },
+              "valid": {
+                "count": 6,
+                "share": 0.171429,
+                "deviation_pp": 2.143
+              },
+              "test": {
+                "count": 6,
+                "share": 0.171429,
+                "deviation_pp": 2.143
+              }
+            }
+          },
+          "boxes:Geometric defect": {
+            "total": 302,
+            "largest_group_contribution": 77,
+            "granularity_pp": 25.497,
+            "splits": {
+              "train": {
+                "count": 213,
+                "share": 0.705298,
+                "deviation_pp": 0.53
+              },
+              "valid": {
+                "count": 46,
+                "share": 0.152318,
+                "deviation_pp": 0.232
+              },
+              "test": {
+                "count": 43,
+                "share": 0.142384,
+                "deviation_pp": -0.762
+              }
+            }
+          },
+          "boxes:Non-fusion defect": {
+            "total": 197,
+            "largest_group_contribution": 42,
+            "granularity_pp": 21.32,
+            "splits": {
+              "train": {
+                "count": 138,
+                "share": 0.700508,
+                "deviation_pp": 0.051
+              },
+              "valid": {
+                "count": 29,
+                "share": 0.147208,
+                "deviation_pp": -0.279
+              },
+              "test": {
+                "count": 30,
+                "share": 0.152284,
+                "deviation_pp": 0.228
+              }
+            }
+          },
+          "images_with:Geometric defect": {
+            "total": 194,
+            "largest_group_contribution": 30,
+            "granularity_pp": 15.464,
+            "splits": {
+              "train": {
+                "count": 135,
+                "share": 0.695876,
+                "deviation_pp": -0.412
+              },
+              "valid": {
+                "count": 29,
+                "share": 0.149485,
+                "deviation_pp": -0.052
+              },
+              "test": {
+                "count": 30,
+                "share": 0.154639,
+                "deviation_pp": 0.464
+              }
+            }
+          },
+          "images_with:Non-fusion defect": {
+            "total": 159,
+            "largest_group_contribution": 22,
+            "granularity_pp": 13.836,
+            "splits": {
+              "train": {
+                "count": 110,
+                "share": 0.691824,
+                "deviation_pp": -0.818
+              },
+              "valid": {
+                "count": 29,
+                "share": 0.18239,
+                "deviation_pp": 3.239
+              },
+              "test": {
+                "count": 20,
+                "share": 0.125786,
+                "deviation_pp": -2.421
+              }
+            }
+          },
+          "background_images": {
+            "total": 58,
+            "largest_group_contribution": 17,
+            "granularity_pp": 29.31,
+            "splits": {
+              "train": {
+                "count": 40,
+                "share": 0.689655,
+                "deviation_pp": -1.034
+              },
+              "valid": {
+                "count": 9,
+                "share": 0.155172,
+                "deviation_pp": 0.517
+              },
+              "test": {
+                "count": 9,
+                "share": 0.155172,
+                "deviation_pp": 0.517
+              }
+            }
+          }
+        },
+        "max_abs_deviation_pp": 4.286
+      }
+    },
+    "visual": {
+      "dataset": "visual",
+      "names": [
+        "Defect",
+        "Welding Line",
+        "workpiece"
+      ],
+      "before": {
+        "images": 1288,
+        "boxes": 6576,
+        "per_class": {
+          "Defect": 4004,
+          "Welding Line": 1281,
+          "workpiece": 1291
+        },
+        "splits": {
+          "train": 1121,
+          "valid": 111,
+          "test": 56
+        }
+      },
+      "after": {
+        "images": 558,
+        "boxes": 2838,
+        "per_class": {
+          "Defect": 1726,
+          "Welding Line": 553,
+          "workpiece": 559
+        },
+        "splits": {
+          "test": 84,
+          "valid": 84,
+          "train": 390
+        },
+        "per_class_by_split": {
+          "test": {
+            "Defect": 259,
+            "Welding Line": 83,
+            "workpiece": 84
+          },
+          "train": {
+            "Defect": 1208,
+            "Welding Line": 387,
+            "workpiece": 391
+          },
+          "valid": {
+            "Defect": 259,
+            "Welding Line": 83,
+            "workpiece": 84
+          }
+        },
+        "per_class_images_by_split": {
+          "test": {
+            "Defect": 75,
+            "Welding Line": 82,
+            "workpiece": 84
+          },
+          "train": {
+            "Defect": 350,
+            "Welding Line": 386,
+            "workpiece": 390
+          },
+          "valid": {
+            "Defect": 75,
+            "Welding Line": 83,
+            "workpiece": 84
+          }
+        },
+        "scene_groups_by_split": {
+          "test": 47,
+          "valid": 47,
+          "train": 219
+        }
+      },
+      "scene_groups": 313,
+      "largest_scene_group": 6,
+      "split_blocks": 285,
+      "largest_split_block": 22,
+      "copy_groups": 558,
+      "copy_complete_linkage_groups": 558,
+      "copy_components_split_by_complete_linkage": 0,
+      "copy_input_component_min_pairwise_ncc": 1.0,
+      "content_scene_groups": 558,
+      "direct_scene_candidate_pairs": 41,
+      "identity_compatible_scene_candidates": 23,
+      "confirmed_content_scene_pairs": 0,
+      "scene_components_split_by_complete_linkage": 0,
+      "scene_input_component_min_pairwise_ncc": 1.0,
+      "frame_run_links": 0,
+      "frame_run_scene_links": 0,
+      "frame_run_scope": "unused",
+      "specimen_links": 245,
+      "split_balance": {
+        "optimizer_status": 1,
+        "optimizer_message": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+        "objective": 0.020906476392624523,
+        "features": {
+          "images": {
+            "total": 558,
+            "largest_group_contribution": 22,
+            "granularity_pp": 3.943,
+            "splits": {
+              "train": {
+                "count": 390,
+                "share": 0.698925,
+                "deviation_pp": -0.108
+              },
+              "valid": {
+                "count": 84,
+                "share": 0.150538,
+                "deviation_pp": 0.054
+              },
+              "test": {
+                "count": 84,
+                "share": 0.150538,
+                "deviation_pp": 0.054
+              }
+            }
+          },
+          "groups": {
+            "total": 313,
+            "largest_group_contribution": 9,
+            "granularity_pp": 2.875,
+            "splits": {
+              "train": {
+                "count": 219,
+                "share": 0.699681,
+                "deviation_pp": -0.032
+              },
+              "valid": {
+                "count": 47,
+                "share": 0.15016,
+                "deviation_pp": 0.016
+              },
+              "test": {
+                "count": 47,
+                "share": 0.15016,
+                "deviation_pp": 0.016
+              }
+            }
+          },
+          "boxes:Defect": {
+            "total": 1726,
+            "largest_group_contribution": 92,
+            "granularity_pp": 5.33,
+            "splits": {
+              "train": {
+                "count": 1208,
+                "share": 0.699884,
+                "deviation_pp": -0.012
+              },
+              "valid": {
+                "count": 259,
+                "share": 0.150058,
+                "deviation_pp": 0.006
+              },
+              "test": {
+                "count": 259,
+                "share": 0.150058,
+                "deviation_pp": 0.006
+              }
+            }
+          },
+          "boxes:Welding Line": {
+            "total": 553,
+            "largest_group_contribution": 22,
+            "granularity_pp": 3.978,
+            "splits": {
+              "train": {
+                "count": 387,
+                "share": 0.699819,
+                "deviation_pp": -0.018
+              },
+              "valid": {
+                "count": 83,
+                "share": 0.15009,
+                "deviation_pp": 0.009
+              },
+              "test": {
+                "count": 83,
+                "share": 0.15009,
+                "deviation_pp": 0.009
+              }
+            }
+          },
+          "boxes:workpiece": {
+            "total": 559,
+            "largest_group_contribution": 22,
+            "granularity_pp": 3.936,
+            "splits": {
+              "train": {
+                "count": 391,
+                "share": 0.699463,
+                "deviation_pp": -0.054
+              },
+              "valid": {
+                "count": 84,
+                "share": 0.150268,
+                "deviation_pp": 0.027
+              },
+              "test": {
+                "count": 84,
+                "share": 0.150268,
+                "deviation_pp": 0.027
+              }
+            }
+          },
+          "images_with:Defect": {
+            "total": 500,
+            "largest_group_contribution": 21,
+            "granularity_pp": 4.2,
+            "splits": {
+              "train": {
+                "count": 350,
+                "share": 0.7,
+                "deviation_pp": 0.0
+              },
+              "valid": {
+                "count": 75,
+                "share": 0.15,
+                "deviation_pp": 0.0
+              },
+              "test": {
+                "count": 75,
+                "share": 0.15,
+                "deviation_pp": 0.0
+              }
+            }
+          },
+          "images_with:Welding Line": {
+            "total": 551,
+            "largest_group_contribution": 22,
+            "granularity_pp": 3.993,
+            "splits": {
+              "train": {
+                "count": 386,
+                "share": 0.700544,
+                "deviation_pp": 0.054
+              },
+              "valid": {
+                "count": 83,
+                "share": 0.150635,
+                "deviation_pp": 0.064
+              },
+              "test": {
+                "count": 82,
+                "share": 0.14882,
+                "deviation_pp": -0.118
+              }
+            }
+          },
+          "images_with:workpiece": {
+            "total": 558,
+            "largest_group_contribution": 22,
+            "granularity_pp": 3.943,
+            "splits": {
+              "train": {
+                "count": 390,
+                "share": 0.698925,
+                "deviation_pp": -0.108
+              },
+              "valid": {
+                "count": 84,
+                "share": 0.150538,
+                "deviation_pp": 0.054
+              },
+              "test": {
+                "count": 84,
+                "share": 0.150538,
+                "deviation_pp": 0.054
+              }
+            }
+          }
+        },
+        "max_abs_deviation_pp": 0.118
+      }
+    },
+    "lohi_weld": {
+      "dataset": "lohi_weld",
+      "names": [
+        "pore",
+        "deposit",
+        "discontinuity",
+        "stain"
+      ],
+      "before": {
+        "images": 3022,
+        "boxes": 22412,
+        "per_class": {
+          "pore": 3950,
+          "deposit": 2935,
+          "discontinuity": 7220,
+          "stain": 8307
+        },
+        "splits": {
+          "train": 3022
+        }
+      },
+      "after": {
+        "images": 3021,
+        "boxes": 22410,
+        "per_class": {
+          "pore": 3950,
+          "deposit": 2935,
+          "discontinuity": 7218,
+          "stain": 8307
+        },
+        "splits": {
+          "train": 2115,
+          "test": 453,
+          "valid": 453
+        },
+        "per_class_by_split": {
+          "test": {
+            "pore": 589,
+            "deposit": 440,
+            "discontinuity": 1082,
+            "stain": 1246
+          },
+          "train": {
+            "pore": 2770,
+            "deposit": 2055,
+            "discontinuity": 5052,
+            "stain": 5815
+          },
+          "valid": {
+            "pore": 591,
+            "deposit": 440,
+            "discontinuity": 1084,
+            "stain": 1246
+          }
+        },
+        "per_class_images_by_split": {
+          "test": {
+            "pore": 113,
+            "deposit": 230,
+            "discontinuity": 429,
+            "stain": 317
+          },
+          "train": {
+            "pore": 520,
+            "deposit": 1077,
+            "discontinuity": 2002,
+            "stain": 1482
+          },
+          "valid": {
+            "pore": 111,
+            "deposit": 231,
+            "discontinuity": 429,
+            "stain": 318
+          }
+        },
+        "scene_groups_by_split": {
+          "train": 1417,
+          "test": 303,
+          "valid": 302
+        }
+      },
+      "scene_groups": 2022,
+      "largest_scene_group": 2,
+      "split_blocks": 1977,
+      "largest_split_block": 64,
+      "copy_groups": 3021,
+      "copy_complete_linkage_groups": 3021,
+      "copy_components_split_by_complete_linkage": 0,
+      "copy_input_component_min_pairwise_ncc": 1.0,
+      "content_scene_groups": 3021,
+      "direct_scene_candidate_pairs": 59,
+      "identity_compatible_scene_candidates": 0,
+      "confirmed_content_scene_pairs": 0,
+      "scene_components_split_by_complete_linkage": 0,
+      "scene_input_component_min_pairwise_ncc": 1.0,
+      "frame_run_links": 0,
+      "frame_run_scene_links": 0,
+      "frame_run_scope": "unused",
+      "specimen_links": 999,
+      "split_balance": {
+        "optimizer_status": 1,
+        "optimizer_message": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+        "objective": 0.027580536694844844,
+        "features": {
+          "images": {
+            "total": 3021,
+            "largest_group_contribution": 64,
+            "granularity_pp": 2.119,
+            "splits": {
+              "train": {
+                "count": 2115,
+                "share": 0.700099,
+                "deviation_pp": 0.01
+              },
+              "valid": {
+                "count": 453,
+                "share": 0.14995,
+                "deviation_pp": -0.005
+              },
+              "test": {
+                "count": 453,
+                "share": 0.14995,
+                "deviation_pp": -0.005
+              }
+            }
+          },
+          "groups": {
+            "total": 2022,
+            "largest_group_contribution": 32,
+            "granularity_pp": 1.583,
+            "splits": {
+              "train": {
+                "count": 1417,
+                "share": 0.700791,
+                "deviation_pp": 0.079
+              },
+              "valid": {
+                "count": 302,
+                "share": 0.149357,
+                "deviation_pp": -0.064
+              },
+              "test": {
+                "count": 303,
+                "share": 0.149852,
+                "deviation_pp": -0.015
+              }
+            }
+          },
+          "boxes:pore": {
+            "total": 3950,
+            "largest_group_contribution": 45,
+            "granularity_pp": 1.139,
+            "splits": {
+              "train": {
+                "count": 2770,
+                "share": 0.701266,
+                "deviation_pp": 0.127
+              },
+              "valid": {
+                "count": 591,
+                "share": 0.14962,
+                "deviation_pp": -0.038
+              },
+              "test": {
+                "count": 589,
+                "share": 0.149114,
+                "deviation_pp": -0.089
+              }
+            }
+          },
+          "boxes:deposit": {
+            "total": 2935,
+            "largest_group_contribution": 38,
+            "granularity_pp": 1.295,
+            "splits": {
+              "train": {
+                "count": 2055,
+                "share": 0.70017,
+                "deviation_pp": 0.017
+              },
+              "valid": {
+                "count": 440,
+                "share": 0.149915,
+                "deviation_pp": -0.009
+              },
+              "test": {
+                "count": 440,
+                "share": 0.149915,
+                "deviation_pp": -0.009
+              }
+            }
+          },
+          "boxes:discontinuity": {
+            "total": 7218,
+            "largest_group_contribution": 120,
+            "granularity_pp": 1.663,
+            "splits": {
+              "train": {
+                "count": 5052,
+                "share": 0.699917,
+                "deviation_pp": -0.008
+              },
+              "valid": {
+                "count": 1084,
+                "share": 0.15018,
+                "deviation_pp": 0.018
+              },
+              "test": {
+                "count": 1082,
+                "share": 0.149903,
+                "deviation_pp": -0.01
+              }
+            }
+          },
+          "boxes:stain": {
+            "total": 8307,
+            "largest_group_contribution": 121,
+            "granularity_pp": 1.457,
+            "splits": {
+              "train": {
+                "count": 5815,
+                "share": 0.700012,
+                "deviation_pp": 0.001
+              },
+              "valid": {
+                "count": 1246,
+                "share": 0.149994,
+                "deviation_pp": -0.001
+              },
+              "test": {
+                "count": 1246,
+                "share": 0.149994,
+                "deviation_pp": -0.001
+              }
+            }
+          },
+          "images_with:pore": {
+            "total": 744,
+            "largest_group_contribution": 4,
+            "granularity_pp": 0.538,
+            "splits": {
+              "train": {
+                "count": 520,
+                "share": 0.698925,
+                "deviation_pp": -0.108
+              },
+              "valid": {
+                "count": 111,
+                "share": 0.149194,
+                "deviation_pp": -0.081
+              },
+              "test": {
+                "count": 113,
+                "share": 0.151882,
+                "deviation_pp": 0.188
+              }
+            }
+          },
+          "images_with:deposit": {
+            "total": 1538,
+            "largest_group_contribution": 21,
+            "granularity_pp": 1.365,
+            "splits": {
+              "train": {
+                "count": 1077,
+                "share": 0.70026,
+                "deviation_pp": 0.026
+              },
+              "valid": {
+                "count": 231,
+                "share": 0.150195,
+                "deviation_pp": 0.02
+              },
+              "test": {
+                "count": 230,
+                "share": 0.149545,
+                "deviation_pp": -0.046
+              }
+            }
+          },
+          "images_with:discontinuity": {
+            "total": 2860,
+            "largest_group_contribution": 55,
+            "granularity_pp": 1.923,
+            "splits": {
+              "train": {
+                "count": 2002,
+                "share": 0.7,
+                "deviation_pp": 0.0
+              },
+              "valid": {
+                "count": 429,
+                "share": 0.15,
+                "deviation_pp": 0.0
+              },
+              "test": {
+                "count": 429,
+                "share": 0.15,
+                "deviation_pp": 0.0
+              }
+            }
+          },
+          "images_with:stain": {
+            "total": 2117,
+            "largest_group_contribution": 38,
+            "granularity_pp": 1.795,
+            "splits": {
+              "train": {
+                "count": 1482,
+                "share": 0.700047,
+                "deviation_pp": 0.005
+              },
+              "valid": {
+                "count": 318,
+                "share": 0.150213,
+                "deviation_pp": 0.021
+              },
+              "test": {
+                "count": 317,
+                "share": 0.14974,
+                "deviation_pp": -0.026
+              }
+            }
+          },
+          "background_images": {
+            "total": 77,
+            "largest_group_contribution": 6,
+            "granularity_pp": 7.792,
+            "splits": {
+              "train": {
+                "count": 54,
+                "share": 0.701299,
+                "deviation_pp": 0.13
+              },
+              "valid": {
+                "count": 12,
+                "share": 0.155844,
+                "deviation_pp": 0.584
+              },
+              "test": {
+                "count": 11,
+                "share": 0.142857,
+                "deviation_pp": -0.714
+              }
+            }
+          }
+        },
+        "max_abs_deviation_pp": 0.714
+      }
+    }
+  },
+  "cross_dataset_copies_after": {}
+}

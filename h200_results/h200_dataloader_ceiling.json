@@ -1,0 +1,86 @@
+{
+  "note": "CPU only. No model and no CUDA. This is the rate above which a faster GPU cannot help.",
+  "root": "/home/USERNAME/weld_generalization",
+  "results": [
+    {
+      "dataset": "weld_surface_v2",
+      "workers": 2,
+      "batch": 16,
+      "imgsz": 640,
+      "batches": 50,
+      "images": 800,
+      "seconds": 3.29,
+      "images_per_s": 242.9
+    },
+    {
+      "dataset": "weld_surface_v2",
+      "workers": 4,
+      "batch": 16,
+      "imgsz": 640,
+      "batches": 50,
+      "images": 800,
+      "seconds": 1.8,
+      "images_per_s": 444.4
+    },
+    {
+      "dataset": "weld_surface_v2",
+      "workers": 8,
+      "batch": 16,
+      "imgsz": 640,
+      "batches": 50,
+      "images": 800,
+      "seconds": 1.33,
+      "images_per_s": 601.0
+    },
+    {
+      "dataset": "weld_surface_v2",
+      "workers": 16,
+      "batch": 16,
+      "imgsz": 640,
+      "batches": 50,
+      "images": 800,
+      "seconds": 0.95,
+      "images_per_s": 837.8
+    },
+    {
+      "dataset": "lohi_weld",
+      "workers": 2,
+      "batch": 16,
+      "imgsz": 640,
+      "batches": 50,
+      "images": 800,
+      "seconds": 2.8,
+      "images_per_s": 285.2
+    },
+    {
+      "dataset": "lohi_weld",
+      "workers": 4,
+      "batch": 16,
+      "imgsz": 640,
+      "batches": 50,
+      "images": 800,
+      "seconds": 1.51,
+      "images_per_s": 528.1
+    },
+    {
+      "dataset": "lohi_weld",
+      "workers": 8,
+      "batch": 16,
+      "imgsz": 640,
+      "batches": 50,
+      "images": 800,
+      "seconds": 1.0,
+      "images_per_s": 799.0
+    },
+    {
+      "dataset": "lohi_weld",
+      "workers": 16,
+      "batch": 16,
+      "imgsz": 640,
+      "batches": 50,
+      "images": 800,
+      "seconds": 0.66,
+      "images_per_s": 1217.6
+    }
+  ]
+}

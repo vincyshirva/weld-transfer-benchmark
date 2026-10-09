@@ -1,0 +1,15 @@
+# Arm B retrain results watcher. The project log 10b.
+#
+# THE `cd` IS LOAD BEARING. Cron starts in $HOME, so a relative ./grid/...
+# would resolve against the wrong root. That is the same relative-path failure
+# as the project log 4c, 5h and 10, and it has now been made four times in this
+# project, twice while writing this very line.
+#
+# Install with:  crontab grid/arms/armb_watcher.cron
+# Remove with:   crontab -r
+#
+# A failed cycle deliberately leaves grid_results_arms/.last_pull untouched, so
+# the file's age is the age of the last REAL pull rather than the last attempt.
+# If .last_pull is older than two hours while the chain is running, the watcher
+# is dead and must be restarted.
+*/30 * * * * cd . && ./grid/fetch_results.sh --arms >> grid_results_arms_watch.log 2>&1

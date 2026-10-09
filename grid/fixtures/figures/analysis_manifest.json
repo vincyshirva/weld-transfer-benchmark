@@ -1,0 +1,68 @@
+{
+  "evaluation_records": 69,
+  "rows": 222,
+  "expected_cells": 69,
+  "missing_cells": [],
+  "complete": true,
+  "configurations_present": [
+    "yolo11n",
+    "yolo11s",
+    "rtdetr_l",
+    "faster_rcnn"
+  ],
+  "kshot_points": 240,
+  "statistical_test": {
+    "image_ap": {
+      "applicable": true,
+      "primary_p": 1.0839939284449641e-07,
+      "significant": true
+    },
+    "box_map50": {
+      "applicable": true,
+      "primary_p": 0.0003551736472519191,
+      "significant": true
+    }
+  },
+  "figures": [
+    "generalization_gap.png",
+    "generalization_gap_raw_ap.png",
+    "recovery_kshot.png",
+    "transfer_box_faster_rcnn.png",
+    "transfer_box_rtdetr_l.png",
+    "transfer_box_yolo11n.png",
+    "transfer_box_yolo11s.png",
+    "transfer_image_faster_rcnn.png",
+    "transfer_image_mean.png",
+    "transfer_image_rtdetr_l.png",
+    "transfer_image_yolo11n.png",
+    "transfer_image_yolo11s.png",
+    "transfer_lift_faster_rcnn.png",
+    "transfer_lift_mean.png",
+    "transfer_lift_rtdetr_l.png",
+    "transfer_lift_yolo11n.png",
+    "transfer_lift_yolo11s.png"
+  ],
+  "tables": [
+    "cells.csv",
+    "downloaded_vs_audited.csv",
+    "downloaded_vs_audited.md",
+    "generalization_gaps.csv",
+    "per_class_ap.csv",
+    "per_class_ap.md",
+    "recovery_kshot.csv",
+    "reliability_bins.csv",
+    "target_base_rates.csv",
+    "transfer_box_faster_rcnn.md",
+    "transfer_box_rtdetr_l.md",
+    "transfer_box_yolo11n.md",
+    "transfer_box_yolo11s.md",
+    "transfer_image_faster_rcnn.md",
+    "transfer_image_mean.md",
+    "transfer_image_rtdetr_l.md",
+    "transfer_image_yolo11n.md",
+    "transfer_image_yolo11s.md",
+    "transfer_ratio_intervals.csv",
+    "transfer_ratio_intervals.md",
+    "transfer_ratios.csv"
+  ]
+}

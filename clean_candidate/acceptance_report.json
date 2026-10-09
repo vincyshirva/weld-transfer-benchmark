@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "candidate": "clean_candidate",
+  "status": "PASS",
+  "failures": [],
+  "checks": {
+    "python_syntax": "PASS",
+    "authoritative_audit": "PASS",
+    "rebuild_methods": {
+      "copy_selection": "maximum_independent_set_at_threshold",
+      "copy_chain_diagnostic": "complete_linkage",
+      "scene_linkage": "complete",
+      "scene_confirmation": "ncc_at_128_after_ncc_at_32",
+      "split_method": "mixed_integer_multilabel_group_balancing",
+      "t_copy": 0.96,
+      "t_scene": 0.9,
+      "scene_candidate_thumb": 32,
+      "scene_confirmation_thumb": 128
+    },
+    "multilabel_balance": {
+      "status": "PASS",
+      "errors": []
+    },
+    "lohi_independence": {
+      "images": 3021,
+      "scene_groups": 2022,
+      "expected_scene_groups": 2022,
+      "rule": "one scene per production cycle, not per image",
+      "status": "PASS"
+    },
+    "dataset_specific_parsing": {
+      "status": "PASS",
+      "errors": []
+    },
+    "manifest_lineage": {
+      "rows": 25215,
+      "status": "PASS",
+      "errors": []
+    },
+    "portable_yaml": {
+      "status": "PASS",
+      "errors": [],
+      "skipped_arm_datasets": [
+        "lohi_high",
+        "lohi_low",
+        "pool_no_kaggle_v2",
+        "pool_no_lohi_weld",
+        "pool_no_weld_surface_v2"
+      ]
+    },
+    "split_files": {
+      "count": 15,
+      "sha256_file": "split_hashes.json"
+    },
+    "source_tree_fingerprint": {
+      "files": 50443,
+      "bytes": 1680135226,
+      "stat_sha256": "74db98a94386a93f19b1748083e77798006a5648264df51c277fa1ba9b365098"
+    }
+  }
+}

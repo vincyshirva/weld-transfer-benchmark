@@ -1,0 +1,1097 @@
+{
+ "generated_by": "grid/image_level.py --kaggle-groups",
+ "groups": {
+  "bad_weld_without_defect": 11,
+  "defect": 72,
+  "good_weld_only": 58
+ },
+ "images": {
+  "Good-Welding-images_20_jpeg.rf.05786e2171fa8723312372d80c4d6762.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "Good-Welding-images",
+   "group": "good_weld_only"
+  },
+  "Good-Welding-images_28_png_jpg.rf.731d3f7abe126466bf829652bbbb5bf4.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "Good-Welding-images",
+   "group": "good_weld_only"
+  },
+  "Good-Welding-images_5_jpeg.rf.39eb8efe2bf42f716d80da4db47da5e8.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "Good-Welding-images",
+   "group": "good_weld_only"
+  },
+  "SampleV1_2_mp4-0_jpg.rf.074ad46e9d0a6874f2a8179d6fd07345.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-10_jpg.rf.332ff2b7d87f787eb2add9661eae8048.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-11_jpg.rf.0f6a7c83971df8145cbfef2190d9e140.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "good_weld_only"
+  },
+  "SampleV1_2_mp4-12_jpg.rf.aa96da1d076e08ad75cace39788fbbe2.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-13_jpg.rf.1ae6ddd315e5bcf58953c790c94581ac.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-14_jpg.rf.4dba7e8bd84314a155dd85df33b5f4d9.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-15_jpg.rf.33d43e162f6f7f7ae4d833f4cb17e417.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-16_jpg.rf.768e95c33b140628b54a71252c61cb18.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-17_jpg.rf.a16416c9c0bec8ef151d26fc509db43d.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "good_weld_only"
+  },
+  "SampleV1_2_mp4-18_jpg.rf.5a48e852d1ab3554ba12f25662075d84.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "good_weld_only"
+  },
+  "SampleV1_2_mp4-19_jpg.rf.5dedb0f0f76d998a79dcaab850f47351.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "good_weld_only"
+  },
+  "SampleV1_2_mp4-1_jpg.rf.3362515a6da7859a53aa1cc4de0d07ab.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-20_jpg.rf.2a11da33621a8264c6331536a673ecd6.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "good_weld_only"
+  },
+  "SampleV1_2_mp4-21_jpg.rf.bc8041c873a14d1b97dd98769eaf532d.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "good_weld_only"
+  },
+  "SampleV1_2_mp4-22_jpg.rf.435457ba158062a382903e5c929b6226.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-23_jpg.rf.11f8eef8f9d23d57fa4bd04e6e00e456.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-24_jpg.rf.33fc09e150c3d67be79cd9079e488ab4.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-25_jpg.rf.46c07a369d7d13e3797faf07e9f6054c.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-26_jpg.rf.1a4ec9e9611b23e89819873e6b208469.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-27_jpg.rf.65ce6fb08af5a11743d0e0e67f8e6633.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-28_jpg.rf.163448875a44f03e9a85e1c54ee6c721.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-29_jpg.rf.6574a8a424ba99743e0ac3cbffe0da31.jpg": {
+   "classes_present": [
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-2_jpg.rf.d050f469c873b976c77829aa93cde991.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "good_weld_only"
+  },
+  "SampleV1_2_mp4-30_jpg.rf.1034f83ae89a1a841906922308a1ba8f.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-31_jpg.rf.2097af0a5f92658924aa7025106714a9.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-32_jpg.rf.5a5e032e9aebd487d55cf14702279037.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-33_jpg.rf.072bb4b66e215a6da6c852626d13b12c.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-34_jpg.rf.532c3fe64256fb3deafe62c9e899c7c1.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-35_jpg.rf.112706bdf7b84566f9b8fa03084da685.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-36_jpg.rf.243306d36dee214682f24787ba17c637.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "good_weld_only"
+  },
+  "SampleV1_2_mp4-37_jpg.rf.bc75b81627a36082661df8f796495844.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "good_weld_only"
+  },
+  "SampleV1_2_mp4-38_jpg.rf.1871c033a38e90d60fe86d8bf7165bb2.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-39_jpg.rf.74fbc7382e2e3f41e507d571f290d3d9.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-3_jpg.rf.44026c70834c8e6b603002aa4021f8cd.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-40_jpg.rf.4b10c40b025ff0edbf35661be3a3a20f.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-41_jpg.rf.20229b120f1103fdb06ecbde078fe63f.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-42_jpg.rf.9210f4e128753895cb12a47cde84068d.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "good_weld_only"
+  },
+  "SampleV1_2_mp4-4_jpg.rf.3307b25b8e668cb6387eba6d62f869b4.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-5_jpg.rf.16bb7a236edddcaeb6d32772e9383599.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-6_jpg.rf.559ec654aa148c90758427e64c8f36cf.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "SampleV1_2_mp4-7_jpg.rf.55278c8878ae23f30a30e0738e663f80.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "good_weld_only"
+  },
+  "SampleV1_2_mp4-8_jpg.rf.74af6bfe9af6f0dc806a4c75123cf8ad.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "good_weld_only"
+  },
+  "SampleV1_2_mp4-9_jpg.rf.d07185e3ce6f2dbd80b7eb57736fb534.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "SampleV1_2_mp",
+   "group": "defect"
+  },
+  "Screenshot-2022-12-05-223350_jpeg.rf.649c2fdc0d306a34c2e5114e7a470b33.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "Screenshot",
+   "group": "defect"
+  },
+  "Screenshot-2022-12-05-223424_jpeg_jpg.rf.0b6814540386bc9541f0fc0368258ebd.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "Screenshot",
+   "group": "defect"
+  },
+  "Screenshot-2022-12-05-223445_jpeg_jpg.rf.7e5488a527b56de8258df2cb6eb4b147.jpg": {
+   "classes_present": [
+    "Defect"
+   ],
+   "family": "Screenshot",
+   "group": "defect"
+  },
+  "Screenshot-2022-12-05-223526_jpeg_jpg.rf.29f6298e62a6be5d24e17c1a6a11411d.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "Screenshot",
+   "group": "good_weld_only"
+  },
+  "Screenshot-2022-12-05-223914_jpeg_jpg.rf.103b18cce16099e2dbf8dcd5762a7ee4.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "Screenshot",
+   "group": "good_weld_only"
+  },
+  "Screenshot-2022-12-05-224021_jpeg.rf.65d78151afdc8a7d3316fe7b255d1f0e.jpg": {
+   "classes_present": [
+    "Bad Weld"
+   ],
+   "family": "Screenshot",
+   "group": "bad_weld_without_defect"
+  },
+  "Screenshot-2022-12-05-224335_jpeg.rf.c35543fed8b5ced1b9fa9c0820cc3d8e.jpg": {
+   "classes_present": [
+    "Bad Weld"
+   ],
+   "family": "Screenshot",
+   "group": "bad_weld_without_defect"
+  },
+  "Screenshot-2022-12-05-225856_jpeg.rf.453c4d4c975c7f632ed0cf7abf8b82e5.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "Screenshot",
+   "group": "defect"
+  },
+  "Screenshot-2022-12-05-230149_jpeg_jpg.rf.20da164cede00ca344ab331935f99492.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "Screenshot",
+   "group": "good_weld_only"
+  },
+  "Screenshot-2022-12-05-230206_jpeg.rf.eb59ba5f04140f3ddfadf825c5882698.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "Screenshot",
+   "group": "defect"
+  },
+  "Screenshot-2022-12-05-230317_jpeg.rf.53af4c9750612fc731be2be01a802f63.jpg": {
+   "classes_present": [
+    "Bad Weld"
+   ],
+   "family": "Screenshot",
+   "group": "bad_weld_without_defect"
+  },
+  "Screenshot-2022-12-05-231028_jpeg.rf.3639fbd75bd02774b67d12b1e93ef600.jpg": {
+   "classes_present": [
+    "Bad Weld"
+   ],
+   "family": "Screenshot",
+   "group": "bad_weld_without_defect"
+  },
+  "Screenshot-2022-12-05-231119_jpeg.rf.7f59439a81424896fa26e68c8ff5f12e.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "Screenshot",
+   "group": "defect"
+  },
+  "Screenshot-2022-12-05-231423_jpeg.rf.2fbdccc559f831bffc4f7c5d34b99b38.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "Screenshot",
+   "group": "good_weld_only"
+  },
+  "Slag-inclusion-welding-images_10_jpeg_jpg.rf.fabe6926703c8e26c2bd865286c3beb3.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Good Weld"
+   ],
+   "family": "Slag-inclusion-welding-images",
+   "group": "bad_weld_without_defect"
+  },
+  "Slag-inclusion-welding-images_13_jpeg.rf.43818993c33b4b08fbeb718e5292612a.jpg": {
+   "classes_present": [
+    "Bad Weld"
+   ],
+   "family": "Slag-inclusion-welding-images",
+   "group": "bad_weld_without_defect"
+  },
+  "Slag-inclusion-welding-images_7_jpeg.rf.65f9e1059b1d7a7b8c67399668e6b3d7.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "Slag-inclusion-welding-images",
+   "group": "defect"
+  },
+  "Spatters-welding-images_10_jpeg.rf.226d72c81b5e151612c9795dabdefb1f.jpg": {
+   "classes_present": [
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "Spatters-welding-images",
+   "group": "defect"
+  },
+  "Spatters-welding-images_12_jpeg.rf.b8e4c4cf1591ee8a171d4cbad6c6cc62.jpg": {
+   "classes_present": [
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "Spatters-welding-images",
+   "group": "defect"
+  },
+  "Spatters-welding-images_20_jpeg_jpg.rf.0b96970740192ac288746d8fab587754.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Good Weld"
+   ],
+   "family": "Spatters-welding-images",
+   "group": "bad_weld_without_defect"
+  },
+  "Spatters-welding-images_8_jpeg.rf.0692bca4088d1c29eb62688d4ed0e334.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "Spatters-welding-images",
+   "group": "defect"
+  },
+  "ac52ea0d-7ff970bf-c7_jpg.rf.0329dd8f90073108588b2c05f7eb8efe.jpg": {
+   "classes_present": [
+    "Defect"
+   ],
+   "family": "ac52ea0d-7ff970bf-c",
+   "group": "defect"
+  },
+  "bad_weld_vid176_jpeg.rf.8536bdfde72541ced88ce0ab6b193513.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "bad_weld_vid",
+   "group": "defect"
+  },
+  "bad_weld_vid177_jpeg.rf.5bf77a9a97b327dc04a8575ba9375aea.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "bad_weld_vid",
+   "group": "defect"
+  },
+  "bad_weld_vid178_jpeg.rf.261106e36bac48251dcb8aebf622e3b3.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "bad_weld_vid",
+   "group": "defect"
+  },
+  "bad_weld_vid179_jpeg.rf.1978f09db22800499cbf15b91dc7e97e.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "bad_weld_vid",
+   "group": "defect"
+  },
+  "bad_weld_vid181_jpeg.rf.e76607a4dd9ac855668e049bdc68515d.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "bad_weld_vid",
+   "group": "defect"
+  },
+  "bad_weld_vid182_jpeg.rf.06edccfb65edce86010e65fdb5b49aa5.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "bad_weld_vid",
+   "group": "defect"
+  },
+  "bad_weld_vid183_jpeg_jpg.rf.371bd805de7e46a47d87b2113b14e75f.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "bad_weld_vid",
+   "group": "defect"
+  },
+  "bad_weld_vid259_jpeg.rf.56cf1ebd1473a681c58e09402523eeb2.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "bad_weld_vid",
+   "group": "defect"
+  },
+  "bad_weld_vid260_jpeg.rf.4780b7d712ce3cefbc37e339f91bc46c.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "bad_weld_vid",
+   "group": "defect"
+  },
+  "bad_weld_vid261_jpeg.rf.b9951a6313f9d74590febebc543aee67.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "bad_weld_vid",
+   "group": "defect"
+  },
+  "bad_weld_vid262_jpeg.rf.0d385a2604c53bbbb7fffa4630ef9d26.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "bad_weld_vid",
+   "group": "defect"
+  },
+  "bad_weld_vid560_jpeg_jpg.rf.be4be408da41d602b8c9a7801a7be733.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "bad_weld_vid",
+   "group": "defect"
+  },
+  "bad_weld_vid686_jpeg_jpg.rf.759825605e31c130c2da8248b29a31ef.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "bad_weld_vid",
+   "group": "defect"
+  },
+  "bad_weld_vid687_jpeg.rf.5c6298ed99ec3283ed0fcd4b09781eb3.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "bad_weld_vid",
+   "group": "defect"
+  },
+  "bad_weld_vid688_jpeg.rf.5011fcf9b99f5670549e04ad7b882cf6.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "bad_weld_vid",
+   "group": "defect"
+  },
+  "bad_weld_vid689_jpeg.rf.f7dd125d58e36523c6c66360152f4b6a.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "bad_weld_vid",
+   "group": "defect"
+  },
+  "bad_weld_vid690_jpeg.rf.7deeeeb79064c7ad5761a04e2dbb40ae.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "bad_weld_vid",
+   "group": "defect"
+  },
+  "bad_weld_vid691_jpeg.rf.bd03731534b9f7f5ae4eb395426f44c7.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "bad_weld_vid",
+   "group": "defect"
+  },
+  "bad_weld_vid692_jpeg.rf.0858a30a68d80590c69ea916b8af22e5.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "bad_weld_vid",
+   "group": "defect"
+  },
+  "bad_weld_vid693_jpeg.rf.81e7d047e5996e73da655768c7ac22ce.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "bad_weld_vid",
+   "group": "defect"
+  },
+  "bad_weld_vid694_jpeg.rf.0ba5eac9e37be7bce272f9f2fe4a1119.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "bad_weld_vid",
+   "group": "defect"
+  },
+  "bad_weld_vid695_jpeg.rf.d05162e762d08fa0c849416194f0de2b.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Good Weld"
+   ],
+   "family": "bad_weld_vid",
+   "group": "bad_weld_without_defect"
+  },
+  "bad_weld_vid721_jpeg.rf.64b6faa62fb7421d85de1a88ff503466.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "bad_weld_vid",
+   "group": "defect"
+  },
+  "bad_weld_vid722_jpeg.rf.560bb5c311b646e66efd5214fad7cc56.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "bad_weld_vid",
+   "group": "defect"
+  },
+  "bad_weld_vid723_jpeg.rf.ecb73ed4cae5241972d088a16840fe53.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Good Weld"
+   ],
+   "family": "bad_weld_vid",
+   "group": "bad_weld_without_defect"
+  },
+  "badly-welded-rusty-metal-bad-weld-corner-132405924_jpeg.rf.0045eb62f8f99a31e200967f62154846.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "badly-welded-rusty-metal-bad-weld-corner",
+   "group": "defect"
+  },
+  "carbon-steel-good-welds_28_png.rf.39db823c37d7c2224080edae7cc37cd6.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "carbon-steel-good-welds",
+   "group": "good_weld_only"
+  },
+  "carbon-steel-good-welds_41_jpeg.rf.8c8458118172941cf625b2c03be95b71.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "carbon-steel-good-welds",
+   "group": "good_weld_only"
+  },
+  "carbon-steel-good-welds_48_jpeg.rf.b963e5cf9d95d70385f0d77c5757cbfa.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "carbon-steel-good-welds",
+   "group": "good_weld_only"
+  },
+  "good-stick-welds_12_jpeg.rf.52f2453f268c1e014164290f8fa131f5.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good-stick-welds",
+   "group": "good_weld_only"
+  },
+  "good-stick-welds_13_jpeg.rf.4c0645f4285f9378e9b2824078040b25.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Good Weld"
+   ],
+   "family": "good-stick-welds",
+   "group": "bad_weld_without_defect"
+  },
+  "good-stick-welds_19_png.rf.2d3c403b66b7544b943c7549efe5f1bf.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Good Weld"
+   ],
+   "family": "good-stick-welds",
+   "group": "bad_weld_without_defect"
+  },
+  "good-stick-welds_20_jpeg.rf.2ba537febb08594683c8def021a9c0c1.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good-stick-welds",
+   "group": "good_weld_only"
+  },
+  "good-stick-welds_34_jpeg.rf.abd8d040bffa1d80c79d69ee27240cc5.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good-stick-welds",
+   "group": "good_weld_only"
+  },
+  "good-stick-welds_44_jpeg.rf.792eaf29461eede254b4ec7a2e9b1456.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good-stick-welds",
+   "group": "good_weld_only"
+  },
+  "good-stick-welds_45_jpeg.rf.278d207df4a9ba8e595b864f0d0c3e1d.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "good-stick-welds",
+   "group": "defect"
+  },
+  "good-stick-welds_6_jpeg.rf.3dd90093495f70cc8c6a6eced5a3d98a.jpg": {
+   "classes_present": [
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "good-stick-welds",
+   "group": "defect"
+  },
+  "good-stick-welds_8_jpeg.rf.bb7e181e37954cd64de49d862105b8ca.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good-stick-welds",
+   "group": "good_weld_only"
+  },
+  "good-tig-welds_10_jpeg_jpg.rf.12a3d0aeff281761b3906e191d4348f8.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good-tig-welds",
+   "group": "good_weld_only"
+  },
+  "good-tig-welds_12_jpeg.rf.8845739da157a311ee255b086b634f48.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good-tig-welds",
+   "group": "good_weld_only"
+  },
+  "good-tig-welds_13_jpeg.rf.5d69daa75729c9a42c96bd5da4e19605.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good-tig-welds",
+   "group": "good_weld_only"
+  },
+  "good-tig-welds_14_jpeg.rf.39e1bbeb0ef9157d9a8f268f45fe30cd.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good-tig-welds",
+   "group": "good_weld_only"
+  },
+  "good-tig-welds_15_png.rf.3be4f3f5c94131b4d9c86f3c067f95b0.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good-tig-welds",
+   "group": "good_weld_only"
+  },
+  "good-tig-welds_18_jpeg.rf.776a0e5922d8f4f2bde7e9196f2f4704.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good-tig-welds",
+   "group": "good_weld_only"
+  },
+  "good-tig-welds_32_png.rf.12cc928d593d5adf57035f7e53801d0d.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good-tig-welds",
+   "group": "good_weld_only"
+  },
+  "good-tig-welds_34_jpeg.rf.abf957630365786d0d4b244828d6ef61.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good-tig-welds",
+   "group": "good_weld_only"
+  },
+  "good-tig-welds_36_jpeg.rf.0bf32218964849bc1f995020fe453f8b.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good-tig-welds",
+   "group": "good_weld_only"
+  },
+  "good-tig-welds_46_jpeg.rf.9518c5cb28e92294488332ea0d90b63f.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good-tig-welds",
+   "group": "good_weld_only"
+  },
+  "good-tig-welds_49_jpeg_jpg.rf.41905a9d3d0addabfb1db2b770e77528.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good-tig-welds",
+   "group": "good_weld_only"
+  },
+  "good-tig-welds_7_jpeg.rf.36712f7ce52a64331a573ec3b8844596.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good-tig-welds",
+   "group": "good_weld_only"
+  },
+  "good_weld_vid1075_jpeg.rf.25f26bfe39eb1f3f543a371b2e1466a5.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good_weld_vid",
+   "group": "good_weld_only"
+  },
+  "good_weld_vid1217_jpeg.rf.6b8cdd5ee1dafdc8e91b57d1774a73a3.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good_weld_vid",
+   "group": "good_weld_only"
+  },
+  "good_weld_vid1567_jpeg.rf.303486c0fefbb7ac887c12cab1e7880e.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good_weld_vid",
+   "group": "good_weld_only"
+  },
+  "good_weld_vid1569_jpeg.rf.6eeff024d69cf00223ebde19982f40fe.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good_weld_vid",
+   "group": "good_weld_only"
+  },
+  "good_weld_vid1680_jpeg.rf.e87dd04a5d63b3f51a22c0a7c0273485.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good_weld_vid",
+   "group": "good_weld_only"
+  },
+  "good_weld_vid1682_jpeg.rf.2225f51b10cd5e7bd846d5b7cb982992.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good_weld_vid",
+   "group": "good_weld_only"
+  },
+  "good_weld_vid1684_jpeg.rf.5a7dce32f42570add99076f5721f129d.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good_weld_vid",
+   "group": "good_weld_only"
+  },
+  "good_weld_vid1705_jpeg.rf.c78baa6cdd5230b36c82d27405f09043.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good_weld_vid",
+   "group": "good_weld_only"
+  },
+  "good_weld_vid1738_jpeg.rf.276fcdc411baa162469c26c8a0c60a2f.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good_weld_vid",
+   "group": "good_weld_only"
+  },
+  "good_weld_vid1933_jpeg.rf.19902af76debc606df4fc2f2f8ef5396.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good_weld_vid",
+   "group": "good_weld_only"
+  },
+  "good_weld_vid1945_jpeg.rf.2d2bb73c40873662966f608c4a95e30f.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good_weld_vid",
+   "group": "good_weld_only"
+  },
+  "good_weld_vid1947_jpeg.rf.0307a51942774b23d150ae96ce2fbac1.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good_weld_vid",
+   "group": "good_weld_only"
+  },
+  "good_weld_vid1996_jpeg.rf.019435ce717d877fe35e9ffb35458561.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good_weld_vid",
+   "group": "good_weld_only"
+  },
+  "good_weld_vid332_jpeg_jpg.rf.31a9c2d5d4d3cc6f248f922a26e824b4.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "good_weld_vid",
+   "group": "good_weld_only"
+  },
+  "istockphoto-1006281470-612x612_jpeg.rf.c340a57a2fa3f33cf21bd28b6e96e28a.jpg": {
+   "classes_present": [
+    "Defect"
+   ],
+   "family": "istockphoto",
+   "group": "defect"
+  },
+  "istockphoto-1196517059-612x612_jpeg.rf.4917b9885ff76db78c8774e4ebe8ef3c.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "istockphoto",
+   "group": "defect"
+  },
+  "mig-good-welds_12_jpeg.rf.50695b02d7408406f3c0ef1625180fc9.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "mig-good-welds",
+   "group": "good_weld_only"
+  },
+  "mig-good-welds_26_jpeg.rf.4b128138f62244c66da9e239790340ee.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "mig-good-welds",
+   "group": "good_weld_only"
+  },
+  "mig-good-welds_31_jpeg.rf.53271bcaddf396fa4b0f9c4fd8eaed8e.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "mig-good-welds",
+   "group": "good_weld_only"
+  },
+  "mig-good-welds_3_jpeg.rf.0fe38aed448c210db6e17f17b1469660.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "mig-good-welds",
+   "group": "good_weld_only"
+  },
+  "mig-good-welds_7_jpeg.rf.4bc90c892411b9dd90b7a957453e3a50.jpg": {
+   "classes_present": [
+    "Good Weld"
+   ],
+   "family": "mig-good-welds",
+   "group": "good_weld_only"
+  },
+  "poor-Welding-Images_19_jpeg.rf.262a7e9304b35b207c77d8ad25df1058.jpg": {
+   "classes_present": [
+    "Bad Weld",
+    "Defect"
+   ],
+   "family": "poor-Welding-Images",
+   "group": "defect"
+  },
+  "weld-defect-work-was-carried-out-using-semi-automatic-arc-welding-mig-welding-weld-defect-work-was-carried-out-using-semi-242005547_jpeg.rf.db4f03c31a932fca6b992692945d293e.jpg": {
+   "classes_present": [
+    "Defect",
+    "Good Weld"
+   ],
+   "family": "weld-defect-work-was-carried-out-using-semi-automatic-arc-welding-mig-welding-weld-defect-work-was-carried-out-using-semi",
+   "group": "defect"
+  }
+ },
+ "source": "clean_candidate/kaggle_v2/test/labels"
+}

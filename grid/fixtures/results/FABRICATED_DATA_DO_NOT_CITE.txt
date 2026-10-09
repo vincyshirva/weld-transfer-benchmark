@@ -1,0 +1,8 @@
+Every number in this directory is FABRICATED.
+
+These files exist only to test grid/analysis.py before the real grid
+runs. They are not measurements. Do not cite them, do not copy them
+into results/ or grid_results/, and do not let a figure built from
+them reach the manuscript.
+
+Regenerate with: python3 grid/make_fixtures.py

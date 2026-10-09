@@ -1,0 +1,418 @@
+{
+  "FABRICATED": true,
+  "warning": "fabricated fixture, not a measurement, do not cite",
+  "cell": {
+    "source": "weld_surface_v2",
+    "family": "yolo11s",
+    "seed": 2,
+    "kind": "dirty"
+  },
+  "name": "dirty_weld_surface_v2__yolo11s__seed2",
+  "config_sha256_16": "f5567a1938278e88",
+  "targets": {
+    "weld_surface_v2": {
+      "target": "weld_surface_v2",
+      "test_split": "downloaded",
+      "n_test_images": 445,
+      "image_level": {
+        "n_pos": 383,
+        "n_neg": 62,
+        "positive_rate": 0.8606741573033708,
+        "ap": 0.9797,
+        "auroc": 0.9317,
+        "auroc_reportable": true,
+        "calibration": {
+          "ece": 0.0881,
+          "brier": 0.2021,
+          "bins": [
+            {
+              "lo": 0.0,
+              "hi": 0.067,
+              "count": 43,
+              "mean_confidence": 0.033,
+              "observed_positive_rate": 0.072
+            },
+            {
+              "lo": 0.067,
+              "hi": 0.133,
+              "count": 42,
+              "mean_confidence": 0.1,
+              "observed_positive_rate": 0.105
+            },
+            {
+              "lo": 0.133,
+              "hi": 0.2,
+              "count": 5,
+              "mean_confidence": 0.167,
+              "observed_positive_rate": 0.131
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.267,
+              "count": 14,
+              "mean_confidence": 0.233,
+              "observed_positive_rate": 0.247
+            },
+            {
+              "lo": 0.267,
+              "hi": 0.333,
+              "count": 14,
+              "mean_confidence": 0.3,
+              "observed_positive_rate": 0.32
+            },
+            {
+              "lo": 0.333,
+              "hi": 0.4,
+              "count": 39,
+              "mean_confidence": 0.367,
+              "observed_positive_rate": 0.352
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.467,
+              "count": 12,
+              "mean_confidence": 0.433,
+              "observed_positive_rate": 0.401
+            },
+            {
+              "lo": 0.467,
+              "hi": 0.533,
+              "count": 38,
+              "mean_confidence": 0.5,
+              "observed_positive_rate": 0.515
+            },
+            {
+              "lo": 0.533,
+              "hi": 0.6,
+              "count": 26,
+              "mean_confidence": 0.567,
+              "observed_positive_rate": 0.584
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.667,
+              "count": 6,
+              "mean_confidence": 0.633,
+              "observed_positive_rate": 0.597
+            },
+            {
+              "lo": 0.667,
+              "hi": 0.733,
+              "count": 56,
+              "mean_confidence": 0.7,
+              "observed_positive_rate": 0.694
+            },
+            {
+              "lo": 0.733,
+              "hi": 0.8,
+              "count": 5,
+              "mean_confidence": 0.767,
+              "observed_positive_rate": 0.777
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.867,
+              "count": 39,
+              "mean_confidence": 0.833,
+              "observed_positive_rate": 0.865
+            },
+            {
+              "lo": 0.867,
+              "hi": 0.933,
+              "count": 26,
+              "mean_confidence": 0.9,
+              "observed_positive_rate": 0.93
+            },
+            {
+              "lo": 0.933,
+              "hi": 1.0,
+              "count": 54,
+              "mean_confidence": 0.967,
+              "observed_positive_rate": 0.977
+            }
+          ]
+        }
+      },
+      "box_level": {
+        "skipped": true,
+        "reason": "source protocol whole_region, target protocol whole_region. A box level number across protocols measures annotation mismatch, not domain shift."
+      },
+      "per_class_in_domain": {
+        "Burn Through-BT": {
+          "map50": 0.9966,
+          "map50_95": 0.6179,
+          "test_instances": 42,
+          "thin": true,
+          "cluster_bootstrap_95ci": {
+            "unit": "split_block",
+            "n_clusters": 42,
+            "resamples": 2000,
+            "map50": {
+              "point": 0.9966,
+              "lo": 0.8166,
+              "hi": 1.0
+            },
+            "map50_95": {
+              "point": 0.6179,
+              "lo": 0.5063,
+              "hi": 0.62
+            }
+          }
+        },
+        "Contamination-CN": {
+          "map50": 1.0,
+          "map50_95": 0.62,
+          "test_instances": 88,
+          "thin": false
+        },
+        "Lack of Fusion-LOF": {
+          "map50": 1.0,
+          "map50_95": 0.62,
+          "test_instances": 71,
+          "thin": false
+        },
+        "Normal Weld-NW": {
+          "map50": 0.9428,
+          "map50_95": 0.5845,
+          "test_instances": 62,
+          "thin": false
+        },
+        "Spatter-SR": {
+          "map50": 0.8957,
+          "map50_95": 0.5554,
+          "test_instances": 80,
+          "thin": false
+        },
+        "Surface Crack-SC": {
+          "map50": 0.9977,
+          "map50_95": 0.6186,
+          "test_instances": 38,
+          "thin": true,
+          "cluster_bootstrap_95ci": {
+            "unit": "split_block",
+            "n_clusters": 38,
+            "resamples": 2000,
+            "map50": {
+              "point": 0.9977,
+              "lo": 0.8177,
+              "hi": 1.0
+            },
+            "map50_95": {
+              "point": 0.6186,
+              "lo": 0.507,
+              "hi": 0.62
+            }
+          }
+        },
+        "Undercut-UC": {
+          "map50": 0.9742,
+          "map50_95": 0.604,
+          "test_instances": 70,
+          "thin": false
+        }
+      }
+    },
+    "weld_surface_v2@clean_test": {
+      "target": "weld_surface_v2",
+      "test_split": "audited",
+      "n_test_images": 445,
+      "image_level": {
+        "n_pos": 383,
+        "n_neg": 62,
+        "positive_rate": 0.8606741573033708,
+        "ap": 0.8935,
+        "auroc": 0.8541,
+        "auroc_reportable": true,
+        "calibration": {
+          "ece": 0.1135,
+          "brier": 0.1776,
+          "bins": [
+            {
+              "lo": 0.0,
+              "hi": 0.067,
+              "count": 28,
+              "mean_confidence": 0.033,
+              "observed_positive_rate": 0.057
+            },
+            {
+              "lo": 0.067,
+              "hi": 0.133,
+              "count": 35,
+              "mean_confidence": 0.1,
+              "observed_positive_rate": 0.114
+            },
+            {
+              "lo": 0.133,
+              "hi": 0.2,
+              "count": 42,
+              "mean_confidence": 0.167,
+              "observed_positive_rate": 0.141
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.267,
+              "count": 52,
+              "mean_confidence": 0.233,
+              "observed_positive_rate": 0.183
+            },
+            {
+              "lo": 0.267,
+              "hi": 0.333,
+              "count": 24,
+              "mean_confidence": 0.3,
+              "observed_positive_rate": 0.273
+            },
+            {
+              "lo": 0.333,
+              "hi": 0.4,
+              "count": 51,
+              "mean_confidence": 0.367,
+              "observed_positive_rate": 0.304
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.467,
+              "count": 14,
+              "mean_confidence": 0.433,
+              "observed_positive_rate": 0.398
+            },
+            {
+              "lo": 0.467,
+              "hi": 0.533,
+              "count": 9,
+              "mean_confidence": 0.5,
+              "observed_positive_rate": 0.461
+            },
+            {
+              "lo": 0.533,
+              "hi": 0.6,
+              "count": 5,
+              "mean_confidence": 0.567,
+              "observed_positive_rate": 0.54
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.667,
+              "count": 8,
+              "mean_confidence": 0.633,
+              "observed_positive_rate": 0.592
+            },
+            {
+              "lo": 0.667,
+              "hi": 0.733,
+              "count": 9,
+              "mean_confidence": 0.7,
+              "observed_positive_rate": 0.666
+            },
+            {
+              "lo": 0.733,
+              "hi": 0.8,
+              "count": 22,
+              "mean_confidence": 0.767,
+              "observed_positive_rate": 0.747
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.867,
+              "count": 31,
+              "mean_confidence": 0.833,
+              "observed_positive_rate": 0.828
+            },
+            {
+              "lo": 0.867,
+              "hi": 0.933,
+              "count": 24,
+              "mean_confidence": 0.9,
+              "observed_positive_rate": 0.859
+            },
+            {
+              "lo": 0.933,
+              "hi": 1.0,
+              "count": 33,
+              "mean_confidence": 0.967,
+              "observed_positive_rate": 0.947
+            }
+          ]
+        }
+      },
+      "box_level": {
+        "skipped": true,
+        "reason": "source protocol whole_region, target protocol whole_region. A box level number across protocols measures annotation mismatch, not domain shift."
+      },
+      "per_class_in_domain": {
+        "Burn Through-BT": {
+          "map50": 0.9514,
+          "map50_95": 0.5898,
+          "test_instances": 42,
+          "thin": true,
+          "cluster_bootstrap_95ci": {
+            "unit": "split_block",
+            "n_clusters": 42,
+            "resamples": 2000,
+            "map50": {
+              "point": 0.9514,
+              "lo": 0.7714,
+              "hi": 1.0
+            },
+            "map50_95": {
+              "point": 0.5898,
+              "lo": 0.4783,
+              "hi": 0.62
+            }
+          }
+        },
+        "Contamination-CN": {
+          "map50": 0.8315,
+          "map50_95": 0.5155,
+          "test_instances": 88,
+          "thin": false
+        },
+        "Lack of Fusion-LOF": {
+          "map50": 0.912,
+          "map50_95": 0.5654,
+          "test_instances": 71,
+          "thin": false
+        },
+        "Normal Weld-NW": {
+          "map50": 1.0,
+          "map50_95": 0.62,
+          "test_instances": 62,
+          "thin": false
+        },
+        "Spatter-SR": {
+          "map50": 0.8216,
+          "map50_95": 0.5094,
+          "test_instances": 80,
+          "thin": false
+        },
+        "Surface Crack-SC": {
+          "map50": 0.8726,
+          "map50_95": 0.541,
+          "test_instances": 38,
+          "thin": true,
+          "cluster_bootstrap_95ci": {
+            "unit": "split_block",
+            "n_clusters": 38,
+            "resamples": 2000,
+            "map50": {
+              "point": 0.8726,
+              "lo": 0.6926,
+              "hi": 1.0
+            },
+            "map50_95": {
+              "point": 0.541,
+              "lo": 0.4294,
+              "hi": 0.62
+            }
+          }
+        },
+        "Undercut-UC": {
+          "map50": 0.8909,
+          "map50_95": 0.5523,
+          "test_instances": 70,
+          "thin": false
+        }
+      }
+    }
+  }
+}

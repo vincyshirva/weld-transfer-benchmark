@@ -1,0 +1,3379 @@
+{
+ "resolved": "2026-09-24",
+ "entries": [
+  {
+   "key": "block2024",
+   "year": 2024,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "journal-article",
+    "title": "LoHi-WELD: A Novel Industrial Dataset for Weld Defect Detection and Classification, a Deep Learning Study, and Future Perspectives",
+    "container-title": "IEEE Access",
+    "volume": "12",
+    "page": "77442-77453",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "DOI": "10.1109/access.2024.3407019",
+    "URL": "http://dx.doi.org/10.1109/access.2024.3407019",
+    "author": [
+     {
+      "family": "Block",
+      "given": "Sylvio Biasuz"
+     },
+     {
+      "family": "da Silva",
+      "given": "Ricardo Dutra"
+     },
+     {
+      "family": "Lazzaretti",
+      "given": "André Eugênio"
+     },
+     {
+      "family": "Minetto",
+      "given": "Rodrigo"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1109/access.2024.3407019",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": [
+     {
+      "field": "author",
+      "reason": "Crossref records the first author's family name as 'Biasuz Block' and misspells a co-author as 'Andre Eugnio'. The paper's running head reads 'S. B. Block et al.', so the family name is Block."
+     }
+    ]
+   }
+  },
+  {
+   "key": "xie2023",
+   "year": 2023,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "journal-article",
+    "title": "Metric-Based Meta-Learning for Cross-Domain Few-Shot Identification of Welding Defect",
+    "container-title": "Journal of Computing and Information Science in Engineering",
+    "volume": "23",
+    "issue": "3",
+    "article-number": "030902",
+    "publisher": "ASME International",
+    "DOI": "10.1115/1.4056219",
+    "URL": "http://dx.doi.org/10.1115/1.4056219",
+    "author": [
+     {
+      "family": "Xie",
+      "given": "Tingli"
+     },
+     {
+      "family": "Huang",
+      "given": "Xufeng"
+     },
+     {
+      "family": "Choi",
+      "given": "Seung-Kyum"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1115/1.4056219",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": 2022,
+    "overrides": []
+   }
+  },
+  {
+   "key": "antony2026",
+   "year": 2026,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "journal-article",
+    "title": "Lightweight deep learning models for visual weld defect inspection: balancing speed and accuracy with YOLO architectures",
+    "container-title": "Welding International",
+    "volume": "40",
+    "issue": "2",
+    "page": "70-84",
+    "publisher": "Informa UK Limited",
+    "DOI": "10.1080/09507116.2025.2563776",
+    "URL": "http://dx.doi.org/10.1080/09507116.2025.2563776",
+    "author": [
+     {
+      "literal": "Antony Aroul Raj V."
+     },
+     {
+      "literal": "Pathmanaban P."
+     },
+     {
+      "literal": "Madasamy Raja G."
+     },
+     {
+      "literal": "Hariharan C."
+     },
+     {
+      "literal": "Praveen Kumar M."
+     },
+     {
+      "literal": "Kishore T."
+     },
+     {
+      "literal": "Rohan Akash V."
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1080/09507116.2025.2563776",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": 2025,
+    "overrides": [
+     {
+      "field": "author",
+      "reason": "THE FIRST AUTHOR IS ANTONY AROUL RAJ V., NOT VENKATARAMANAN. OpenAlex records the name printed on the paper as 'Antony Aroul Raj V.' and then resolves it to a different person, 'Abhinau K. Venkataramanan', and Scopus carries the same wrong resolution. That is where the project log's 'Venkataramanan et al.' came from. The names are given exactly as printed, because each family name is an initial and inverting them would produce 'V., A. A. R.'."
+     }
+    ]
+   }
+  },
+  {
+   "key": "bauer2026",
+   "year": 2026,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "journal-article",
+    "title": "Handling data drift in deep learning-based quality monitoring: evaluating calibration methods using the example of friction stir welding",
+    "container-title": "Journal of Intelligent Manufacturing",
+    "volume": "37",
+    "issue": "2",
+    "page": "759-774",
+    "publisher": "Springer Science and Business Media LLC",
+    "DOI": "10.1007/s10845-025-02569-6",
+    "URL": "http://dx.doi.org/10.1007/s10845-025-02569-6",
+    "author": [
+     {
+      "family": "Bauer",
+      "given": "Johannes C."
+     },
+     {
+      "family": "Trattnig",
+      "given": "Stephan"
+     },
+     {
+      "family": "Vieltorf",
+      "given": "Fabian"
+     },
+     {
+      "family": "Daub",
+      "given": "Rüdiger"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1007/s10845-025-02569-6",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": 2025,
+    "overrides": []
+   }
+  },
+  {
+   "key": "lema2026",
+   "year": 2026,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "journal-article",
+    "title": "Benchmarking deep learning models for surface defect detection: a reproducible and statistically-rigorous approach",
+    "container-title": "Journal of Intelligent Manufacturing",
+    "volume": "37",
+    "issue": "7",
+    "page": "3001-3018",
+    "publisher": "Springer Science and Business Media LLC",
+    "DOI": "10.1007/s10845-025-02672-8",
+    "URL": "http://dx.doi.org/10.1007/s10845-025-02672-8",
+    "author": [
+     {
+      "family": "Lema",
+      "given": "Darío G."
+     },
+     {
+      "family": "Sánchez-González",
+      "given": "Lidia"
+     },
+     {
+      "family": "Usamentiaga",
+      "given": "Rubén"
+     },
+     {
+      "family": "delaCalle",
+      "given": "F. J."
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1007/s10845-025-02672-8",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": 2025,
+    "overrides": []
+   }
+  },
+  {
+   "key": "provencal2021",
+   "year": 2021,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "journal-article",
+    "title": "Detection of exact and near duplicates in phased-array ultrasound weld scan",
+    "container-title": "Procedia Manufacturing",
+    "volume": "54",
+    "page": "263-268",
+    "publisher": "Elsevier BV",
+    "DOI": "10.1016/j.promfg.2021.07.041",
+    "URL": "http://dx.doi.org/10.1016/j.promfg.2021.07.041",
+    "author": [
+     {
+      "family": "Provençal",
+      "given": "Etienne"
+     },
+     {
+      "family": "Laperrière",
+      "given": "Luc"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1016/j.promfg.2021.07.041",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": [
+     {
+      "field": "family0",
+      "reason": "The deposit drops the cedilla, which Scopus and the paper keep. The manuscript draft had also written 'Provencal and Laperriere', losing both accents."
+     }
+    ]
+   }
+  },
+  {
+   "key": "yu2024",
+   "year": 2024,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "journal-article",
+    "title": "Defect identification method for ultrasonic inspection of pipeline welds based on cross-modal zero-shot learning",
+    "container-title": "Measurement Science and Technology",
+    "volume": "35",
+    "issue": "2",
+    "page": "025009",
+    "publisher": "IOP Publishing",
+    "DOI": "10.1088/1361-6501/ad0613",
+    "URL": "http://dx.doi.org/10.1088/1361-6501/ad0613",
+    "author": [
+     {
+      "family": "Yu",
+      "given": "Zeyu"
+     },
+     {
+      "family": "Ma",
+      "given": "Qi"
+     },
+     {
+      "family": "Yuan",
+      "given": "Hongqiang"
+     },
+     {
+      "family": "Du",
+      "given": "Guofeng"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1088/1361-6501/ad0613",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": 2023,
+    "overrides": [
+     {
+      "field": "author",
+      "reason": "THE DEPOSITED RECORD SWAPS GIVEN AND FAMILY NAME FOR ALL FOUR AUTHORS: it records family names Zeyu, Qi, Hongqiang and Guofeng. That swap is where the project log's 'Zeyu et al.' came from. Scopus gives Zeyu Yu, Qi Ma, Hongqiang Yuan. Cite as Yu et al."
+     }
+    ]
+   }
+  },
+  {
+   "key": "parmarpal2026",
+   "year": 2026,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "book-chapter",
+    "title": "Domain-Adapted CNNs for Interpretable Weld Classification",
+    "page": "359-370",
+    "publisher": "Springer Nature Switzerland",
+    "DOI": "10.1007/978-3-032-08243-5_32",
+    "URL": "http://dx.doi.org/10.1007/978-3-032-08243-5_32",
+    "author": [
+     {
+      "family": "Parmar",
+      "given": "Kumar"
+     },
+     {
+      "family": "Palaniappan",
+      "given": "Damodharan"
+     }
+    ],
+    "book-title": "Smart Computing Paradigms: Advanced Data Mining and Analytics",
+    "editor": [
+     {
+      "family": "Bhateja",
+      "given": "Vikrant"
+     },
+     {
+      "family": "Hoong",
+      "given": "Angela Lee Siew"
+     },
+     {
+      "family": "Kong",
+      "given": "Jude Dzevela"
+     },
+     {
+      "family": "Jena",
+      "given": "Junali Jasmine"
+     }
+    ],
+    "series": "Lecture Notes in Networks and Systems",
+    "book-doi": "10.1007/978-3-032-08243-5"
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1007/978-3-032-08243-5_32",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": 2026,
+    "overrides": []
+   }
+  },
+  {
+   "key": "mendieta2025",
+   "year": 2025,
+   "year_rule": "issued",
+   "csl": {
+    "type": "journal-article",
+    "title": "Application of convolutional neural networks for surface discontinuities detection in shielded metal arc welding process",
+    "container-title": "Frontiers in Robotics and AI",
+    "volume": "12",
+    "article-number": "1632417",
+    "publisher": "Frontiers Media SA",
+    "DOI": "10.3389/frobt.2025.1632417",
+    "URL": "http://dx.doi.org/10.3389/frobt.2025.1632417",
+    "author": [
+     {
+      "family": "Mendieta",
+      "given": "Elisa Elizabeth"
+     },
+     {
+      "family": "Quintero",
+      "given": "Hector"
+     },
+     {
+      "family": "Pinzon-Acosta",
+      "given": "Cesar"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.3389/frobt.2025.1632417",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": 2025,
+    "overrides": []
+   }
+  },
+  {
+   "key": "shen2026",
+   "year": 2026,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "journal-article",
+    "title": "A physics-guided memory-enhanced semi-supervised approach for detecting weld defects in radiographic images",
+    "container-title": "NDT & E International",
+    "volume": "157",
+    "page": "103521",
+    "article-number": "103521",
+    "publisher": "Elsevier BV",
+    "DOI": "10.1016/j.ndteint.2025.103521",
+    "URL": "http://dx.doi.org/10.1016/j.ndteint.2025.103521",
+    "author": [
+     {
+      "family": "Shen",
+      "given": "Mengen"
+     },
+     {
+      "family": "Yang",
+      "given": "Jianhua"
+     },
+     {
+      "family": "Jiang",
+      "given": "Wenbo"
+     },
+     {
+      "family": "Wang",
+      "given": "Yutong"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1016/j.ndteint.2025.103521",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": []
+   }
+  },
+  {
+   "key": "palma2024",
+   "year": 2024,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "journal-article",
+    "title": "Deep convolutional neural network for weld defect classification in radiographic images",
+    "container-title": "Heliyon",
+    "volume": "10",
+    "issue": "9",
+    "page": "e30590",
+    "article-number": "e30590",
+    "publisher": "Elsevier BV",
+    "DOI": "10.1016/j.heliyon.2024.e30590",
+    "URL": "http://dx.doi.org/10.1016/j.heliyon.2024.e30590",
+    "author": [
+     {
+      "family": "Palma-Ramírez",
+      "given": "Dayana"
+     },
+     {
+      "family": "Ross-Veitía",
+      "given": "Bárbara D."
+     },
+     {
+      "family": "Font-Ariosa",
+      "given": "Pablo"
+     },
+     {
+      "family": "Espinel-Hernández",
+      "given": "Alejandro"
+     },
+     {
+      "family": "Sanchez-Roca",
+      "given": "Angel"
+     },
+     {
+      "family": "Carvajal-Fals",
+      "given": "Hipólito"
+     },
+     {
+      "family": "Nuñez-Alvarez",
+      "given": "José R."
+     },
+     {
+      "family": "Hernández-Herrera",
+      "given": "Hernan"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1016/j.heliyon.2024.e30590",
+    "found_by": "query",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": []
+   }
+  },
+  {
+   "key": "lopez2025",
+   "year": 2025,
+   "year_rule": "issued",
+   "csl": {
+    "type": "journal-article",
+    "title": "WeldVGG: A VGG-Inspired Deep Learning Model for Weld Defect Classification from Radiographic Images with Visual Interpretability",
+    "container-title": "Sensors",
+    "volume": "25",
+    "issue": "19",
+    "page": "6183",
+    "publisher": "MDPI AG",
+    "DOI": "10.3390/s25196183",
+    "URL": "http://dx.doi.org/10.3390/s25196183",
+    "author": [
+     {
+      "family": "López",
+      "given": "Gabriel"
+     },
+     {
+      "family": "Ramírez",
+      "given": "Pablo Duque"
+     },
+     {
+      "family": "Vega",
+      "given": "Emanuel"
+     },
+     {
+      "family": "Pizarro",
+      "given": "Felix"
+     },
+     {
+      "family": "Toro",
+      "given": "Joaquin"
+     },
+     {
+      "family": "Parra",
+      "given": "Carlos"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.3390/s25196183",
+    "found_by": "query",
+    "resolved": "2026-09-24",
+    "online_year": 2025,
+    "overrides": []
+   }
+  },
+  {
+   "key": "parmar2026",
+   "year": 2026,
+   "year_rule": "issued",
+   "csl": {
+    "type": "journal-article",
+    "title": "A misclassification-aware explainable hybrid CNN-vision transformer framework for radiographic weld inspection",
+    "container-title": "Scientific Reports",
+    "volume": "16",
+    "issue": "1",
+    "article-number": "17134",
+    "publisher": "Springer Science and Business Media LLC",
+    "DOI": "10.1038/s41598-026-44874-x",
+    "URL": "http://dx.doi.org/10.1038/s41598-026-44874-x",
+    "author": [
+     {
+      "family": "Parmar",
+      "given": "Kumar"
+     },
+     {
+      "family": "Jain",
+      "given": "Rituraj"
+     },
+     {
+      "family": "Anitha",
+      "given": "P. T."
+     },
+     {
+      "family": "Jayanthi",
+      "given": "A."
+     },
+     {
+      "family": "Putchanuthala",
+      "given": "Ramesh Babu"
+     },
+     {
+      "family": "Upreti",
+      "given": "Kamal"
+     },
+     {
+      "family": "Ayele",
+      "given": "Terefe Bayisa"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1038/s41598-026-44874-x",
+    "found_by": "query",
+    "resolved": "2026-09-24",
+    "online_year": 2026,
+    "overrides": []
+   }
+  },
+  {
+   "key": "mustajib2026",
+   "year": 2026,
+   "year_rule": "issued",
+   "csl": {
+    "type": "journal-article",
+    "title": "Deep learning-based detection transformer (DETR) for defect identification in shielded metal arc welding plate joints",
+    "container-title": "Welding International",
+    "page": "1-16",
+    "publisher": "Informa UK Limited",
+    "DOI": "10.1080/09507116.2026.2708882",
+    "URL": "http://dx.doi.org/10.1080/09507116.2026.2708882",
+    "author": [
+     {
+      "family": "Mustajib",
+      "given": "Mohamad Imron"
+     },
+     {
+      "family": "Muntasa",
+      "given": "Arif"
+     },
+     {
+      "family": "Wahyuningrum",
+      "given": "Rima Tri"
+     },
+     {
+      "family": "Rahmat",
+      "given": "Abdullah Basuki"
+     },
+     {
+      "family": "Ummah",
+      "given": "Mubessirul"
+     },
+     {
+      "family": "Dewi",
+      "given": "Deshinta Arrova"
+     },
+     {
+      "family": "Asmara",
+      "given": "Yuli Panca"
+     },
+     {
+      "family": "Bauravindah",
+      "given": "Achmad"
+     },
+     {
+      "family": "Sasmito",
+      "given": "Agus"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1080/09507116.2026.2708882",
+    "found_by": "query",
+    "resolved": "2026-09-24",
+    "online_year": 2026,
+    "overrides": []
+   }
+  },
+  {
+   "key": "liang2025",
+   "year": 2025,
+   "year_rule": "issued",
+   "csl": {
+    "type": "journal-article",
+    "title": "WELD-DETR: A Real-Time Welding Defect Detection Framework with Multi-Scale Feature Fusion and Multi-Kernel Perception Optimization",
+    "container-title": "Sensors",
+    "volume": "25",
+    "issue": "22",
+    "page": "7024",
+    "publisher": "MDPI AG",
+    "DOI": "10.3390/s25227024",
+    "URL": "http://dx.doi.org/10.3390/s25227024",
+    "author": [
+     {
+      "family": "Liang",
+      "given": "Yu"
+     },
+     {
+      "family": "Yu",
+      "given": "Bojian"
+     },
+     {
+      "family": "Ding",
+      "given": "Mengyu"
+     },
+     {
+      "family": "Hu",
+      "given": "Wenchen"
+     },
+     {
+      "family": "Jin",
+      "given": "Yuchang"
+     },
+     {
+      "family": "Yuan",
+      "given": "Yuefeng"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.3390/s25227024",
+    "found_by": "query",
+    "resolved": "2026-09-24",
+    "online_year": 2025,
+    "overrides": []
+   }
+  },
+  {
+   "key": "sun2025",
+   "year": 2025,
+   "year_rule": "issued",
+   "csl": {
+    "type": "journal-article",
+    "title": "DEIM-SFA: A Multi-Module Enhanced Model for Accurate Detection of Weld Surface Defects",
+    "container-title": "Sensors",
+    "volume": "25",
+    "issue": "20",
+    "page": "6314",
+    "publisher": "MDPI AG",
+    "DOI": "10.3390/s25206314",
+    "URL": "http://dx.doi.org/10.3390/s25206314",
+    "author": [
+     {
+      "family": "Sun",
+      "given": "Yan"
+     },
+     {
+      "family": "Xie",
+      "given": "Yingjie"
+     },
+     {
+      "family": "Peng",
+      "given": "Ran"
+     },
+     {
+      "family": "Zhang",
+      "given": "Yifan"
+     },
+     {
+      "family": "Chen",
+      "given": "Wei"
+     },
+     {
+      "family": "Guo",
+      "given": "Yan"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.3390/s25206314",
+    "found_by": "query",
+    "resolved": "2026-09-24",
+    "online_year": 2025,
+    "overrides": []
+   }
+  },
+  {
+   "key": "xu2024",
+   "year": 2024,
+   "year_rule": "issued",
+   "csl": {
+    "type": "journal-article",
+    "title": "Detection method of small size defects on pipeline weld surface based on improved YOLOv7",
+    "container-title": "PLOS ONE",
+    "volume": "19",
+    "issue": "12",
+    "page": "e0313348",
+    "publisher": "Public Library of Science (PLoS)",
+    "DOI": "10.1371/journal.pone.0313348",
+    "URL": "http://dx.doi.org/10.1371/journal.pone.0313348",
+    "author": [
+     {
+      "family": "Xu",
+      "given": "Xiangqian"
+     },
+     {
+      "family": "Hou",
+      "given": "Wenting"
+     },
+     {
+      "family": "Li",
+      "given": "Xing"
+     }
+    ],
+    "editor": [
+     {
+      "given": "Din",
+      "family": "Bandhu",
+      "sequence": "first",
+      "affiliation": [],
+      "role": [
+       {
+        "vocabulary": "crossref",
+        "role": "editor"
+       }
+      ]
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1371/journal.pone.0313348",
+    "found_by": "query",
+    "resolved": "2026-09-24",
+    "online_year": 2024,
+    "overrides": []
+   }
+  },
+  {
+   "key": "mohammed2025",
+   "year": 2025,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "journal-article",
+    "title": "Advances and Challenges in Deep Learning for Automated Welding Defect Detection: A Technical Survey",
+    "container-title": "IEEE Access",
+    "volume": "13",
+    "page": "94553-94569",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "DOI": "10.1109/access.2025.3574083",
+    "URL": "http://dx.doi.org/10.1109/access.2025.3574083",
+    "author": [
+     {
+      "family": "Mohammed",
+      "given": "Abdulrahim"
+     },
+     {
+      "family": "Hussain",
+      "given": "Muhammad"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1109/access.2025.3574083",
+    "found_by": "query",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": []
+   }
+  },
+  {
+   "key": "totino2023",
+   "year": 2023,
+   "year_rule": "issued",
+   "csl": {
+    "type": "journal-article",
+    "title": "RIAWELC: A Novel Dataset of Radiographic Images for Automatic Weld Defects Classification",
+    "container-title": "International Journal of Electrical and Computer Engineering Research",
+    "volume": "3",
+    "issue": "1",
+    "page": "13-17",
+    "publisher": "International Journal of Electrical and Computer Engineering Research",
+    "DOI": "10.53375/ijecer.2023.320",
+    "URL": "http://dx.doi.org/10.53375/ijecer.2023.320",
+    "author": [
+     {
+      "family": "Totino",
+      "given": "Benito"
+     },
+     {
+      "family": "Spagnolo",
+      "given": "Fanny"
+     },
+     {
+      "family": "Perri",
+      "given": "Stefania"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.53375/ijecer.2023.320",
+    "found_by": "query",
+    "resolved": "2026-09-24",
+    "online_year": 2023,
+    "overrides": []
+   }
+  },
+  {
+   "key": "mery2015",
+   "year": 2015,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "journal-article",
+    "title": "GDXray: The Database of X-ray Images for Nondestructive Testing",
+    "container-title": "Journal of Nondestructive Evaluation",
+    "volume": "34",
+    "issue": "4",
+    "article-number": "42",
+    "publisher": "Springer Science and Business Media LLC",
+    "DOI": "10.1007/s10921-015-0315-7",
+    "URL": "http://dx.doi.org/10.1007/s10921-015-0315-7",
+    "author": [
+     {
+      "family": "Mery",
+      "given": "Domingo"
+     },
+     {
+      "family": "Riffo",
+      "given": "Vladimir"
+     },
+     {
+      "family": "Zscherpel",
+      "given": "Uwe"
+     },
+     {
+      "family": "Mondragón",
+      "given": "German"
+     },
+     {
+      "family": "Lillo",
+      "given": "Iván"
+     },
+     {
+      "family": "Zuccar",
+      "given": "Irene"
+     },
+     {
+      "family": "Lobel",
+      "given": "Hans"
+     },
+     {
+      "family": "Carrasco",
+      "given": "Miguel"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1007/s10921-015-0315-7",
+    "found_by": "query",
+    "resolved": "2026-09-24",
+    "online_year": 2015,
+    "overrides": []
+   }
+  },
+  {
+   "key": "zhao2025swrd",
+   "year": 2025,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "journal-article",
+    "title": "SWRD: A Dataset of Radiographic Image of Seam Weld for Defect Detection",
+    "container-title": "Journal of Nondestructive Evaluation",
+    "volume": "44",
+    "issue": "2",
+    "article-number": "50",
+    "publisher": "Springer Science and Business Media LLC",
+    "DOI": "10.1007/s10921-025-01186-w",
+    "URL": "http://dx.doi.org/10.1007/s10921-025-01186-w",
+    "author": [
+     {
+      "family": "Zhao",
+      "given": "Xuefeng"
+     },
+     {
+      "family": "Wu",
+      "given": "Juntao"
+     },
+     {
+      "family": "Zhang",
+      "given": "Baoxin"
+     },
+     {
+      "family": "Wen",
+      "given": "Haoyu"
+     },
+     {
+      "family": "Wang",
+      "given": "Xiaopeng"
+     },
+     {
+      "family": "Li",
+      "given": "Yan"
+     },
+     {
+      "family": "Yu",
+      "given": "Xinghua"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1007/s10921-025-01186-w",
+    "found_by": "query",
+    "resolved": "2026-09-24",
+    "online_year": 2025,
+    "overrides": []
+   }
+  },
+  {
+   "key": "kennerley2025",
+   "year": 2025,
+   "year_rule": "issued",
+   "csl": {
+    "type": "article",
+    "title": "Bridging Annotation Gaps: Transferring Labels to Align Object Detection Datasets",
+    "publisher": "arXiv",
+    "DOI": "10.48550/ARXIV.2506.04737",
+    "URL": "https://arxiv.org/abs/2506.04737",
+    "author": [
+     {
+      "family": "Kennerley",
+      "given": "Mikhail"
+     },
+     {
+      "family": "Aviles-Rivero",
+      "given": "Angelica"
+     },
+     {
+      "family": "Schönlieb",
+      "given": "Carola-Bibiane"
+     },
+     {
+      "family": "Tan",
+      "given": "Robby T."
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.48550/arXiv.2506.04737",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": []
+   }
+  },
+  {
+   "key": "hussain2026",
+   "year": 2026,
+   "year_rule": "issued",
+   "csl": {
+    "type": "journal-article",
+    "title": "Quality over quantity: a data-centric survey of annotation errors in object detection datasets",
+    "container-title": "Artificial Intelligence Review",
+    "volume": "59",
+    "issue": "3",
+    "article-number": "107",
+    "publisher": "Springer Science and Business Media LLC",
+    "DOI": "10.1007/s10462-026-11502-z",
+    "URL": "http://dx.doi.org/10.1007/s10462-026-11502-z",
+    "author": [
+     {
+      "family": "Hussain",
+      "given": "Adnan"
+     },
+     {
+      "family": "Ullah",
+      "given": "Kaleem"
+     },
+     {
+      "family": "Afaq",
+      "given": "Muhammad"
+     },
+     {
+      "family": "Munsif",
+      "given": "Muhammad"
+     },
+     {
+      "family": "Hussain",
+      "given": "Altaf"
+     },
+     {
+      "family": "Baik",
+      "given": "Sung Wook"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1007/s10462-026-11502-z",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": 2026,
+    "overrides": []
+   }
+  },
+  {
+   "key": "awad2026",
+   "year": 2026,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "journal-article",
+    "title": "RUOD-R: A High-Fidelity Re-Annotated Benchmark for Underwater Object Detection",
+    "container-title": "IEEE Access",
+    "volume": "14",
+    "page": "60030-60046",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "DOI": "10.1109/access.2026.3685121",
+    "URL": "http://dx.doi.org/10.1109/access.2026.3685121",
+    "author": [
+     {
+      "family": "Awad",
+      "given": "Ali"
+     },
+     {
+      "family": "Saleem",
+      "given": "Ashraf"
+     },
+     {
+      "family": "Aljnadi",
+      "given": "Yaman"
+     },
+     {
+      "family": "Lucas",
+      "given": "Evan"
+     },
+     {
+      "family": "Paheding",
+      "given": "Sidike"
+     },
+     {
+      "family": "Havens",
+      "given": "Timothy C."
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1109/access.2026.3685121",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": []
+   }
+  },
+  {
+   "key": "ma2022a",
+   "year": 2022,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "proceedings-article",
+    "title": "The Effect of Improving Annotation Quality on Object Detection Datasets: A Preliminary Study",
+    "container-title": "2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)",
+    "page": "4849-4858",
+    "publisher": "IEEE",
+    "DOI": "10.1109/cvprw56347.2022.00532",
+    "URL": "http://dx.doi.org/10.1109/CVPRW56347.2022.00532",
+    "author": [
+     {
+      "family": "Ma",
+      "given": "Jiaxin"
+     },
+     {
+      "family": "Ushiku",
+      "given": "Yoshitaka"
+     },
+     {
+      "family": "Sagara",
+      "given": "Miori"
+     }
+    ],
+    "event": "2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)"
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1109/CVPRW56347.2022.00532",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": []
+   }
+  },
+  {
+   "key": "singh2025",
+   "year": 2025,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "book-chapter",
+    "title": "Benchmarking Object Detectors with COCO: A New Path Forward",
+    "page": "279-295",
+    "publisher": "Springer Nature Switzerland",
+    "DOI": "10.1007/978-3-031-72784-9_16",
+    "URL": "http://dx.doi.org/10.1007/978-3-031-72784-9_16",
+    "author": [
+     {
+      "family": "Singh",
+      "given": "Shweta"
+     },
+     {
+      "family": "Yadav",
+      "given": "Aayan"
+     },
+     {
+      "family": "Jain",
+      "given": "Jitesh"
+     },
+     {
+      "family": "Shi",
+      "given": "Humphrey"
+     },
+     {
+      "family": "Johnson",
+      "given": "Justin"
+     },
+     {
+      "family": "Desai",
+      "given": "Karan"
+     }
+    ],
+    "book-title": "Computer Vision – ECCV 2024",
+    "editor": [
+     {
+      "family": "Leonardis",
+      "given": "Aleš"
+     },
+     {
+      "family": "Ricci",
+      "given": "Elisa"
+     },
+     {
+      "family": "Roth",
+      "given": "Stefan"
+     },
+     {
+      "family": "Russakovsky",
+      "given": "Olga"
+     },
+     {
+      "family": "Sattler",
+      "given": "Torsten"
+     },
+     {
+      "family": "Varol",
+      "given": "Gül"
+     }
+    ],
+    "series": "Lecture Notes in Computer Science",
+    "book-doi": "10.1007/978-3-031-72784-9"
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1007/978-3-031-72784-9_16",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": 2024,
+    "overrides": []
+   }
+  },
+  {
+   "key": "ma2022b",
+   "year": 2024,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "journal-article",
+    "title": "Cross-scale fusion and domain adversarial network for generalizable rail surface defect segmentation on unseen datasets",
+    "container-title": "Journal of Intelligent Manufacturing",
+    "volume": "35",
+    "issue": "1",
+    "page": "367-386",
+    "publisher": "Springer Science and Business Media LLC",
+    "DOI": "10.1007/s10845-022-02051-7",
+    "URL": "http://dx.doi.org/10.1007/s10845-022-02051-7",
+    "author": [
+     {
+      "family": "Ma",
+      "given": "Shuai"
+     },
+     {
+      "family": "Song",
+      "given": "Kechen"
+     },
+     {
+      "family": "Niu",
+      "given": "Menghui"
+     },
+     {
+      "family": "Tian",
+      "given": "Hongkun"
+     },
+     {
+      "family": "Yan",
+      "given": "Yunhui"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1007/s10845-022-02051-7",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": 2022,
+    "overrides": []
+   }
+  },
+  {
+   "key": "zhao2026",
+   "year": 2026,
+   "year_rule": "issued",
+   "csl": {
+    "type": "article",
+    "title": "SteelDefectX: A Multi-Form Vision-Language Dataset and Benchmark for Steel Surface Defect Analysis",
+    "publisher": "arXiv",
+    "DOI": "10.48550/ARXIV.2603.21824",
+    "URL": "https://arxiv.org/abs/2603.21824",
+    "author": [
+     {
+      "family": "Zhao",
+      "given": "Shuxian"
+     },
+     {
+      "family": "Gui",
+      "given": "Jie"
+     },
+     {
+      "family": "Yu",
+      "given": "Baosheng"
+     },
+     {
+      "family": "Tao",
+      "given": "Dacheng"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.48550/arXiv.2603.21824",
+    "found_by": "query",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": []
+   }
+  },
+  {
+   "key": "chakraborty2026",
+   "year": 2026,
+   "year_rule": "issued",
+   "csl": {
+    "type": "article",
+    "title": "Towards Robust Cross-Dataset Object Detection Generalization under Domain Specificity",
+    "publisher": "arXiv",
+    "DOI": "10.48550/ARXIV.2601.09497",
+    "URL": "https://arxiv.org/abs/2601.09497",
+    "author": [
+     {
+      "family": "Chakraborty",
+      "given": "Ritabrata"
+     },
+     {
+      "family": "Mitra",
+      "given": "Hrishit"
+     },
+     {
+      "family": "Palaiahnakote",
+      "given": "Shivakumara"
+     },
+     {
+      "family": "Pal",
+      "given": "Umapada"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.48550/arXiv.2601.09497",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": []
+   }
+  },
+  {
+   "key": "sun2026",
+   "year": 2026,
+   "year_rule": "issued",
+   "csl": {
+    "type": "article",
+    "title": "ICME 2026 Grand Challenge on Cross-Scenario Defect Detection and Fine-Grained Severity Grading for High-Precision Manufacturing",
+    "publisher": "arXiv",
+    "DOI": "10.48550/ARXIV.2607.04675",
+    "URL": "https://arxiv.org/abs/2607.04675",
+    "author": [
+     {
+      "family": "Sun",
+      "given": "Wei"
+     },
+     {
+      "family": "Zhang",
+      "given": "Weixia"
+     },
+     {
+      "family": "Cao",
+      "given": "Linhan"
+     },
+     {
+      "family": "Lu",
+      "given": "Mingkai"
+     },
+     {
+      "family": "Min",
+      "given": "Xiongkuo"
+     },
+     {
+      "family": "Zhang",
+      "given": "Xiaoping"
+     },
+     {
+      "family": "Le Callet",
+      "given": "Patrick"
+     },
+     {
+      "family": "Zhai",
+      "given": "Guangtao"
+     },
+     {
+      "family": "Chen",
+      "given": "Hongxing"
+     },
+     {
+      "family": "Wu",
+      "given": "Wenqi"
+     },
+     {
+      "family": "Hu",
+      "given": "Zhenhao"
+     },
+     {
+      "family": "Lin",
+      "given": "Shanshan"
+     },
+     {
+      "family": "Huang",
+      "given": "Guanjie"
+     },
+     {
+      "family": "Xie",
+      "given": "Kai"
+     },
+     {
+      "family": "Xin",
+      "given": "Rui"
+     },
+     {
+      "family": "Zhao",
+      "given": "Zilong"
+     },
+     {
+      "family": "Cong",
+      "given": "Runmin"
+     },
+     {
+      "family": "Li",
+      "given": "Ningjing"
+     },
+     {
+      "family": "Ma",
+      "given": "Siqi"
+     },
+     {
+      "family": "Ong",
+      "given": "Yi Jin"
+     },
+     {
+      "family": "Zhou",
+      "given": "Tianfei"
+     },
+     {
+      "family": "Wang",
+      "given": "Shunzhou"
+     },
+     {
+      "family": "Chen",
+      "given": "Zhiyang"
+     },
+     {
+      "family": "Fang",
+      "given": "Hao"
+     },
+     {
+      "family": "Zhang",
+      "given": "Chen"
+     },
+     {
+      "family": "Tang",
+      "given": "Tze-Hsiang"
+     },
+     {
+      "family": "Li",
+      "given": "Dikai"
+     },
+     {
+      "family": "Wu",
+      "given": "Xianjin"
+     },
+     {
+      "family": "Sharma",
+      "given": "Avinash Kumar"
+     },
+     {
+      "family": "Wang",
+      "given": "Zhaoyang"
+     },
+     {
+      "family": "Chen",
+      "given": "Haiyong"
+     },
+     {
+      "family": "Su",
+      "given": "Binyi"
+     },
+     {
+      "family": "Shahariar",
+      "given": "Atik"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.48550/arXiv.2607.04675",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": [
+     {
+      "field": "author6",
+      "reason": "DataCite splits the family name as 'Callet' with given 'Patrick Le'. The family name is Le Callet."
+     }
+    ]
+   }
+  },
+  {
+   "key": "silva2026",
+   "year": 2026,
+   "year_rule": "issued",
+   "csl": {
+    "type": "journal-article",
+    "title": "Cross-Dataset Benchmarking of Deep Learning Models for Surface Defect Classification in Metal Parts",
+    "container-title": "Applied Sciences",
+    "volume": "16",
+    "issue": "6",
+    "page": "3022",
+    "publisher": "MDPI AG",
+    "DOI": "10.3390/app16063022",
+    "URL": "http://dx.doi.org/10.3390/app16063022",
+    "author": [
+     {
+      "family": "Silva",
+      "given": "Fábio Mendes da"
+     },
+     {
+      "family": "Tavares",
+      "given": "João Manuel R. S."
+     },
+     {
+      "family": "Lopes",
+      "given": "António Mendes"
+     },
+     {
+      "family": "Silva",
+      "given": "Antonio Ramos"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.3390/app16063022",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": 2026,
+    "overrides": []
+   }
+  },
+  {
+   "key": "krassnig2026",
+   "year": 2026,
+   "year_rule": "issued",
+   "csl": {
+    "type": "journal-article",
+    "title": "ISP-AD: a large-scale real-world dataset for advancing industrial anomaly detection with synthetic and real defects",
+    "container-title": "Journal of Intelligent Manufacturing",
+    "publisher": "Springer Science and Business Media LLC",
+    "DOI": "10.1007/s10845-025-02778-z",
+    "URL": "http://dx.doi.org/10.1007/s10845-025-02778-z",
+    "author": [
+     {
+      "family": "Krassnig",
+      "given": "Paul Josef"
+     },
+     {
+      "family": "Gruber",
+      "given": "Dieter Paul"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1007/s10845-025-02778-z",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": 2026,
+    "overrides": []
+   }
+  },
+  {
+   "key": "jensen2025",
+   "year": 2025,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "book-chapter",
+    "title": "BugNIST a Large Volumetric Dataset for Object Detection Under Domain Shift",
+    "page": "18-36",
+    "publisher": "Springer Nature Switzerland",
+    "DOI": "10.1007/978-3-031-73411-3_2",
+    "URL": "http://dx.doi.org/10.1007/978-3-031-73411-3_2",
+    "author": [
+     {
+      "family": "Jensen",
+      "given": "Patrick Møller"
+     },
+     {
+      "family": "Dahl",
+      "given": "Vedrana Andersen"
+     },
+     {
+      "family": "Engberg",
+      "given": "Rebecca"
+     },
+     {
+      "family": "Gundlach",
+      "given": "Carsten"
+     },
+     {
+      "family": "Kjer",
+      "given": "Hans Marin"
+     },
+     {
+      "family": "Dahl",
+      "given": "Anders Bjorholm"
+     }
+    ],
+    "book-title": "Computer Vision – ECCV 2024",
+    "editor": [
+     {
+      "family": "Leonardis",
+      "given": "Aleš"
+     },
+     {
+      "family": "Ricci",
+      "given": "Elisa"
+     },
+     {
+      "family": "Roth",
+      "given": "Stefan"
+     },
+     {
+      "family": "Russakovsky",
+      "given": "Olga"
+     },
+     {
+      "family": "Sattler",
+      "given": "Torsten"
+     },
+     {
+      "family": "Varol",
+      "given": "Gül"
+     }
+    ],
+    "series": "Lecture Notes in Computer Science",
+    "book-doi": "10.1007/978-3-031-73411-3"
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1007/978-3-031-73411-3_2",
+    "found_by": "query",
+    "resolved": "2026-09-24",
+    "online_year": 2024,
+    "overrides": []
+   }
+  },
+  {
+   "key": "saenko2010",
+   "year": 2010,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "book-chapter",
+    "title": "Adapting Visual Category Models to New Domains",
+    "page": "213-226",
+    "publisher": "Springer Berlin Heidelberg",
+    "DOI": "10.1007/978-3-642-15561-1_16",
+    "URL": "http://dx.doi.org/10.1007/978-3-642-15561-1_16",
+    "author": [
+     {
+      "family": "Saenko",
+      "given": "Kate"
+     },
+     {
+      "family": "Kulis",
+      "given": "Brian"
+     },
+     {
+      "family": "Fritz",
+      "given": "Mario"
+     },
+     {
+      "family": "Darrell",
+      "given": "Trevor"
+     }
+    ],
+    "book-title": "Computer Vision – ECCV 2010",
+    "editor": [
+     {
+      "family": "Daniilidis",
+      "given": "Kostas"
+     },
+     {
+      "family": "Maragos",
+      "given": "Petros"
+     },
+     {
+      "family": "Paragios",
+      "given": "Nikos"
+     }
+    ],
+    "series": "Lecture Notes in Computer Science",
+    "book-doi": "10.1007/978-3-642-15561-1"
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1007/978-3-642-15561-1_16",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": []
+   }
+  },
+  {
+   "key": "heckler2026",
+   "year": 2026,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "journal-article",
+    "title": "The MVTec AD 2 Dataset: Advanced Scenarios for Unsupervised Anomaly Detection",
+    "container-title": "International Journal of Computer Vision",
+    "volume": "134",
+    "issue": "4",
+    "article-number": "175",
+    "publisher": "Springer Science and Business Media LLC",
+    "DOI": "10.1007/s11263-026-02743-0",
+    "URL": "http://dx.doi.org/10.1007/s11263-026-02743-0",
+    "author": [
+     {
+      "family": "Heckler-Kram",
+      "given": "Lars"
+     },
+     {
+      "family": "Neudeck",
+      "given": "Jan-Hendrik"
+     },
+     {
+      "family": "Scheler",
+      "given": "Ulla"
+     },
+     {
+      "family": "König",
+      "given": "Rebecca"
+     },
+     {
+      "family": "Steger",
+      "given": "Carsten"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1007/s11263-026-02743-0",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": 2026,
+    "overrides": []
+   }
+  },
+  {
+   "key": "barz2020",
+   "year": 2020,
+   "year_rule": "issued",
+   "csl": {
+    "type": "journal-article",
+    "title": "Do We Train on Test Data? Purging CIFAR of Near-Duplicates",
+    "container-title": "Journal of Imaging",
+    "volume": "6",
+    "issue": "6",
+    "page": "41",
+    "publisher": "MDPI AG",
+    "DOI": "10.3390/jimaging6060041",
+    "URL": "http://dx.doi.org/10.3390/jimaging6060041",
+    "author": [
+     {
+      "family": "Barz",
+      "given": "Björn"
+     },
+     {
+      "family": "Denzler",
+      "given": "Joachim"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.3390/jimaging6060041",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": 2020,
+    "overrides": []
+   }
+  },
+  {
+   "key": "laroca2023",
+   "year": 2023,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "proceedings-article",
+    "title": "Do We Train on Test Data? The Impact of Near-Duplicates on License Plate Recognition",
+    "container-title": "2023 International Joint Conference on Neural Networks (IJCNN)",
+    "page": "1-8",
+    "publisher": "IEEE",
+    "DOI": "10.1109/ijcnn54540.2023.10191584",
+    "URL": "http://dx.doi.org/10.1109/ijcnn54540.2023.10191584",
+    "author": [
+     {
+      "family": "Laroca",
+      "given": "Rayson"
+     },
+     {
+      "family": "Estevam",
+      "given": "Valter"
+     },
+     {
+      "family": "Britto",
+      "given": "Alceu S."
+     },
+     {
+      "family": "Minetto",
+      "given": "Rodrigo"
+     },
+     {
+      "family": "Menotti",
+      "given": "David"
+     }
+    ],
+    "event": "2023 International Joint Conference on Neural Networks (IJCNN)"
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1109/ijcnn54540.2023.10191584",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": []
+   }
+  },
+  {
+   "key": "ramos2025",
+   "year": 2025,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "proceedings-article",
+    "title": "Data Leakage in Visual Datasets",
+    "container-title": "2025 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)",
+    "page": "6368-6378",
+    "publisher": "IEEE",
+    "DOI": "10.1109/iccvw69036.2025.00661",
+    "URL": "http://dx.doi.org/10.1109/iccvw69036.2025.00661",
+    "author": [
+     {
+      "family": "Ramos",
+      "given": "Patrick"
+     },
+     {
+      "family": "Ramos",
+      "given": "Ryan"
+     },
+     {
+      "family": "Garcia",
+      "given": "Noa"
+     }
+    ],
+    "event": "2025 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)"
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1109/iccvw69036.2025.00661",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": []
+   }
+  },
+  {
+   "key": "nogueira2026",
+   "year": 2026,
+   "year_rule": "issued",
+   "csl": {
+    "type": "journal-article",
+    "title": "Data Leakage Concerns in Training and Evaluation Protocols for Oral Cancer Image Classification",
+    "container-title": "SN Computer Science",
+    "volume": "7",
+    "issue": "5",
+    "article-number": "530",
+    "publisher": "Springer Science and Business Media LLC",
+    "DOI": "10.1007/s42979-026-05141-y",
+    "URL": "http://dx.doi.org/10.1007/s42979-026-05141-y",
+    "author": [
+     {
+      "family": "Nogueira",
+      "given": "Marcelo"
+     },
+     {
+      "family": "Gomes",
+      "given": "Elsa Ferreira"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1007/s42979-026-05141-y",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": 2026,
+    "overrides": []
+   }
+  },
+  {
+   "key": "tampu2022",
+   "year": 2022,
+   "year_rule": "issued",
+   "csl": {
+    "type": "journal-article",
+    "title": "Inflation of test accuracy due to data leakage in deep learning-based classification of OCT images",
+    "container-title": "Scientific Data",
+    "volume": "9",
+    "issue": "1",
+    "article-number": "580",
+    "publisher": "Springer Science and Business Media LLC",
+    "DOI": "10.1038/s41597-022-01618-6",
+    "URL": "http://dx.doi.org/10.1038/s41597-022-01618-6",
+    "author": [
+     {
+      "family": "Tampu",
+      "given": "Iulian Emil"
+     },
+     {
+      "family": "Eklund",
+      "given": "Anders"
+     },
+     {
+      "family": "Haj-Hosseini",
+      "given": "Neda"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1038/s41597-022-01618-6",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": 2022,
+    "overrides": []
+   }
+  },
+  {
+   "key": "adimoolam2023",
+   "year": 2023,
+   "year_rule": "issued",
+   "csl": {
+    "type": "article",
+    "title": "Data Leakage Detection and De-duplication in Large Scale Geospatial Image Datasets",
+    "publisher": "arXiv",
+    "DOI": "10.48550/ARXIV.2304.02296",
+    "URL": "https://arxiv.org/abs/2304.02296",
+    "author": [
+     {
+      "family": "Adimoolam",
+      "given": "Yeshwanth Kumar"
+     },
+     {
+      "family": "Poullis",
+      "given": "Charalambos"
+     },
+     {
+      "family": "Averkiou",
+      "given": "Melinos"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.48550/arXiv.2304.02296",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": []
+   }
+  },
+  {
+   "key": "cassidy2022",
+   "year": 2022,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "journal-article",
+    "title": "Analysis of the ISIC image datasets: Usage, benchmarks and recommendations",
+    "container-title": "Medical Image Analysis",
+    "volume": "75",
+    "page": "102305",
+    "article-number": "102305",
+    "publisher": "Elsevier BV",
+    "DOI": "10.1016/j.media.2021.102305",
+    "URL": "http://dx.doi.org/10.1016/j.media.2021.102305",
+    "author": [
+     {
+      "family": "Cassidy",
+      "given": "Bill"
+     },
+     {
+      "family": "Kendrick",
+      "given": "Connah"
+     },
+     {
+      "family": "Brodzicki",
+      "given": "Andrzej"
+     },
+     {
+      "family": "Jaworek-Korjakowska",
+      "given": "Joanna"
+     },
+     {
+      "family": "Yap",
+      "given": "Moi Hoon"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1016/j.media.2021.102305",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": []
+   }
+  },
+  {
+   "key": "northcutt2021",
+   "year": 2021,
+   "year_rule": "issued",
+   "csl": {
+    "type": "paper-conference",
+    "title": "Pervasive Label Errors in Test Sets Destabilize Machine Learning Benchmarks",
+    "container-title": "Proceedings of the Neural Information Processing Systems Track on Datasets and Benchmarks",
+    "publisher": "arXiv",
+    "DOI": "10.48550/ARXIV.2103.14749",
+    "URL": "https://arxiv.org/abs/2103.14749",
+    "author": [
+     {
+      "family": "Northcutt",
+      "given": "Curtis G."
+     },
+     {
+      "family": "Athalye",
+      "given": "Anish"
+     },
+     {
+      "family": "Mueller",
+      "given": "Jonas"
+     }
+    ],
+    "volume": "1"
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.48550/arXiv.2103.14749",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": [
+     {
+      "field": "type",
+      "reason": "Published in the NeurIPS Datasets and Benchmarks track, which assigns no DOI. The arXiv DOI is kept as the locator, as the 20 September ledger instructs."
+     },
+     {
+      "field": "container-title",
+      "reason": "As above."
+     },
+     {
+      "field": "volume",
+      "reason": "As above."
+     }
+    ]
+   }
+  },
+  {
+   "key": "wang2025",
+   "year": 2025,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "journal-article",
+    "title": "Cross-Dataset Steel Defect Few-Shot Detection: A Deep Learning Approach Based on Multi-Scale Features and Metric Learning",
+    "container-title": "Journal of Computers",
+    "volume": "36",
+    "issue": "5",
+    "page": "123-138",
+    "publisher": "Computer Society of the Republic of China",
+    "DOI": "10.63367/199115992025103605009",
+    "URL": "http://dx.doi.org/10.63367/199115992025103605009",
+    "author": [
+     {
+      "family": "Wang",
+      "given": "Hsiao-Yu"
+     },
+     {
+      "family": "Hung",
+      "given": "Ching-Hua"
+     },
+     {
+      "family": "Cheng",
+      "given": "Chun-Shih"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.63367/199115992025103605009",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": 2025,
+    "overrides": []
+   }
+  },
+  {
+   "key": "wang2022",
+   "year": 2022,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "journal-article",
+    "title": "Few-Shot Steel Surface Defect Detection",
+    "container-title": "IEEE Transactions on Instrumentation and Measurement",
+    "volume": "71",
+    "page": "1-12",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "DOI": "10.1109/tim.2021.3128208",
+    "URL": "http://dx.doi.org/10.1109/TIM.2021.3128208",
+    "author": [
+     {
+      "family": "Wang",
+      "given": "Haohan"
+     },
+     {
+      "family": "Li",
+      "given": "Zhuoling"
+     },
+     {
+      "family": "Wang",
+      "given": "Haoqian"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1109/TIM.2021.3128208",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": []
+   }
+  },
+  {
+   "key": "wang2019",
+   "year": 2019,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "proceedings-article",
+    "title": "Few-Shot Adaptive Faster R-CNN",
+    "container-title": "2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+    "page": "7166-7175",
+    "publisher": "IEEE",
+    "DOI": "10.1109/cvpr.2019.00734",
+    "URL": "http://dx.doi.org/10.1109/cvpr.2019.00734",
+    "author": [
+     {
+      "family": "Wang",
+      "given": "Tao"
+     },
+     {
+      "family": "Zhang",
+      "given": "Xiaopeng"
+     },
+     {
+      "family": "Yuan",
+      "given": "Li"
+     },
+     {
+      "family": "Feng",
+      "given": "Jiashi"
+     }
+    ],
+    "event": "2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1109/cvpr.2019.00734",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": []
+   }
+  },
+  {
+   "key": "chu2016",
+   "year": 2016,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "book-chapter",
+    "title": "Best Practices for Fine-Tuning Visual Classifiers to New Domains",
+    "page": "435-442",
+    "publisher": "Springer International Publishing",
+    "DOI": "10.1007/978-3-319-49409-8_34",
+    "URL": "http://dx.doi.org/10.1007/978-3-319-49409-8_34",
+    "author": [
+     {
+      "family": "Chu",
+      "given": "Brian"
+     },
+     {
+      "family": "Madhavan",
+      "given": "Vashisht"
+     },
+     {
+      "family": "Beijbom",
+      "given": "Oscar"
+     },
+     {
+      "family": "Hoffman",
+      "given": "Judy"
+     },
+     {
+      "family": "Darrell",
+      "given": "Trevor"
+     }
+    ],
+    "book-title": "Computer Vision – ECCV 2016 Workshops",
+    "editor": [
+     {
+      "family": "Hua",
+      "given": "Gang"
+     },
+     {
+      "family": "Jégou",
+      "given": "Hervé"
+     }
+    ],
+    "series": "Lecture Notes in Computer Science",
+    "book-doi": "10.1007/978-3-319-49409-8"
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1007/978-3-319-49409-8_34",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": 2016,
+    "overrides": []
+   }
+  },
+  {
+   "key": "benhafid2026",
+   "year": 2026,
+   "year_rule": "issued",
+   "csl": {
+    "type": "journal-article",
+    "title": "Rarity-Aware Stratified Active Learning for Class-Imbalanced Industrial Object Detection",
+    "container-title": "Applied Sciences",
+    "volume": "16",
+    "issue": "3",
+    "page": "1236",
+    "publisher": "MDPI AG",
+    "DOI": "10.3390/app16031236",
+    "URL": "http://dx.doi.org/10.3390/app16031236",
+    "author": [
+     {
+      "family": "Benhafid",
+      "given": "Zhor"
+     },
+     {
+      "family": "Selouani",
+      "given": "Sid Ahmed"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.3390/app16031236",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": 2026,
+    "overrides": []
+   }
+  },
+  {
+   "key": "huseljic2025",
+   "year": 2025,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "journal-article",
+    "title": "Systematic Evaluation of Uncertainty Calibration in Pretrained Object Detectors",
+    "container-title": "International Journal of Computer Vision",
+    "volume": "133",
+    "issue": "3",
+    "page": "1033-1047",
+    "publisher": "Springer Science and Business Media LLC",
+    "DOI": "10.1007/s11263-024-02219-z",
+    "URL": "http://dx.doi.org/10.1007/s11263-024-02219-z",
+    "author": [
+     {
+      "family": "Huseljic",
+      "given": "Denis"
+     },
+     {
+      "family": "Herde",
+      "given": "Marek"
+     },
+     {
+      "family": "Hahn",
+      "given": "Paul"
+     },
+     {
+      "family": "Müjde",
+      "given": "Mehmet"
+     },
+     {
+      "family": "Sick",
+      "given": "Bernhard"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1007/s11263-024-02219-z",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": 2024,
+    "overrides": []
+   }
+  },
+  {
+   "key": "munir2022",
+   "year": 2022,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "proceedings-article",
+    "title": "Towards Improving Calibration in Object Detection Under Domain Shift",
+    "container-title": "Advances in Neural Information Processing Systems 35",
+    "page": "38706-38718",
+    "publisher": "Neural Information Processing Systems Foundation, Inc. (NeurIPS)",
+    "DOI": "10.52202/068431-2805",
+    "URL": "http://dx.doi.org/10.52202/068431-2805",
+    "author": [
+     {
+      "family": "Munir",
+      "given": "Muhammad Akhtar"
+     },
+     {
+      "family": "Khan",
+      "given": "Muhammad Haris"
+     },
+     {
+      "family": "Sarfraz",
+      "given": "M."
+     },
+     {
+      "family": "Ali",
+      "given": "Mohsen"
+     }
+    ],
+    "event": "Advances in Neural Information Processing Systems 35"
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.52202/068431-2805",
+    "found_by": "query",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": []
+   }
+  },
+  {
+   "key": "kuzucu2025",
+   "year": 2025,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "book-chapter",
+    "title": "On Calibration of Object Detectors: Pitfalls, Evaluation and Baselines",
+    "page": "185-204",
+    "publisher": "Springer Nature Switzerland",
+    "DOI": "10.1007/978-3-031-72664-4_11",
+    "URL": "http://dx.doi.org/10.1007/978-3-031-72664-4_11",
+    "author": [
+     {
+      "family": "Kuzucu",
+      "given": "Selim"
+     },
+     {
+      "family": "Oksuz",
+      "given": "Kemal"
+     },
+     {
+      "family": "Sadeghi",
+      "given": "Jonathan"
+     },
+     {
+      "family": "Dokania",
+      "given": "Puneet K."
+     }
+    ],
+    "book-title": "Computer Vision – ECCV 2024",
+    "editor": [
+     {
+      "family": "Leonardis",
+      "given": "Aleš"
+     },
+     {
+      "family": "Ricci",
+      "given": "Elisa"
+     },
+     {
+      "family": "Roth",
+      "given": "Stefan"
+     },
+     {
+      "family": "Russakovsky",
+      "given": "Olga"
+     },
+     {
+      "family": "Sattler",
+      "given": "Torsten"
+     },
+     {
+      "family": "Varol",
+      "given": "Gül"
+     }
+    ],
+    "series": "Lecture Notes in Computer Science",
+    "book-doi": "10.1007/978-3-031-72664-4"
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1007/978-3-031-72664-4_11",
+    "found_by": "query",
+    "resolved": "2026-09-24",
+    "online_year": 2024,
+    "overrides": []
+   }
+  },
+  {
+   "key": "oksuz2023",
+   "year": 2023,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "proceedings-article",
+    "title": "Towards Building Self-Aware Object Detectors via Reliable Uncertainty Quantification and Calibration",
+    "container-title": "2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+    "page": "9263-9274",
+    "publisher": "IEEE",
+    "DOI": "10.1109/cvpr52729.2023.00894",
+    "URL": "http://dx.doi.org/10.1109/CVPR52729.2023.00894",
+    "author": [
+     {
+      "family": "Oksuz",
+      "given": "Kemal"
+     },
+     {
+      "family": "Joy",
+      "given": "Tom"
+     },
+     {
+      "family": "Dokania",
+      "given": "Puneet K."
+     }
+    ],
+    "event": "2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1109/CVPR52729.2023.00894",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": []
+   }
+  },
+  {
+   "key": "kuppers2020",
+   "year": 2020,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "proceedings-article",
+    "title": "Multivariate Confidence Calibration for Object Detection",
+    "container-title": "2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)",
+    "page": "1322-1330",
+    "publisher": "IEEE",
+    "DOI": "10.1109/cvprw50498.2020.00171",
+    "URL": "http://dx.doi.org/10.1109/cvprw50498.2020.00171",
+    "author": [
+     {
+      "family": "Küppers",
+      "given": "Fabian"
+     },
+     {
+      "family": "Kronenberger",
+      "given": "Jan"
+     },
+     {
+      "family": "Shantia",
+      "given": "Amirhossein"
+     },
+     {
+      "family": "Haselhoff",
+      "given": "Anselm"
+     }
+    ],
+    "event": "2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)"
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1109/cvprw50498.2020.00171",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": [
+     {
+      "field": "family0",
+      "reason": "The deposit drops the umlaut."
+     }
+    ]
+   }
+  },
+  {
+   "key": "oza2024",
+   "year": 2024,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "journal-article",
+    "title": "Unsupervised Domain Adaptation of Object Detectors: A Survey",
+    "container-title": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "volume": "46",
+    "issue": "6",
+    "page": "4018-4040",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "DOI": "10.1109/tpami.2022.3217046",
+    "URL": "http://dx.doi.org/10.1109/TPAMI.2022.3217046",
+    "author": [
+     {
+      "family": "Oza",
+      "given": "Poojan"
+     },
+     {
+      "family": "Sindagi",
+      "given": "Vishwanath A."
+     },
+     {
+      "family": "VS",
+      "given": "Vibashan"
+     },
+     {
+      "family": "Patel",
+      "given": "Vishal M."
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1109/TPAMI.2022.3217046",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": []
+   }
+  },
+  {
+   "key": "zou2026",
+   "year": 2026,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "journal-article",
+    "title": "Causal invariant representations for robust surface defect inspection under domain shifts",
+    "container-title": "Engineering Research Express",
+    "volume": "8",
+    "issue": "15",
+    "page": "155212",
+    "publisher": "IOP Publishing",
+    "DOI": "10.1088/2631-8695/ae8b7b",
+    "URL": "http://dx.doi.org/10.1088/2631-8695/ae8b7b",
+    "author": [
+     {
+      "family": "Zou",
+      "given": "Juncheng"
+     },
+     {
+      "family": "Dong",
+      "given": "Jianwei"
+     },
+     {
+      "family": "Wang",
+      "given": "Chenglong"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1088/2631-8695/ae8b7b",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": 2026,
+    "overrides": []
+   }
+  },
+  {
+   "key": "babu2026",
+   "year": 2026,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "proceedings-article",
+    "title": "Evaluating Train–Test Data Leakage in Automotive Image Datasets",
+    "container-title": "2026 IEEE Intelligent Vehicles Symposium (IV)",
+    "page": "201-207",
+    "publisher": "IEEE",
+    "DOI": "10.1109/iv66570.2026.11623865",
+    "URL": "http://dx.doi.org/10.1109/iv66570.2026.11623865",
+    "author": [
+     {
+      "family": "Babu",
+      "given": "Md Abu Ahammed"
+     },
+     {
+      "family": "Staron",
+      "given": "Miroslaw"
+     },
+     {
+      "family": "Bálint",
+      "given": "András"
+     },
+     {
+      "family": "Durisic",
+      "given": "Darko"
+     },
+     {
+      "family": "Pandey",
+      "given": "Sushant Kumar"
+     }
+    ],
+    "event": "2026 IEEE Intelligent Vehicles Symposium (IV)"
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1109/iv66570.2026.11623865",
+    "found_by": "query",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": []
+   }
+  },
+  {
+   "key": "zhou2022",
+   "year": 2022,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "proceedings-article",
+    "title": "Simple Multi-dataset Detection",
+    "container-title": "2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+    "page": "7561-7570",
+    "publisher": "IEEE",
+    "DOI": "10.1109/cvpr52688.2022.00742",
+    "URL": "http://dx.doi.org/10.1109/cvpr52688.2022.00742",
+    "author": [
+     {
+      "family": "Zhou",
+      "given": "Xingyi"
+     },
+     {
+      "family": "Koltun",
+      "given": "Vladlen"
+     },
+     {
+      "family": "Krähenbühl",
+      "given": "Philipp"
+     }
+    ],
+    "event": "2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1109/cvpr52688.2022.00742",
+    "found_by": "query",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": [
+     {
+      "field": "author2",
+      "reason": "The IEEE deposit drops both umlauts."
+     }
+    ]
+   }
+  },
+  {
+   "key": "zhao2024",
+   "year": 2024,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "proceedings-article",
+    "title": "DETRs Beat YOLOs on Real-time Object Detection",
+    "container-title": "2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+    "page": "16965-16974",
+    "publisher": "IEEE",
+    "DOI": "10.1109/cvpr52733.2024.01605",
+    "URL": "http://dx.doi.org/10.1109/cvpr52733.2024.01605",
+    "author": [
+     {
+      "family": "Zhao",
+      "given": "Yian"
+     },
+     {
+      "family": "Lv",
+      "given": "Wenyu"
+     },
+     {
+      "family": "Xu",
+      "given": "Shangliang"
+     },
+     {
+      "family": "Wei",
+      "given": "Jinman"
+     },
+     {
+      "family": "Wang",
+      "given": "Guanzhong"
+     },
+     {
+      "family": "Dang",
+      "given": "Qingqing"
+     },
+     {
+      "family": "Liu",
+      "given": "Yi"
+     },
+     {
+      "family": "Chen",
+      "given": "Jie"
+     }
+    ],
+    "event": "2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1109/cvpr52733.2024.01605",
+    "found_by": "query",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": []
+   }
+  },
+  {
+   "key": "ren2017",
+   "year": 2017,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "journal-article",
+    "title": "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks",
+    "container-title": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "volume": "39",
+    "issue": "6",
+    "page": "1137-1149",
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "DOI": "10.1109/tpami.2016.2577031",
+    "URL": "http://dx.doi.org/10.1109/TPAMI.2016.2577031",
+    "author": [
+     {
+      "family": "Ren",
+      "given": "Shaoqing"
+     },
+     {
+      "family": "He",
+      "given": "Kaiming"
+     },
+     {
+      "family": "Girshick",
+      "given": "Ross"
+     },
+     {
+      "family": "Sun",
+      "given": "Jian"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1109/TPAMI.2016.2577031",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": []
+   }
+  },
+  {
+   "key": "he2016",
+   "year": 2016,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "proceedings-article",
+    "title": "Deep Residual Learning for Image Recognition",
+    "container-title": "2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
+    "page": "770-778",
+    "publisher": "IEEE",
+    "DOI": "10.1109/cvpr.2016.90",
+    "URL": "http://dx.doi.org/10.1109/CVPR.2016.90",
+    "author": [
+     {
+      "family": "He",
+      "given": "Kaiming"
+     },
+     {
+      "family": "Zhang",
+      "given": "Xiangyu"
+     },
+     {
+      "family": "Ren",
+      "given": "Shaoqing"
+     },
+     {
+      "family": "Sun",
+      "given": "Jian"
+     }
+    ],
+    "event": "2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)"
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1109/CVPR.2016.90",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": []
+   }
+  },
+  {
+   "key": "lin2017",
+   "year": 2017,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "proceedings-article",
+    "title": "Feature Pyramid Networks for Object Detection",
+    "container-title": "2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
+    "page": "936-944",
+    "publisher": "IEEE",
+    "DOI": "10.1109/cvpr.2017.106",
+    "URL": "http://dx.doi.org/10.1109/CVPR.2017.106",
+    "author": [
+     {
+      "family": "Lin",
+      "given": "Tsung-Yi"
+     },
+     {
+      "family": "Dollár",
+      "given": "Piotr"
+     },
+     {
+      "family": "Girshick",
+      "given": "Ross"
+     },
+     {
+      "family": "He",
+      "given": "Kaiming"
+     },
+     {
+      "family": "Hariharan",
+      "given": "Bharath"
+     },
+     {
+      "family": "Belongie",
+      "given": "Serge"
+     }
+    ],
+    "event": "2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)"
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1109/CVPR.2017.106",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": [
+     {
+      "field": "author1",
+      "reason": "The IEEE deposit drops the accent that the COCO record keeps."
+     }
+    ]
+   }
+  },
+  {
+   "key": "lin2014",
+   "year": 2014,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "book-chapter",
+    "title": "Microsoft COCO: Common Objects in Context",
+    "page": "740-755",
+    "publisher": "Springer International Publishing",
+    "DOI": "10.1007/978-3-319-10602-1_48",
+    "URL": "http://dx.doi.org/10.1007/978-3-319-10602-1_48",
+    "author": [
+     {
+      "family": "Lin",
+      "given": "Tsung-Yi"
+     },
+     {
+      "family": "Maire",
+      "given": "Michael"
+     },
+     {
+      "family": "Belongie",
+      "given": "Serge"
+     },
+     {
+      "family": "Hays",
+      "given": "James"
+     },
+     {
+      "family": "Perona",
+      "given": "Pietro"
+     },
+     {
+      "family": "Ramanan",
+      "given": "Deva"
+     },
+     {
+      "family": "Dollár",
+      "given": "Piotr"
+     },
+     {
+      "family": "Zitnick",
+      "given": "C. Lawrence"
+     }
+    ],
+    "book-title": "Computer Vision – ECCV 2014",
+    "editor": [
+     {
+      "family": "Fleet",
+      "given": "David"
+     },
+     {
+      "family": "Pajdla",
+      "given": "Tomas"
+     },
+     {
+      "family": "Schiele",
+      "given": "Bernt"
+     },
+     {
+      "family": "Tuytelaars",
+      "given": "Tinne"
+     }
+    ],
+    "series": "Lecture Notes in Computer Science",
+    "book-doi": "10.1007/978-3-319-10602-1"
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1007/978-3-319-10602-1_48",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": []
+   }
+  },
+  {
+   "key": "friedman1937",
+   "year": 1937,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "journal-article",
+    "title": "The Use of Ranks to Avoid the Assumption of Normality Implicit in the Analysis of Variance",
+    "container-title": "Journal of the American Statistical Association",
+    "volume": "32",
+    "issue": "200",
+    "page": "675-701",
+    "publisher": "Informa UK Limited",
+    "DOI": "10.1080/01621459.1937.10503522",
+    "URL": "http://dx.doi.org/10.1080/01621459.1937.10503522",
+    "author": [
+     {
+      "family": "Friedman",
+      "given": "Milton"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1080/01621459.1937.10503522",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": []
+   }
+  },
+  {
+   "key": "huangfu2018",
+   "year": 2018,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "journal-article",
+    "title": "Parallelizing the dual revised simplex method",
+    "container-title": "Mathematical Programming Computation",
+    "volume": "10",
+    "issue": "1",
+    "page": "119-142",
+    "publisher": "Springer Science and Business Media LLC",
+    "DOI": "10.1007/s12532-017-0130-5",
+    "URL": "http://dx.doi.org/10.1007/s12532-017-0130-5",
+    "author": [
+     {
+      "family": "Huangfu",
+      "given": "Q."
+     },
+     {
+      "family": "Hall",
+      "given": "J. A. J."
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1007/s12532-017-0130-5",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": 2017,
+    "overrides": []
+   }
+  },
+  {
+   "key": "naeini2015",
+   "year": 2015,
+   "year_rule": "issued",
+   "csl": {
+    "type": "journal-article",
+    "title": "Obtaining Well Calibrated Probabilities Using Bayesian Binning",
+    "container-title": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "volume": "29",
+    "issue": "1",
+    "publisher": "Association for the Advancement of Artificial Intelligence (AAAI)",
+    "DOI": "10.1609/aaai.v29i1.9602",
+    "URL": "http://dx.doi.org/10.1609/aaai.v29i1.9602",
+    "author": [
+     {
+      "family": "Naeini",
+      "given": "Mahdi Pakdaman"
+     },
+     {
+      "family": "Cooper",
+      "given": "Gregory"
+     },
+     {
+      "family": "Hauskrecht",
+      "given": "Milos"
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1609/aaai.v29i1.9602",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": 2015,
+    "overrides": [
+     {
+      "field": "author0",
+      "reason": "The deposit gives the compound family name 'Pakdaman Naeini'. The calibration literature cites this paper as Naeini et al., which is the form a reader will search for."
+     }
+    ]
+   }
+  },
+  {
+   "key": "field2007",
+   "year": 2007,
+   "year_rule": "published-print",
+   "csl": {
+    "type": "journal-article",
+    "title": "Bootstrapping Clustered Data",
+    "container-title": "Journal of the Royal Statistical Society Series B: Statistical Methodology",
+    "volume": "69",
+    "issue": "3",
+    "page": "369-390",
+    "publisher": "Oxford University Press (OUP)",
+    "DOI": "10.1111/j.1467-9868.2007.00593.x",
+    "URL": "http://dx.doi.org/10.1111/j.1467-9868.2007.00593.x",
+    "author": [
+     {
+      "family": "Field",
+      "given": "C. A."
+     },
+     {
+      "family": "Welsh",
+      "given": "A. H."
+     }
+    ]
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.1111/j.1467-9868.2007.00593.x",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": 2007,
+    "overrides": []
+   }
+  },
+  {
+   "key": "paszke2019",
+   "year": 2019,
+   "year_rule": "issued",
+   "csl": {
+    "type": "paper-conference",
+    "title": "PyTorch: An Imperative Style, High-Performance Deep Learning Library",
+    "publisher": "arXiv",
+    "DOI": "10.48550/ARXIV.1912.01703",
+    "URL": "https://arxiv.org/abs/1912.01703",
+    "author": [
+     {
+      "family": "Paszke",
+      "given": "Adam"
+     },
+     {
+      "family": "Gross",
+      "given": "Sam"
+     },
+     {
+      "family": "Massa",
+      "given": "Francisco"
+     },
+     {
+      "family": "Lerer",
+      "given": "Adam"
+     },
+     {
+      "family": "Bradbury",
+      "given": "James"
+     },
+     {
+      "family": "Chanan",
+      "given": "Gregory"
+     },
+     {
+      "family": "Killeen",
+      "given": "Trevor"
+     },
+     {
+      "family": "Lin",
+      "given": "Zeming"
+     },
+     {
+      "family": "Gimelshein",
+      "given": "Natalia"
+     },
+     {
+      "family": "Antiga",
+      "given": "Luca"
+     },
+     {
+      "family": "Desmaison",
+      "given": "Alban"
+     },
+     {
+      "family": "Köpf",
+      "given": "Andreas"
+     },
+     {
+      "family": "Yang",
+      "given": "Edward"
+     },
+     {
+      "family": "DeVito",
+      "given": "Zach"
+     },
+     {
+      "family": "Raison",
+      "given": "Martin"
+     },
+     {
+      "family": "Tejani",
+      "given": "Alykhan"
+     },
+     {
+      "family": "Chilamkurthy",
+      "given": "Sasank"
+     },
+     {
+      "family": "Steiner",
+      "given": "Benoit"
+     },
+     {
+      "family": "Fang",
+      "given": "Lu"
+     },
+     {
+      "family": "Bai",
+      "given": "Junjie"
+     },
+     {
+      "family": "Chintala",
+      "given": "Soumith"
+     }
+    ],
+    "container-title": "Advances in Neural Information Processing Systems",
+    "volume": "32"
+   },
+   "provenance": {
+    "method": "doi.org content negotiation, CSL-JSON",
+    "doi": "10.48550/arXiv.1912.01703",
+    "found_by": "given",
+    "resolved": "2026-09-24",
+    "online_year": null,
+    "overrides": [
+     {
+      "field": "type",
+      "reason": "Published in NeurIPS 2019, which assigns no DOI. The arXiv DOI is kept as the locator."
+     },
+     {
+      "field": "container-title",
+      "reason": "As above."
+     },
+     {
+      "field": "volume",
+      "reason": "As above."
+     }
+    ]
+   }
+  },
+  {
+   "key": "demsar2006",
+   "year": 2006,
+   "year_rule": "stated",
+   "csl": {
+    "type": "article-journal",
+    "author": [
+     {
+      "family": "Demšar",
+      "given": "Janez"
+     }
+    ],
+    "title": "Statistical comparisons of classifiers over multiple data sets",
+    "container-title": "Journal of Machine Learning Research",
+    "volume": "7",
+    "page": "1-30",
+    "URL": "https://jmlr.org/papers/v7/demsar06a.html"
+   },
+   "provenance": {
+    "method": "hand-written, no DOI",
+    "note": "JMLR assigns no DOI. Landing page given as URL.",
+    "resolved": "2026-09-24"
+   }
+  },
+  {
+   "key": "jocher2024",
+   "year": 2024,
+   "year_rule": "stated",
+   "csl": {
+    "type": "software",
+    "author": [
+     {
+      "family": "Jocher",
+      "given": "Glenn"
+     },
+     {
+      "family": "Qiu",
+      "given": "Jing"
+     }
+    ],
+    "title": "Ultralytics YOLO11",
+    "version": "11.0.0",
+    "publisher": "Ultralytics",
+    "URL": "https://github.com/ultralytics/ultralytics"
+   },
+   "provenance": {
+    "method": "hand-written, no DOI",
+    "note": "The citation Ultralytics publishes for YOLO11. No DOI. The grid ran ultralytics 8.4.138, which Section 3.8 states.",
+    "resolved": "2026-09-24"
+   }
+  },
+  {
+   "key": "wijaya2024",
+   "year": 2024,
+   "year_rule": "stated",
+   "csl": {
+    "type": "dataset",
+    "author": [
+     {
+      "family": "Wijaya",
+      "given": "Sukma Adhi"
+     }
+    ],
+    "title": "Welding defect - object detection",
+    "version": "2",
+    "publisher": "Kaggle",
+    "URL": "https://www.kaggle.com/datasets/sukmaadhiwijaya/welding-defect-object-detection"
+   },
+   "provenance": {
+    "method": "hand-written, no DOI",
+    "note": "Kaggle dataset page and metadata endpoint, read 18 September 2026 (the project log, Kaggle licence). CC0 1.0.",
+    "resolved": "2026-09-24"
+   }
+  },
+  {
+   "key": "welddefect2025",
+   "year": 2025,
+   "year_rule": "stated",
+   "csl": {
+    "type": "dataset",
+    "author": [
+     {
+      "literal": "Weld defect Detection"
+     }
+    ],
+    "title": "Weld surface defect detection",
+    "version": "2",
+    "publisher": "Roboflow Universe",
+    "URL": "https://universe.roboflow.com/weld-defect-detection-onlal/weld-surface-defect-detection-884h9"
+   },
+   "provenance": {
+    "method": "hand-written, no DOI",
+    "note": "Roboflow Universe project page, read 24 September 2026. The author is the workspace display name, which is how Roboflow's own citation names it. CC BY 4.0. Our copy is export version 2.",
+    "resolved": "2026-09-24"
+   }
+  },
+  {
+   "key": "faza2024",
+   "year": 2024,
+   "year_rule": "stated",
+   "csl": {
+    "type": "dataset",
+    "author": [
+     {
+      "literal": "Faza"
+     }
+    ],
+    "title": "Visual welding defect",
+    "version": "1",
+    "publisher": "Roboflow Universe",
+    "URL": "https://universe.roboflow.com/faza/visual-welding-defect"
+   },
+   "provenance": {
+    "method": "hand-written, no DOI",
+    "note": "Roboflow Universe project page, read 24 September 2026. CC BY 4.0. Our copy is export version 1.",
+    "resolved": "2026-09-24"
+   }
+  },
+  {
+   "key": "kaidal2024",
+   "year": 2024,
+   "year_rule": "stated",
+   "csl": {
+    "type": "dataset",
+    "author": [
+     {
+      "literal": "kaid Al2"
+     }
+    ],
+    "title": "Welding defect 2class",
+    "publisher": "Roboflow Universe",
+    "URL": "https://universe.roboflow.com/kaid-al2/welding-defect-2class"
+   },
+   "provenance": {
+    "method": "hand-written, no DOI",
+    "note": "Roboflow Universe project page, read 24 September 2026. CC BY 4.0. THIS IS THE UPSTREAM of `twoclass`, found this pass. It publishes no dataset version, so it cannot be exported directly, and the copy this study used is a fork in the author's own workspace. The data availability statement names both.",
+    "resolved": "2026-09-24"
+   }
+  }
+ ]
+}

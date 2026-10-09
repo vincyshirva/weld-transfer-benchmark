@@ -1,0 +1,98 @@
+{
+  "device": {
+    "name": "NVIDIA H200 NVL MIG 7g.141gb",
+    "compute_capability": "9.0",
+    "multi_processors": 132,
+    "total_vram_gib": 139.8,
+    "free_vram_gib_at_start": 139.29,
+    "torch": "2.5.1+cu121",
+    "torch_cuda": "12.1",
+    "arch_list": [
+      "sm_50",
+      "sm_60",
+      "sm_70",
+      "sm_75",
+      "sm_80",
+      "sm_86",
+      "sm_90"
+    ],
+    "driver_cuda": "580.173.02\n580.173.02"
+  },
+  "imgsz": 640,
+  "amp": true,
+  "root": "/home/USERNAME/weld_generalization",
+  "stage2_real": {
+    "workers_2": {
+      "source": "lohi_weld",
+      "train_images": 2115,
+      "epochs_run": 6,
+      "batch": 32,
+      "imgsz": 640,
+      "workers": 2,
+      "total_wall_s": 54.9,
+      "per_epoch": {
+        "all_epochs_s": [
+          10.1,
+          8.0,
+          8.1,
+          8.1,
+          8.1,
+          8.6,
+          10.0
+        ],
+        "steady_state_s": 8.5,
+        "steady_min_s": 8.0,
+        "steady_max_s": 10.0
+      },
+      "images_per_s_end_to_end": 248.8
+    },
+    "workers_8": {
+      "source": "lohi_weld",
+      "train_images": 2115,
+      "epochs_run": 6,
+      "batch": 32,
+      "imgsz": 640,
+      "workers": 8,
+      "total_wall_s": 34.0,
+      "per_epoch": {
+        "all_epochs_s": [
+          6.5,
+          4.8,
+          5.1,
+          4.9,
+          4.8,
+          5.4,
+          6.7
+        ],
+        "steady_state_s": 5.3,
+        "steady_min_s": 4.8,
+        "steady_max_s": 6.7
+      },
+      "images_per_s_end_to_end": 399.1
+    },
+    "workers_16": {
+      "source": "lohi_weld",
+      "train_images": 2115,
+      "epochs_run": 6,
+      "batch": 32,
+      "imgsz": 640,
+      "workers": 16,
+      "total_wall_s": 37.0,
+      "per_epoch": {
+        "all_epochs_s": [
+          7.6,
+          5.2,
+          5.3,
+          5.1,
+          5.1,
+          5.3,
+          6.5
+        ],
+        "steady_state_s": 5.4,
+        "steady_min_s": 5.1,
+        "steady_max_s": 6.5
+      },
+      "images_per_s_end_to_end": 391.7
+    }
+  }
+}

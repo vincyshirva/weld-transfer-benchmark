@@ -1,0 +1,571 @@
+{
+  "Visual Welding Defect.v1i.yolov8": {
+    "path": "Visual Welding Defect.v1i.yolov8",
+    "classes": [
+      "Defect",
+      "Welding Line",
+      "workpiece"
+    ],
+    "splits": {
+      "train": {
+        "n_images": 1121,
+        "n_boxes": 5735,
+        "n_background": 0,
+        "n_missing_label_file": 0,
+        "per_class": {
+          "0": 3493,
+          "1": 1118,
+          "2": 1124
+        },
+        "box_area_frac_median": 0.16727265815083886,
+        "box_area_frac_p10": 0.018037503147950544,
+        "resolutions": [
+          [
+            [
+              640,
+              640
+            ],
+            1121
+          ]
+        ],
+        "n_distinct_resolutions": 1
+      },
+      "valid": {
+        "n_images": 111,
+        "n_boxes": 560,
+        "n_background": 0,
+        "n_missing_label_file": 0,
+        "per_class": {
+          "0": 339,
+          "1": 110,
+          "2": 111
+        },
+        "box_area_frac_median": 0.15163338567991833,
+        "box_area_frac_p10": 0.007657232649226252,
+        "resolutions": [
+          [
+            [
+              640,
+              640
+            ],
+            111
+          ]
+        ],
+        "n_distinct_resolutions": 1
+      },
+      "test": {
+        "n_images": 56,
+        "n_boxes": 281,
+        "n_background": 0,
+        "n_missing_label_file": 0,
+        "per_class": {
+          "0": 172,
+          "1": 53,
+          "2": 56
+        },
+        "box_area_frac_median": 0.13838037744033896,
+        "box_area_frac_p10": 0.006781683941989476,
+        "resolutions": [
+          [
+            [
+              640,
+              640
+            ],
+            56
+          ]
+        ],
+        "n_distinct_resolutions": 1
+      }
+    },
+    "total": {
+      "images": 1288,
+      "boxes": 6576,
+      "background": 0
+    },
+    "per_class_total": {
+      "Defect": 4004,
+      "Welding Line": 1281,
+      "workpiece": 1291
+    }
+  },
+  "Weld Surface Defect Detection.v1i.yolov8": {
+    "path": "Weld Surface Defect Detection.v1i.yolov8",
+    "classes": [
+      "Burn Through-BT",
+      "Contamination-CN",
+      "Lack of Fusion-LOF",
+      "Normal Weld-NW",
+      "Spatter-SR",
+      "Surface Crack-SC",
+      "Undercut-UC"
+    ],
+    "splits": {
+      "train": {
+        "n_images": 15045,
+        "n_boxes": 15258,
+        "n_background": 0,
+        "n_missing_label_file": 0,
+        "per_class": {
+          "0": 2331,
+          "1": 2292,
+          "2": 2253,
+          "3": 1950,
+          "4": 2073,
+          "5": 2217,
+          "6": 2142
+        },
+        "box_area_frac_median": 0.22546508789062497,
+        "box_area_frac_p10": 0.007734374999999999,
+        "resolutions": [
+          [
+            [
+              640,
+              640
+            ],
+            15045
+          ]
+        ],
+        "n_distinct_resolutions": 1
+      },
+      "valid": {
+        "n_images": 1435,
+        "n_boxes": 1463,
+        "n_background": 0,
+        "n_missing_label_file": 0,
+        "per_class": {
+          "0": 223,
+          "1": 227,
+          "2": 215,
+          "3": 186,
+          "4": 197,
+          "5": 211,
+          "6": 204
+        },
+        "box_area_frac_median": 0.22216003417968752,
+        "box_area_frac_p10": 0.008006103515625,
+        "resolutions": [
+          [
+            [
+              640,
+              640
+            ],
+            1435
+          ]
+        ],
+        "n_distinct_resolutions": 1
+      },
+      "test": {
+        "n_images": 715,
+        "n_boxes": 724,
+        "n_background": 0,
+        "n_missing_label_file": 0,
+        "per_class": {
+          "0": 110,
+          "1": 108,
+          "2": 107,
+          "3": 93,
+          "4": 99,
+          "5": 105,
+          "6": 102
+        },
+        "box_area_frac_median": 0.2089703369140625,
+        "box_area_frac_p10": 0.00815167236328125,
+        "resolutions": [
+          [
+            [
+              640,
+              640
+            ],
+            715
+          ]
+        ],
+        "n_distinct_resolutions": 1
+      }
+    },
+    "total": {
+      "images": 17195,
+      "boxes": 17445,
+      "background": 0
+    },
+    "per_class_total": {
+      "Burn Through-BT": 2664,
+      "Contamination-CN": 2627,
+      "Lack of Fusion-LOF": 2575,
+      "Normal Weld-NW": 2229,
+      "Spatter-SR": 2369,
+      "Surface Crack-SC": 2533,
+      "Undercut-UC": 2448
+    }
+  },
+  "Weld Surface Defect Detection.v2i.yolov8": {
+    "path": "Weld Surface Defect Detection.v2i.yolov8",
+    "classes": [
+      "Burn Through-BT",
+      "Contamination-CN",
+      "Lack of Fusion-LOF",
+      "Normal Weld-NW",
+      "Spatter-SR",
+      "Surface Crack-SC",
+      "Undercut-UC"
+    ],
+    "splits": {
+      "train": {
+        "n_images": 15045,
+        "n_boxes": 15258,
+        "n_background": 0,
+        "n_missing_label_file": 0,
+        "per_class": {
+          "0": 2331,
+          "1": 2292,
+          "2": 2253,
+          "3": 1950,
+          "4": 2073,
+          "5": 2217,
+          "6": 2142
+        },
+        "box_area_frac_median": 0.22553710937500002,
+        "box_area_frac_p10": 0.0077673339843749994,
+        "resolutions": [
+          [
+            [
+              640,
+              640
+            ],
+            15045
+          ]
+        ],
+        "n_distinct_resolutions": 1
+      },
+      "valid": {
+        "n_images": 1435,
+        "n_boxes": 1463,
+        "n_background": 0,
+        "n_missing_label_file": 0,
+        "per_class": {
+          "0": 223,
+          "1": 227,
+          "2": 215,
+          "3": 186,
+          "4": 197,
+          "5": 211,
+          "6": 204
+        },
+        "box_area_frac_median": 0.22216003417968752,
+        "box_area_frac_p10": 0.008006103515625,
+        "resolutions": [
+          [
+            [
+              640,
+              640
+            ],
+            1435
+          ]
+        ],
+        "n_distinct_resolutions": 1
+      },
+      "test": {
+        "n_images": 715,
+        "n_boxes": 724,
+        "n_background": 0,
+        "n_missing_label_file": 0,
+        "per_class": {
+          "0": 110,
+          "1": 108,
+          "2": 107,
+          "3": 93,
+          "4": 99,
+          "5": 105,
+          "6": 102
+        },
+        "box_area_frac_median": 0.2089703369140625,
+        "box_area_frac_p10": 0.00815167236328125,
+        "resolutions": [
+          [
+            [
+              640,
+              640
+            ],
+            715
+          ]
+        ],
+        "n_distinct_resolutions": 1
+      }
+    },
+    "total": {
+      "images": 17195,
+      "boxes": 17445,
+      "background": 0
+    },
+    "per_class_total": {
+      "Burn Through-BT": 2664,
+      "Contamination-CN": 2627,
+      "Lack of Fusion-LOF": 2575,
+      "Normal Weld-NW": 2229,
+      "Spatter-SR": 2369,
+      "Surface Crack-SC": 2533,
+      "Undercut-UC": 2448
+    }
+  },
+  "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset": {
+    "path": "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset",
+    "classes": [
+      "Bad Weld",
+      "Good Weld",
+      "Defect"
+    ],
+    "splits": {
+      "train": {
+        "n_images": 839,
+        "n_boxes": 3145,
+        "n_background": 0,
+        "n_missing_label_file": 0,
+        "per_class": {
+          "0": 736,
+          "1": 1111,
+          "2": 1298
+        },
+        "box_area_frac_median": 0.01878662109375,
+        "box_area_frac_p10": 0.005845947265625,
+        "resolutions": [
+          [
+            [
+              640,
+              640
+            ],
+            839
+          ]
+        ],
+        "n_distinct_resolutions": 1
+      },
+      "valid": {
+        "n_images": 176,
+        "n_boxes": 573,
+        "n_background": 0,
+        "n_missing_label_file": 0,
+        "per_class": {
+          "0": 127,
+          "1": 253,
+          "2": 193
+        },
+        "box_area_frac_median": 0.01975341796875,
+        "box_area_frac_p10": 0.004528930664062501,
+        "resolutions": [
+          [
+            [
+              640,
+              640
+            ],
+            176
+          ]
+        ],
+        "n_distinct_resolutions": 1
+      },
+      "test": {
+        "n_images": 74,
+        "n_boxes": 209,
+        "n_background": 0,
+        "n_missing_label_file": 0,
+        "per_class": {
+          "0": 67,
+          "1": 76,
+          "2": 66
+        },
+        "box_area_frac_median": 0.0282867431640625,
+        "box_area_frac_p10": 0.004628906249999999,
+        "resolutions": [
+          [
+            [
+              640,
+              640
+            ],
+            74
+          ]
+        ],
+        "n_distinct_resolutions": 1
+      }
+    },
+    "total": {
+      "images": 1089,
+      "boxes": 3927,
+      "background": 0
+    },
+    "per_class_total": {
+      "Bad Weld": 930,
+      "Good Weld": 1440,
+      "Defect": 1557
+    }
+  },
+  "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2": {
+    "path": "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2",
+    "classes": [
+      "Bad Weld",
+      "Good Weld",
+      "Defect"
+    ],
+    "splits": {
+      "train": {
+        "n_images": 1619,
+        "n_boxes": 4583,
+        "n_background": 0,
+        "n_missing_label_file": 0,
+        "per_class": {
+          "0": 1089,
+          "1": 1896,
+          "2": 1598
+        },
+        "box_area_frac_median": 0.025512695312500003,
+        "box_area_frac_p10": 0.0059771728515625,
+        "resolutions": [
+          [
+            [
+              640,
+              640
+            ],
+            1619
+          ]
+        ],
+        "n_distinct_resolutions": 1
+      },
+      "valid": {
+        "n_images": 283,
+        "n_boxes": 802,
+        "n_background": 0,
+        "n_missing_label_file": 0,
+        "per_class": {
+          "0": 194,
+          "1": 335,
+          "2": 273
+        },
+        "box_area_frac_median": 0.02256866455078125,
+        "box_area_frac_p10": 0.004236328125,
+        "resolutions": [
+          [
+            [
+              640,
+              640
+            ],
+            283
+          ]
+        ],
+        "n_distinct_resolutions": 1
+      },
+      "test": {
+        "n_images": 126,
+        "n_boxes": 301,
+        "n_background": 0,
+        "n_missing_label_file": 0,
+        "per_class": {
+          "0": 95,
+          "1": 117,
+          "2": 89
+        },
+        "box_area_frac_median": 0.034617919921875004,
+        "box_area_frac_p10": 0.004969482421875001,
+        "resolutions": [
+          [
+            [
+              640,
+              640
+            ],
+            126
+          ]
+        ],
+        "n_distinct_resolutions": 1
+      }
+    },
+    "total": {
+      "images": 2028,
+      "boxes": 5686,
+      "background": 0
+    },
+    "per_class_total": {
+      "Bad Weld": 1378,
+      "Good Weld": 2348,
+      "Defect": 1960
+    }
+  },
+  "welding defect 2class.v1i.yolov8": {
+    "path": "welding defect 2class.v1i.yolov8",
+    "classes": [
+      "Geometric defect",
+      "Non-fusion defect"
+    ],
+    "splits": {
+      "train": {
+        "n_images": 1254,
+        "n_boxes": 2074,
+        "n_background": 277,
+        "n_missing_label_file": 0,
+        "per_class": {
+          "0": 1164,
+          "1": 910
+        },
+        "box_area_frac_median": 0.012727050781249999,
+        "box_area_frac_p10": 0.0060546875,
+        "resolutions": [
+          [
+            [
+              640,
+              640
+            ],
+            1254
+          ]
+        ],
+        "n_distinct_resolutions": 1
+      },
+      "valid": {
+        "n_images": 333,
+        "n_boxes": 556,
+        "n_background": 66,
+        "n_missing_label_file": 0,
+        "per_class": {
+          "0": 299,
+          "1": 257
+        },
+        "box_area_frac_median": 0.013326416015625,
+        "box_area_frac_p10": 0.006494140625,
+        "resolutions": [
+          [
+            [
+              640,
+              640
+            ],
+            333
+          ]
+        ],
+        "n_distinct_resolutions": 1
+      },
+      "test": {
+        "n_images": 95,
+        "n_boxes": 147,
+        "n_background": 20,
+        "n_missing_label_file": 0,
+        "per_class": {
+          "0": 78,
+          "1": 69
+        },
+        "box_area_frac_median": 0.01294921875,
+        "box_area_frac_p10": 0.0060087890625,
+        "resolutions": [
+          [
+            [
+              640,
+              640
+            ],
+            95
+          ]
+        ],
+        "n_distinct_resolutions": 1
+      }
+    },
+    "total": {
+      "images": 1682,
+      "boxes": 2777,
+      "background": 363
+    },
+    "per_class_total": {
+      "Geometric defect": 1541,
+      "Non-fusion defect": 1236
+    }
+  }
+}

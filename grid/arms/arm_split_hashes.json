@@ -1,0 +1,109 @@
+{
+ "arm_fingerprint": "3bd641d4c37f0d2f",
+ "frozen_main_fingerprint": "f5567a1938278e88",
+ "acquisition_block_check": {
+  "n_blocks": 1977,
+  "straddling": 0,
+  "counts": {
+   "train": {
+    "lohi_low": 1396,
+    "lohi_high": 719
+   },
+   "valid": {
+    "lohi_low": 302,
+    "lohi_high": 151
+   },
+   "test": {
+    "lohi_low": 301,
+    "lohi_high": 152
+   }
+  }
+ },
+ "datasets": {
+  "lohi_high": {
+   "kind": "acquisition_subset",
+   "parent": "lohi_weld",
+   "counts": {
+    "train": 719,
+    "valid": 151,
+    "test": 152
+   },
+   "hashes": {
+    "train": "fbb1a7069894e087730a18469f365005ca2da7bbf5f7478a05c55ea68825001b",
+    "valid": "8479b7f337f2950fdd03912305055d53e632685f4a40b7063bdc1d656e215f87",
+    "test": "35ba4617835812855268decba3b89499496db93fe2f6d0acdfb8c322482b297d"
+   }
+  },
+  "lohi_low": {
+   "kind": "acquisition_subset",
+   "parent": "lohi_weld",
+   "counts": {
+    "train": 1396,
+    "valid": 302,
+    "test": 301
+   },
+   "hashes": {
+    "train": "9e2518f98bbb75614619ed150f566b3bc22184fde857adc8d7c89f0337d8575d",
+    "valid": "e90572f88b08499ebcee8a816203dc217bc32d1902fb05309882f16bdc201eec",
+    "test": "4077f22a6a8b9d63eaf5561f9864d143b3aaa49fa72f24f50bc9b028e522de94"
+   }
+  },
+  "pool_no_weld_surface_v2": {
+   "kind": "pool",
+   "members": [
+    "kaggle_v2",
+    "lohi_weld"
+   ],
+   "protocol": "localisation",
+   "n_classes": 7,
+   "counts": {
+    "train": 2771,
+    "valid": 594,
+    "test": 594
+   },
+   "hashes": {
+    "train": "1f076d19e882a6c433c41edae8f04a492d9bafd20c8ad1ed8402b00258f24681",
+    "valid": "22e47683eff18350166716abf9fd0e4f35acacf4bc69a7c84cf7c5bd0f13df3f",
+    "test": "8f830cd4dd49cc5ef6fc60153ec97cf527934ec67dcb327a738d5039bb5d4b4b"
+   }
+  },
+  "pool_no_kaggle_v2": {
+   "kind": "pool",
+   "members": [
+    "weld_surface_v2",
+    "lohi_weld"
+   ],
+   "protocol": "mixed",
+   "n_classes": 11,
+   "counts": {
+    "train": 4189,
+    "valid": 897,
+    "test": 898
+   },
+   "hashes": {
+    "train": "8a224a6b3a705b54eb45dca0e85835be6631de1f40ad401f474a848172e952bf",
+    "valid": "0475b3a41d2fb8653f4c79e4e0ccffc565e4471639575fe5a629443a4aafabf8",
+    "test": "0f1ceb861090a0777d44afaff74e3f66f2e0339800d9c39b61b4371484688e49"
+   }
+  },
+  "pool_no_lohi_weld": {
+   "kind": "pool",
+   "members": [
+    "weld_surface_v2",
+    "kaggle_v2"
+   ],
+   "protocol": "mixed",
+   "n_classes": 10,
+   "counts": {
+    "train": 2730,
+    "valid": 585,
+    "test": 586
+   },
+   "hashes": {
+    "train": "0247e65304e37a9f298e196506efb4a0db3a3545396f7ee2e891e7cce326ac4e",
+    "valid": "b4e6accb9055c1215ad2b33e37b2f9f8ae7e930424f808386e211b0be02971d4",
+    "test": "5aceb2e7a15e366f22786a0e58f277c41fdaa5b5aee9f5fca3f9e71e34b23a6a"
+   }
+  }
+ }
+}

@@ -1,0 +1,153 @@
+{
+  "rows": [
+    {
+      "pool": "pool_no_weld_surface_v2",
+      "pool_protocol": "localisation",
+      "target": "weld_surface_v2",
+      "target_protocol": "whole_region",
+      "role": "held out training source",
+      "box_level_defined": false
+    },
+    {
+      "pool": "pool_no_weld_surface_v2",
+      "pool_protocol": "localisation",
+      "target": "kaggle_v2",
+      "target_protocol": "localisation",
+      "role": "in pool",
+      "box_level_defined": true
+    },
+    {
+      "pool": "pool_no_weld_surface_v2",
+      "pool_protocol": "localisation",
+      "target": "lohi_weld",
+      "target_protocol": "localisation",
+      "role": "in pool",
+      "box_level_defined": true
+    },
+    {
+      "pool": "pool_no_weld_surface_v2",
+      "pool_protocol": "localisation",
+      "target": "visual",
+      "target_protocol": "localisation",
+      "role": "held out test only target",
+      "box_level_defined": true
+    },
+    {
+      "pool": "pool_no_weld_surface_v2",
+      "pool_protocol": "localisation",
+      "target": "twoclass",
+      "target_protocol": "localisation",
+      "role": "held out test only target",
+      "box_level_defined": true
+    },
+    {
+      "pool": "pool_no_kaggle_v2",
+      "pool_protocol": "mixed",
+      "target": "weld_surface_v2",
+      "target_protocol": "whole_region",
+      "role": "in pool",
+      "box_level_defined": false
+    },
+    {
+      "pool": "pool_no_kaggle_v2",
+      "pool_protocol": "mixed",
+      "target": "kaggle_v2",
+      "target_protocol": "localisation",
+      "role": "held out training source",
+      "box_level_defined": false
+    },
+    {
+      "pool": "pool_no_kaggle_v2",
+      "pool_protocol": "mixed",
+      "target": "lohi_weld",
+      "target_protocol": "localisation",
+      "role": "in pool",
+      "box_level_defined": false
+    },
+    {
+      "pool": "pool_no_kaggle_v2",
+      "pool_protocol": "mixed",
+      "target": "visual",
+      "target_protocol": "localisation",
+      "role": "held out test only target",
+      "box_level_defined": false
+    },
+    {
+      "pool": "pool_no_kaggle_v2",
+      "pool_protocol": "mixed",
+      "target": "twoclass",
+      "target_protocol": "localisation",
+      "role": "held out test only target",
+      "box_level_defined": false
+    },
+    {
+      "pool": "pool_no_lohi_weld",
+      "pool_protocol": "mixed",
+      "target": "weld_surface_v2",
+      "target_protocol": "whole_region",
+      "role": "in pool",
+      "box_level_defined": false
+    },
+    {
+      "pool": "pool_no_lohi_weld",
+      "pool_protocol": "mixed",
+      "target": "kaggle_v2",
+      "target_protocol": "localisation",
+      "role": "in pool",
+      "box_level_defined": false
+    },
+    {
+      "pool": "pool_no_lohi_weld",
+      "pool_protocol": "mixed",
+      "target": "lohi_weld",
+      "target_protocol": "localisation",
+      "role": "held out training source",
+      "box_level_defined": false
+    },
+    {
+      "pool": "pool_no_lohi_weld",
+      "pool_protocol": "mixed",
+      "target": "visual",
+      "target_protocol": "localisation",
+      "role": "held out test only target",
+      "box_level_defined": false
+    },
+    {
+      "pool": "pool_no_lohi_weld",
+      "pool_protocol": "mixed",
+      "target": "twoclass",
+      "target_protocol": "localisation",
+      "role": "held out test only target",
+      "box_level_defined": false
+    }
+  ],
+  "box_defined_on_any_held_out_training_source": false,
+  "box_defined_pairs": [
+    [
+      "pool_no_weld_surface_v2",
+      "kaggle_v2"
+    ],
+    [
+      "pool_no_weld_surface_v2",
+      "lohi_weld"
+    ],
+    [
+      "pool_no_weld_surface_v2",
+      "twoclass"
+    ],
+    [
+      "pool_no_weld_surface_v2",
+      "visual"
+    ]
+  ],
+  "box_defined_held_out_pairs": [
+    [
+      "pool_no_weld_surface_v2",
+      "twoclass"
+    ],
+    [
+      "pool_no_weld_surface_v2",
+      "visual"
+    ]
+  ]
+}

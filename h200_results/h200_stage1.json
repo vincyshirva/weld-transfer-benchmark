@@ -1,0 +1,166 @@
+{
+  "device": {
+    "name": "NVIDIA H200 NVL MIG 7g.141gb",
+    "compute_capability": "9.0",
+    "multi_processors": 132,
+    "total_vram_gib": 139.8,
+    "free_vram_gib_at_start": 139.29,
+    "torch": "2.5.1+cu121",
+    "torch_cuda": "12.1",
+    "arch_list": [
+      "sm_50",
+      "sm_60",
+      "sm_70",
+      "sm_75",
+      "sm_80",
+      "sm_86",
+      "sm_90"
+    ],
+    "driver_cuda": "580.173.02\n580.173.02"
+  },
+  "imgsz": 640,
+  "amp": true,
+  "root": "/home/USERNAME/weld_generalization",
+  "stage1_synthetic": {
+    "yolo11n.yaml": {
+      "batches": {
+        "8": {
+          "images_per_s": 382.0,
+          "ms_per_step": 20.9,
+          "peak_vram_gib": 1.01
+        },
+        "16": {
+          "images_per_s": 625.2,
+          "ms_per_step": 25.6,
+          "peak_vram_gib": 1.95
+        },
+        "32": {
+          "images_per_s": 688.3,
+          "ms_per_step": 46.5,
+          "peak_vram_gib": 3.79
+        },
+        "64": {
+          "images_per_s": 719.6,
+          "ms_per_step": 88.9,
+          "peak_vram_gib": 7.48
+        },
+        "128": {
+          "images_per_s": 737.7,
+          "ms_per_step": 173.5,
+          "peak_vram_gib": 14.85
+        },
+        "256": {
+          "images_per_s": 746.0,
+          "ms_per_step": 343.2,
+          "peak_vram_gib": 29.54
+        }
+      },
+      "max_batch": 256,
+      "best_ips": 746.0
+    },
+    "yolo11s.yaml": {
+      "batches": {
+        "8": {
+          "images_per_s": 349.2,
+          "ms_per_step": 22.9,
+          "peak_vram_gib": 1.81
+        },
+        "16": {
+          "images_per_s": 502.7,
+          "ms_per_step": 31.8,
+          "peak_vram_gib": 3.51
+        },
+        "32": {
+          "images_per_s": 544.6,
+          "ms_per_step": 58.8,
+          "peak_vram_gib": 6.85
+        },
+        "64": {
+          "images_per_s": 568.2,
+          "ms_per_step": 112.6,
+          "peak_vram_gib": 13.52
+        },
+        "128": {
+          "images_per_s": 584.4,
+          "ms_per_step": 219.0,
+          "peak_vram_gib": 26.83
+        },
+        "256": {
+          "images_per_s": 587.5,
+          "ms_per_step": 435.7,
+          "peak_vram_gib": 53.48
+        }
+      },
+      "max_batch": 256,
+      "best_ips": 587.5
+    },
+    "rtdetr-l.yaml": {
+      "batches": {
+        "8": {
+          "images_per_s": 91.9,
+          "ms_per_step": 87.1,
+          "peak_vram_gib": 5.08
+        },
+        "16": {
+          "images_per_s": 130.7,
+          "ms_per_step": 122.4,
+          "peak_vram_gib": 9.9
+        },
+        "32": {
+          "images_per_s": 165.5,
+          "ms_per_step": 193.4,
+          "peak_vram_gib": 19.36
+        },
+        "64": {
+          "images_per_s": 168.9,
+          "ms_per_step": 378.9,
+          "peak_vram_gib": 38.33
+        },
+        "128": {
+          "images_per_s": 175.9,
+          "ms_per_step": 727.7,
+          "peak_vram_gib": 76.23
+        },
+        "256": {
+          "oom": true
+        }
+      },
+      "max_batch": 128,
+      "best_ips": 175.9
+    },
+    "fasterrcnn_resnet50_fpn": {
+      "batches": {
+        "8": {
+          "images_per_s": 69.0,
+          "ms_per_step": 115.9,
+          "peak_vram_gib": 6.85
+        },
+        "16": {
+          "images_per_s": 72.8,
+          "ms_per_step": 219.6,
+          "peak_vram_gib": 13.46
+        },
+        "32": {
+          "images_per_s": 74.3,
+          "ms_per_step": 430.5,
+          "peak_vram_gib": 26.41
+        },
+        "64": {
+          "images_per_s": 75.0,
+          "ms_per_step": 853.1,
+          "peak_vram_gib": 52.27
+        },
+        "128": {
+          "images_per_s": 74.9,
+          "ms_per_step": 1709.9,
+          "peak_vram_gib": 104.02
+        },
+        "256": {
+          "oom": true
+        }
+      },
+      "max_batch": 128,
+      "best_ips": 75.0
+    }
+  }
+}

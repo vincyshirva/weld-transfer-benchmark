@@ -1,0 +1,697 @@
+{
+  "FABRICATED": true,
+  "warning": "fabricated fixture, not a measurement, do not cite",
+  "cell": {
+    "source": "kaggle_v2",
+    "family": "faster_rcnn",
+    "seed": 1,
+    "kind": "main"
+  },
+  "name": "kaggle_v2__faster_rcnn__seed1",
+  "config_sha256_16": "f5567a1938278e88",
+  "targets": {
+    "weld_surface_v2": {
+      "target": "weld_surface_v2",
+      "test_split": "audited",
+      "n_test_images": 445,
+      "image_level": {
+        "n_pos": 383,
+        "n_neg": 62,
+        "positive_rate": 0.8606741573033708,
+        "ap": 0.3927,
+        "auroc": 0.4034,
+        "auroc_reportable": true,
+        "calibration": {
+          "ece": 0.0926,
+          "brier": 0.1325,
+          "bins": [
+            {
+              "lo": 0.0,
+              "hi": 0.067,
+              "count": 37,
+              "mean_confidence": 0.033,
+              "observed_positive_rate": 0.056
+            },
+            {
+              "lo": 0.067,
+              "hi": 0.133,
+              "count": 17,
+              "mean_confidence": 0.1,
+              "observed_positive_rate": 0.092
+            },
+            {
+              "lo": 0.133,
+              "hi": 0.2,
+              "count": 57,
+              "mean_confidence": 0.167,
+              "observed_positive_rate": 0.15
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.267,
+              "count": 41,
+              "mean_confidence": 0.233,
+              "observed_positive_rate": 0.198
+            },
+            {
+              "lo": 0.267,
+              "hi": 0.333,
+              "count": 46,
+              "mean_confidence": 0.3,
+              "observed_positive_rate": 0.238
+            },
+            {
+              "lo": 0.333,
+              "hi": 0.4,
+              "count": 37,
+              "mean_confidence": 0.367,
+              "observed_positive_rate": 0.263
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.467,
+              "count": 10,
+              "mean_confidence": 0.433,
+              "observed_positive_rate": 0.326
+            },
+            {
+              "lo": 0.467,
+              "hi": 0.533,
+              "count": 26,
+              "mean_confidence": 0.5,
+              "observed_positive_rate": 0.401
+            },
+            {
+              "lo": 0.533,
+              "hi": 0.6,
+              "count": 30,
+              "mean_confidence": 0.567,
+              "observed_positive_rate": 0.415
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.667,
+              "count": 54,
+              "mean_confidence": 0.633,
+              "observed_positive_rate": 0.439
+            },
+            {
+              "lo": 0.667,
+              "hi": 0.733,
+              "count": 44,
+              "mean_confidence": 0.7,
+              "observed_positive_rate": 0.513
+            },
+            {
+              "lo": 0.733,
+              "hi": 0.8,
+              "count": 38,
+              "mean_confidence": 0.767,
+              "observed_positive_rate": 0.543
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.867,
+              "count": 7,
+              "mean_confidence": 0.833,
+              "observed_positive_rate": 0.645
+            },
+            {
+              "lo": 0.867,
+              "hi": 0.933,
+              "count": 26,
+              "mean_confidence": 0.9,
+              "observed_positive_rate": 0.69
+            },
+            {
+              "lo": 0.933,
+              "hi": 1.0,
+              "count": 47,
+              "mean_confidence": 0.967,
+              "observed_positive_rate": 0.733
+            }
+          ]
+        }
+      },
+      "box_level": {
+        "skipped": true,
+        "reason": "source protocol localisation, target protocol whole_region. A box level number across protocols measures annotation mismatch, not domain shift."
+      }
+    },
+    "kaggle_v2": {
+      "target": "kaggle_v2",
+      "test_split": "audited",
+      "n_test_images": 141,
+      "image_level": {
+        "n_pos": 72,
+        "n_neg": 69,
+        "positive_rate": 0.5106382978723404,
+        "ap": 0.7497,
+        "auroc": 0.7248,
+        "auroc_reportable": true,
+        "calibration": {
+          "ece": 0.1049,
+          "brier": 0.1926,
+          "bins": [
+            {
+              "lo": 0.0,
+              "hi": 0.067,
+              "count": 13,
+              "mean_confidence": 0.033,
+              "observed_positive_rate": 0.009
+            },
+            {
+              "lo": 0.067,
+              "hi": 0.133,
+              "count": 36,
+              "mean_confidence": 0.1,
+              "observed_positive_rate": 0.069
+            },
+            {
+              "lo": 0.133,
+              "hi": 0.2,
+              "count": 17,
+              "mean_confidence": 0.167,
+              "observed_positive_rate": 0.147
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.267,
+              "count": 16,
+              "mean_confidence": 0.233,
+              "observed_positive_rate": 0.223
+            },
+            {
+              "lo": 0.267,
+              "hi": 0.333,
+              "count": 34,
+              "mean_confidence": 0.3,
+              "observed_positive_rate": 0.254
+            },
+            {
+              "lo": 0.333,
+              "hi": 0.4,
+              "count": 40,
+              "mean_confidence": 0.367,
+              "observed_positive_rate": 0.31
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.467,
+              "count": 17,
+              "mean_confidence": 0.433,
+              "observed_positive_rate": 0.381
+            },
+            {
+              "lo": 0.467,
+              "hi": 0.533,
+              "count": 54,
+              "mean_confidence": 0.5,
+              "observed_positive_rate": 0.458
+            },
+            {
+              "lo": 0.533,
+              "hi": 0.6,
+              "count": 21,
+              "mean_confidence": 0.567,
+              "observed_positive_rate": 0.497
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.667,
+              "count": 27,
+              "mean_confidence": 0.633,
+              "observed_positive_rate": 0.594
+            },
+            {
+              "lo": 0.667,
+              "hi": 0.733,
+              "count": 12,
+              "mean_confidence": 0.7,
+              "observed_positive_rate": 0.622
+            },
+            {
+              "lo": 0.733,
+              "hi": 0.8,
+              "count": 54,
+              "mean_confidence": 0.767,
+              "observed_positive_rate": 0.669
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.867,
+              "count": 20,
+              "mean_confidence": 0.833,
+              "observed_positive_rate": 0.791
+            },
+            {
+              "lo": 0.867,
+              "hi": 0.933,
+              "count": 33,
+              "mean_confidence": 0.9,
+              "observed_positive_rate": 0.796
+            },
+            {
+              "lo": 0.933,
+              "hi": 1.0,
+              "count": 55,
+              "mean_confidence": 0.967,
+              "observed_positive_rate": 0.871
+            }
+          ]
+        }
+      },
+      "box_level": {
+        "map50": 0.566,
+        "map50_95": 0.3509,
+        "n_gt": 1728,
+        "n_pred": 4453,
+        "recall_at_0.1_fp_per_image": 0.2903,
+        "recall_at_0.5_fp_per_image": 0.3649,
+        "recall_at_1.0_fp_per_image": 0.512
+      },
+      "per_class_in_domain": {
+        "Bad Weld": {
+          "map50": 0.7899,
+          "map50_95": 0.4898,
+          "test_instances": 110,
+          "thin": false
+        },
+        "Good Weld": {
+          "map50": 0.7508,
+          "map50_95": 0.4655,
+          "test_instances": 182,
+          "thin": false
+        },
+        "Defect": {
+          "map50": 0.724,
+          "map50_95": 0.4489,
+          "test_instances": 159,
+          "thin": false
+        }
+      }
+    },
+    "lohi_weld": {
+      "target": "lohi_weld",
+      "test_split": "audited",
+      "n_test_images": 453,
+      "image_level": {
+        "n_pos": 442,
+        "n_neg": 11,
+        "positive_rate": 0.9757174392935982,
+        "ap": 0.6748,
+        "auroc": null,
+        "auroc_reportable": false,
+        "calibration": {
+          "ece": 0.0339,
+          "brier": 0.1544,
+          "bins": [
+            {
+              "lo": 0.0,
+              "hi": 0.067,
+              "count": 55,
+              "mean_confidence": 0.033,
+              "observed_positive_rate": 0.024
+            },
+            {
+              "lo": 0.067,
+              "hi": 0.133,
+              "count": 26,
+              "mean_confidence": 0.1,
+              "observed_positive_rate": 0.089
+            },
+            {
+              "lo": 0.133,
+              "hi": 0.2,
+              "count": 29,
+              "mean_confidence": 0.167,
+              "observed_positive_rate": 0.109
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.267,
+              "count": 43,
+              "mean_confidence": 0.233,
+              "observed_positive_rate": 0.217
+            },
+            {
+              "lo": 0.267,
+              "hi": 0.333,
+              "count": 11,
+              "mean_confidence": 0.3,
+              "observed_positive_rate": 0.274
+            },
+            {
+              "lo": 0.333,
+              "hi": 0.4,
+              "count": 20,
+              "mean_confidence": 0.367,
+              "observed_positive_rate": 0.336
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.467,
+              "count": 48,
+              "mean_confidence": 0.433,
+              "observed_positive_rate": 0.38
+            },
+            {
+              "lo": 0.467,
+              "hi": 0.533,
+              "count": 25,
+              "mean_confidence": 0.5,
+              "observed_positive_rate": 0.458
+            },
+            {
+              "lo": 0.533,
+              "hi": 0.6,
+              "count": 38,
+              "mean_confidence": 0.567,
+              "observed_positive_rate": 0.489
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.667,
+              "count": 38,
+              "mean_confidence": 0.633,
+              "observed_positive_rate": 0.579
+            },
+            {
+              "lo": 0.667,
+              "hi": 0.733,
+              "count": 23,
+              "mean_confidence": 0.7,
+              "observed_positive_rate": 0.608
+            },
+            {
+              "lo": 0.733,
+              "hi": 0.8,
+              "count": 40,
+              "mean_confidence": 0.767,
+              "observed_positive_rate": 0.688
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.867,
+              "count": 47,
+              "mean_confidence": 0.833,
+              "observed_positive_rate": 0.777
+            },
+            {
+              "lo": 0.867,
+              "hi": 0.933,
+              "count": 46,
+              "mean_confidence": 0.9,
+              "observed_positive_rate": 0.808
+            },
+            {
+              "lo": 0.933,
+              "hi": 1.0,
+              "count": 38,
+              "mean_confidence": 0.967,
+              "observed_positive_rate": 0.846
+            }
+          ]
+        },
+        "auroc_suppressed_reason": "11 negative images, under the 30 needed for a calibrated false alarm rate"
+      },
+      "box_level": {
+        "map50": 0.494,
+        "map50_95": 0.3063,
+        "n_gt": 3321,
+        "n_pred": 253,
+        "recall_at_0.1_fp_per_image": 0.2455,
+        "recall_at_0.5_fp_per_image": 0.328,
+        "recall_at_1.0_fp_per_image": 0.4347
+      }
+    },
+    "visual": {
+      "target": "visual",
+      "test_split": "audited",
+      "n_test_images": 84,
+      "image_level": {
+        "n_pos": 75,
+        "n_neg": 9,
+        "positive_rate": 0.8928571428571429,
+        "ap": 0.4264,
+        "auroc": null,
+        "auroc_reportable": false,
+        "calibration": {
+          "ece": 0.0913,
+          "brier": 0.1594,
+          "bins": [
+            {
+              "lo": 0.0,
+              "hi": 0.067,
+              "count": 42,
+              "mean_confidence": 0.033,
+              "observed_positive_rate": 0.0
+            },
+            {
+              "lo": 0.067,
+              "hi": 0.133,
+              "count": 55,
+              "mean_confidence": 0.1,
+              "observed_positive_rate": 0.066
+            },
+            {
+              "lo": 0.133,
+              "hi": 0.2,
+              "count": 7,
+              "mean_confidence": 0.167,
+              "observed_positive_rate": 0.157
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.267,
+              "count": 31,
+              "mean_confidence": 0.233,
+              "observed_positive_rate": 0.165
+            },
+            {
+              "lo": 0.267,
+              "hi": 0.333,
+              "count": 20,
+              "mean_confidence": 0.3,
+              "observed_positive_rate": 0.218
+            },
+            {
+              "lo": 0.333,
+              "hi": 0.4,
+              "count": 38,
+              "mean_confidence": 0.367,
+              "observed_positive_rate": 0.297
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.467,
+              "count": 25,
+              "mean_confidence": 0.433,
+              "observed_positive_rate": 0.352
+            },
+            {
+              "lo": 0.467,
+              "hi": 0.533,
+              "count": 25,
+              "mean_confidence": 0.5,
+              "observed_positive_rate": 0.424
+            },
+            {
+              "lo": 0.533,
+              "hi": 0.6,
+              "count": 34,
+              "mean_confidence": 0.567,
+              "observed_positive_rate": 0.484
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.667,
+              "count": 22,
+              "mean_confidence": 0.633,
+              "observed_positive_rate": 0.511
+            },
+            {
+              "lo": 0.667,
+              "hi": 0.733,
+              "count": 31,
+              "mean_confidence": 0.7,
+              "observed_positive_rate": 0.515
+            },
+            {
+              "lo": 0.733,
+              "hi": 0.8,
+              "count": 26,
+              "mean_confidence": 0.767,
+              "observed_positive_rate": 0.575
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.867,
+              "count": 27,
+              "mean_confidence": 0.833,
+              "observed_positive_rate": 0.654
+            },
+            {
+              "lo": 0.867,
+              "hi": 0.933,
+              "count": 5,
+              "mean_confidence": 0.9,
+              "observed_positive_rate": 0.69
+            },
+            {
+              "lo": 0.933,
+              "hi": 1.0,
+              "count": 9,
+              "mean_confidence": 0.967,
+              "observed_positive_rate": 0.7
+            }
+          ]
+        },
+        "auroc_suppressed_reason": "9 negative images, under the 30 needed for a calibrated false alarm rate"
+      },
+      "box_level": {
+        "map50": 0.3273,
+        "map50_95": 0.2029,
+        "n_gt": 676,
+        "n_pred": 4680,
+        "recall_at_0.1_fp_per_image": 0.1636,
+        "recall_at_0.5_fp_per_image": 0.2356,
+        "recall_at_1.0_fp_per_image": 0.3026
+      }
+    },
+    "twoclass": {
+      "target": "twoclass",
+      "test_split": "audited",
+      "n_test_images": 45,
+      "image_level": {
+        "n_pos": 36,
+        "n_neg": 9,
+        "positive_rate": 0.8,
+        "ap": 0.273,
+        "auroc": null,
+        "auroc_reportable": false,
+        "calibration": {
+          "ece": 0.1184,
+          "brier": 0.1739,
+          "bins": [
+            {
+              "lo": 0.0,
+              "hi": 0.067,
+              "count": 14,
+              "mean_confidence": 0.033,
+              "observed_positive_rate": 0.01
+            },
+            {
+              "lo": 0.067,
+              "hi": 0.133,
+              "count": 32,
+              "mean_confidence": 0.1,
+              "observed_positive_rate": 0.067
+            },
+            {
+              "lo": 0.133,
+              "hi": 0.2,
+              "count": 39,
+              "mean_confidence": 0.167,
+              "observed_positive_rate": 0.126
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.267,
+              "count": 5,
+              "mean_confidence": 0.233,
+              "observed_positive_rate": 0.155
+            },
+            {
+              "lo": 0.267,
+              "hi": 0.333,
+              "count": 16,
+              "mean_confidence": 0.3,
+              "observed_positive_rate": 0.222
+            },
+            {
+              "lo": 0.333,
+              "hi": 0.4,
+              "count": 14,
+              "mean_confidence": 0.367,
+              "observed_positive_rate": 0.261
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.467,
+              "count": 13,
+              "mean_confidence": 0.433,
+              "observed_positive_rate": 0.289
+            },
+            {
+              "lo": 0.467,
+              "hi": 0.533,
+              "count": 21,
+              "mean_confidence": 0.5,
+              "observed_positive_rate": 0.352
+            },
+            {
+              "lo": 0.533,
+              "hi": 0.6,
+              "count": 45,
+              "mean_confidence": 0.567,
+              "observed_positive_rate": 0.434
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.667,
+              "count": 49,
+              "mean_confidence": 0.633,
+              "observed_positive_rate": 0.398
+            },
+            {
+              "lo": 0.667,
+              "hi": 0.733,
+              "count": 22,
+              "mean_confidence": 0.7,
+              "observed_positive_rate": 0.55
+            },
+            {
+              "lo": 0.733,
+              "hi": 0.8,
+              "count": 43,
+              "mean_confidence": 0.767,
+              "observed_positive_rate": 0.554
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.867,
+              "count": 30,
+              "mean_confidence": 0.833,
+              "observed_positive_rate": 0.59
+            },
+            {
+              "lo": 0.867,
+              "hi": 0.933,
+              "count": 58,
+              "mean_confidence": 0.9,
+              "observed_positive_rate": 0.655
+            },
+            {
+              "lo": 0.933,
+              "hi": 1.0,
+              "count": 12,
+              "mean_confidence": 0.967,
+              "observed_positive_rate": 0.673
+            }
+          ]
+        },
+        "auroc_suppressed_reason": "9 negative images, under the 30 needed for a calibrated false alarm rate"
+      },
+      "box_level": {
+        "map50": 0.1926,
+        "map50_95": 0.1194,
+        "n_gt": 2413,
+        "n_pred": 4627,
+        "recall_at_0.1_fp_per_image": 0.1045,
+        "recall_at_0.5_fp_per_image": 0.1406,
+        "recall_at_1.0_fp_per_image": 0.1666
+      }
+    }
+  }
+}

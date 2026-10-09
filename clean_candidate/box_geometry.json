@@ -1,0 +1,73 @@
+{
+ "area_unit": "percent of the frame, width times height",
+ "datasets": {
+  "kaggle_v2": {
+   "boxes_per_image": 1.1343283582089552,
+   "defect_boxes": 1064,
+   "images": 938,
+   "median_box_area_percent": 1.063995361328125,
+   "train_defect_boxes": 745,
+   "train_images_with_a_defect_box": 337
+  },
+  "lohi_weld": {
+   "boxes_per_image": 7.418073485600795,
+   "defect_boxes": 22410,
+   "images": 3021,
+   "median_box_area_percent": 1.1608285669,
+   "train_defect_boxes": 15692,
+   "train_images_with_a_defect_box": 2061
+  },
+  "twoclass": {
+   "boxes_per_image": 1.6414473684210527,
+   "defect_boxes": 499,
+   "images": 304,
+   "median_box_area_percent": 1.353515625,
+   "train_defect_boxes": 351,
+   "train_images_with_a_defect_box": 173
+  },
+  "visual": {
+   "boxes_per_image": 3.0931899641577063,
+   "defect_boxes": 1726,
+   "images": 558,
+   "median_box_area_percent": 0.18318079802366,
+   "train_defect_boxes": 1208,
+   "train_images_with_a_defect_box": 350
+  },
+  "weld_surface_v2": {
+   "boxes_per_image": 0.8754640566992913,
+   "defect_boxes": 2594,
+   "images": 2963,
+   "median_box_area_percent": 19.2513427734375,
+   "train_defect_boxes": 1816,
+   "train_images_with_a_defect_box": 1783
+  }
+ },
+ "defect_classes_only": true,
+ "generated_by": "box_geometry.py",
+ "lohi_acquisitions": {
+  "high": {
+   "boxes_per_image": 9.271037181996086,
+   "class_share_percent": {
+    "deposit": 18.934036939313984,
+    "discontinuity": 31.41952506596306,
+    "pore": 5.519788918205805,
+    "stain": 44.12664907651715
+   },
+   "defect_boxes": 9475,
+   "images": 1022,
+   "median_box_area_percent": 0.6920563688000001
+  },
+  "low": {
+   "boxes_per_image": 6.470735367683842,
+   "class_share_percent": {
+    "deposit": 8.821028218013142,
+    "discontinuity": 32.787011982991885,
+    "pore": 26.494008504058755,
+    "stain": 31.89795129493622
+   },
+   "defect_boxes": 12935,
+   "images": 1999,
+   "median_box_area_percent": 1.52285
+  }
+ }
+}

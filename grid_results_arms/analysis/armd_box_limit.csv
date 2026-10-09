@@ -1,0 +1,16 @@
+box_level_defined,pool,pool_protocol,role,target,target_protocol
+False,pool_no_weld_surface_v2,localisation,held out training source,weld_surface_v2,whole_region
+True,pool_no_weld_surface_v2,localisation,in pool,kaggle_v2,localisation
+True,pool_no_weld_surface_v2,localisation,in pool,lohi_weld,localisation
+True,pool_no_weld_surface_v2,localisation,held out test only target,visual,localisation
+True,pool_no_weld_surface_v2,localisation,held out test only target,twoclass,localisation
+False,pool_no_kaggle_v2,mixed,in pool,weld_surface_v2,whole_region
+False,pool_no_kaggle_v2,mixed,held out training source,kaggle_v2,localisation
+False,pool_no_kaggle_v2,mixed,in pool,lohi_weld,localisation
+False,pool_no_kaggle_v2,mixed,held out test only target,visual,localisation
+False,pool_no_kaggle_v2,mixed,held out test only target,twoclass,localisation
+False,pool_no_lohi_weld,mixed,in pool,weld_surface_v2,whole_region
+False,pool_no_lohi_weld,mixed,in pool,kaggle_v2,localisation
+False,pool_no_lohi_weld,mixed,held out training source,lohi_weld,localisation
+False,pool_no_lohi_weld,mixed,held out test only target,visual,localisation
+False,pool_no_lohi_weld,mixed,held out test only target,twoclass,localisation

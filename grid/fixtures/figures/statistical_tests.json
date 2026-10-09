@@ -1,0 +1,700 @@
+{
+  "image_ap": {
+    "metric": "image_ap",
+    "configurations": [
+      "yolo11n",
+      "yolo11s",
+      "rtdetr_l",
+      "faster_rcnn"
+    ],
+    "n_blocks": 15,
+    "n_blocks_dropped_incomplete": 0,
+    "blocks": [
+      "kaggle_v2->kaggle_v2",
+      "kaggle_v2->lohi_weld",
+      "kaggle_v2->twoclass",
+      "kaggle_v2->visual",
+      "kaggle_v2->weld_surface_v2",
+      "lohi_weld->kaggle_v2",
+      "lohi_weld->lohi_weld",
+      "lohi_weld->twoclass",
+      "lohi_weld->visual",
+      "lohi_weld->weld_surface_v2",
+      "weld_surface_v2->kaggle_v2",
+      "weld_surface_v2->lohi_weld",
+      "weld_surface_v2->twoclass",
+      "weld_surface_v2->visual",
+      "weld_surface_v2->weld_surface_v2"
+    ],
+    "design": "complete block, configurations crossed with evaluation cells",
+    "preregistered": true,
+    "applicable": true,
+    "primary": {
+      "test": "Friedman, blocked on evaluation cell",
+      "chi2": 35.24,
+      "df": 3,
+      "p_value": 1.0839939284449641e-07,
+      "significant": true,
+      "posthoc": {
+        "mean_ranks": {
+          "yolo11n": 1.067,
+          "yolo11s": 2.2,
+          "rtdetr_l": 3.733,
+          "faster_rcnn": 3.0
+        },
+        "critical_difference": 1.211,
+        "alpha": 0.05,
+        "pairs": [
+          {
+            "a": "yolo11n",
+            "b": "yolo11s",
+            "mean_rank_a": 1.067,
+            "mean_rank_b": 2.2,
+            "rank_difference": 1.133,
+            "critical_difference": 1.211,
+            "significant": false
+          },
+          {
+            "a": "yolo11n",
+            "b": "rtdetr_l",
+            "mean_rank_a": 1.067,
+            "mean_rank_b": 3.733,
+            "rank_difference": 2.667,
+            "critical_difference": 1.211,
+            "significant": true
+          },
+          {
+            "a": "yolo11n",
+            "b": "faster_rcnn",
+            "mean_rank_a": 1.067,
+            "mean_rank_b": 3.0,
+            "rank_difference": 1.933,
+            "critical_difference": 1.211,
+            "significant": true
+          },
+          {
+            "a": "yolo11s",
+            "b": "rtdetr_l",
+            "mean_rank_a": 2.2,
+            "mean_rank_b": 3.733,
+            "rank_difference": 1.533,
+            "critical_difference": 1.211,
+            "significant": true
+          },
+          {
+            "a": "yolo11s",
+            "b": "faster_rcnn",
+            "mean_rank_a": 2.2,
+            "mean_rank_b": 3.0,
+            "rank_difference": 0.8,
+            "critical_difference": 1.211,
+            "significant": false
+          },
+          {
+            "a": "rtdetr_l",
+            "b": "faster_rcnn",
+            "mean_rank_a": 3.733,
+            "mean_rank_b": 3.0,
+            "rank_difference": 0.733,
+            "critical_difference": 1.211,
+            "significant": false
+          }
+        ]
+      }
+    },
+    "secondary": {
+      "test": "repeated-measures ANOVA with Tukey HSD, after Lema et al. 10.1007/s10845-025-02672-8",
+      "anova": {
+        "applicable": true,
+        "f_statistic": 67.9972,
+        "df_treatment": 3,
+        "df_error": 42,
+        "p_value": 3.6431247544477254e-16,
+        "significant": true,
+        "partial_eta_squared": 0.8293
+      },
+      "tukey": {
+        "applicable": true,
+        "alpha": 0.05,
+        "pairs": [
+          {
+            "a": "yolo11n",
+            "b": "yolo11s",
+            "mean_difference": -0.0315,
+            "p_value": 0.9806990675211348,
+            "significant": false
+          },
+          {
+            "a": "yolo11n",
+            "b": "rtdetr_l",
+            "mean_difference": -0.0592,
+            "p_value": 0.8889374654466579,
+            "significant": false
+          },
+          {
+            "a": "yolo11n",
+            "b": "faster_rcnn",
+            "mean_difference": -0.0458,
+            "p_value": 0.944216537735402,
+            "significant": false
+          },
+          {
+            "a": "yolo11s",
+            "b": "rtdetr_l",
+            "mean_difference": -0.0277,
+            "p_value": 0.9867360025010349,
+            "significant": false
+          },
+          {
+            "a": "yolo11s",
+            "b": "faster_rcnn",
+            "mean_difference": -0.0143,
+            "p_value": 0.9981001542925064,
+            "significant": false
+          },
+          {
+            "a": "rtdetr_l",
+            "b": "faster_rcnn",
+            "mean_difference": 0.0134,
+            "p_value": 0.9984591428129431,
+            "significant": false
+          }
+        ]
+      }
+    },
+    "primary_and_secondary_agree": true,
+    "sensitivity_cell_by_seed": {
+      "blocking_unit": "(evaluation cell, seed)",
+      "preregistered": true,
+      "note": "Seeds treated as blocks rather than as replicates. Reported because the pre-registration commits to it, not because the primary result needed support.",
+      "agrees_with_primary": true,
+      "metric": "image_ap",
+      "configurations": [
+        "yolo11n",
+        "yolo11s",
+        "rtdetr_l",
+        "faster_rcnn"
+      ],
+      "n_blocks": 45,
+      "n_blocks_dropped_incomplete": 0,
+      "blocks": [
+        "kaggle_v2->kaggle_v2|seed0",
+        "kaggle_v2->kaggle_v2|seed1",
+        "kaggle_v2->kaggle_v2|seed2",
+        "kaggle_v2->lohi_weld|seed0",
+        "kaggle_v2->lohi_weld|seed1",
+        "kaggle_v2->lohi_weld|seed2",
+        "kaggle_v2->twoclass|seed0",
+        "kaggle_v2->twoclass|seed1",
+        "kaggle_v2->twoclass|seed2",
+        "kaggle_v2->visual|seed0",
+        "kaggle_v2->visual|seed1",
+        "kaggle_v2->visual|seed2",
+        "kaggle_v2->weld_surface_v2|seed0",
+        "kaggle_v2->weld_surface_v2|seed1",
+        "kaggle_v2->weld_surface_v2|seed2",
+        "lohi_weld->kaggle_v2|seed0",
+        "lohi_weld->kaggle_v2|seed1",
+        "lohi_weld->kaggle_v2|seed2",
+        "lohi_weld->lohi_weld|seed0",
+        "lohi_weld->lohi_weld|seed1",
+        "lohi_weld->lohi_weld|seed2",
+        "lohi_weld->twoclass|seed0",
+        "lohi_weld->twoclass|seed1",
+        "lohi_weld->twoclass|seed2",
+        "lohi_weld->visual|seed0",
+        "lohi_weld->visual|seed1",
+        "lohi_weld->visual|seed2",
+        "lohi_weld->weld_surface_v2|seed0",
+        "lohi_weld->weld_surface_v2|seed1",
+        "lohi_weld->weld_surface_v2|seed2",
+        "weld_surface_v2->kaggle_v2|seed0",
+        "weld_surface_v2->kaggle_v2|seed1",
+        "weld_surface_v2->kaggle_v2|seed2",
+        "weld_surface_v2->lohi_weld|seed0",
+        "weld_surface_v2->lohi_weld|seed1",
+        "weld_surface_v2->lohi_weld|seed2",
+        "weld_surface_v2->twoclass|seed0",
+        "weld_surface_v2->twoclass|seed1",
+        "weld_surface_v2->twoclass|seed2",
+        "weld_surface_v2->visual|seed0",
+        "weld_surface_v2->visual|seed1",
+        "weld_surface_v2->visual|seed2",
+        "weld_surface_v2->weld_surface_v2|seed0",
+        "weld_surface_v2->weld_surface_v2|seed1",
+        "weld_surface_v2->weld_surface_v2|seed2"
+      ],
+      "design": "complete block, configurations crossed with evaluation cells",
+      "applicable": true,
+      "primary": {
+        "test": "Friedman, blocked on evaluation cell",
+        "chi2": 85.8267,
+        "df": 3,
+        "p_value": 1.7246534650977205e-18,
+        "significant": true,
+        "posthoc": {
+          "mean_ranks": {
+            "yolo11n": 1.2,
+            "yolo11s": 2.222,
+            "rtdetr_l": 3.578,
+            "faster_rcnn": 3.0
+          },
+          "critical_difference": 0.699,
+          "alpha": 0.05,
+          "pairs": [
+            {
+              "a": "yolo11n",
+              "b": "yolo11s",
+              "mean_rank_a": 1.2,
+              "mean_rank_b": 2.222,
+              "rank_difference": 1.022,
+              "critical_difference": 0.699,
+              "significant": true
+            },
+            {
+              "a": "yolo11n",
+              "b": "rtdetr_l",
+              "mean_rank_a": 1.2,
+              "mean_rank_b": 3.578,
+              "rank_difference": 2.378,
+              "critical_difference": 0.699,
+              "significant": true
+            },
+            {
+              "a": "yolo11n",
+              "b": "faster_rcnn",
+              "mean_rank_a": 1.2,
+              "mean_rank_b": 3.0,
+              "rank_difference": 1.8,
+              "critical_difference": 0.699,
+              "significant": true
+            },
+            {
+              "a": "yolo11s",
+              "b": "rtdetr_l",
+              "mean_rank_a": 2.222,
+              "mean_rank_b": 3.578,
+              "rank_difference": 1.356,
+              "critical_difference": 0.699,
+              "significant": true
+            },
+            {
+              "a": "yolo11s",
+              "b": "faster_rcnn",
+              "mean_rank_a": 2.222,
+              "mean_rank_b": 3.0,
+              "rank_difference": 0.778,
+              "critical_difference": 0.699,
+              "significant": true
+            },
+            {
+              "a": "rtdetr_l",
+              "b": "faster_rcnn",
+              "mean_rank_a": 3.578,
+              "mean_rank_b": 3.0,
+              "rank_difference": 0.578,
+              "critical_difference": 0.699,
+              "significant": false
+            }
+          ]
+        }
+      },
+      "secondary": {
+        "test": "repeated-measures ANOVA with Tukey HSD, after Lema et al. 10.1007/s10845-025-02672-8",
+        "anova": {
+          "applicable": true,
+          "f_statistic": 80.0111,
+          "df_treatment": 3,
+          "df_error": 132,
+          "p_value": 1.4817630236449388e-29,
+          "significant": true,
+          "partial_eta_squared": 0.6452
+        },
+        "tukey": {
+          "applicable": true,
+          "alpha": 0.05,
+          "pairs": [
+            {
+              "a": "yolo11n",
+              "b": "yolo11s",
+              "mean_difference": -0.0315,
+              "p_value": 0.9056583203755735,
+              "significant": false
+            },
+            {
+              "a": "yolo11n",
+              "b": "rtdetr_l",
+              "mean_difference": -0.0592,
+              "p_value": 0.581926879484983,
+              "significant": false
+            },
+            {
+              "a": "yolo11n",
+              "b": "faster_rcnn",
+              "mean_difference": -0.0458,
+              "p_value": 0.7581589529626702,
+              "significant": false
+            },
+            {
+              "a": "yolo11s",
+              "b": "rtdetr_l",
+              "mean_difference": -0.0277,
+              "p_value": 0.9334969667955885,
+              "significant": false
+            },
+            {
+              "a": "yolo11s",
+              "b": "faster_rcnn",
+              "mean_difference": -0.0143,
+              "p_value": 0.9898410219231627,
+              "significant": false
+            },
+            {
+              "a": "rtdetr_l",
+              "b": "faster_rcnn",
+              "mean_difference": 0.0134,
+              "p_value": 0.9917347100879307,
+              "significant": false
+            }
+          ]
+        }
+      },
+      "primary_and_secondary_agree": true
+    }
+  },
+  "box_map50": {
+    "metric": "box_map50",
+    "configurations": [
+      "yolo11n",
+      "yolo11s",
+      "rtdetr_l",
+      "faster_rcnn"
+    ],
+    "n_blocks": 8,
+    "n_blocks_dropped_incomplete": 0,
+    "blocks": [
+      "kaggle_v2->kaggle_v2",
+      "kaggle_v2->lohi_weld",
+      "kaggle_v2->twoclass",
+      "kaggle_v2->visual",
+      "lohi_weld->kaggle_v2",
+      "lohi_weld->lohi_weld",
+      "lohi_weld->twoclass",
+      "lohi_weld->visual"
+    ],
+    "design": "complete block, configurations crossed with evaluation cells",
+    "preregistered": true,
+    "applicable": true,
+    "primary": {
+      "test": "Friedman, blocked on evaluation cell",
+      "chi2": 18.45,
+      "df": 3,
+      "p_value": 0.0003551736472519191,
+      "significant": true,
+      "posthoc": {
+        "mean_ranks": {
+          "yolo11n": 1.0,
+          "yolo11s": 2.625,
+          "rtdetr_l": 3.75,
+          "faster_rcnn": 2.625
+        },
+        "critical_difference": 1.658,
+        "alpha": 0.05,
+        "pairs": [
+          {
+            "a": "yolo11n",
+            "b": "yolo11s",
+            "mean_rank_a": 1.0,
+            "mean_rank_b": 2.625,
+            "rank_difference": 1.625,
+            "critical_difference": 1.658,
+            "significant": false
+          },
+          {
+            "a": "yolo11n",
+            "b": "rtdetr_l",
+            "mean_rank_a": 1.0,
+            "mean_rank_b": 3.75,
+            "rank_difference": 2.75,
+            "critical_difference": 1.658,
+            "significant": true
+          },
+          {
+            "a": "yolo11n",
+            "b": "faster_rcnn",
+            "mean_rank_a": 1.0,
+            "mean_rank_b": 2.625,
+            "rank_difference": 1.625,
+            "critical_difference": 1.658,
+            "significant": false
+          },
+          {
+            "a": "yolo11s",
+            "b": "rtdetr_l",
+            "mean_rank_a": 2.625,
+            "mean_rank_b": 3.75,
+            "rank_difference": 1.125,
+            "critical_difference": 1.658,
+            "significant": false
+          },
+          {
+            "a": "yolo11s",
+            "b": "faster_rcnn",
+            "mean_rank_a": 2.625,
+            "mean_rank_b": 2.625,
+            "rank_difference": 0.0,
+            "critical_difference": 1.658,
+            "significant": false
+          },
+          {
+            "a": "rtdetr_l",
+            "b": "faster_rcnn",
+            "mean_rank_a": 3.75,
+            "mean_rank_b": 2.625,
+            "rank_difference": 1.125,
+            "critical_difference": 1.658,
+            "significant": false
+          }
+        ]
+      }
+    },
+    "secondary": {
+      "test": "repeated-measures ANOVA with Tukey HSD, after Lema et al. 10.1007/s10845-025-02672-8",
+      "anova": {
+        "applicable": true,
+        "f_statistic": 15.731,
+        "df_treatment": 3,
+        "df_error": 21,
+        "p_value": 1.3657280362829698e-05,
+        "significant": true,
+        "partial_eta_squared": 0.6921
+      },
+      "tukey": {
+        "applicable": true,
+        "alpha": 0.05,
+        "pairs": [
+          {
+            "a": "yolo11n",
+            "b": "yolo11s",
+            "mean_difference": -0.0251,
+            "p_value": 0.9929024701268371,
+            "significant": false
+          },
+          {
+            "a": "yolo11n",
+            "b": "rtdetr_l",
+            "mean_difference": -0.0375,
+            "p_value": 0.9773378026339002,
+            "significant": false
+          },
+          {
+            "a": "yolo11n",
+            "b": "faster_rcnn",
+            "mean_difference": -0.0281,
+            "p_value": 0.990211141008951,
+            "significant": false
+          },
+          {
+            "a": "yolo11s",
+            "b": "rtdetr_l",
+            "mean_difference": -0.0123,
+            "p_value": 0.9991422489533887,
+            "significant": false
+          },
+          {
+            "a": "yolo11s",
+            "b": "faster_rcnn",
+            "mean_difference": -0.0029,
+            "p_value": 0.9999886258721603,
+            "significant": false
+          },
+          {
+            "a": "rtdetr_l",
+            "b": "faster_rcnn",
+            "mean_difference": 0.0094,
+            "p_value": 0.9996165483110041,
+            "significant": false
+          }
+        ]
+      }
+    },
+    "primary_and_secondary_agree": true,
+    "sensitivity_cell_by_seed": {
+      "blocking_unit": "(evaluation cell, seed)",
+      "preregistered": true,
+      "note": "Seeds treated as blocks rather than as replicates. Reported because the pre-registration commits to it, not because the primary result needed support.",
+      "agrees_with_primary": true,
+      "metric": "box_map50",
+      "configurations": [
+        "yolo11n",
+        "yolo11s",
+        "rtdetr_l",
+        "faster_rcnn"
+      ],
+      "n_blocks": 24,
+      "n_blocks_dropped_incomplete": 0,
+      "blocks": [
+        "kaggle_v2->kaggle_v2|seed0",
+        "kaggle_v2->kaggle_v2|seed1",
+        "kaggle_v2->kaggle_v2|seed2",
+        "kaggle_v2->lohi_weld|seed0",
+        "kaggle_v2->lohi_weld|seed1",
+        "kaggle_v2->lohi_weld|seed2",
+        "kaggle_v2->twoclass|seed0",
+        "kaggle_v2->twoclass|seed1",
+        "kaggle_v2->twoclass|seed2",
+        "kaggle_v2->visual|seed0",
+        "kaggle_v2->visual|seed1",
+        "kaggle_v2->visual|seed2",
+        "lohi_weld->kaggle_v2|seed0",
+        "lohi_weld->kaggle_v2|seed1",
+        "lohi_weld->kaggle_v2|seed2",
+        "lohi_weld->lohi_weld|seed0",
+        "lohi_weld->lohi_weld|seed1",
+        "lohi_weld->lohi_weld|seed2",
+        "lohi_weld->twoclass|seed0",
+        "lohi_weld->twoclass|seed1",
+        "lohi_weld->twoclass|seed2",
+        "lohi_weld->visual|seed0",
+        "lohi_weld->visual|seed1",
+        "lohi_weld->visual|seed2"
+      ],
+      "design": "complete block, configurations crossed with evaluation cells",
+      "applicable": true,
+      "primary": {
+        "test": "Friedman, blocked on evaluation cell",
+        "chi2": 19.7,
+        "df": 3,
+        "p_value": 0.00019585826803794338,
+        "significant": true,
+        "posthoc": {
+          "mean_ranks": {
+            "yolo11n": 1.542,
+            "yolo11s": 2.625,
+            "rtdetr_l": 3.125,
+            "faster_rcnn": 2.708
+          },
+          "critical_difference": 0.957,
+          "alpha": 0.05,
+          "pairs": [
+            {
+              "a": "yolo11n",
+              "b": "yolo11s",
+              "mean_rank_a": 1.542,
+              "mean_rank_b": 2.625,
+              "rank_difference": 1.083,
+              "critical_difference": 0.957,
+              "significant": true
+            },
+            {
+              "a": "yolo11n",
+              "b": "rtdetr_l",
+              "mean_rank_a": 1.542,
+              "mean_rank_b": 3.125,
+              "rank_difference": 1.583,
+              "critical_difference": 0.957,
+              "significant": true
+            },
+            {
+              "a": "yolo11n",
+              "b": "faster_rcnn",
+              "mean_rank_a": 1.542,
+              "mean_rank_b": 2.708,
+              "rank_difference": 1.167,
+              "critical_difference": 0.957,
+              "significant": true
+            },
+            {
+              "a": "yolo11s",
+              "b": "rtdetr_l",
+              "mean_rank_a": 2.625,
+              "mean_rank_b": 3.125,
+              "rank_difference": 0.5,
+              "critical_difference": 0.957,
+              "significant": false
+            },
+            {
+              "a": "yolo11s",
+              "b": "faster_rcnn",
+              "mean_rank_a": 2.625,
+              "mean_rank_b": 2.708,
+              "rank_difference": 0.083,
+              "critical_difference": 0.957,
+              "significant": false
+            },
+            {
+              "a": "rtdetr_l",
+              "b": "faster_rcnn",
+              "mean_rank_a": 3.125,
+              "mean_rank_b": 2.708,
+              "rank_difference": 0.417,
+              "critical_difference": 0.957,
+              "significant": false
+            }
+          ]
+        }
+      },
+      "secondary": {
+        "test": "repeated-measures ANOVA with Tukey HSD, after Lema et al. 10.1007/s10845-025-02672-8",
+        "anova": {
+          "applicable": true,
+          "f_statistic": 12.2944,
+          "df_treatment": 3,
+          "df_error": 69,
+          "p_value": 1.5553622090982535e-06,
+          "significant": true,
+          "partial_eta_squared": 0.3483
+        },
+        "tukey": {
+          "applicable": true,
+          "alpha": 0.05,
+          "pairs": [
+            {
+              "a": "yolo11n",
+              "b": "yolo11s",
+              "mean_difference": -0.0251,
+              "p_value": 0.9616410303288488,
+              "significant": false
+            },
+            {
+              "a": "yolo11n",
+              "b": "rtdetr_l",
+              "mean_difference": -0.0375,
+              "p_value": 0.8860226800008583,
+              "significant": false
+            },
+            {
+              "a": "yolo11n",
+              "b": "faster_rcnn",
+              "mean_difference": -0.028,
+              "p_value": 0.9478645151883246,
+              "significant": false
+            },
+            {
+              "a": "yolo11s",
+              "b": "rtdetr_l",
+              "mean_difference": -0.0123,
+              "p_value": 0.9951459481109789,
+              "significant": false
+            },
+            {
+              "a": "yolo11s",
+              "b": "faster_rcnn",
+              "mean_difference": -0.0029,
+              "p_value": 0.9999347276440116,
+              "significant": false
+            },
+            {
+              "a": "rtdetr_l",
+              "b": "faster_rcnn",
+              "mean_difference": 0.0094,
+              "p_value": 0.9978166381185043,
+              "significant": false
+            }
+          ]
+        }
+      },
+      "primary_and_secondary_agree": true
+    }
+  }
+}

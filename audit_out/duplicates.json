@@ -1,0 +1,706 @@
+{
+  "threshold_bits": 5,
+  "within_split": {
+    "Visual Welding Defect.v1i.yolov8::train": 155,
+    "Weld Surface Defect Detection.v1i.yolov8::train": 17297,
+    "Weld Surface Defect Detection.v2i.yolov8::train": 17088,
+    "Weld Surface Defect Detection.v1i.yolov8::valid": 213,
+    "Weld Surface Defect Detection.v2i.yolov8::valid": 213,
+    "Weld Surface Defect Detection.v1i.yolov8::test": 46,
+    "Weld Surface Defect Detection.v2i.yolov8::test": 46,
+    "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset::train": 260,
+    "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2::train": 480,
+    "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2::valid": 32,
+    "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset::valid": 4,
+    "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2::test": 11,
+    "welding defect 2class.v1i.yolov8::train": 200,
+    "welding defect 2class.v1i.yolov8::valid": 12,
+    "welding defect 2class.v1i.yolov8::test": 1,
+    "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset::test": 1
+  },
+  "cross_split": {
+    "Weld Surface Defect Detection.v1i.yolov8::train|valid": 2979,
+    "Weld Surface Defect Detection.v2i.yolov8::train|valid": 2924,
+    "Weld Surface Defect Detection.v1i.yolov8::test|train": 1415,
+    "Weld Surface Defect Detection.v1i.yolov8::test|valid": 194,
+    "Weld Surface Defect Detection.v2i.yolov8::test|train": 1419,
+    "Weld Surface Defect Detection.v2i.yolov8::test|valid": 194,
+    "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2::test|train": 80,
+    "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2::train|valid": 144,
+    "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset::test|train": 16,
+    "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2::test|valid": 21,
+    "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset::train|valid": 19,
+    "welding defect 2class.v1i.yolov8::train|valid": 113,
+    "welding defect 2class.v1i.yolov8::test|train": 32,
+    "Visual Welding Defect.v1i.yolov8::test|train": 16,
+    "Visual Welding Defect.v1i.yolov8::train|valid": 6,
+    "Visual Welding Defect.v1i.yolov8::test|valid": 2,
+    "welding defect 2class.v1i.yolov8::test|valid": 11,
+    "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset::test|valid": 3
+  },
+  "cross_dataset": {
+    "Weld Surface Defect Detection.v1i.yolov8|Weld Surface Defect Detection.v2i.yolov8": 53600,
+    "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset|Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2": 2047,
+    "Visual Welding Defect.v1i.yolov8|Weld Surface Defect Detection.v1i.yolov8": 198,
+    "Visual Welding Defect.v1i.yolov8|Weld Surface Defect Detection.v2i.yolov8": 200,
+    "Visual Welding Defect.v1i.yolov8|Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2": 7,
+    "Weld Surface Defect Detection.v2i.yolov8|welding defect 2class.v1i.yolov8": 10,
+    "Weld Surface Defect Detection.v1i.yolov8|Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2": 40,
+    "Weld Surface Defect Detection.v2i.yolov8|Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2": 47,
+    "Weld Surface Defect Detection.v1i.yolov8|Welding Defect, Object Detection_kaggle/The Welding Defect Dataset": 25,
+    "Weld Surface Defect Detection.v2i.yolov8|Welding Defect, Object Detection_kaggle/The Welding Defect Dataset": 34,
+    "Weld Surface Defect Detection.v1i.yolov8|welding defect 2class.v1i.yolov8": 10,
+    "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset|welding defect 2class.v1i.yolov8": 1,
+    "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2|welding defect 2class.v1i.yolov8": 2,
+    "Visual Welding Defect.v1i.yolov8|Welding Defect, Object Detection_kaggle/The Welding Defect Dataset": 1,
+    "Visual Welding Defect.v1i.yolov8|welding defect 2class.v1i.yolov8": 1
+  },
+  "example_pairs": {
+    "Weld Surface Defect Detection.v1i.yolov8|Weld Surface Defect Detection.v2i.yolov8": [
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/BT-9-1-_jpg.rf.5f0b24b2f52c8ae04a1f391030aa17c2.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/BT-9-1-_jpg.rf.5f0b24b2f52c8ae04a1f391030aa17c2.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/BT-9-1-_jpg.rf.5f0b24b2f52c8ae04a1f391030aa17c2.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/BT-9-17-_jpg.rf.d26f08038be4395517b88196edc108ac.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/BT-9-1-_jpg.rf.5f0b24b2f52c8ae04a1f391030aa17c2.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/BT-9-20-_jpg.rf.719de4dcdc4a656766f264520be00b8e.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/BT-9-1-_jpg.rf.b02e29a4ffe32f7e35ecac0a50b3f634.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/BT-9-1-_jpg.rf.5f0b24b2f52c8ae04a1f391030aa17c2.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/BT-9-1-_jpg.rf.b02e29a4ffe32f7e35ecac0a50b3f634.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/BT-9-17-_jpg.rf.d26f08038be4395517b88196edc108ac.jpg"
+      ]
+    ],
+    "Weld Surface Defect Detection.v1i.yolov8 :: train|valid": [
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/BT-9-1-_jpg.rf.dbad1287b70d113242921790d0167a8f.jpg",
+        "Weld Surface Defect Detection.v1i.yolov8/valid/images/BT-9-12-_jpg.rf.beb3fa367fa7b8b1f34133676acb5514.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/BT-9-8-_jpg.rf.0f4316bc92393fedcc23c44ebb096895.jpg",
+        "Weld Surface Defect Detection.v1i.yolov8/valid/images/BT-9-12-_jpg.rf.beb3fa367fa7b8b1f34133676acb5514.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/BT-9-8-_jpg.rf.a610b50bc8ad6e6eff008f52a7081a9b.jpg",
+        "Weld Surface Defect Detection.v1i.yolov8/valid/images/BT-9-12-_jpg.rf.beb3fa367fa7b8b1f34133676acb5514.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/BT-9-8-_jpg.rf.e1f463846c64b5d72cdf914bc5dfff46.jpg",
+        "Weld Surface Defect Detection.v1i.yolov8/valid/images/BT-9-12-_jpg.rf.beb3fa367fa7b8b1f34133676acb5514.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/BT-9-105-_jpg.rf.b4df624005fb43204041cc5f5ae1ddda.jpg",
+        "Weld Surface Defect Detection.v1i.yolov8/valid/images/BT-9-107-_jpg.rf.7a140737c359c6a965c9e68a8e047eae.jpg"
+      ]
+    ],
+    "Weld Surface Defect Detection.v2i.yolov8 :: train|valid": [
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/BT-9-5-_jpg.rf.7de8291ec8a971582ae05f9dc925f272.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/valid/images/BT-9-12-_jpg.rf.beb3fa367fa7b8b1f34133676acb5514.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/BT-9-8-_jpg.rf.8c1462526397e41b52145a172938559a.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/valid/images/BT-9-12-_jpg.rf.beb3fa367fa7b8b1f34133676acb5514.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/BT-9-8-_jpg.rf.e1f463846c64b5d72cdf914bc5dfff46.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/valid/images/BT-9-12-_jpg.rf.beb3fa367fa7b8b1f34133676acb5514.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/BT-9-105-_jpg.rf.942e745aade8eb250f05cd2190e6b5ad.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/valid/images/BT-9-107-_jpg.rf.7a140737c359c6a965c9e68a8e047eae.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/BT-9-99-_jpg.rf.45a2cac0295559d68d5ee1f58bb020df.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/valid/images/BT-9-107-_jpg.rf.7a140737c359c6a965c9e68a8e047eae.jpg"
+      ]
+    ],
+    "Weld Surface Defect Detection.v1i.yolov8 :: test|train": [
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/BT-9-1085-_jpg.rf.e595657bfc98cdf6944e262ca24fa870.jpg",
+        "Weld Surface Defect Detection.v1i.yolov8/test/images/BT-9-1087-_jpg.rf.109bdfbbf049f9ef90a1985f63e280f8.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/BT-9-150-_jpg.rf.44b55214725bf27d1cd637afdbf6dd3b.jpg",
+        "Weld Surface Defect Detection.v1i.yolov8/test/images/BT-9-164-_jpg.rf.e9e379b6a500563254740e143a16ee15.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/BT-9-152-_jpg.rf.d0688c474278c91083b0288760297c00.jpg",
+        "Weld Surface Defect Detection.v1i.yolov8/test/images/BT-9-164-_jpg.rf.e9e379b6a500563254740e143a16ee15.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/BT-9-158-_jpg.rf.d92bef6db3d8c8a08f1a631e19e601f2.jpg",
+        "Weld Surface Defect Detection.v1i.yolov8/test/images/BT-9-164-_jpg.rf.e9e379b6a500563254740e143a16ee15.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/BT-9-172-_jpg.rf.a30c4b6339421b09c224e69904d18375.jpg",
+        "Weld Surface Defect Detection.v1i.yolov8/test/images/BT-9-164-_jpg.rf.e9e379b6a500563254740e143a16ee15.jpg"
+      ]
+    ],
+    "Weld Surface Defect Detection.v1i.yolov8 :: test|valid": [
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/valid/images/BT-9-156-_jpg.rf.333526d52a5c708470c114847bcd99ba.jpg",
+        "Weld Surface Defect Detection.v1i.yolov8/test/images/BT-9-164-_jpg.rf.e9e379b6a500563254740e143a16ee15.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/valid/images/BT-9-160-_jpg.rf.7382d57e418dacbdbb13197b6995386b.jpg",
+        "Weld Surface Defect Detection.v1i.yolov8/test/images/BT-9-164-_jpg.rf.e9e379b6a500563254740e143a16ee15.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/valid/images/BT-9-168-_jpg.rf.e5bc74cdd50a1dfb65cb4bce34f9ecdc.jpg",
+        "Weld Surface Defect Detection.v1i.yolov8/test/images/BT-9-164-_jpg.rf.e9e379b6a500563254740e143a16ee15.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/valid/images/BT-9-161-_jpg.rf.00413d8bc78090c09404f95e8f48c0ab.jpg",
+        "Weld Surface Defect Detection.v1i.yolov8/test/images/BT-9-157-_jpg.rf.81a3e2075ec5782e8aba8980be43a794.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/valid/images/BT-9-184-_jpg.rf.88ca91f08f7ea92aa965d47e7c614f26.jpg",
+        "Weld Surface Defect Detection.v1i.yolov8/test/images/BT-9-180-_jpg.rf.616a7f7225590dd731126ef20c5ab3d2.jpg"
+      ]
+    ],
+    "Weld Surface Defect Detection.v2i.yolov8 :: test|train": [
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/BT-9-152-_jpg.rf.d0688c474278c91083b0288760297c00.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/test/images/BT-9-164-_jpg.rf.e9e379b6a500563254740e143a16ee15.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/BT-9-158-_jpg.rf.dd4f73a5a96eab63942c8a2bf40d79e9.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/test/images/BT-9-164-_jpg.rf.e9e379b6a500563254740e143a16ee15.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/BT-9-166-_jpg.rf.efdbaac1b503efd707d726e8db9b221f.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/test/images/BT-9-164-_jpg.rf.e9e379b6a500563254740e143a16ee15.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/BT-9-172-_jpg.rf.a30c4b6339421b09c224e69904d18375.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/test/images/BT-9-164-_jpg.rf.e9e379b6a500563254740e143a16ee15.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/BT-9-165-_jpg.rf.1eab400226eada26d45fc8d49afe0898.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/test/images/BT-9-157-_jpg.rf.81a3e2075ec5782e8aba8980be43a794.jpg"
+      ]
+    ],
+    "Weld Surface Defect Detection.v2i.yolov8 :: test|valid": [
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/valid/images/BT-9-156-_jpg.rf.333526d52a5c708470c114847bcd99ba.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/test/images/BT-9-164-_jpg.rf.e9e379b6a500563254740e143a16ee15.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/valid/images/BT-9-160-_jpg.rf.7382d57e418dacbdbb13197b6995386b.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/test/images/BT-9-164-_jpg.rf.e9e379b6a500563254740e143a16ee15.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/valid/images/BT-9-168-_jpg.rf.e5bc74cdd50a1dfb65cb4bce34f9ecdc.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/test/images/BT-9-164-_jpg.rf.e9e379b6a500563254740e143a16ee15.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/valid/images/BT-9-161-_jpg.rf.00413d8bc78090c09404f95e8f48c0ab.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/test/images/BT-9-157-_jpg.rf.81a3e2075ec5782e8aba8980be43a794.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/valid/images/BT-9-184-_jpg.rf.88ca91f08f7ea92aa965d47e7c614f26.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/test/images/BT-9-180-_jpg.rf.616a7f7225590dd731126ef20c5ab3d2.jpg"
+      ]
+    ],
+    "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset|Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2": [
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/0e538f39-1d30436c-c23_jpg.rf.05ff78024b481ae4fada24ef439ebd97.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/0e538f39-1d30436c-c23_jpg.rf.05ff78024b481ae4fada24ef439ebd97.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/0e538f39-1d30436c-c23_jpg.rf.26d4bf7a38b3bf4195696d7d002dfc32.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/0e538f39-1d30436c-c23_jpg.rf.26d4bf7a38b3bf4195696d7d002dfc32.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/0e538f39-1d30436c-c23_jpg.rf.3ce38b0e86b3cd83db06acc794de04f0.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/0e538f39-1d30436c-c23_jpg.rf.3ce38b0e86b3cd83db06acc794de04f0.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/0e538f39-1d30436c-c23_jpg.rf.68d881523d9df5f75e91f0d319e2ad5c.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/0e538f39-1d30436c-c23_jpg.rf.68d881523d9df5f75e91f0d319e2ad5c.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/0e538f39-1d30436c-c23_jpg.rf.77546dd3e656d80bb16894a47fb55b27.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/0e538f39-1d30436c-c23_jpg.rf.77546dd3e656d80bb16894a47fb55b27.jpg"
+      ]
+    ],
+    "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2 :: test|train": [
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/Good-Welding-images_28_png_jpg.rf.731d3f7abe126466bf829652bbbb5bf4.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/test/images/Good-Welding-images_28_png.rf.503eeed161b61cf8ec218b1c17440787.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/Screenshot-2022-12-05-223424_jpeg_jpg.rf.0b6814540386bc9541f0fc0368258ebd.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/test/images/Screenshot-2022-12-05-223424_jpeg.rf.3de790d465fbb0428d1066ab0ec33daf.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/Screenshot-2022-12-05-230149_jpeg_jpg.rf.20da164cede00ca344ab331935f99492.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/test/images/Screenshot-2022-12-05-230149_jpeg.rf.9a609cc50aed07d1532d574bdfddd081.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/bad_weld_vid205_jpeg_jpg.rf.5f4f900ed3c6a70fe7dd169d73fecbea.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/test/images/bad_weld_vid205_jpeg.rf.4732128c8ac74427330c636ff0e63949.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/bad_weld_vid280_jpeg_jpg.rf.5eafecafa1ea0e0517a9a9e601fc64e8.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/test/images/bad_weld_vid280_jpeg.rf.84ae852be0cfdf652d6c54a8ea04b4f9.jpg"
+      ]
+    ],
+    "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2 :: train|valid": [
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/Good-Welding-images_47_jpeg_jpg.rf.6250ded0586d8c55d907d2660ba2d689.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/valid/images/Good-Welding-images_47_jpeg.rf.ac708f7ce59708ffaacf92787a0454c4.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/Good-Welding-images_4_jpeg_jpg.rf.93140739eed69282794f7a0453cd4a28.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/valid/images/Good-Welding-images_4_jpeg.rf.986518c5eb56613a41d71ac3dbd308bb.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/Screenshot-2022-12-05-223526_jpeg_jpg.rf.29f6298e62a6be5d24e17c1a6a11411d.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/valid/images/Screenshot-2022-12-05-223526_jpeg.rf.62ffe12406717a1e99af51812c60e2f0.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/Screenshot-2022-12-05-223853_jpeg_jpg.rf.42262466b642c35f0aeafa519c286014.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/valid/images/Screenshot-2022-12-05-223853_jpeg.rf.45266c6071617a79519234bc2fe623fe.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/Screenshot-2022-12-05-223914_jpeg_jpg.rf.103b18cce16099e2dbf8dcd5762a7ee4.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/valid/images/Screenshot-2022-12-05-223914_jpeg.rf.e035e2c927f94af7de47b7ab08dfcc31.jpg"
+      ]
+    ],
+    "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset :: test|train": [
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/good-stick-welds_13_jpeg_jpg.rf.efb5720065a033ec7fd8834a970ab206.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/test/images/mig-good-welds_11_jpeg_jpg.rf.c488ebd180387fc1f20114bed459fbb5.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/imageruus_jpeg_jpg.rf.04627d4403b70a2af661c9cf2bd99cf6.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/test/images/porosity-worm-hole-weld-defect-welding-process-flux-cored-arc-fcaw-204492534_jpeg_jpg.rf.c5201d1c888e3ffa1fded39930503d32.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/1723687d-6dd44d6e-Centerline-Crack_jpg.rf.00358687861836123ab68058f975b15e.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/test/images/crack-welding-images_11_jpeg_jpg.rf.5174724ff08d893dc926840b5d3a3e22.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/53b5de7a-77e2178f-weld-cracking-centerline-longitudinal-crack-260nw-1313514314_jpg.rf.ce6ebf49b78fbe150d2bf182d5b57549.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/test/images/crack-welding-images_17_jpeg_jpg.rf.ff570716da313da84983bc629ae7e331.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/test/images/SampleV2_1_mp4-97_jpg.rf.1cbd06413c3d08495ffce915e0d8bd94.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/SampleV2_1_mp4-92_jpg.rf.74e77e6dc2ede55519e40a32a133d698.jpg"
+      ]
+    ],
+    "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2 :: test|valid": [
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/valid/images/mig-good-welds_11_jpeg.rf.f7d53cdf1deeee8d1ebb918d2788f3ee.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/test/images/mig-good-welds_11_jpeg_jpg.rf.c488ebd180387fc1f20114bed459fbb5.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/valid/images/Screenshot-2022-12-05-223504_jpeg_jpg.rf.5b9d1fe2f7702f51c2d7add5fb05dbc8.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/test/images/Screenshot-2022-12-05-223504_jpeg.rf.f6c1d1d819ba7212516d5da2471bdb04.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/valid/images/Slag-inclusion-welding-images_11_jpeg_jpg.rf.b93cbb4ed4793f16bd717a04201af241.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/test/images/Slag-inclusion-welding-images_11_jpeg.rf.06f53c90b96f942c575dad2d8ba10992.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/valid/images/bad_weld_vid181_jpeg_jpg.rf.7d9912c2d73df82417963a765beb335e.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/test/images/bad_weld_vid181_jpeg.rf.e76607a4dd9ac855668e049bdc68515d.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/valid/images/bad_weld_vid368_jpeg_jpg.rf.cc8c996094237a36bcee56ba35fb5cd6.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/test/images/bad_weld_vid368_jpeg.rf.513a43066292f2b16b8428284df2b472.jpg"
+      ]
+    ],
+    "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset :: train|valid": [
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/imagesery4y_jpeg_jpg.rf.2440fc757255ab56b2a11786869f5f2a.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/valid/images/poor-Welding-Images_30_jpeg_jpg.rf.9c41acc876f697dfbe12a27cd68536c9.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/SampleV2_1_mp4-63_jpg.rf.b9c00b6988c9422d9dc6139880cfbfa5.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/valid/images/SampleV2_2_mp4-92_jpg.rf.15cfce2d493dc6a68332c975e9a7963f.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/SampleV2_2_mp4-87_jpg.rf.3171af215f03cee2c53b0c8d9728da54.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/valid/images/SampleV2_2_mp4-92_jpg.rf.15cfce2d493dc6a68332c975e9a7963f.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/SampleV2_2_mp4-87_jpg.rf.c7bcf02a086bbef65f3e4d08fcbef5fe.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/valid/images/SampleV2_2_mp4-92_jpg.rf.15cfce2d493dc6a68332c975e9a7963f.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/valid/images/good_weld_vid686_jpeg_jpg.rf.6a58a23440ba50cef78c98e9bee3ad34.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/good_weld_vid687_jpeg_jpg.rf.c26fe1cd9ab524f056cdf0ac73fb9e64.jpg"
+      ]
+    ],
+    "welding defect 2class.v1i.yolov8 :: train|valid": [
+      [
+        "welding defect 2class.v1i.yolov8/train/images/5-39-_180_flip_jpg.rf.02c2d4090db7797f8017adc9a075d482.jpg",
+        "welding defect 2class.v1i.yolov8/valid/images/5-40-_180_flip_jpg.rf.a6312e3b8cce1a4ff0c99fad0400b335.jpg"
+      ],
+      [
+        "welding defect 2class.v1i.yolov8/train/images/7-174-_270_jpg.rf.0bb165d4c2848c9bb0338544b77f5a4b.jpg",
+        "welding defect 2class.v1i.yolov8/valid/images/7-175-_270_jpg.rf.5cdb692867ff991352475a78ddcd54e0.jpg"
+      ],
+      [
+        "welding defect 2class.v1i.yolov8/valid/images/7-28-_180_flip_jpg.rf.ccc3b8b4df3e2b6473879d5f083f7895.jpg",
+        "welding defect 2class.v1i.yolov8/train/images/7-29-_180_flip_jpg.rf.6a07e742e3118e7801dc15c76561402e.jpg"
+      ],
+      [
+        "welding defect 2class.v1i.yolov8/valid/images/4-148-_180_jpg.rf.900e7268ebbcadb1c7d2405eff0aefde.jpg",
+        "welding defect 2class.v1i.yolov8/train/images/4-147-_180_jpg.rf.1a921a1622bd9b486dd0c7d6bc708e84.jpg"
+      ],
+      [
+        "welding defect 2class.v1i.yolov8/valid/images/7-14-_180_flip_jpg.rf.b144c1f0813bd28c2ede303d2e8a2f81.jpg",
+        "welding defect 2class.v1i.yolov8/train/images/7-13-_180_flip_jpg.rf.78062ffa54f37f2e16ae1f023c8107e0.jpg"
+      ]
+    ],
+    "Visual Welding Defect.v1i.yolov8|Weld Surface Defect Detection.v1i.yolov8": [
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/BT-9-984-_jpg.rf.0b3acf957eb26e7c7cae6ed102e0141d.jpg",
+        "Visual Welding Defect.v1i.yolov8/train/images/253_Pre_Test_Root_jpg.rf.7c4aac2d60c20d068d320db762f8af02.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/BT-9-984-_jpg.rf.0b3acf957eb26e7c7cae6ed102e0141d.jpg",
+        "Visual Welding Defect.v1i.yolov8/train/images/PXL_20221207_095105076-MP_jpg.rf.f74db755c077d681654facf00e510b5e.jpg"
+      ],
+      [
+        "Visual Welding Defect.v1i.yolov8/train/images/253_Pre_Test_Root_jpg.rf.7c4aac2d60c20d068d320db762f8af02.jpg",
+        "Weld Surface Defect Detection.v1i.yolov8/valid/images/BT-9-982-_jpg.rf.1215a6c5130ac00d46458128950cde43.jpg"
+      ],
+      [
+        "Visual Welding Defect.v1i.yolov8/train/images/253_Pre_Test_Root_jpg.rf.7c4aac2d60c20d068d320db762f8af02.jpg",
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/BT-9-986-_jpg.rf.1c62f81724a58d9b02268075e9c29d19.jpg"
+      ],
+      [
+        "Visual Welding Defect.v1i.yolov8/train/images/253_Pre_Test_Root_jpg.rf.7c4aac2d60c20d068d320db762f8af02.jpg",
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/BT-9-976-_jpg.rf.086ae6ec589206ca07c854aaa516c573.jpg"
+      ]
+    ],
+    "Visual Welding Defect.v1i.yolov8|Weld Surface Defect Detection.v2i.yolov8": [
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/BT-9-984-_jpg.rf.0b3acf957eb26e7c7cae6ed102e0141d.jpg",
+        "Visual Welding Defect.v1i.yolov8/train/images/253_Pre_Test_Root_jpg.rf.7c4aac2d60c20d068d320db762f8af02.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/BT-9-984-_jpg.rf.0b3acf957eb26e7c7cae6ed102e0141d.jpg",
+        "Visual Welding Defect.v1i.yolov8/train/images/PXL_20221207_095105076-MP_jpg.rf.f74db755c077d681654facf00e510b5e.jpg"
+      ],
+      [
+        "Visual Welding Defect.v1i.yolov8/train/images/253_Pre_Test_Root_jpg.rf.7c4aac2d60c20d068d320db762f8af02.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/valid/images/BT-9-982-_jpg.rf.1215a6c5130ac00d46458128950cde43.jpg"
+      ],
+      [
+        "Visual Welding Defect.v1i.yolov8/train/images/318_Post_Test_Root_jpg.rf.e7d1daac5e22d8c8ca3ea60ba7fe50e9.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/SR9-903-_jpg.rf.5c7aea97138f88f137988c0f47d34a83.jpg"
+      ],
+      [
+        "Visual Welding Defect.v1i.yolov8/train/images/PXL_20221207_095105076-MP_jpg.rf.f74db755c077d681654facf00e510b5e.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/BT-9-984-_jpg.rf.057456f91bdd584b42f0e7196a2ba9c2.jpg"
+      ]
+    ],
+    "Visual Welding Defect.v1i.yolov8|Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2": [
+      [
+        "Visual Welding Defect.v1i.yolov8/train/images/318_Post_Test_Root_jpg.rf.e7d1daac5e22d8c8ca3ea60ba7fe50e9.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/mig-good-welds_16_jpeg.rf.bd3a07190cfbf02f72aa24ccb9a25706.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/Screenshot-2022-12-05-231053_jpeg.rf.202f98463560450766954ca9d12c6853.jpg",
+        "Visual Welding Defect.v1i.yolov8/train/images/PXL_20221207_095105076-MP_jpg.rf.f74db755c077d681654facf00e510b5e.jpg"
+      ],
+      [
+        "Visual Welding Defect.v1i.yolov8/train/images/079_Pre_Test_Capping_jpg.rf.453ee53cf5588aebe73e4759df7d3985.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/weld-defect-work-was-carried-out-using-semi-automatic-arc-welding-mig-welding-weld-defect-work-was-carried-out-using-semi-242005547_jpeg.rf.db4f03c31a932fca6b992692945d293e.jpg"
+      ],
+      [
+        "Visual Welding Defect.v1i.yolov8/train/images/079_Pre_Test_Capping_jpg.rf.674e9a5c7e06ff996c3f5a40ad7a7422.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/weld-defect-work-was-carried-out-using-semi-automatic-arc-welding-mig-welding-weld-defect-work-was-carried-out-using-semi-242005547_jpeg.rf.db4f03c31a932fca6b992692945d293e.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/imageruus_jpeg.rf.d8f7c53a267e43e606a442861575457d.jpg",
+        "Visual Welding Defect.v1i.yolov8/train/images/144_Post_Test_Capping_jpg.rf.f58573c4727035516f930ad4a6277dbc.jpg"
+      ]
+    ],
+    "welding defect 2class.v1i.yolov8 :: test|train": [
+      [
+        "welding defect 2class.v1i.yolov8/test/images/7-111-_180_flip_jpg.rf.83832fe586859c7f0e83fa7b20ddcd1e.jpg",
+        "welding defect 2class.v1i.yolov8/train/images/7-110-_180_flip_jpg.rf.8ddc337ac5cf49d86b7340836b78a5b4.jpg"
+      ],
+      [
+        "welding defect 2class.v1i.yolov8/train/images/7-255-_180_flip_jpg.rf.f3080295f470ce18a8d37c2cca9bd284.jpg",
+        "welding defect 2class.v1i.yolov8/test/images/7-256-_180_flip_jpg.rf.0084ad80bcb959e71f3924455c9b86b7.jpg"
+      ],
+      [
+        "welding defect 2class.v1i.yolov8/train/images/6-36-_90_flip_jpg.rf.bc9dada8760854b44c50ef0f2d39f0fc.jpg",
+        "welding defect 2class.v1i.yolov8/test/images/6-57-_90_flip_jpg.rf.07db673a2240e847909f8dd3f20d980a.jpg"
+      ],
+      [
+        "welding defect 2class.v1i.yolov8/train/images/7-43-_90_flip_jpg.rf.6e976923551ec35bb05e71b076d55c69.jpg",
+        "welding defect 2class.v1i.yolov8/test/images/7-44-_90_flip_jpg.rf.36d15b34bff3076cf0d4dc05f837e389.jpg"
+      ],
+      [
+        "welding defect 2class.v1i.yolov8/train/images/7-105-_90_flip_jpg.rf.57d14f132db0480a6c9784d8c0e40b0c.jpg",
+        "welding defect 2class.v1i.yolov8/test/images/7-104-_90_flip_jpg.rf.86f46e630891228d010e439d9c5ec226.jpg"
+      ]
+    ],
+    "Visual Welding Defect.v1i.yolov8 :: test|train": [
+      [
+        "Visual Welding Defect.v1i.yolov8/train/images/PXL_20221207_095105076-MP_jpg.rf.f74db755c077d681654facf00e510b5e.jpg",
+        "Visual Welding Defect.v1i.yolov8/test/images/PXL_20221207_095353807_jpg.rf.d703d568631f26f51a04d72cec8ddf73.jpg"
+      ],
+      [
+        "Visual Welding Defect.v1i.yolov8/test/images/PXL_20221207_095353807_jpg.rf.d703d568631f26f51a04d72cec8ddf73.jpg",
+        "Visual Welding Defect.v1i.yolov8/train/images/PXL_20221207_094720273_jpg.rf.653b7b3f7a58ae45addcc0df1354eb35.jpg"
+      ],
+      [
+        "Visual Welding Defect.v1i.yolov8/train/images/088_Pre_Test_Capping_jpg.rf.ddd688a3e45dcc50241042b5c374e9b3.jpg",
+        "Visual Welding Defect.v1i.yolov8/test/images/157_Pre_Test_Root_jpg.rf.76659a81ce3b587c042fe86fc733715b.jpg"
+      ],
+      [
+        "Visual Welding Defect.v1i.yolov8/train/images/073_Pre_Test_Capping_jpg.rf.d59ae7f37a39d340fe1927d05e8df048.jpg",
+        "Visual Welding Defect.v1i.yolov8/test/images/146_Pre_Test_Capping_jpg.rf.3e9eee309b8f4825bc1065febe03dbea.jpg"
+      ],
+      [
+        "Visual Welding Defect.v1i.yolov8/train/images/146_Pre_Test_Root_jpg.rf.40b99467be2f5a27abe8e29d5f2f0224.jpg",
+        "Visual Welding Defect.v1i.yolov8/test/images/157_Pre_Test_Root_jpg.rf.76659a81ce3b587c042fe86fc733715b.jpg"
+      ]
+    ],
+    "Visual Welding Defect.v1i.yolov8 :: train|valid": [
+      [
+        "Visual Welding Defect.v1i.yolov8/train/images/PXL_20221207_095105076-MP_jpg.rf.f74db755c077d681654facf00e510b5e.jpg",
+        "Visual Welding Defect.v1i.yolov8/valid/images/PXL_20221207_094613740_jpg.rf.2da5e13e8d6e7be9b64ff32e4a7bc0ee.jpg"
+      ],
+      [
+        "Visual Welding Defect.v1i.yolov8/train/images/157_Pre_Test_Capping_jpg.rf.8ca604cefffd5ea3219e2ac7706c81ad.jpg",
+        "Visual Welding Defect.v1i.yolov8/valid/images/153_Pre_Test_Capping_jpg.rf.2553c83d978c356814ba0f329e8bb492.jpg"
+      ],
+      [
+        "Visual Welding Defect.v1i.yolov8/train/images/157_Pre_Test_Capping_jpg.rf.bf3fb4fe3171040497b52dd3f85aba4c.jpg",
+        "Visual Welding Defect.v1i.yolov8/valid/images/153_Pre_Test_Capping_jpg.rf.2553c83d978c356814ba0f329e8bb492.jpg"
+      ],
+      [
+        "Visual Welding Defect.v1i.yolov8/train/images/144_Pre_Test_Root_jpg.rf.0f464245ec7aa741e06ab27512592005.jpg",
+        "Visual Welding Defect.v1i.yolov8/valid/images/153_Pre_Test_Capping_jpg.rf.2553c83d978c356814ba0f329e8bb492.jpg"
+      ],
+      [
+        "Visual Welding Defect.v1i.yolov8/train/images/213_Pre_Test_Root_jpg.rf.913f0392fd29aea54a55fb109c22b88f.jpg",
+        "Visual Welding Defect.v1i.yolov8/valid/images/153_Pre_Test_Capping_jpg.rf.2553c83d978c356814ba0f329e8bb492.jpg"
+      ]
+    ],
+    "Visual Welding Defect.v1i.yolov8 :: test|valid": [
+      [
+        "Visual Welding Defect.v1i.yolov8/test/images/PXL_20221207_095353807_jpg.rf.d703d568631f26f51a04d72cec8ddf73.jpg",
+        "Visual Welding Defect.v1i.yolov8/valid/images/PXL_20221207_094613740_jpg.rf.2da5e13e8d6e7be9b64ff32e4a7bc0ee.jpg"
+      ],
+      [
+        "Visual Welding Defect.v1i.yolov8/test/images/157_Pre_Test_Root_jpg.rf.76659a81ce3b587c042fe86fc733715b.jpg",
+        "Visual Welding Defect.v1i.yolov8/valid/images/153_Pre_Test_Capping_jpg.rf.2553c83d978c356814ba0f329e8bb492.jpg"
+      ]
+    ],
+    "Weld Surface Defect Detection.v2i.yolov8|welding defect 2class.v1i.yolov8": [
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/SR9-905-_jpg.rf.f7a078bd61c3395a87d7e12e6e123fd1.jpg",
+        "welding defect 2class.v1i.yolov8/train/images/7-109-_180_flip_jpg.rf.24261d18eaf5cebbd903ffea35c5b2d3.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/valid/images/NWS-258-_jpg.rf.8d6e70206303496dffb35c4ff711fda1.jpg",
+        "welding defect 2class.v1i.yolov8/train/images/6-13-_270_jpg.rf.adb2ed9b86b7eb992ba23e2eba7bfc39.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/NWS-260-_jpg.rf.449416c71da3f8c57a7c5879a6719162.jpg",
+        "welding defect 2class.v1i.yolov8/train/images/6-13-_270_jpg.rf.adb2ed9b86b7eb992ba23e2eba7bfc39.jpg"
+      ],
+      [
+        "welding defect 2class.v1i.yolov8/test/images/6-57-_90_flip_jpg.rf.07db673a2240e847909f8dd3f20d980a.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/NWS-260-_jpg.rf.41d129f882260103bc1251f2d86a5677.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/NWS-259-_jpg.rf.ab83b58b5baf8c6651982fc85274ac06.jpg",
+        "welding defect 2class.v1i.yolov8/train/images/6-13-_270_flip_jpg.rf.6ea2c27651d135de56159a9bd1f6ab04.jpg"
+      ]
+    ],
+    "Weld Surface Defect Detection.v1i.yolov8|Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2": [
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/NWS-358-_jpg.rf.0b20408ba6ede90cf90f0b124e5964b9.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/weld-defect-work-was-carried-out-using-semi-automatic-arc-welding-mig-welding-weld-defect-work-was-carried-out-using-semi-242005547_jpeg.rf.db4f03c31a932fca6b992692945d293e.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/NWS-353-_jpg.rf.e6789ae8c4f50338b56a7fc7a16c73a3.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/weld-defect-work-was-carried-out-using-semi-automatic-arc-welding-mig-welding-weld-defect-work-was-carried-out-using-semi-242005547_jpeg.rf.db4f03c31a932fca6b992692945d293e.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/LoF-9-523-_jpg.rf.7411fb1001f42c1d83956820c65b35f7.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/SampleV3_2_mp4-6_jpg.rf.03f22ce1b532618dac469b5a797e8e7a.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/SampleV3_2_mp4-6_jpg.rf.03f22ce1b532618dac469b5a797e8e7a.jpg",
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/LoF-9-2-_jpeg.rf.55507db9d19c82d44d1a14314b37bc0a.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/NWS-324-_jpg.rf.b5105dbb5623965088cc8fbdc2c1a508.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/weld-defect-work-was-carried-out-using-semi-automatic-arc-welding-mig-welding-weld-defect-work-was-carried-out-using-semi-242005547_jpeg.rf.db4f03c31a932fca6b992692945d293e.jpg"
+      ]
+    ],
+    "Weld Surface Defect Detection.v2i.yolov8|Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2": [
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/NWS-358-_jpg.rf.35f142b3e2881024f6c8dc9e310e36c4.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/weld-defect-work-was-carried-out-using-semi-automatic-arc-welding-mig-welding-weld-defect-work-was-carried-out-using-semi-242005547_jpeg.rf.db4f03c31a932fca6b992692945d293e.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/SampleV3_2_mp4-6_jpg.rf.03f22ce1b532618dac469b5a797e8e7a.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/LoF-9-2-_jpeg.rf.143b904e320ad3a8923df799c8cd8f2e.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/NWS-321-_jpg.rf.435577bd0dfa4026552e1df12bd16fb9.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/weld-defect-work-was-carried-out-using-semi-automatic-arc-welding-mig-welding-weld-defect-work-was-carried-out-using-semi-242005547_jpeg.rf.db4f03c31a932fca6b992692945d293e.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/NWS-324-_jpg.rf.47bea37abb9d3407d4c59360e80b86a5.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/weld-defect-work-was-carried-out-using-semi-automatic-arc-welding-mig-welding-weld-defect-work-was-carried-out-using-semi-242005547_jpeg.rf.db4f03c31a932fca6b992692945d293e.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/weld-defect-work-was-carried-out-using-semi-automatic-arc-welding-mig-welding-weld-defect-work-was-carried-out-using-semi-242005547_jpeg.rf.db4f03c31a932fca6b992692945d293e.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/NWS-327-_jpg.rf.d1978080c9b819355b966d975e0c9c11.jpg"
+      ]
+    ],
+    "Weld Surface Defect Detection.v1i.yolov8|Welding Defect, Object Detection_kaggle/The Welding Defect Dataset": [
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/LoF-9-523-_jpg.rf.7411fb1001f42c1d83956820c65b35f7.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/SampleV3_2_mp4-6_jpg.rf.03f22ce1b532618dac469b5a797e8e7a.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/SampleV3_2_mp4-6_jpg.rf.03f22ce1b532618dac469b5a797e8e7a.jpg",
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/LoF-9-2-_jpeg.rf.55507db9d19c82d44d1a14314b37bc0a.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/LoF-9-766-_jpg.rf.2ff836c3835373aa00c614ec3b63bc4e.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/SampleV1_1_mp4-9_jpg.rf.24a551d3b13ef6d114dfed9094fd2b8f.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/LoF-9-766-_jpg.rf.2ff836c3835373aa00c614ec3b63bc4e.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/SampleV1_1_mp4-9_jpg.rf.855f2136d493bf6cb4bad497d4708596.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/LoF-9-766-_jpg.rf.63be6e22f1a18281a07ed20b0959e708.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/SampleV1_1_mp4-9_jpg.rf.24a551d3b13ef6d114dfed9094fd2b8f.jpg"
+      ]
+    ],
+    "Weld Surface Defect Detection.v2i.yolov8|Welding Defect, Object Detection_kaggle/The Welding Defect Dataset": [
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/SampleV3_2_mp4-6_jpg.rf.03f22ce1b532618dac469b5a797e8e7a.jpg",
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/LoF-9-2-_jpeg.rf.143b904e320ad3a8923df799c8cd8f2e.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/LoF-9-765-_jpg.rf.dd55ff388e4a208a83c0ddce1541e4f6.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/SampleV1_1_mp4-9_jpg.rf.24a551d3b13ef6d114dfed9094fd2b8f.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/LoF-9-765-_jpg.rf.dd55ff388e4a208a83c0ddce1541e4f6.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/SampleV1_1_mp4-9_jpg.rf.855f2136d493bf6cb4bad497d4708596.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/LoF-9-755-_jpg.rf.1526987e907749f1c525bea6b542d30b.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/SampleV1_1_mp4-9_jpg.rf.24a551d3b13ef6d114dfed9094fd2b8f.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v2i.yolov8/train/images/LoF-9-755-_jpg.rf.1526987e907749f1c525bea6b542d30b.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/SampleV1_1_mp4-9_jpg.rf.855f2136d493bf6cb4bad497d4708596.jpg"
+      ]
+    ],
+    "welding defect 2class.v1i.yolov8 :: test|valid": [
+      [
+        "welding defect 2class.v1i.yolov8/test/images/4-75-_180_jpg.rf.32deed115aa98e9551ce031de97952be.jpg",
+        "welding defect 2class.v1i.yolov8/valid/images/4-74-_180_jpg.rf.67cb3da1b5e5a53fb130032979219bae.jpg"
+      ],
+      [
+        "welding defect 2class.v1i.yolov8/valid/images/7-185-_270_flip_jpg.rf.fb546c664d88ddd7237546fbb8ef4b4c.jpg",
+        "welding defect 2class.v1i.yolov8/test/images/7-186-_270_flip_jpg.rf.6ea851581558ae397967ac34882544e7.jpg"
+      ],
+      [
+        "welding defect 2class.v1i.yolov8/valid/images/7-184-_270_flip_jpg.rf.7ec84b3bddd00978117ec06fa7351f40.jpg",
+        "welding defect 2class.v1i.yolov8/test/images/7-186-_270_flip_jpg.rf.6ea851581558ae397967ac34882544e7.jpg"
+      ],
+      [
+        "welding defect 2class.v1i.yolov8/test/images/6-58-_90_jpg.rf.934d13bccfcc71bdd4cf26716e008583.jpg",
+        "welding defect 2class.v1i.yolov8/valid/images/6-31-_90_jpg.rf.01e15eb4aad91802e15e86a725ace960.jpg"
+      ],
+      [
+        "welding defect 2class.v1i.yolov8/test/images/6-58-_90_jpg.rf.934d13bccfcc71bdd4cf26716e008583.jpg",
+        "welding defect 2class.v1i.yolov8/valid/images/6-18-_90_jpg.rf.49e73fa509cd5f2fd5a225bea7b7cdb1.jpg"
+      ]
+    ],
+    "Weld Surface Defect Detection.v1i.yolov8|welding defect 2class.v1i.yolov8": [
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/valid/images/NWS-258-_jpg.rf.8d6e70206303496dffb35c4ff711fda1.jpg",
+        "welding defect 2class.v1i.yolov8/train/images/6-13-_270_jpg.rf.adb2ed9b86b7eb992ba23e2eba7bfc39.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/NWS-259-_jpg.rf.8c0d1e85032ee0876ce6506e0da41b1d.jpg",
+        "welding defect 2class.v1i.yolov8/train/images/6-13-_270_jpg.rf.adb2ed9b86b7eb992ba23e2eba7bfc39.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/NWS-260-_jpg.rf.449416c71da3f8c57a7c5879a6719162.jpg",
+        "welding defect 2class.v1i.yolov8/train/images/6-13-_270_jpg.rf.adb2ed9b86b7eb992ba23e2eba7bfc39.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/NWS-260-_jpg.rf.6d09b81b1749657bd1d4b08cd06fc54d.jpg",
+        "welding defect 2class.v1i.yolov8/train/images/6-13-_270_jpg.rf.adb2ed9b86b7eb992ba23e2eba7bfc39.jpg"
+      ],
+      [
+        "Weld Surface Defect Detection.v1i.yolov8/train/images/NWS-259-_jpg.rf.5ca3f14d9764f0fa905f937f3818a995.jpg",
+        "welding defect 2class.v1i.yolov8/train/images/6-13-_270_flip_jpg.rf.6ea2c27651d135de56159a9bd1f6ab04.jpg"
+      ]
+    ],
+    "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset|welding defect 2class.v1i.yolov8": [
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/valid/images/istockphoto-1006281428-612x612_jpeg_jpg.rf.097a9032fb3decdd9fec0d929cb29754.jpg",
+        "welding defect 2class.v1i.yolov8/train/images/7-25-_0_jpg.rf.3417028cc139acb0c52f64c5207367f5.jpg"
+      ]
+    ],
+    "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2|welding defect 2class.v1i.yolov8": [
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/train/images/istockphoto-1006281428-612x612_jpeg.rf.19b6b77f7f6f8f28dcc6bf0aace2a166.jpg",
+        "welding defect 2class.v1i.yolov8/train/images/7-25-_0_jpg.rf.3417028cc139acb0c52f64c5207367f5.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2/The Welding Defect Dataset - v2/valid/images/istockphoto-1006281428-612x612_jpeg_jpg.rf.097a9032fb3decdd9fec0d929cb29754.jpg",
+        "welding defect 2class.v1i.yolov8/train/images/7-25-_0_jpg.rf.3417028cc139acb0c52f64c5207367f5.jpg"
+      ]
+    ],
+    "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset :: test|valid": [
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/test/images/SampleV2_1_mp4-97_jpg.rf.1cbd06413c3d08495ffce915e0d8bd94.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/valid/images/SampleV2_2_mp4-85_jpg.rf.c362dd8c973cea60f136c5996b0fd398.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/valid/images/bad_weld_vid85_jpeg_jpg.rf.4ec131c145176b8e4fee392e414937c3.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/test/images/bad_weld_vid84_jpeg_jpg.rf.f148c4898a835b73a3eb087d905ed8f3.jpg"
+      ],
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/valid/images/SampleV2_2_mp4-79_jpg.rf.46674fcdba85463e3a72275eb64e9a60.jpg",
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/test/images/SampleV2_2_mp4-71_jpg.rf.de0eaa495c44a7817fab26c6c6277796.jpg"
+      ]
+    ],
+    "Visual Welding Defect.v1i.yolov8|Welding Defect, Object Detection_kaggle/The Welding Defect Dataset": [
+      [
+        "Welding Defect, Object Detection_kaggle/The Welding Defect Dataset/The Welding Defect Dataset/train/images/SampleV2_1_mp4-79_jpg.rf.f39312ebbd59f7d0b3bac978023732b3.jpg",
+        "Visual Welding Defect.v1i.yolov8/valid/images/048_Pre_Test_Capping_jpg.rf.b4c4f6c080ca5548c7febb27851a0f39.jpg"
+      ]
+    ],
+    "Visual Welding Defect.v1i.yolov8|welding defect 2class.v1i.yolov8": [
+      [
+        "welding defect 2class.v1i.yolov8/train/images/5-19-_180_flip_jpg.rf.7db8223810c1e4e567d07126dafd5832.jpg",
+        "Visual Welding Defect.v1i.yolov8/test/images/PXL_20221208_065157742_jpg.rf.bb9eaa06263debb2d422c5f4ca27cebd.jpg"
+      ]
+    ]
+  }
+}

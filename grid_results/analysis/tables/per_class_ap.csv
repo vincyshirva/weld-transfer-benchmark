@@ -1,0 +1,313 @@
+ap50,ap50_95,ci_hi,ci_lo,class,excluded_from_gt,family,in_defect_space,kind,nms_corrected,seed,source,target,test_instances,test_split,thin
+0.8275692727941942,0.552939307950143,,,Bad Weld,False,yolo11s,False,dirty,False,0,kaggle_v2,kaggle_v2,95,downloaded,False
+0.7640861834842693,0.5397656355723411,,,Good Weld,False,yolo11s,False,dirty,False,0,kaggle_v2,kaggle_v2,117,downloaded,False
+0.4617052647738099,0.23034868482505808,,,Defect,False,yolo11s,True,dirty,False,0,kaggle_v2,kaggle_v2,89,downloaded,False
+0.8741195688508189,0.7065363646915451,,,Bad Weld,False,yolo11s,False,dirty,False,0,kaggle_v2,kaggle_v2,110,audited,False
+0.9170481336015838,0.7040792208676974,,,Good Weld,False,yolo11s,False,dirty,False,0,kaggle_v2,kaggle_v2,182,audited,False
+0.8143932684819041,0.547141136885388,,,Defect,False,yolo11s,True,dirty,False,0,kaggle_v2,kaggle_v2,159,audited,False
+0.8215755023500129,0.5681548572014162,,,Bad Weld,False,yolo11s,False,dirty,False,1,kaggle_v2,kaggle_v2,95,downloaded,False
+0.8050572379501024,0.5679348229045958,,,Good Weld,False,yolo11s,False,dirty,False,1,kaggle_v2,kaggle_v2,117,downloaded,False
+0.5246375683047199,0.2539281149845941,,,Defect,False,yolo11s,True,dirty,False,1,kaggle_v2,kaggle_v2,89,downloaded,False
+0.8629950972228635,0.6991235864131693,,,Bad Weld,False,yolo11s,False,dirty,False,1,kaggle_v2,kaggle_v2,110,audited,False
+0.9070243916497169,0.7256622911040131,,,Good Weld,False,yolo11s,False,dirty,False,1,kaggle_v2,kaggle_v2,182,audited,False
+0.8095463316386432,0.559966872814789,,,Defect,False,yolo11s,True,dirty,False,1,kaggle_v2,kaggle_v2,159,audited,False
+0.7719931672415702,0.5517599510128359,,,Bad Weld,False,yolo11s,False,dirty,False,2,kaggle_v2,kaggle_v2,95,downloaded,False
+0.7941923785454262,0.5683795085897863,,,Good Weld,False,yolo11s,False,dirty,False,2,kaggle_v2,kaggle_v2,117,downloaded,False
+0.44948149213232874,0.23999964739281493,,,Defect,False,yolo11s,True,dirty,False,2,kaggle_v2,kaggle_v2,89,downloaded,False
+0.8493718205088778,0.6894570202459549,,,Bad Weld,False,yolo11s,False,dirty,False,2,kaggle_v2,kaggle_v2,110,audited,False
+0.9153349505210351,0.7164909589866437,,,Good Weld,False,yolo11s,False,dirty,False,2,kaggle_v2,kaggle_v2,182,audited,False
+0.8136532782091076,0.5701117174885096,,,Defect,False,yolo11s,True,dirty,False,2,kaggle_v2,kaggle_v2,159,audited,False
+0.446883022352181,0.14902797025993447,,,pore,False,yolo11s,True,dirty,False,0,lohi_weld,lohi_weld,793,downloaded,False
+0.5159802257498081,0.24664221947301734,,,deposit,False,yolo11s,True,dirty,False,0,lohi_weld,lohi_weld,627,downloaded,False
+0.7701046937243968,0.32960226642072,,,discontinuity,False,yolo11s,True,dirty,False,0,lohi_weld,lohi_weld,1445,downloaded,False
+0.6062538959316411,0.2655838058160422,,,stain,False,yolo11s,True,dirty,False,0,lohi_weld,lohi_weld,1733,downloaded,False
+0.5323087452620557,0.20036320602389762,,,pore,False,yolo11s,True,dirty,False,0,lohi_weld,lohi_weld,589,audited,False
+0.6656246362888081,0.34158723286901066,,,deposit,False,yolo11s,True,dirty,False,0,lohi_weld,lohi_weld,440,audited,False
+0.8446364299311323,0.41856828707525856,,,discontinuity,False,yolo11s,True,dirty,False,0,lohi_weld,lohi_weld,1082,audited,False
+0.692207574185551,0.3153508261904664,,,stain,False,yolo11s,True,dirty,False,0,lohi_weld,lohi_weld,1246,audited,False
+0.4560486152041268,0.14852655456709912,,,pore,False,yolo11s,True,dirty,False,1,lohi_weld,lohi_weld,793,downloaded,False
+0.49622445088393585,0.23451240107832363,,,deposit,False,yolo11s,True,dirty,False,1,lohi_weld,lohi_weld,627,downloaded,False
+0.7733849039829557,0.3202199650976232,,,discontinuity,False,yolo11s,True,dirty,False,1,lohi_weld,lohi_weld,1445,downloaded,False
+0.6300153302593379,0.2811739294210781,,,stain,False,yolo11s,True,dirty,False,1,lohi_weld,lohi_weld,1733,downloaded,False
+0.6414776625702997,0.2477128380380174,,,pore,False,yolo11s,True,dirty,False,1,lohi_weld,lohi_weld,589,audited,False
+0.6869780557804053,0.36958236221259083,,,deposit,False,yolo11s,True,dirty,False,1,lohi_weld,lohi_weld,440,audited,False
+0.8671438966933097,0.448164579494466,,,discontinuity,False,yolo11s,True,dirty,False,1,lohi_weld,lohi_weld,1082,audited,False
+0.7341458912408618,0.3528610262182271,,,stain,False,yolo11s,True,dirty,False,1,lohi_weld,lohi_weld,1246,audited,False
+0.5056656703802764,0.16224216775362307,,,pore,False,yolo11s,True,dirty,False,2,lohi_weld,lohi_weld,793,downloaded,False
+0.4820171182881324,0.2243778062250415,,,deposit,False,yolo11s,True,dirty,False,2,lohi_weld,lohi_weld,627,downloaded,False
+0.7633874445466412,0.32748846495643524,,,discontinuity,False,yolo11s,True,dirty,False,2,lohi_weld,lohi_weld,1445,downloaded,False
+0.6122784777158266,0.27326211265816547,,,stain,False,yolo11s,True,dirty,False,2,lohi_weld,lohi_weld,1733,downloaded,False
+0.5301262422185193,0.1877004763812952,,,pore,False,yolo11s,True,dirty,False,2,lohi_weld,lohi_weld,589,audited,False
+0.5820768188738371,0.2904228566259103,,,deposit,False,yolo11s,True,dirty,False,2,lohi_weld,lohi_weld,440,audited,False
+0.8029089617221707,0.38456772718176796,,,discontinuity,False,yolo11s,True,dirty,False,2,lohi_weld,lohi_weld,1082,audited,False
+0.6630077537945902,0.3037134393622071,,,stain,False,yolo11s,True,dirty,False,2,lohi_weld,lohi_weld,1246,audited,False
+0.9855575281247804,0.5863517255188195,,,Burn Through-BT,False,yolo11s,True,dirty,False,0,weld_surface_v2,weld_surface_v2,110,downloaded,False
+0.9461171341756981,0.5035941029841561,,,Contamination-CN,False,yolo11s,True,dirty,False,0,weld_surface_v2,weld_surface_v2,108,downloaded,False
+0.9577338881151537,0.6002209981031685,,,Lack of Fusion-LOF,False,yolo11s,True,dirty,False,0,weld_surface_v2,weld_surface_v2,107,downloaded,False
+0.9979481819149655,0.7064894428062524,,,Normal Weld-NW,False,yolo11s,False,dirty,False,0,weld_surface_v2,weld_surface_v2,93,downloaded,False
+0.8083270907213936,0.4016899060683231,,,Spatter-SR,False,yolo11s,True,dirty,False,0,weld_surface_v2,weld_surface_v2,99,downloaded,False
+0.9627814740835475,0.5820224870725677,,,Surface Crack-SC,False,yolo11s,True,dirty,False,0,weld_surface_v2,weld_surface_v2,105,downloaded,False
+0.9703855850627476,0.6325895381011737,,,Undercut-UC,False,yolo11s,True,dirty,False,0,weld_surface_v2,weld_surface_v2,102,downloaded,False
+0.9665320190555643,0.7098384895228232,,,Burn Through-BT,False,yolo11s,True,dirty,False,0,weld_surface_v2,weld_surface_v2,42,audited,True
+0.9670748078203183,0.6944200322956753,,,Contamination-CN,False,yolo11s,True,dirty,False,0,weld_surface_v2,weld_surface_v2,88,audited,False
+0.9963771071341629,0.7634825150311981,,,Lack of Fusion-LOF,False,yolo11s,True,dirty,False,0,weld_surface_v2,weld_surface_v2,71,audited,False
+0.9827009247363475,0.6835942798664679,,,Normal Weld-NW,False,yolo11s,False,dirty,False,0,weld_surface_v2,weld_surface_v2,62,audited,False
+0.9051471743794293,0.518061608442042,,,Spatter-SR,False,yolo11s,True,dirty,False,0,weld_surface_v2,weld_surface_v2,80,audited,False
+1.0,0.7037539080484309,,,Surface Crack-SC,False,yolo11s,True,dirty,False,0,weld_surface_v2,weld_surface_v2,38,audited,True
+0.9974807147360787,0.6985479086022848,,,Undercut-UC,False,yolo11s,True,dirty,False,0,weld_surface_v2,weld_surface_v2,70,audited,False
+0.9842481188455413,0.587269515572482,,,Burn Through-BT,False,yolo11s,True,dirty,False,1,weld_surface_v2,weld_surface_v2,110,downloaded,False
+0.9658817884230787,0.5021850624824611,,,Contamination-CN,False,yolo11s,True,dirty,False,1,weld_surface_v2,weld_surface_v2,108,downloaded,False
+0.9755324401279742,0.6002879463447344,,,Lack of Fusion-LOF,False,yolo11s,True,dirty,False,1,weld_surface_v2,weld_surface_v2,107,downloaded,False
+0.9968121949420649,0.7010119836559896,,,Normal Weld-NW,False,yolo11s,False,dirty,False,1,weld_surface_v2,weld_surface_v2,93,downloaded,False
+0.8380491923505162,0.42828109985065455,,,Spatter-SR,False,yolo11s,True,dirty,False,1,weld_surface_v2,weld_surface_v2,99,downloaded,False
+0.9681636174684959,0.6002672325914638,,,Surface Crack-SC,False,yolo11s,True,dirty,False,1,weld_surface_v2,weld_surface_v2,105,downloaded,False
+0.996460359562586,0.6313971549114736,,,Undercut-UC,False,yolo11s,True,dirty,False,1,weld_surface_v2,weld_surface_v2,102,downloaded,False
+0.9670734515311995,0.730714320354796,,,Burn Through-BT,False,yolo11s,True,dirty,False,1,weld_surface_v2,weld_surface_v2,42,audited,True
+0.9750801488566875,0.6731188227760478,,,Contamination-CN,False,yolo11s,True,dirty,False,1,weld_surface_v2,weld_surface_v2,88,audited,False
+0.996935407826497,0.7714332782883324,,,Lack of Fusion-LOF,False,yolo11s,True,dirty,False,1,weld_surface_v2,weld_surface_v2,71,audited,False
+0.9993713657079996,0.7012068689951808,,,Normal Weld-NW,False,yolo11s,False,dirty,False,1,weld_surface_v2,weld_surface_v2,62,audited,False
+0.8774876593880996,0.5101282621927733,,,Spatter-SR,False,yolo11s,True,dirty,False,1,weld_surface_v2,weld_surface_v2,80,audited,False
+1.0,0.6911348754152353,,,Surface Crack-SC,False,yolo11s,True,dirty,False,1,weld_surface_v2,weld_surface_v2,38,audited,True
+0.9945304803885524,0.6816616820235947,,,Undercut-UC,False,yolo11s,True,dirty,False,1,weld_surface_v2,weld_surface_v2,70,audited,False
+0.981808449390978,0.5814385021559847,,,Burn Through-BT,False,yolo11s,True,dirty,False,2,weld_surface_v2,weld_surface_v2,110,downloaded,False
+0.9350164286416884,0.4771434178621271,,,Contamination-CN,False,yolo11s,True,dirty,False,2,weld_surface_v2,weld_surface_v2,108,downloaded,False
+0.967897398512093,0.6038526366860395,,,Lack of Fusion-LOF,False,yolo11s,True,dirty,False,2,weld_surface_v2,weld_surface_v2,107,downloaded,False
+0.9974090867030629,0.6930945115247225,,,Normal Weld-NW,False,yolo11s,False,dirty,False,2,weld_surface_v2,weld_surface_v2,93,downloaded,False
+0.8230345231998514,0.40460303762246025,,,Spatter-SR,False,yolo11s,True,dirty,False,2,weld_surface_v2,weld_surface_v2,99,downloaded,False
+0.9631683894062855,0.6005460365810329,,,Surface Crack-SC,False,yolo11s,True,dirty,False,2,weld_surface_v2,weld_surface_v2,105,downloaded,False
+0.9870972374319741,0.6346651097884493,,,Undercut-UC,False,yolo11s,True,dirty,False,2,weld_surface_v2,weld_surface_v2,102,downloaded,False
+0.9645347361211971,0.7294936141079995,,,Burn Through-BT,False,yolo11s,True,dirty,False,2,weld_surface_v2,weld_surface_v2,42,audited,True
+0.973448364033121,0.6869493599500608,,,Contamination-CN,False,yolo11s,True,dirty,False,2,weld_surface_v2,weld_surface_v2,88,audited,False
+0.9965791501697503,0.7644142027793641,,,Lack of Fusion-LOF,False,yolo11s,True,dirty,False,2,weld_surface_v2,weld_surface_v2,71,audited,False
+0.9981036410092623,0.6962699844183069,,,Normal Weld-NW,False,yolo11s,False,dirty,False,2,weld_surface_v2,weld_surface_v2,62,audited,False
+0.8977762076824412,0.5178085946714941,,,Spatter-SR,False,yolo11s,True,dirty,False,2,weld_surface_v2,weld_surface_v2,80,audited,False
+1.0,0.757683963827721,,,Surface Crack-SC,False,yolo11s,True,dirty,False,2,weld_surface_v2,weld_surface_v2,38,audited,True
+0.997789765901666,0.7342105540822857,,,Undercut-UC,False,yolo11s,True,dirty,False,2,weld_surface_v2,weld_surface_v2,70,audited,False
+0.5478793497413593,0.30270721146018853,,,Bad Weld,False,faster_rcnn,False,main,True,0,kaggle_v2,kaggle_v2,110,audited,False
+0.5729737070118901,0.32166204491284667,,,Good Weld,False,faster_rcnn,False,main,True,0,kaggle_v2,kaggle_v2,182,audited,False
+0.03005123484927345,0.009523844384028545,,,Defect,False,faster_rcnn,True,main,True,0,kaggle_v2,kaggle_v2,159,audited,False
+0.5707371993407148,0.32453219138209094,,,Bad Weld,False,faster_rcnn,False,main,True,1,kaggle_v2,kaggle_v2,110,audited,False
+0.6153565692261068,0.34732759785060613,,,Good Weld,False,faster_rcnn,False,main,True,1,kaggle_v2,kaggle_v2,182,audited,False
+0.03801357670628494,0.01139134938686642,,,Defect,False,faster_rcnn,True,main,True,1,kaggle_v2,kaggle_v2,159,audited,False
+0.5129330157752814,0.2834138274158217,,,Bad Weld,False,faster_rcnn,False,main,True,2,kaggle_v2,kaggle_v2,110,audited,False
+0.576690963349176,0.33076777575614347,,,Good Weld,False,faster_rcnn,False,main,True,2,kaggle_v2,kaggle_v2,182,audited,False
+0.03511384434436227,0.013985439410951952,,,Defect,False,faster_rcnn,True,main,True,2,kaggle_v2,kaggle_v2,159,audited,False
+0.341264986035725,0.20401044145054215,,,Bad Weld,False,rtdetr_l,False,main,True,0,kaggle_v2,kaggle_v2,110,audited,False
+0.5183817744248967,0.31045694494661463,,,Good Weld,False,rtdetr_l,False,main,True,0,kaggle_v2,kaggle_v2,182,audited,False
+0.07427022176589795,0.02905733191698165,,,Defect,False,rtdetr_l,True,main,True,0,kaggle_v2,kaggle_v2,159,audited,False
+0.40749588462943986,0.23428856587268515,,,Bad Weld,False,rtdetr_l,False,main,True,1,kaggle_v2,kaggle_v2,110,audited,False
+0.5534071612626869,0.33240442230693995,,,Good Weld,False,rtdetr_l,False,main,True,1,kaggle_v2,kaggle_v2,182,audited,False
+0.11025279973865527,0.044277955814238754,,,Defect,False,rtdetr_l,True,main,True,1,kaggle_v2,kaggle_v2,159,audited,False
+0.37114094011632265,0.2242161433949624,,,Bad Weld,False,rtdetr_l,False,main,True,2,kaggle_v2,kaggle_v2,110,audited,False
+0.5425358928970037,0.32584449909134966,,,Good Weld,False,rtdetr_l,False,main,True,2,kaggle_v2,kaggle_v2,182,audited,False
+0.07722738983736183,0.03187657769690647,,,Defect,False,rtdetr_l,True,main,True,2,kaggle_v2,kaggle_v2,159,audited,False
+0.3402670819381223,0.19853528636638895,,,Bad Weld,False,yolo11n,False,main,True,0,kaggle_v2,kaggle_v2,110,audited,False
+0.510951921763246,0.28675845417935875,,,Good Weld,False,yolo11n,False,main,True,0,kaggle_v2,kaggle_v2,182,audited,False
+0.08510608910750657,0.027405994921494824,,,Defect,False,yolo11n,True,main,True,0,kaggle_v2,kaggle_v2,159,audited,False
+0.4383225268049108,0.22898701137105726,,,Bad Weld,False,yolo11n,False,main,True,1,kaggle_v2,kaggle_v2,110,audited,False
+0.4735223550880443,0.25246915688802274,,,Good Weld,False,yolo11n,False,main,True,1,kaggle_v2,kaggle_v2,182,audited,False
+0.08400873543781016,0.02878825492342076,,,Defect,False,yolo11n,True,main,True,1,kaggle_v2,kaggle_v2,159,audited,False
+0.36627737925269815,0.2085397053503558,,,Bad Weld,False,yolo11n,False,main,True,2,kaggle_v2,kaggle_v2,110,audited,False
+0.515695217486538,0.2989249736409086,,,Good Weld,False,yolo11n,False,main,True,2,kaggle_v2,kaggle_v2,182,audited,False
+0.09387265295844342,0.03673701660023604,,,Defect,False,yolo11n,True,main,True,2,kaggle_v2,kaggle_v2,159,audited,False
+0.4015649681318114,0.21843987483528315,,,Bad Weld,False,yolo11s,False,main,True,0,kaggle_v2,kaggle_v2,110,audited,False
+0.5083660265920781,0.27649275243923344,,,Good Weld,False,yolo11s,False,main,True,0,kaggle_v2,kaggle_v2,182,audited,False
+0.09422355227022022,0.03517879139489647,,,Defect,False,yolo11s,True,main,True,0,kaggle_v2,kaggle_v2,159,audited,False
+0.42144952031726424,0.23272102834251812,,,Bad Weld,False,yolo11s,False,main,True,1,kaggle_v2,kaggle_v2,110,audited,False
+0.5011005107222484,0.2902143049849254,,,Good Weld,False,yolo11s,False,main,True,1,kaggle_v2,kaggle_v2,182,audited,False
+0.12615629202167294,0.0564103984138419,,,Defect,False,yolo11s,True,main,True,1,kaggle_v2,kaggle_v2,159,audited,False
+0.407661079118199,0.21462045937681234,,,Bad Weld,False,yolo11s,False,main,True,2,kaggle_v2,kaggle_v2,110,audited,False
+0.5202786048997066,0.2923794138294292,,,Good Weld,False,yolo11s,False,main,True,2,kaggle_v2,kaggle_v2,182,audited,False
+0.11513473505642993,0.043837053219698593,,,Defect,False,yolo11s,True,main,True,2,kaggle_v2,kaggle_v2,159,audited,False
+0.3720039421784122,0.12350383934879779,,,pore,False,faster_rcnn,True,main,True,0,lohi_weld,lohi_weld,589,audited,False
+0.4861383921026322,0.21069419765847366,,,deposit,False,faster_rcnn,True,main,True,0,lohi_weld,lohi_weld,440,audited,False
+0.7500411305922176,0.3039050986921471,,,discontinuity,False,faster_rcnn,True,main,True,0,lohi_weld,lohi_weld,1082,audited,False
+0.5505229179451401,0.22713007842158267,,,stain,False,faster_rcnn,True,main,True,0,lohi_weld,lohi_weld,1246,audited,False
+0.3657837731744809,0.12626986433740992,,,pore,False,faster_rcnn,True,main,True,1,lohi_weld,lohi_weld,589,audited,False
+0.44077560659749343,0.19004870846645977,,,deposit,False,faster_rcnn,True,main,True,1,lohi_weld,lohi_weld,440,audited,False
+0.7672073779823559,0.3081743595897055,,,discontinuity,False,faster_rcnn,True,main,True,1,lohi_weld,lohi_weld,1082,audited,False
+0.5571344601617313,0.23179919153434397,,,stain,False,faster_rcnn,True,main,True,1,lohi_weld,lohi_weld,1246,audited,False
+0.3873186461328386,0.12480770415691482,,,pore,False,faster_rcnn,True,main,True,2,lohi_weld,lohi_weld,589,audited,False
+0.4904577011739104,0.21823793117276286,,,deposit,False,faster_rcnn,True,main,True,2,lohi_weld,lohi_weld,440,audited,False
+0.7527825078100061,0.3020996925462444,,,discontinuity,False,faster_rcnn,True,main,True,2,lohi_weld,lohi_weld,1082,audited,False
+0.5467024409334157,0.2274021386270176,,,stain,False,faster_rcnn,True,main,True,2,lohi_weld,lohi_weld,1246,audited,False
+0.4906651114409215,0.16031256997477883,,,pore,False,rtdetr_l,True,main,True,0,lohi_weld,lohi_weld,589,audited,False
+0.5615802788792142,0.24250339203914956,,,deposit,False,rtdetr_l,True,main,True,0,lohi_weld,lohi_weld,440,audited,False
+0.7389041891432976,0.30424538699181974,,,discontinuity,False,rtdetr_l,True,main,True,0,lohi_weld,lohi_weld,1082,audited,False
+0.6311405851829961,0.27118103614560785,,,stain,False,rtdetr_l,True,main,True,0,lohi_weld,lohi_weld,1246,audited,False
+0.4777616158334204,0.15469838426501728,,,pore,False,rtdetr_l,True,main,True,1,lohi_weld,lohi_weld,589,audited,False
+0.569088084268674,0.25173619563640803,,,deposit,False,rtdetr_l,True,main,True,1,lohi_weld,lohi_weld,440,audited,False
+0.7518448065842671,0.3053216836353122,,,discontinuity,False,rtdetr_l,True,main,True,1,lohi_weld,lohi_weld,1082,audited,False
+0.6351150429618467,0.27124891018051545,,,stain,False,rtdetr_l,True,main,True,1,lohi_weld,lohi_weld,1246,audited,False
+0.3845793333447131,0.11998023630149957,,,pore,False,rtdetr_l,True,main,True,2,lohi_weld,lohi_weld,589,audited,False
+0.4617218860452854,0.20740886253734142,,,deposit,False,rtdetr_l,True,main,True,2,lohi_weld,lohi_weld,440,audited,False
+0.6399477476584606,0.24746094440811298,,,discontinuity,False,rtdetr_l,True,main,True,2,lohi_weld,lohi_weld,1082,audited,False
+0.5391870626051847,0.21476577380688822,,,stain,False,rtdetr_l,True,main,True,2,lohi_weld,lohi_weld,1246,audited,False
+0.4525500093266565,0.14615889154640752,,,pore,False,yolo11n,True,main,True,0,lohi_weld,lohi_weld,589,audited,False
+0.503879700762983,0.231472236499673,,,deposit,False,yolo11n,True,main,True,0,lohi_weld,lohi_weld,440,audited,False
+0.7492579276554008,0.3161185711996486,,,discontinuity,False,yolo11n,True,main,True,0,lohi_weld,lohi_weld,1082,audited,False
+0.5909348870156618,0.24899896459330106,,,stain,False,yolo11n,True,main,True,0,lohi_weld,lohi_weld,1246,audited,False
+0.47494286623842125,0.15493300925268813,,,pore,False,yolo11n,True,main,True,1,lohi_weld,lohi_weld,589,audited,False
+0.4979993743363906,0.21921474272946048,,,deposit,False,yolo11n,True,main,True,1,lohi_weld,lohi_weld,440,audited,False
+0.770939240472421,0.3166722634828657,,,discontinuity,False,yolo11n,True,main,True,1,lohi_weld,lohi_weld,1082,audited,False
+0.596382076582302,0.25244620877952506,,,stain,False,yolo11n,True,main,True,1,lohi_weld,lohi_weld,1246,audited,False
+0.4648110563437333,0.14416657943977024,,,pore,False,yolo11n,True,main,True,2,lohi_weld,lohi_weld,589,audited,False
+0.5025900574079644,0.21925199846458027,,,deposit,False,yolo11n,True,main,True,2,lohi_weld,lohi_weld,440,audited,False
+0.7409341725640806,0.3114594649821185,,,discontinuity,False,yolo11n,True,main,True,2,lohi_weld,lohi_weld,1082,audited,False
+0.602107485679352,0.249054478561941,,,stain,False,yolo11n,True,main,True,2,lohi_weld,lohi_weld,1246,audited,False
+0.4621413693611666,0.14606120760620722,,,pore,False,yolo11s,True,main,True,0,lohi_weld,lohi_weld,589,audited,False
+0.49828748403906437,0.22109079667335613,,,deposit,False,yolo11s,True,main,True,0,lohi_weld,lohi_weld,440,audited,False
+0.7696412786825068,0.3200731482958511,,,discontinuity,False,yolo11s,True,main,True,0,lohi_weld,lohi_weld,1082,audited,False
+0.6128363618467187,0.25779485856100937,,,stain,False,yolo11s,True,main,True,0,lohi_weld,lohi_weld,1246,audited,False
+0.4484180128252191,0.14982685738330065,,,pore,False,yolo11s,True,main,True,1,lohi_weld,lohi_weld,589,audited,False
+0.48399565395252414,0.2209178256579864,,,deposit,False,yolo11s,True,main,True,1,lohi_weld,lohi_weld,440,audited,False
+0.7528475811304015,0.31397037183661614,,,discontinuity,False,yolo11s,True,main,True,1,lohi_weld,lohi_weld,1082,audited,False
+0.5934508294129011,0.24783854305082803,,,stain,False,yolo11s,True,main,True,1,lohi_weld,lohi_weld,1246,audited,False
+0.46292354178664735,0.15566904700341583,,,pore,False,yolo11s,True,main,True,2,lohi_weld,lohi_weld,589,audited,False
+0.49487227763572095,0.22662446216059323,,,deposit,False,yolo11s,True,main,True,2,lohi_weld,lohi_weld,440,audited,False
+0.7534239619893217,0.31704786458324136,,,discontinuity,False,yolo11s,True,main,True,2,lohi_weld,lohi_weld,1082,audited,False
+0.6080674157896828,0.25327739350610035,,,stain,False,yolo11s,True,main,True,2,lohi_weld,lohi_weld,1246,audited,False
+0.511299129292753,0.23603825825569347,0.6923620933521923,0.02566764567975803,Geometric defect,False,faster_rcnn,True,reference,True,0,twoclass,twoclass,43,audited,True
+0.7881657860029603,0.29921830915027325,0.8556999400799916,0.008403361344537813,Non-fusion defect,False,faster_rcnn,True,reference,True,0,twoclass,twoclass,30,audited,True
+0.48448351840873516,0.22264163885395355,0.6417641764176417,0.01984592436346671,Geometric defect,False,faster_rcnn,True,reference,True,1,twoclass,twoclass,43,audited,True
+0.7667391959528872,0.32743551860961295,0.8376115885504991,0.00411522633744856,Non-fusion defect,False,faster_rcnn,True,reference,True,1,twoclass,twoclass,30,audited,True
+0.5814495971118254,0.2601026415750747,0.7536753675367537,0.1360936093609361,Geometric defect,False,faster_rcnn,True,reference,True,2,twoclass,twoclass,43,audited,True
+0.7193387661177651,0.26802320034997945,0.8083401281304596,0.0,Non-fusion defect,False,faster_rcnn,True,reference,True,2,twoclass,twoclass,30,audited,True
+0.41731569763398396,0.15895564989989475,0.6434932391414365,0.011492667494337966,Geometric defect,False,rtdetr_l,True,reference,True,0,twoclass,twoclass,43,audited,True
+0.34716903698256246,0.1192596175584574,0.8191201195591257,0.0,Non-fusion defect,False,rtdetr_l,True,reference,True,0,twoclass,twoclass,30,audited,True
+0.5489096715952871,0.2588469888063689,0.7543512934346711,0.008295656155210895,Geometric defect,False,rtdetr_l,True,reference,True,1,twoclass,twoclass,43,audited,True
+0.5027816732963046,0.20857037928161715,1.0,0.19624497889429807,Non-fusion defect,False,rtdetr_l,True,reference,True,1,twoclass,twoclass,30,audited,True
+0.4637262552731014,0.22327292211427602,0.6275442410628823,0.0032980155569212006,Geometric defect,False,rtdetr_l,True,reference,True,2,twoclass,twoclass,43,audited,True
+0.6303653715709627,0.2301674876962015,1.0,0.441242688183511,Non-fusion defect,False,rtdetr_l,True,reference,True,2,twoclass,twoclass,30,audited,True
+0.4218532545080818,0.17035712904350422,0.7015773301468077,0.014377166672341077,Geometric defect,False,yolo11n,True,reference,True,0,twoclass,twoclass,43,audited,True
+0.728555797438897,0.28382139682990754,0.9944880605707626,0.19999999999999996,Non-fusion defect,False,yolo11n,True,reference,True,0,twoclass,twoclass,30,audited,True
+0.47485862327606315,0.23405868591471884,0.6653051224556928,0.0033074091845914657,Geometric defect,False,yolo11n,True,reference,True,1,twoclass,twoclass,43,audited,True
+0.6930972560469917,0.2564815231541712,0.8403465346534653,0.0,Non-fusion defect,False,yolo11n,True,reference,True,1,twoclass,twoclass,30,audited,True
+0.5246200833553052,0.20667882221824643,0.6697562326744025,0.06789804015844932,Geometric defect,False,yolo11n,True,reference,True,2,twoclass,twoclass,43,audited,True
+0.8303289041725199,0.32137227723226747,1.0,0.7094238514518474,Non-fusion defect,False,yolo11n,True,reference,True,2,twoclass,twoclass,30,audited,True
+0.4416655275068311,0.2228894926481276,0.6122536594227821,0.0033040188773977,Geometric defect,False,yolo11s,True,reference,True,0,twoclass,twoclass,43,audited,True
+0.44356530812889056,0.12847413074591874,0.7945544554455446,0.09090909090909097,Non-fusion defect,False,yolo11s,True,reference,True,0,twoclass,twoclass,30,audited,True
+0.5709836311479802,0.23983558069874839,0.7617472925010953,0.05705610561056105,Geometric defect,False,yolo11s,True,reference,True,1,twoclass,twoclass,43,audited,True
+0.6171160783603458,0.2024040823755649,1.0,0.0,Non-fusion defect,False,yolo11s,True,reference,True,1,twoclass,twoclass,30,audited,True
+0.4839869346728425,0.23026366995560923,0.6512406827605025,0.015269761520918678,Geometric defect,False,yolo11s,True,reference,True,2,twoclass,twoclass,43,audited,True
+0.42377980034028245,0.15374082220059784,1.0,0.14026402640264027,Non-fusion defect,False,yolo11s,True,reference,True,2,twoclass,twoclass,30,audited,True
+0.15507934338974594,0.034326907491404025,,,Defect,False,faster_rcnn,True,reference,True,0,visual,visual,259,audited,False
+nan,nan,,,Welding Line,True,faster_rcnn,False,reference,True,0,visual,visual,0,audited,True
+nan,nan,,,workpiece,True,faster_rcnn,False,reference,True,0,visual,visual,0,audited,True
+0.14726391814917703,0.03584018119229389,,,Defect,False,faster_rcnn,True,reference,True,1,visual,visual,259,audited,False
+nan,nan,,,Welding Line,True,faster_rcnn,False,reference,True,1,visual,visual,0,audited,True
+nan,nan,,,workpiece,True,faster_rcnn,False,reference,True,1,visual,visual,0,audited,True
+0.16773931120512017,0.036421591896477194,,,Defect,False,faster_rcnn,True,reference,True,2,visual,visual,259,audited,False
+nan,nan,,,Welding Line,True,faster_rcnn,False,reference,True,2,visual,visual,0,audited,True
+nan,nan,,,workpiece,True,faster_rcnn,False,reference,True,2,visual,visual,0,audited,True
+0.15469644369811653,0.04020323553609316,,,Defect,False,rtdetr_l,True,reference,True,0,visual,visual,259,audited,False
+nan,nan,,,Welding Line,True,rtdetr_l,False,reference,True,0,visual,visual,0,audited,True
+nan,nan,,,workpiece,True,rtdetr_l,False,reference,True,0,visual,visual,0,audited,True
+0.12901074947679297,0.03181947706973677,,,Defect,False,rtdetr_l,True,reference,True,1,visual,visual,259,audited,False
+nan,nan,,,Welding Line,True,rtdetr_l,False,reference,True,1,visual,visual,0,audited,True
+nan,nan,,,workpiece,True,rtdetr_l,False,reference,True,1,visual,visual,0,audited,True
+0.10680249506620842,0.02945083860297142,,,Defect,False,rtdetr_l,True,reference,True,2,visual,visual,259,audited,False
+nan,nan,,,Welding Line,True,rtdetr_l,False,reference,True,2,visual,visual,0,audited,True
+nan,nan,,,workpiece,True,rtdetr_l,False,reference,True,2,visual,visual,0,audited,True
+0.13648790162688448,0.037991875263629696,,,Defect,False,yolo11n,True,reference,True,0,visual,visual,259,audited,False
+nan,nan,,,Welding Line,True,yolo11n,False,reference,True,0,visual,visual,0,audited,True
+nan,nan,,,workpiece,True,yolo11n,False,reference,True,0,visual,visual,0,audited,True
+0.16272751443317168,0.04102770641349304,,,Defect,False,yolo11n,True,reference,True,1,visual,visual,259,audited,False
+nan,nan,,,Welding Line,True,yolo11n,False,reference,True,1,visual,visual,0,audited,True
+nan,nan,,,workpiece,True,yolo11n,False,reference,True,1,visual,visual,0,audited,True
+0.1524216517495677,0.035814870722656,,,Defect,False,yolo11n,True,reference,True,2,visual,visual,259,audited,False
+nan,nan,,,Welding Line,True,yolo11n,False,reference,True,2,visual,visual,0,audited,True
+nan,nan,,,workpiece,True,yolo11n,False,reference,True,2,visual,visual,0,audited,True
+0.13848769655013168,0.034154970473953605,,,Defect,False,yolo11s,True,reference,True,0,visual,visual,259,audited,False
+nan,nan,,,Welding Line,True,yolo11s,False,reference,True,0,visual,visual,0,audited,True
+nan,nan,,,workpiece,True,yolo11s,False,reference,True,0,visual,visual,0,audited,True
+0.14866871960651357,0.03600692188509943,,,Defect,False,yolo11s,True,reference,True,1,visual,visual,259,audited,False
+nan,nan,,,Welding Line,True,yolo11s,False,reference,True,1,visual,visual,0,audited,True
+nan,nan,,,workpiece,True,yolo11s,False,reference,True,1,visual,visual,0,audited,True
+0.13784988470136458,0.04050656901448439,,,Defect,False,yolo11s,True,reference,True,2,visual,visual,259,audited,False
+nan,nan,,,Welding Line,True,yolo11s,False,reference,True,2,visual,visual,0,audited,True
+nan,nan,,,workpiece,True,yolo11s,False,reference,True,2,visual,visual,0,audited,True
+0.9290554238290499,0.5955013554365152,0.993983692486896,0.8117136108667657,Burn Through-BT,False,faster_rcnn,True,main,True,0,weld_surface_v2,weld_surface_v2,42,audited,True
+0.4443240942026567,0.1773450060200668,,,Contamination-CN,False,faster_rcnn,True,main,True,0,weld_surface_v2,weld_surface_v2,88,audited,False
+0.9330445732201449,0.5483544170256367,,,Lack of Fusion-LOF,False,faster_rcnn,True,main,True,0,weld_surface_v2,weld_surface_v2,71,audited,False
+0.8962140406961066,0.4036394105340221,,,Normal Weld-NW,False,faster_rcnn,False,main,True,0,weld_surface_v2,weld_surface_v2,62,audited,False
+0.4454578898300168,0.1915403350520994,,,Spatter-SR,False,faster_rcnn,True,main,True,0,weld_surface_v2,weld_surface_v2,80,audited,False
+1.0,0.72167865706549,1.0,1.0,Surface Crack-SC,False,faster_rcnn,True,main,True,0,weld_surface_v2,weld_surface_v2,38,audited,True
+0.7715574890796635,0.4779561400953978,,,Undercut-UC,False,faster_rcnn,True,main,True,0,weld_surface_v2,weld_surface_v2,70,audited,False
+0.9369900630897504,0.5903742689624536,0.9983951942491543,0.8463602607559343,Burn Through-BT,False,faster_rcnn,True,main,True,1,weld_surface_v2,weld_surface_v2,42,audited,True
+0.495836675104333,0.19704253194276328,,,Contamination-CN,False,faster_rcnn,True,main,True,1,weld_surface_v2,weld_surface_v2,88,audited,False
+0.8918972199787673,0.5169852164262293,,,Lack of Fusion-LOF,False,faster_rcnn,True,main,True,1,weld_surface_v2,weld_surface_v2,71,audited,False
+0.8354279901710054,0.36383483287758434,,,Normal Weld-NW,False,faster_rcnn,False,main,True,1,weld_surface_v2,weld_surface_v2,62,audited,False
+0.448472073835625,0.20567149051420608,,,Spatter-SR,False,faster_rcnn,True,main,True,1,weld_surface_v2,weld_surface_v2,80,audited,False
+0.9695153725898905,0.6906810751359542,1.0,0.9056264155827347,Surface Crack-SC,False,faster_rcnn,True,main,True,1,weld_surface_v2,weld_surface_v2,38,audited,True
+0.7932134652727891,0.4946908527123922,,,Undercut-UC,False,faster_rcnn,True,main,True,1,weld_surface_v2,weld_surface_v2,70,audited,False
+0.9143790560383147,0.6039894765684884,0.9929367043847239,0.8002246571041741,Burn Through-BT,False,faster_rcnn,True,main,True,2,weld_surface_v2,weld_surface_v2,42,audited,True
+0.4246118894102364,0.17103094218563109,,,Contamination-CN,False,faster_rcnn,True,main,True,2,weld_surface_v2,weld_surface_v2,88,audited,False
+0.8736183220553231,0.513726773689273,,,Lack of Fusion-LOF,False,faster_rcnn,True,main,True,2,weld_surface_v2,weld_surface_v2,71,audited,False
+0.8328391332973853,0.38738506060160105,,,Normal Weld-NW,False,faster_rcnn,False,main,True,2,weld_surface_v2,weld_surface_v2,62,audited,False
+0.39375149581555985,0.17504463062581602,,,Spatter-SR,False,faster_rcnn,True,main,True,2,weld_surface_v2,weld_surface_v2,80,audited,False
+0.9702970297029703,0.7052009711726841,1.0,0.9108910891089109,Surface Crack-SC,False,faster_rcnn,True,main,True,2,weld_surface_v2,weld_surface_v2,38,audited,True
+0.7565023391573048,0.4385731659230353,,,Undercut-UC,False,faster_rcnn,True,main,True,2,weld_surface_v2,weld_surface_v2,70,audited,False
+0.7670015217808551,0.5049829115287466,0.9625030168731695,0.4949800516882291,Burn Through-BT,False,rtdetr_l,True,main,True,0,weld_surface_v2,weld_surface_v2,42,audited,True
+0.417369251723285,0.16600734809690962,,,Contamination-CN,False,rtdetr_l,True,main,True,0,weld_surface_v2,weld_surface_v2,88,audited,False
+0.9603752631325279,0.549048210802585,,,Lack of Fusion-LOF,False,rtdetr_l,True,main,True,0,weld_surface_v2,weld_surface_v2,71,audited,False
+0.6402350604443962,0.31770143898499764,,,Normal Weld-NW,False,rtdetr_l,False,main,True,0,weld_surface_v2,weld_surface_v2,62,audited,False
+0.5180115870309666,0.2418655430641689,,,Spatter-SR,False,rtdetr_l,True,main,True,0,weld_surface_v2,weld_surface_v2,80,audited,False
+0.9977331943720689,0.6065278159620858,1.0,0.968751225416907,Surface Crack-SC,False,rtdetr_l,True,main,True,0,weld_surface_v2,weld_surface_v2,38,audited,True
+0.7817995860377204,0.4535905958587116,,,Undercut-UC,False,rtdetr_l,True,main,True,0,weld_surface_v2,weld_surface_v2,70,audited,False
+0.9391323040032643,0.5832824220527686,0.9834709878852447,0.7751729181139949,Burn Through-BT,False,rtdetr_l,True,main,True,1,weld_surface_v2,weld_surface_v2,42,audited,True
+0.49595026793732466,0.18753924914025644,,,Contamination-CN,False,rtdetr_l,True,main,True,1,weld_surface_v2,weld_surface_v2,88,audited,False
+0.9079963282071802,0.5182197455905636,,,Lack of Fusion-LOF,False,rtdetr_l,True,main,True,1,weld_surface_v2,weld_surface_v2,71,audited,False
+0.5860283649488468,0.2869588988267076,,,Normal Weld-NW,False,rtdetr_l,False,main,True,1,weld_surface_v2,weld_surface_v2,62,audited,False
+0.47037287801246497,0.2289531865751957,,,Spatter-SR,False,rtdetr_l,True,main,True,1,weld_surface_v2,weld_surface_v2,80,audited,False
+0.9719133293926407,0.6302505036288295,1.0,0.9039887920337668,Surface Crack-SC,False,rtdetr_l,True,main,True,1,weld_surface_v2,weld_surface_v2,38,audited,True
+0.7267383877313898,0.4258467259449105,,,Undercut-UC,False,rtdetr_l,True,main,True,1,weld_surface_v2,weld_surface_v2,70,audited,False
+0.9274382362696719,0.606564722091959,0.990981551265246,0.7598656042352003,Burn Through-BT,False,rtdetr_l,True,main,True,2,weld_surface_v2,weld_surface_v2,42,audited,True
+0.4443412504853608,0.1928815061836919,,,Contamination-CN,False,rtdetr_l,True,main,True,2,weld_surface_v2,weld_surface_v2,88,audited,False
+0.9400150317924112,0.5735296553417426,,,Lack of Fusion-LOF,False,rtdetr_l,True,main,True,2,weld_surface_v2,weld_surface_v2,71,audited,False
+0.7493433267844888,0.32905366121007024,,,Normal Weld-NW,False,rtdetr_l,False,main,True,2,weld_surface_v2,weld_surface_v2,62,audited,False
+0.3586436288250635,0.13987941246099408,,,Spatter-SR,False,rtdetr_l,True,main,True,2,weld_surface_v2,weld_surface_v2,80,audited,False
+1.0,0.6306402618002903,1.0,0.8937170763408389,Surface Crack-SC,False,rtdetr_l,True,main,True,2,weld_surface_v2,weld_surface_v2,38,audited,True
+0.8053419805383024,0.4918101227845549,,,Undercut-UC,False,rtdetr_l,True,main,True,2,weld_surface_v2,weld_surface_v2,70,audited,False
+0.9354395782282776,0.6217132936184292,0.9837571440070838,0.8539769237469654,Burn Through-BT,False,yolo11n,True,main,True,0,weld_surface_v2,weld_surface_v2,42,audited,True
+0.5417635468390759,0.21503291174732775,,,Contamination-CN,False,yolo11n,True,main,True,0,weld_surface_v2,weld_surface_v2,88,audited,False
+0.9281756769220989,0.5300881358575324,,,Lack of Fusion-LOF,False,yolo11n,True,main,True,0,weld_surface_v2,weld_surface_v2,71,audited,False
+0.6998377717224907,0.3275541840299162,,,Normal Weld-NW,False,yolo11n,False,main,True,0,weld_surface_v2,weld_surface_v2,62,audited,False
+0.6263369514044128,0.2842965608602415,,,Spatter-SR,False,yolo11n,True,main,True,0,weld_surface_v2,weld_surface_v2,80,audited,False
+0.9963894885729172,0.6289758307218827,1.0,0.9874039338077029,Surface Crack-SC,False,yolo11n,True,main,True,0,weld_surface_v2,weld_surface_v2,38,audited,True
+0.7868385408757054,0.3780060081488514,,,Undercut-UC,False,yolo11n,True,main,True,0,weld_surface_v2,weld_surface_v2,70,audited,False
+0.9259168625797352,0.5525264705109462,0.9961929055128312,0.8199636034112012,Burn Through-BT,False,yolo11n,True,main,True,1,weld_surface_v2,weld_surface_v2,42,audited,True
+0.5823155985393043,0.2610309388737981,,,Contamination-CN,False,yolo11n,True,main,True,1,weld_surface_v2,weld_surface_v2,88,audited,False
+0.9325200331690623,0.509613199586187,,,Lack of Fusion-LOF,False,yolo11n,True,main,True,1,weld_surface_v2,weld_surface_v2,71,audited,False
+0.4256116287775121,0.21026545429352925,,,Normal Weld-NW,False,yolo11n,False,main,True,1,weld_surface_v2,weld_surface_v2,62,audited,False
+0.5396066107765835,0.20590005433561615,,,Spatter-SR,False,yolo11n,True,main,True,1,weld_surface_v2,weld_surface_v2,80,audited,False
+1.0,0.593378022865843,1.0,1.0,Surface Crack-SC,False,yolo11n,True,main,True,1,weld_surface_v2,weld_surface_v2,38,audited,True
+0.766665624987252,0.45462343127572974,,,Undercut-UC,False,yolo11n,True,main,True,1,weld_surface_v2,weld_surface_v2,70,audited,False
+0.929119376463404,0.580041010609251,0.9943448787387447,0.831576860656956,Burn Through-BT,False,yolo11n,True,main,True,2,weld_surface_v2,weld_surface_v2,42,audited,True
+0.5310059908316761,0.24009184205820605,,,Contamination-CN,False,yolo11n,True,main,True,2,weld_surface_v2,weld_surface_v2,88,audited,False
+0.9050454432114299,0.47778505060373266,,,Lack of Fusion-LOF,False,yolo11n,True,main,True,2,weld_surface_v2,weld_surface_v2,71,audited,False
+0.6758698246280656,0.3046910556683605,,,Normal Weld-NW,False,yolo11n,False,main,True,2,weld_surface_v2,weld_surface_v2,62,audited,False
+0.6324523596070659,0.2791732062366626,,,Spatter-SR,False,yolo11n,True,main,True,2,weld_surface_v2,weld_surface_v2,80,audited,False
+1.0,0.6058823723494288,1.0,1.0,Surface Crack-SC,False,yolo11n,True,main,True,2,weld_surface_v2,weld_surface_v2,38,audited,True
+0.7915415084875163,0.39205817439577073,,,Undercut-UC,False,yolo11n,True,main,True,2,weld_surface_v2,weld_surface_v2,70,audited,False
+0.8976464980067741,0.547005270824423,0.9762783422882853,0.7744337193257925,Burn Through-BT,False,yolo11s,True,main,True,0,weld_surface_v2,weld_surface_v2,42,audited,True
+0.5353760123289073,0.23419907272916757,,,Contamination-CN,False,yolo11s,True,main,True,0,weld_surface_v2,weld_surface_v2,88,audited,False
+0.9352562287824849,0.48202360723321885,,,Lack of Fusion-LOF,False,yolo11s,True,main,True,0,weld_surface_v2,weld_surface_v2,71,audited,False
+0.7149472208067656,0.31311764710355283,,,Normal Weld-NW,False,yolo11s,False,main,True,0,weld_surface_v2,weld_surface_v2,62,audited,False
+0.5807010555994502,0.25092332736226747,,,Spatter-SR,False,yolo11s,True,main,True,0,weld_surface_v2,weld_surface_v2,80,audited,False
+0.971988436812032,0.62392197207521,1.0,0.9238172087570808,Surface Crack-SC,False,yolo11s,True,main,True,0,weld_surface_v2,weld_surface_v2,38,audited,True
+0.736641645644891,0.4232401003199878,,,Undercut-UC,False,yolo11s,True,main,True,0,weld_surface_v2,weld_surface_v2,70,audited,False
+0.9068586549379593,0.5777685177347985,0.9852569217603435,0.792178189499077,Burn Through-BT,False,yolo11s,True,main,True,1,weld_surface_v2,weld_surface_v2,42,audited,True
+0.4969600792756394,0.21710435631917185,,,Contamination-CN,False,yolo11s,True,main,True,1,weld_surface_v2,weld_surface_v2,88,audited,False
+0.9464071431505187,0.5353724195800302,,,Lack of Fusion-LOF,False,yolo11s,True,main,True,1,weld_surface_v2,weld_surface_v2,71,audited,False
+0.8520383462926479,0.3623491193640159,,,Normal Weld-NW,False,yolo11s,False,main,True,1,weld_surface_v2,weld_surface_v2,62,audited,False
+0.5254446268121432,0.23260851581395364,,,Spatter-SR,False,yolo11s,True,main,True,1,weld_surface_v2,weld_surface_v2,80,audited,False
+0.996430432516936,0.6490871844929857,1.0,0.987822823505755,Surface Crack-SC,False,yolo11s,True,main,True,1,weld_surface_v2,weld_surface_v2,38,audited,True
+0.7790189892786431,0.40846875716718795,,,Undercut-UC,False,yolo11s,True,main,True,1,weld_surface_v2,weld_surface_v2,70,audited,False
+0.9513822740738066,0.5393239401157714,0.9963503590015772,0.8687174224888963,Burn Through-BT,False,yolo11s,True,main,True,2,weld_surface_v2,weld_surface_v2,42,audited,True
+0.47527114540113846,0.1774975001590442,,,Contamination-CN,False,yolo11s,True,main,True,2,weld_surface_v2,weld_surface_v2,88,audited,False
+0.927327959494498,0.4958478645733435,,,Lack of Fusion-LOF,False,yolo11s,True,main,True,2,weld_surface_v2,weld_surface_v2,71,audited,False
+0.6953757059753313,0.3059866332424895,,,Normal Weld-NW,False,yolo11s,False,main,True,2,weld_surface_v2,weld_surface_v2,62,audited,False
+0.5516364316075025,0.2500625017689683,,,Spatter-SR,False,yolo11s,True,main,True,2,weld_surface_v2,weld_surface_v2,80,audited,False
+1.0,0.5604917197498309,1.0,1.0,Surface Crack-SC,False,yolo11s,True,main,True,2,weld_surface_v2,weld_surface_v2,38,audited,True
+0.7687151535365448,0.4070748592451907,,,Undercut-UC,False,yolo11s,True,main,True,2,weld_surface_v2,weld_surface_v2,70,audited,False

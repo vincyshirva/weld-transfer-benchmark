@@ -1,0 +1,17 @@
+{
+  "kaggle_v2_test.txt": "0940475116db836b16425aa0c9c8fc2685b8bb5f191f9377616f805e0f44bdd6",
+  "kaggle_v2_train.txt": "a14008fc07df7e930485f6627b3a53cfe4fc0f24d14ac499926df3349feee060",
+  "kaggle_v2_valid.txt": "1ad55b63b290cbe83b2944c04f9257504317a4af95cf0fdf63e6ff33b5cbd0c2",
+  "lohi_weld_test.txt": "fb434a320d576879b5d4f9d315ced8fc2ed68f3c6759b7a0b9a5c9fa8a850fd0",
+  "lohi_weld_train.txt": "9dc68df6f37a6d33d34a7b68d60a27d80d71ab3f460cb3dbcd26b150f05e0e2d",
+  "lohi_weld_valid.txt": "54a772521157cf6a68c4a316c5146c083f7253fe6878dbc5d25e8ca79d212248",
+  "twoclass_test.txt": "ecc57b3b612f49f003de01d70e5bf142bcc89bb74c7e66dfe8aa7e5653a37322",
+  "twoclass_train.txt": "174708682108b55e2abf7e9dcb580fbc8ab1bc5a83fbc58eccf2edc134e2bb2b",
+  "twoclass_valid.txt": "cfccddbd18c3d491ce21baf4de9c82e25ac245ddca80f93b912c42de77e745ac",
+  "visual_test.txt": "7773e25a2d7dae281361b189133c745cea0da783c485d825fc035c962b0add20",
+  "visual_train.txt": "84046ceed0dc5a4e84dee83f021c208cb6ede6d6ca4a766dda5df3d3bdac98e0",
+  "visual_valid.txt": "f7cc6cb24b6860979be156383f0959a0146f0d94d44486f752e956b6f631e2a5",
+  "weld_surface_v2_test.txt": "5d7815264d9a4db9167211d18ed81342ae0060a1683ce31dc8eea91a7d553c99",
+  "weld_surface_v2_train.txt": "7d41efc9805f4de35408493015eee32161d55d20bdca897596dff6bf9489e58b",
+  "weld_surface_v2_valid.txt": "e1cbd94ff1ec8681f58c8bca5b5650843ccfa4b4cb3aaebffcfad0bb9220c718"
+}

@@ -1,0 +1,10 @@
+{
+  "gate_1a_checked": 84,
+  "gate_1b_lohi_high": 0.6539030702485615,
+  "gate_1b_lohi_low": 0.6730141353469054,
+  "gate_1b_main_lohi_diag": 0.666174699868011,
+  "gate_1c_empty_cells": 17,
+  "gate_1c_box_records": 360,
+  "gate_1c_unexplained": [],
+  "gate_1c_note": "The plan expected zero empty cells. 14 of 360 are empty. All 14 are a reinitialised head collapsing onto a single wrong class at low k, verified by checking that the filter ids are inside the head width and that the model emitted predictions in other classes only. The project log 6a-v."
+}

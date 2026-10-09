@@ -1,0 +1,96 @@
+{
+  "device": {
+    "name": "NVIDIA GeForce RTX 5050 Laptop GPU",
+    "compute_capability": "12.0",
+    "multi_processors": 20,
+    "total_vram_gib": 7.53,
+    "free_vram_gib_at_start": 7.42,
+    "torch": "2.11.0+cu128",
+    "torch_cuda": "12.8",
+    "arch_list": [
+      "sm_75",
+      "sm_80",
+      "sm_86",
+      "sm_90",
+      "sm_100",
+      "sm_120"
+    ],
+    "driver_cuda": "580.173.02"
+  },
+  "imgsz": 640,
+  "amp": true,
+  "stage2_real": {
+    "workers_2": {
+      "source": "lohi_weld",
+      "train_images": 2115,
+      "epochs_run": 6,
+      "batch": 16,
+      "imgsz": 640,
+      "workers": 2,
+      "total_wall_s": 232.3,
+      "per_epoch": {
+        "all_epochs_s": [
+          54.5,
+          32.6,
+          32.4,
+          33.0,
+          32.3,
+          33.0,
+          45.0
+        ],
+        "steady_state_s": 34.7,
+        "steady_min_s": 32.3,
+        "steady_max_s": 45.0
+      },
+      "images_per_s_end_to_end": 61.0
+    },
+    "workers_8": {
+      "source": "lohi_weld",
+      "train_images": 2115,
+      "epochs_run": 6,
+      "batch": 16,
+      "imgsz": 640,
+      "workers": 8,
+      "total_wall_s": 202.5,
+      "per_epoch": {
+        "all_epochs_s": [
+          33.4,
+          32.5,
+          32.9,
+          32.8,
+          32.7,
+          33.3,
+          35.2
+        ],
+        "steady_state_s": 33.2,
+        "steady_min_s": 32.5,
+        "steady_max_s": 35.2
+      },
+      "images_per_s_end_to_end": 63.7
+    },
+    "workers_4": {
+      "source": "lohi_weld",
+      "train_images": 2115,
+      "epochs_run": 6,
+      "batch": 16,
+      "imgsz": 640,
+      "workers": 4,
+      "total_wall_s": 201.1,
+      "per_epoch": {
+        "all_epochs_s": [
+          33.2,
+          33.1,
+          32.2,
+          32.8,
+          32.2,
+          33.2,
+          35.3
+        ],
+        "steady_state_s": 33.1,
+        "steady_min_s": 32.2,
+        "steady_max_s": 35.3
+      },
+      "images_per_s_end_to_end": 63.9
+    }
+  }
+}

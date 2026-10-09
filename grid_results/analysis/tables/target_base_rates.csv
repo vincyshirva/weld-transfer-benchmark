@@ -1,0 +1,6 @@
+balanced,n_neg,n_pos,note,positive_rate,target
+True,69,72,"near 0.5, so AP is informative on its own",0.5106382978723404,kaggle_v2
+False,11,442,"AP is dominated by the base rate, quote the lift",0.9757174392935982,lohi_weld
+False,9,36,"AP is dominated by the base rate, quote the lift",0.8,twoclass
+False,9,75,"AP is dominated by the base rate, quote the lift",0.8928571428571429,visual
+False,62,383,"AP is dominated by the base rate, quote the lift",0.8606741573033708,weld_surface_v2

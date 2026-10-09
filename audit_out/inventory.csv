@@ -1,0 +1,19 @@
+dataset,split,images,boxes,background,missing_label_files,distinct_resolutions,median_box_area_frac
+"Visual Welding Defect.v1i.yolov8",train,1121,5735,0,0,1,0.167273
+"Visual Welding Defect.v1i.yolov8",valid,111,560,0,0,1,0.151633
+"Visual Welding Defect.v1i.yolov8",test,56,281,0,0,1,0.13838
+"Weld Surface Defect Detection.v1i.yolov8",train,15045,15258,0,0,1,0.225465
+"Weld Surface Defect Detection.v1i.yolov8",valid,1435,1463,0,0,1,0.22216
+"Weld Surface Defect Detection.v1i.yolov8",test,715,724,0,0,1,0.20897
+"Weld Surface Defect Detection.v2i.yolov8",train,15045,15258,0,0,1,0.225537
+"Weld Surface Defect Detection.v2i.yolov8",valid,1435,1463,0,0,1,0.22216
+"Weld Surface Defect Detection.v2i.yolov8",test,715,724,0,0,1,0.20897
+"Welding Defect, Object Detection_kaggle/The Welding Defect Dataset",train,839,3145,0,0,1,0.018787
+"Welding Defect, Object Detection_kaggle/The Welding Defect Dataset",valid,176,573,0,0,1,0.019753
+"Welding Defect, Object Detection_kaggle/The Welding Defect Dataset",test,74,209,0,0,1,0.028287
+"Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2",train,1619,4583,0,0,1,0.025513
+"Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2",valid,283,802,0,0,1,0.022569
+"Welding Defect, Object Detection_kaggle/The Welding Defect Dataset - v2",test,126,301,0,0,1,0.034618
+"welding defect 2class.v1i.yolov8",train,1254,2074,277,0,1,0.012727
+"welding defect 2class.v1i.yolov8",valid,333,556,66,0,1,0.013326
+"welding defect 2class.v1i.yolov8",test,95,147,20,0,1,0.012949

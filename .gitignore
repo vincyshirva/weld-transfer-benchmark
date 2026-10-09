@@ -1,0 +1,140 @@
+# What this repository is, and is not.
+#
+# It holds the CODE and the SMALL RELEASED ARTEFACTS of the cross-dataset weld
+# generalization study: scripts, the frozen split lists, the hash manifests
+# that pin them, the exact lineage, and the analysis tables and figures.
+#
+# It deliberately holds NO IMAGES and NO CHECKPOINTS. Roughly 38 GB of this
+# working tree is image data, trained weights and pulled results. Three reasons
+# to keep all of it out:
+#
+#   1. Licensing. The five original dataset folders belong to their authors.
+#      The data availability statement promises that originals are obtained
+#      from the cited sources, not redistributed by us. GDXray in particular is
+#      research and educational use only with no redistribution.
+#   2. Reproducibility does not need them. The project log "Split reproducibility"
+#      establishes that the released artefact is the frozen split FILES and
+#      their sha256 hashes, not a re-run of the solver. Those files are
+#      tracked. Anyone can verify a rebuilt tree against them.
+#   3. Size. A git history is not a backup system for 21 GB of checkpoints.
+#
+# The rule below is deny-by-default for anything bulky, then re-include the
+# specific small artefacts. Adding a new big directory therefore fails safe.
+
+# ---------------------------------------------------------------- environments
+.venv-weld/
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# ------------------------------------------------- original third-party data
+# Not ours to redistribute. Obtain from the sources cited in the project log.
+/Weld Surface Defect Detection.v1i.yolov8/
+/Weld Surface Defect Detection.v2i.yolov8/
+/Welding Defect, Object Detection_kaggle/
+/Visual Welding Defect.v1i.yolov8/
+/welding defect 2class.v1i.yolov8/
+/LoHi-WELD weld-dataset/
+
+# ------------------------------------------------------------ derived trees
+# lohi_weld_yolo/ is a conversion staging area, rebuilt by lohi_to_yolo.py.
+# clean/ is the SUPERSEDED 3 September tree and must not be used at all.
+/lohi_weld_yolo/
+/clean/
+
+# --------------------------------------------------- the audited clean tree
+# Exclude the images, keep the artefacts that define the partition. The
+# re-includes below are what make the splits verifiable without the pixels.
+/clean_candidate/*
+!/clean_candidate/splits/
+!/clean_candidate/split_hashes.json
+!/clean_candidate/manifest.csv
+!/clean_candidate/before_after.md
+!/clean_candidate/*.json
+!/clean_candidate/*.md
+
+# Arm datasets are views of the frozen splits, materialised by
+# grid/arms/build_arm_datasets.py. Their hash manifest is tracked instead.
+/clean_candidate/lohi_high/
+/clean_candidate/lohi_low/
+/clean_candidate/pool_no_*/
+
+# ------------------------------------------------------ weights and results
+# Checkpoints are pinned by sha256 in models/pretrained/manifest.json, which IS
+# tracked. The .pt files themselves are downloads.
+/models/pretrained/*.pt
+/models/pretrained/*.pth
+/weights/
+/runs/
+/runs_arms/
+/results/
+/results_arms/
+
+# Pulled cluster results. The analysis output is re-included below because the
+# tables and figures are manuscript artefacts.
+/grid_results/*
+/grid_results_arms/*
+!/grid_results/analysis/
+!/grid_results_arms/analysis/
+# The thin-class bootstrap cache is re-included too. build_results_section.py
+# reads its key to check the draw count the captions quote, so a clone
+# without it cannot build the manuscript. It is keyed by resample count and
+# seed and names no path, so it is the same in every checkout.
+!/grid_results/bootstrap_cache.json
+
+# grid/dirty/ is a 179 MB symlink farm of the ORIGINAL shipped splits, rebuilt
+# by grid/make_dirty_yaml.py. Its content hashes are recorded in the cell
+# provenance, so the farm itself is disposable.
+/grid/dirty/
+
+# grid/fixtures/per_class_nms_cache.json is not tracked, unlike its two
+# siblings there. Those are keyed by resample count and seed, which are the
+# same in every checkout, so a fixture run leaves them unchanged. This one is
+# keyed by the absolute path of the results directory, so a tracked copy would
+# name one checkout and mismatch in every other. Since 25 September 2026 no
+# fixture run writes it. The fixtures ship no raw__*.npz archives, and
+# per_class_nms.py writes no cache when there is nothing to correct. The rule
+# stays so that a copy left by an earlier run is never committed.
+/grid/fixtures/per_class_nms_cache.json
+
+# ------------------------------------------------------------------- audit
+# The pair montages are 43 MB of rendered JPEGs and hashes.json is 9.4 MB of
+# perceptual hashes, both regenerable. The VERDICTS are the evidence, and
+# sampled_pairs.csv is small, so it stays.
+/audit_out/pairs/*.jpg
+/audit_out/pairs/*.png
+/audit_out/hashes.json
+
+# --------------------------------------------------------------------- logs
+*.log
+/grid_results_arms_watch.log
+/grid_results/logs/
+/grid_results_arms/logs/
+/grid_results_arms/extracted/
+
+# ------------------------------------------------------------------ scratch
+/tmp/
+*.tmp
+*.bak
+*.orig
+*~
+.DS_Store
+
+# Manuscript builds. build_results_section.py writes these, so they are
+# outputs rather than sources.
+/Weld_Transfer_Results_Section.docx
+/Weld_Transfer_Results_Section_clean.docx
+
+# Exploratory matched-step control, the project log 6a-xi. Checkpoints, per-cell
+# evaluation records and raw predictions are NOT tracked, exactly as for the
+# main grid and the arms: 9b keeps code, split lists and analysis outputs in
+# the repository and leaves the heavy artefacts out.
+#
+# The first version of this block ended `!/grid_results_msc/*/`, which
+# re-included every subdirectory and would have committed 55 MB of raw npz.
+# Only the two small report artefacts are tracked.
+/runs_msc/
+/grid_results_msc/*
+!/grid_results_msc/matched_step_control.md
+!/grid_results_msc/matched_step_control.csv

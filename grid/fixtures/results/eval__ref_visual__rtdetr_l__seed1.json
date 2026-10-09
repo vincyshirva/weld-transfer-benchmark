@@ -1,0 +1,156 @@
+{
+  "FABRICATED": true,
+  "warning": "fabricated fixture, not a measurement, do not cite",
+  "cell": {
+    "source": "visual",
+    "family": "rtdetr_l",
+    "seed": 1,
+    "kind": "reference"
+  },
+  "name": "ref_visual__rtdetr_l__seed1",
+  "config_sha256_16": "f5567a1938278e88",
+  "targets": {
+    "visual": {
+      "target": "visual",
+      "test_split": "audited",
+      "n_test_images": 84,
+      "image_level": {
+        "n_pos": 75,
+        "n_neg": 9,
+        "positive_rate": 0.8928571428571429,
+        "ap": 0.8629,
+        "auroc": null,
+        "auroc_reportable": false,
+        "calibration": {
+          "ece": 0.0564,
+          "brier": 0.1852,
+          "bins": [
+            {
+              "lo": 0.0,
+              "hi": 0.067,
+              "count": 9,
+              "mean_confidence": 0.033,
+              "observed_positive_rate": 0.051
+            },
+            {
+              "lo": 0.067,
+              "hi": 0.133,
+              "count": 58,
+              "mean_confidence": 0.1,
+              "observed_positive_rate": 0.1
+            },
+            {
+              "lo": 0.133,
+              "hi": 0.2,
+              "count": 37,
+              "mean_confidence": 0.167,
+              "observed_positive_rate": 0.169
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.267,
+              "count": 8,
+              "mean_confidence": 0.233,
+              "observed_positive_rate": 0.249
+            },
+            {
+              "lo": 0.267,
+              "hi": 0.333,
+              "count": 20,
+              "mean_confidence": 0.3,
+              "observed_positive_rate": 0.265
+            },
+            {
+              "lo": 0.333,
+              "hi": 0.4,
+              "count": 36,
+              "mean_confidence": 0.367,
+              "observed_positive_rate": 0.381
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.467,
+              "count": 5,
+              "mean_confidence": 0.433,
+              "observed_positive_rate": 0.396
+            },
+            {
+              "lo": 0.467,
+              "hi": 0.533,
+              "count": 19,
+              "mean_confidence": 0.5,
+              "observed_positive_rate": 0.484
+            },
+            {
+              "lo": 0.533,
+              "hi": 0.6,
+              "count": 56,
+              "mean_confidence": 0.567,
+              "observed_positive_rate": 0.57
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.667,
+              "count": 50,
+              "mean_confidence": 0.633,
+              "observed_positive_rate": 0.642
+            },
+            {
+              "lo": 0.667,
+              "hi": 0.733,
+              "count": 22,
+              "mean_confidence": 0.7,
+              "observed_positive_rate": 0.636
+            },
+            {
+              "lo": 0.733,
+              "hi": 0.8,
+              "count": 26,
+              "mean_confidence": 0.767,
+              "observed_positive_rate": 0.73
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.867,
+              "count": 27,
+              "mean_confidence": 0.833,
+              "observed_positive_rate": 0.806
+            },
+            {
+              "lo": 0.867,
+              "hi": 0.933,
+              "count": 13,
+              "mean_confidence": 0.9,
+              "observed_positive_rate": 0.822
+            },
+            {
+              "lo": 0.933,
+              "hi": 1.0,
+              "count": 26,
+              "mean_confidence": 0.967,
+              "observed_positive_rate": 0.913
+            }
+          ]
+        },
+        "auroc_suppressed_reason": "9 negative images, under the 30 needed for a calibrated false alarm rate"
+      },
+      "box_level": {
+        "map50": 0.6541,
+        "map50_95": 0.4055,
+        "n_gt": 3082,
+        "n_pred": 8916,
+        "recall_at_0.1_fp_per_image": 0.3667,
+        "recall_at_0.5_fp_per_image": 0.4672,
+        "recall_at_1.0_fp_per_image": 0.589
+      },
+      "per_class_in_domain": {
+        "Defect": {
+          "map50": 0.8193,
+          "map50_95": 0.508,
+          "test_instances": 259,
+          "thin": false
+        }
+      }
+    }
+  }
+}

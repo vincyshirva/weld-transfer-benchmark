@@ -1,0 +1,7 @@
+{
+ "key": "2000:500:20260904:both",
+ "elapsed_seconds": 0.4,
+ "image_resamples": 2000,
+ "box_resamples": 500,
+ "rows": []
+}

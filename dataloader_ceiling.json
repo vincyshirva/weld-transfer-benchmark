@@ -1,0 +1,65 @@
+{
+  "note": "CPU only. No model and no CUDA. This is the rate above which a faster GPU cannot help.",
+  "results": [
+    {
+      "dataset": "lohi_weld",
+      "workers": 2,
+      "batch": 16,
+      "imgsz": 640,
+      "batches": 50,
+      "images": 800,
+      "seconds": 2.49,
+      "images_per_s": 321.8
+    },
+    {
+      "dataset": "lohi_weld",
+      "workers": 4,
+      "batch": 16,
+      "imgsz": 640,
+      "batches": 50,
+      "images": 800,
+      "seconds": 1.65,
+      "images_per_s": 485.7
+    },
+    {
+      "dataset": "lohi_weld",
+      "workers": 8,
+      "batch": 16,
+      "imgsz": 640,
+      "batches": 50,
+      "images": 800,
+      "seconds": 1.59,
+      "images_per_s": 502.3
+    },
+    {
+      "dataset": "weld_surface_v2",
+      "workers": 2,
+      "batch": 16,
+      "imgsz": 640,
+      "batches": 50,
+      "images": 800,
+      "seconds": 3.48,
+      "images_per_s": 229.6
+    },
+    {
+      "dataset": "weld_surface_v2",
+      "workers": 4,
+      "batch": 16,
+      "imgsz": 640,
+      "batches": 50,
+      "images": 800,
+      "seconds": 2.52,
+      "images_per_s": 317.1
+    },
+    {
+      "dataset": "weld_surface_v2",
+      "workers": 8,
+      "batch": 16,
+      "imgsz": 640,
+      "batches": 50,
+      "images": 800,
+      "seconds": 2.04,
+      "images_per_s": 393.0
+    }
+  ]
+}

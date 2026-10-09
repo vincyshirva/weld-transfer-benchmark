@@ -1,0 +1,320 @@
+{
+  "FABRICATED": true,
+  "warning": "fabricated fixture, not a measurement, do not cite",
+  "cell": {
+    "source": "kaggle_v2",
+    "family": "yolo11s",
+    "seed": 2,
+    "kind": "dirty"
+  },
+  "name": "dirty_kaggle_v2__yolo11s__seed2",
+  "config_sha256_16": "f5567a1938278e88",
+  "targets": {
+    "kaggle_v2": {
+      "target": "kaggle_v2",
+      "test_split": "downloaded",
+      "n_test_images": 141,
+      "image_level": {
+        "n_pos": 72,
+        "n_neg": 69,
+        "positive_rate": 0.5106382978723404,
+        "ap": 0.7965,
+        "auroc": 0.7669,
+        "auroc_reportable": true,
+        "calibration": {
+          "ece": 0.1026,
+          "brier": 0.1372,
+          "bins": [
+            {
+              "lo": 0.0,
+              "hi": 0.067,
+              "count": 8,
+              "mean_confidence": 0.033,
+              "observed_positive_rate": 0.054
+            },
+            {
+              "lo": 0.067,
+              "hi": 0.133,
+              "count": 28,
+              "mean_confidence": 0.1,
+              "observed_positive_rate": 0.079
+            },
+            {
+              "lo": 0.133,
+              "hi": 0.2,
+              "count": 6,
+              "mean_confidence": 0.167,
+              "observed_positive_rate": 0.145
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.267,
+              "count": 7,
+              "mean_confidence": 0.233,
+              "observed_positive_rate": 0.228
+            },
+            {
+              "lo": 0.267,
+              "hi": 0.333,
+              "count": 33,
+              "mean_confidence": 0.3,
+              "observed_positive_rate": 0.294
+            },
+            {
+              "lo": 0.333,
+              "hi": 0.4,
+              "count": 48,
+              "mean_confidence": 0.367,
+              "observed_positive_rate": 0.38
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.467,
+              "count": 29,
+              "mean_confidence": 0.433,
+              "observed_positive_rate": 0.427
+            },
+            {
+              "lo": 0.467,
+              "hi": 0.533,
+              "count": 47,
+              "mean_confidence": 0.5,
+              "observed_positive_rate": 0.439
+            },
+            {
+              "lo": 0.533,
+              "hi": 0.6,
+              "count": 8,
+              "mean_confidence": 0.567,
+              "observed_positive_rate": 0.526
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.667,
+              "count": 52,
+              "mean_confidence": 0.633,
+              "observed_positive_rate": 0.551
+            },
+            {
+              "lo": 0.667,
+              "hi": 0.733,
+              "count": 13,
+              "mean_confidence": 0.7,
+              "observed_positive_rate": 0.655
+            },
+            {
+              "lo": 0.733,
+              "hi": 0.8,
+              "count": 20,
+              "mean_confidence": 0.767,
+              "observed_positive_rate": 0.717
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.867,
+              "count": 28,
+              "mean_confidence": 0.833,
+              "observed_positive_rate": 0.805
+            },
+            {
+              "lo": 0.867,
+              "hi": 0.933,
+              "count": 26,
+              "mean_confidence": 0.9,
+              "observed_positive_rate": 0.826
+            },
+            {
+              "lo": 0.933,
+              "hi": 1.0,
+              "count": 26,
+              "mean_confidence": 0.967,
+              "observed_positive_rate": 0.903
+            }
+          ]
+        }
+      },
+      "box_level": {
+        "map50": 0.6294,
+        "map50_95": 0.3902,
+        "n_gt": 3216,
+        "n_pred": 2448,
+        "recall_at_0.1_fp_per_image": 0.3559,
+        "recall_at_0.5_fp_per_image": 0.4614,
+        "recall_at_1.0_fp_per_image": 0.57
+      },
+      "per_class_in_domain": {
+        "Bad Weld": {
+          "map50": 0.7539,
+          "map50_95": 0.4674,
+          "test_instances": 110,
+          "thin": false
+        },
+        "Good Weld": {
+          "map50": 0.7812,
+          "map50_95": 0.4844,
+          "test_instances": 182,
+          "thin": false
+        },
+        "Defect": {
+          "map50": 0.8237,
+          "map50_95": 0.5107,
+          "test_instances": 159,
+          "thin": false
+        }
+      }
+    },
+    "kaggle_v2@clean_test": {
+      "target": "kaggle_v2",
+      "test_split": "audited",
+      "n_test_images": 141,
+      "image_level": {
+        "n_pos": 72,
+        "n_neg": 69,
+        "positive_rate": 0.5106382978723404,
+        "ap": 0.7533,
+        "auroc": 0.7279,
+        "auroc_reportable": true,
+        "calibration": {
+          "ece": 0.0462,
+          "brier": 0.1235,
+          "bins": [
+            {
+              "lo": 0.0,
+              "hi": 0.067,
+              "count": 22,
+              "mean_confidence": 0.033,
+              "observed_positive_rate": 0.006
+            },
+            {
+              "lo": 0.067,
+              "hi": 0.133,
+              "count": 11,
+              "mean_confidence": 0.1,
+              "observed_positive_rate": 0.125
+            },
+            {
+              "lo": 0.133,
+              "hi": 0.2,
+              "count": 57,
+              "mean_confidence": 0.167,
+              "observed_positive_rate": 0.146
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.267,
+              "count": 58,
+              "mean_confidence": 0.233,
+              "observed_positive_rate": 0.202
+            },
+            {
+              "lo": 0.267,
+              "hi": 0.333,
+              "count": 57,
+              "mean_confidence": 0.3,
+              "observed_positive_rate": 0.268
+            },
+            {
+              "lo": 0.333,
+              "hi": 0.4,
+              "count": 28,
+              "mean_confidence": 0.367,
+              "observed_positive_rate": 0.348
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.467,
+              "count": 35,
+              "mean_confidence": 0.433,
+              "observed_positive_rate": 0.369
+            },
+            {
+              "lo": 0.467,
+              "hi": 0.533,
+              "count": 52,
+              "mean_confidence": 0.5,
+              "observed_positive_rate": 0.468
+            },
+            {
+              "lo": 0.533,
+              "hi": 0.6,
+              "count": 22,
+              "mean_confidence": 0.567,
+              "observed_positive_rate": 0.486
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.667,
+              "count": 40,
+              "mean_confidence": 0.633,
+              "observed_positive_rate": 0.575
+            },
+            {
+              "lo": 0.667,
+              "hi": 0.733,
+              "count": 13,
+              "mean_confidence": 0.7,
+              "observed_positive_rate": 0.639
+            },
+            {
+              "lo": 0.733,
+              "hi": 0.8,
+              "count": 46,
+              "mean_confidence": 0.767,
+              "observed_positive_rate": 0.694
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.867,
+              "count": 51,
+              "mean_confidence": 0.833,
+              "observed_positive_rate": 0.746
+            },
+            {
+              "lo": 0.867,
+              "hi": 0.933,
+              "count": 51,
+              "mean_confidence": 0.9,
+              "observed_positive_rate": 0.799
+            },
+            {
+              "lo": 0.933,
+              "hi": 1.0,
+              "count": 38,
+              "mean_confidence": 0.967,
+              "observed_positive_rate": 0.866
+            }
+          ]
+        }
+      },
+      "box_level": {
+        "map50": 0.5573,
+        "map50_95": 0.3455,
+        "n_gt": 3170,
+        "n_pred": 7410,
+        "recall_at_0.1_fp_per_image": 0.3553,
+        "recall_at_0.5_fp_per_image": 0.3886,
+        "recall_at_1.0_fp_per_image": 0.4928
+      },
+      "per_class_in_domain": {
+        "Bad Weld": {
+          "map50": 0.7872,
+          "map50_95": 0.488,
+          "test_instances": 110,
+          "thin": false
+        },
+        "Good Weld": {
+          "map50": 0.8177,
+          "map50_95": 0.507,
+          "test_instances": 182,
+          "thin": false
+        },
+        "Defect": {
+          "map50": 0.6628,
+          "map50_95": 0.4109,
+          "test_instances": 159,
+          "thin": false
+        }
+      }
+    }
+  }
+}
