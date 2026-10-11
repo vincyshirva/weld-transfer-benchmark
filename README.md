@@ -91,6 +91,7 @@ files as tracked in this repository.
 | `models/pretrained/manifest.json` | Every initial checkpoint pinned by URL, byte count and sha256 |
 | `build_results_section.py` | Builds the manuscript sections from the released tables |
 | `manuscript_figures.py` | Draws the manuscript's four figures at their printed width, from the same released tables |
+| `CITATION.cff` | How to cite this repository. The build checks it against the manuscript's title page |
 
 `grid_results/analysis/` and `grid_results_arms/analysis/` hold the generated
 tables and figures. The checkpoints and raw predictions are not in the

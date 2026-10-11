@@ -2088,6 +2088,7 @@ def run_checks():
         raise SystemExit(f"\nCONSISTENCY CHECK FAILED: the data availability "
                          f"statement says the checkpoints and raw predictions "
                          f"are {CHECKPOINTS_GB} GB, and README.md does not.")
+    check_citation()
     if REPO_LIVE:
         check_repo_live()
 
@@ -2662,6 +2663,30 @@ def check_british(d) -> None:
         raise SystemExit(f"\nSPELLING CHECK FAILED: American forms in the "
                          f"body: {hits}")
     print("  spelling: British throughout the body")
+
+
+def check_citation() -> None:
+    """CITATION.cff repeats the title page and the repository address. It is
+    read back and compared with them, so a new title or address cannot leave
+    it behind. The release's licence is MIT, which make_release.py writes."""
+    import yaml
+    cff = yaml.safe_load((ROOT / "CITATION.cff").read_text(encoding="utf-8"))
+    authors = cff.get("authors") or []
+    a = authors[0] if len(authors) == 1 else {}
+    pairs = {
+        "one author": (len(authors), 1),
+        "title": (cff.get("title"), TITLE),
+        "author": (f"{a.get('given-names')} {a.get('family-names')}", AUTHOR),
+        "affiliation": (a.get("affiliation"), AFFILIATION),
+        "orcid": (a.get("orcid"), f"https://orcid.org/{ORCID}"),
+        "repository": (cff.get("repository-code"), REPO_URL),
+        "licence": (cff.get("license"), "MIT"),
+    }
+    bad = [f"{k}: {got!r}, title page {want!r}"
+           for k, (got, want) in pairs.items() if got != want]
+    if bad:
+        raise SystemExit("\nCONSISTENCY CHECK FAILED: CITATION.cff disagrees "
+                         "with the title page:\n  " + "\n  ".join(bad))
 
 
 def check_plain_text(d) -> None:
