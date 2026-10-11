@@ -1,5 +1,7 @@
 # Transferability of deep object detectors for visible-light weld inspection under camera and dataset shift
 
+[![DOI](https://zenodo.org/badge/1412096288.svg)](https://doi.org/10.5281/zenodo.23298593)
+
 This repository is the released artefact for the study of that name. It holds
 the harmonised label mappings, the frozen split files with their sha256 hashes,
 the leakage audit, the training and evaluation code, and the analysis that
@@ -182,6 +184,12 @@ interchangeable. `h200_requirements.txt` holds the cluster lock, and
 `laptop_requirements.txt` holds the laptop's pins. The audit and rebuild
 scripts need only `pillow numpy pyyaml scipy`.
 
+## Citing this repository
+
+To cite the code and splits as the paper used them, cite version 1.0.0 at
+https://doi.org/10.5281/zenodo.23298594. The badge above opens the latest
+version, at https://doi.org/10.5281/zenodo.23298593.
+
 ## Citing the datasets
 
 Attribute all five sources. The CC0 source imposes no legal requirement to
@@ -204,4 +212,4 @@ licences, listed above.
 The Slurm scripts name absolute paths in the form `/home/USERNAME/...`.
 Replace `USERNAME` with your own account, or the whole path with your project
 root. The cluster the study used requires absolute paths, so do not make them
-relative. 
+relative.

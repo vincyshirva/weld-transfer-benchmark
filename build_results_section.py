@@ -1422,11 +1422,19 @@ COMPETING_ELSEVIER = ("The author declares that he has no known competing "
                       "financial interests or personal relationships that "
                       "could have appeared to influence the work reported in "
                       "this paper.")
-# Set when Vincent has archived the GitHub repository on Zenodo. The data
-# availability statement then gives the DOI, and the reference list gains a
-# dataset entry for the deposit. Until then the paper cites the GitHub address.
-ZENODO_DOI = None
-ZENODO_TITLE = None             # the deposit's title as Zenodo shows it
+# Zenodo archived GitHub release v1.0.0, tag v1.0.0 at commit a975132 of the
+# public repository, on 11 October 2026. The paper cites that version's DOI.
+# The concept DOI resolves to the latest version, and CITATION.cff and the
+# README badge carry it. Each new GitHub release makes a new Zenodo version
+# with its own DOI, so the paper keeps citing 1.0.0.
+ZENODO_DOI = "10.5281/zenodo.23298594"
+ZENODO_CONCEPT_DOI = "10.5281/zenodo.23298593"
+ZENODO_VERSION = "1.0.0"
+# The deposit's own title, as Zenodo registered it from CITATION.cff. Written
+# out rather than taken from TITLE, because the deposit keeps this title even
+# if the paper's title changes in revision.
+ZENODO_TITLE = ("Transferability of deep object detectors for visible-light "
+                "weld inspection under camera and dataset shift")
 ZENODO_YEAR = 2026
 # What the repository does not hold, as README.md states it.
 CHECKPOINTS_GB = 28
@@ -1665,14 +1673,15 @@ REFS_PATH = ROOT / "literature_review" / "references.json"
 _PARTICLES = {"da", "de", "do", "dos", "das", "del", "della", "di", "du",
               "van", "von", "der", "den", "la", "le"}
 REFS = {e["key"]: e for e in json.loads(REFS_PATH.read_text())["entries"]}
-# The Zenodo deposit, once Vincent has made it. It is this study's own
-# dataset entry, so it is added here rather than resolved from a DOI that does
-# not exist yet. Set ZENODO_TITLE with the DOI, to the deposit's own title.
+# The Zenodo deposit. It is this study's own dataset entry, so it is added
+# here rather than resolved by resolve_references.py. Elsevier lists the
+# version among the elements of a data reference.
 if ZENODO_DOI:
     REFS["deposit"] = {"key": "deposit", "year": ZENODO_YEAR, "csl": {
         "type": "dataset",
         "author": [{"family": "Dsouza", "given": "Vincent Linish"}],
         "title": ZENODO_TITLE or REPO_URL.rsplit("/", 1)[-1],
+        "version": ZENODO_VERSION,
         "publisher": "Zenodo", "DOI": ZENODO_DOI}}
 CITED: set = set()
 
@@ -2089,6 +2098,14 @@ def run_checks():
                          f"statement says the checkpoints and raw predictions "
                          f"are {CHECKPOINTS_GB} GB, and README.md does not.")
     check_citation()
+    # The README badge opens the latest version, and the README tells a reader
+    # which version the paper used. Both DOIs must be the builder's.
+    if ZENODO_DOI:
+        readme = (ROOT / "README.md").read_text()
+        for doi in (ZENODO_DOI, ZENODO_CONCEPT_DOI):
+            if f"https://doi.org/{doi}" not in readme:
+                raise SystemExit(f"\nCONSISTENCY CHECK FAILED: README.md does "
+                                 f"not give https://doi.org/{doi}.")
     if REPO_LIVE:
         check_repo_live()
 
@@ -2668,7 +2685,12 @@ def check_british(d) -> None:
 def check_citation() -> None:
     """CITATION.cff repeats the title page and the repository address. It is
     read back and compared with them, so a new title or address cannot leave
-    it behind. The release's licence is MIT, which make_release.py writes."""
+    it behind. The release's licence is MIT, which make_release.py writes.
+
+    Its doi is the CONCEPT DOI, not the version DOI the paper cites, because
+    the file travels with every later version. Zenodo's help page does not
+    list doi among the fields it reads from this file. If a later GitHub
+    release ever fails to archive, check that line first."""
     import yaml
     cff = yaml.safe_load((ROOT / "CITATION.cff").read_text(encoding="utf-8"))
     authors = cff.get("authors") or []
@@ -2681,6 +2703,7 @@ def check_citation() -> None:
         "orcid": (a.get("orcid"), f"https://orcid.org/{ORCID}"),
         "repository": (cff.get("repository-code"), REPO_URL),
         "licence": (cff.get("license"), "MIT"),
+        "concept doi": (cff.get("doi"), ZENODO_CONCEPT_DOI),
     }
     bad = [f"{k}: {got!r}, title page {want!r}"
            for k, (got, want) in pairs.items() if got != want]
@@ -2820,16 +2843,24 @@ def write_checklist(n_words: int, lines: list, figures: dict) -> None:
         f"{figures[k]['min_font_pt']:.1f} pt" for k in FIGURE_ORDER)
     hl = "\n".join(f"{n}. {x} ({len(x)} characters)"
                     for n, x in enumerate(lines, 1))
+    if ZENODO_DOI:
+        archive_step = f"""\
+3. The repository is archived on Zenodo as version {ZENODO_VERSION} at
+   https://doi.org/{ZENODO_DOI}. Give this DOI when the submission system
+   asks about research data."""
+    else:
+        archive_step = f"""\
+3. Archive the GitHub repository on Zenodo. Then set `ZENODO_DOI` and
+   `ZENODO_TITLE` in `build_results_section.py` and rebuild. The data
+   availability statement then gives the DOI and the reference list gains the
+   deposit as a dataset entry. Until then the paper cites {REPO_URL}."""
     if JOURNAL == "aei":
         author_steps = f"""\
 1. Run Elsevier's declarations tool for competing interests and upload the
    Word file it produces. The manuscript's own declaration reads: "{COMPETING_ELSEVIER}"
 2. Enter the CRediT roles in the submission system as the manuscript states
    them: "{CREDIT}"
-3. Archive the GitHub repository on Zenodo. Then set `ZENODO_DOI` and
-   `ZENODO_TITLE` in `build_results_section.py` and rebuild. The data
-   availability statement then gives the DOI and the reference list gains the
-   deposit as a dataset entry. Until then the paper cites {REPO_URL}.
+{archive_step}
 4. Choose whether to post the preprint on SSRN when the submission system
    offers it.
 """
@@ -6052,6 +6083,14 @@ def build(clean: bool = False):
         code_where = (f"are available at {REPO_URL}" if REPO_LIVE else
                       "will be released in a public repository on acceptance of "
                       "this article")
+        # The deposit is cited once, in the data statement, and the code
+        # statement points back to it. Citing it nowhere would leave a listed
+        # reference uncited, which check_references() refuses.
+        data_where = code_where
+        if ZENODO_DOI:
+            data_where = (f"are available at {REPO_URL}, archived on Zenodo "
+                          f"{cp('deposit')} at https://doi.org/{ZENODO_DOI}")
+            code_where = "are in the same repository and archive"
         data_par = (
             f"The five source datasets are available from their authors at the "
             f"locations given in the reference list: kaggle_v2 "
@@ -6069,7 +6108,7 @@ def build(clean: bool = False):
             f"as unverified and point readers at the authoritative copy rather "
             f"than propagate a second one. The harmonised label mappings, the "
             f"frozen split files and their sha256 hashes, and the per-cell results "
-            f"{code_where}. Every split file identifies its images by their "
+            f"{data_where}. Every split file identifies its images by their "
             f"original filenames, and all {SPLIT_ENTRIES_VERIFIED:,} entries were "
             f"verified on {SPLIT_VERIFY_DATE} to resolve against untouched "
             f"original downloads, so the partitions can be reconstructed exactly "
