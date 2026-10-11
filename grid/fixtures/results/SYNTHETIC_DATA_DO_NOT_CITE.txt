@@ -1,4 +1,4 @@
-Every number in this directory is FABRICATED.
+Every number in this directory is SYNTHETIC.
 
 These files exist only to test grid/analysis.py before the real grid
 runs. They are not measurements. Do not cite them, do not copy them

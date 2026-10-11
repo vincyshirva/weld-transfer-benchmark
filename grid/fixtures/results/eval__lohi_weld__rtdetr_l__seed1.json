@@ -1,6 +1,6 @@
 {
   "FABRICATED": true,
-  "warning": "fabricated fixture, not a measurement, do not cite",
+  "warning": "synthetic fixture, not a measurement, do not cite",
   "cell": {
     "source": "lohi_weld",
     "family": "rtdetr_l",

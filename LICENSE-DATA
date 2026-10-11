@@ -11,7 +11,7 @@ https://creativecommons.org/licenses/by/4.0/legalcode
 
 That covers the frozen split files, their sha256 hashes, the lineage manifest,
 the label mappings, the audit outputs, the box geometry, the measured
-throughput, the fabricated test fixtures, the resolved reference list, and the
+throughput, the synthetic test fixtures, the resolved reference list, and the
 generated tables and figures.
 
 Neither licence covers the source images. They are not in this repository.

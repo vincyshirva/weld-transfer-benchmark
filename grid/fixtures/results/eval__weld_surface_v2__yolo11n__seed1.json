@@ -1,6 +1,6 @@
 {
   "FABRICATED": true,
-  "warning": "fabricated fixture, not a measurement, do not cite",
+  "warning": "synthetic fixture, not a measurement, do not cite",
   "cell": {
     "source": "weld_surface_v2",
     "family": "yolo11n",

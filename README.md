@@ -87,9 +87,10 @@ files as tracked in this repository.
 | `lohi_to_yolo.py` | Converts LoHi-WELD to YOLO layout, both acquisitions |
 | `grid/` | The frozen 69 cell experiment runner, evaluation, metrics and analysis |
 | `grid/arms/` | The control and mitigation arms, 300 cells |
-| `grid/fixtures/` | Fabricated records that let the analysis be tested without real results |
+| `grid/fixtures/` | Synthetic records that let the analysis be tested without real results |
 | `models/pretrained/manifest.json` | Every initial checkpoint pinned by URL, byte count and sha256 |
 | `build_results_section.py` | Builds the manuscript sections from the released tables |
+| `manuscript_figures.py` | Draws the manuscript's four figures at their printed width, from the same released tables |
 
 `grid_results/analysis/` and `grid_results_arms/analysis/` hold the generated
 tables and figures. The checkpoints and raw predictions are not in the
@@ -209,5 +210,11 @@ relative. `grid/fetch_results.sh` pulls results over ssh from a host alias,
 
 Code comments and some generated reports cite "the project log" by entry
 number, for example "the project log, 5p". That log is the author's internal
-record of decisions and is not released. Every result it describes is
-reproducible from the code and the files in this repository.
+record of decisions and is not released.
+
+The released tables reproduce every number in the manuscript, and
+`build_results_section.py` rebuilds it from them. Reproducing the tables
+themselves from scratch needs more than this repository holds. The trained
+checkpoints and raw predictions, 28 GB, are not included, so it means
+obtaining the public source images from their creators, rebuilding the
+audited tree from the split files, and retraining.

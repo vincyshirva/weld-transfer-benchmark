@@ -40,6 +40,7 @@ import csv
 import html
 import json
 import re
+import shutil
 import statistics
 import sys
 import unicodedata
@@ -50,7 +51,9 @@ from pathlib import Path
 
 import docx
 from docx.enum.text import WD_ALIGN_PARAGRAPH
-from docx.shared import Inches, Pt, RGBColor
+from docx.oxml import OxmlElement
+from docx.oxml.ns import qn
+from docx.shared import Emu, Inches, Mm, Pt, RGBColor
 
 ROOT = Path(__file__).resolve().parent
 MAIN_FIG = ROOT / "grid_results" / "analysis" / "figures"
@@ -753,7 +756,7 @@ def armb_table() -> list:
                     m("recovery", top), BOX_OFF[(src, tgt)][cfg][4]))
     # Six localisation pairs, two configurations: YOLO11s and RT-DETR-l.
     if len(out) != 2 * len(BOX_PAIRS):
-        raise SystemExit(f"\nCONSISTENCY CHECK FAILED: Table 4.8 expects "
+        raise SystemExit(f"\nCONSISTENCY CHECK FAILED: {T('label_cost')} expects "
                          f"{2 * len(BOX_PAIRS)} rows and {ARMB_CSV.name} "
                          f"gives {len(out)}.")
     return out
@@ -1252,7 +1255,7 @@ def control_ece() -> dict:
         a = acc.get((cfg, "in domain"), [])
         b = acc.get((cfg, "cross domain"), [])
         if len(a) != 6 or len(b) != 6:
-            raise SystemExit(f"\nCONSISTENCY CHECK FAILED: Table 4.13 says six "
+            raise SystemExit(f"\nCONSISTENCY CHECK FAILED: {T('ece')} says six "
                              f"cells per entry and {CALIB_CSV.name} holds "
                              f"{len(a)} and {len(b)} for {cfg}.")
         out[cfg] = (sum(a) / len(a), sum(b) / len(b))
@@ -1335,8 +1338,10 @@ LOHI_URL = "https://github.com/SylvioBlock/LoHi-Weld"
 TITLE = ("Transferability of deep object detectors for visible-light weld "
          "inspection under camera and dataset shift")
 AUTHOR = "Vincent Linish Dsouza"
+# As Vincent gave it on 11 October 2026, for both journals.
 AFFILIATION = ("Department of Robotics and Artificial Intelligence, "
-               "NMAM Institute of Technology, Nitte, Karnataka, India")
+               "NMAM Institute of Technology, NITTE (Deemed to be "
+               "University), Nitte 574110, Karnataka, India")
 EMAIL = "vincentldsouza@nitte.edu.in"
 # Given by Vincent on 9 October 2026. The last character is an ISO 7064
 # MOD 11-2 check digit, verified at import, so a mistyped digit fails the build.
@@ -1359,8 +1364,105 @@ if not _orcid_ok(ORCID):
 KEYWORDS = ("Weld defect detection", "Object detection",
             "Cross-dataset generalisation", "Domain shift", "Data leakage",
             "Visual inspection")
-ABSTRACT_WORDS = (150, 250)     # the journal's limits
-KEYWORD_COUNT = (4, 6)
+
+# --------------------------------------------------------------- the journal
+# SUBMITTED FIRST TO ADVANCED ENGINEERING INFORMATICS, decided by Vincent on
+# 11 October 2026. The Journal of Intelligent Manufacturing stays the fallback
+# and must still build, with --journal jim. A profile holds only what differs
+# between the two; everything else, the numbering, the table rules and the
+# figure sizing, applies to both. The AEI rules come from its Guide for
+# Authors, saved by Vincent on 11 October 2026.
+JOURNAL = "aei"
+if "--journal" in sys.argv:
+    JOURNAL = sys.argv[sys.argv.index("--journal") + 1]
+PROFILES = {
+    "aei": {
+        "name": "Advanced Engineering Informatics",
+        "abstract_words": (1, 250), "keywords": (1, 7),
+        "funding": ("This research did not receive any specific grant from "
+                    "funding agencies in the public, commercial, or "
+                    "not-for-profit sectors."),
+        "back_matter": "elsevier", "captions": "elsevier",
+        # Printed widths in mm: Elsevier's full 190, one and a half columns
+        # 140 and single column 90. Each figure takes the narrowest it fits.
+        "fig_mm": {"control_matrix": 90, "box_heatmap": 140,
+                   "label_cost_curve": 190, "reliability": 140},
+        "highlights": True, "dataset_marker": True,
+    },
+    "jim": {
+        "name": "Journal of Intelligent Manufacturing",
+        "abstract_words": (150, 250), "keywords": (4, 6),
+        "funding": "No funding was received for conducting this study.",
+        "back_matter": "springer", "captions": "springer",
+        # Springer's double column 174 and single column 84.
+        "fig_mm": {"control_matrix": 84, "box_heatmap": 174,
+                   "label_cost_curve": 174, "reliability": 174},
+        "highlights": False, "dataset_marker": False,
+    },
+}
+if JOURNAL not in PROFILES:
+    raise SystemExit(f"\n--journal must be one of {', '.join(PROFILES)}, "
+                     f"not {JOURNAL!r}.")
+PROFILE = PROFILES[JOURNAL]
+ABSTRACT_WORDS = PROFILE["abstract_words"]
+KEYWORD_COUNT = PROFILE["keywords"]
+SUBMISSION = Path(__file__).resolve().parent / "submission" / JOURNAL
+# The journal whose builds keep the project-root file names. Changing the
+# target journal means changing this too.
+ROOT_JOURNAL = "aei"
+
+# Confirmed by Vincent on 11 October 2026. CRediT role names are fixed terms
+# and keep their own spelling and punctuation, so the dash and British
+# spelling checks skip this one paragraph.
+CREDIT = ("Vincent Linish Dsouza: Conceptualization, Methodology, Software, "
+          "Validation, Formal analysis, Investigation, Data curation, "
+          "Visualization, Writing – original draft, Writing – review "
+          "& editing.")
+COMPETING_ELSEVIER = ("The author declares that he has no known competing "
+                      "financial interests or personal relationships that "
+                      "could have appeared to influence the work reported in "
+                      "this paper.")
+# Set when Vincent has archived the GitHub repository on Zenodo. The data
+# availability statement then gives the DOI, and the reference list gains a
+# dataset entry for the deposit. Until then the paper cites the GitHub address.
+ZENODO_DOI = None
+ZENODO_TITLE = None             # the deposit's title as Zenodo shows it
+ZENODO_YEAR = 2026
+# What the repository does not hold, as README.md states it.
+CHECKPOINTS_GB = 28
+
+# ------------------------------------------- numbering of tables and figures
+# Tables and figures are numbered 1 to N in order of first citation through
+# the whole paper, as both journals require, and every cross-reference is
+# generated from a label so none can go stale. The order below is the order
+# of first citation in the body text, and check_numbering() asserts it on the
+# built document: a table cited for the first time out of this order, or
+# placed out of it, or never cited in the body, stops the build. Appendix
+# tables are numbered within their appendix.
+TABLE_ORDER = (
+    "sources", "geometry", "recipe",
+    "control", "box_yolo11s", "box_ratio", "diagonals", "auroc", "blocks",
+    "audit", "label_cost", "schedule", "pooling", "recall_control",
+    "recall_cross", "ece", "per_class", "mendieta")
+APPENDIX_TABLES = {"class_map": "A.1", "provenance": "B.1"}
+FIGURE_ORDER = ("control_matrix", "box_heatmap", "label_cost_curve",
+                "reliability")
+
+
+def table_no(label: str) -> str:
+    if label in APPENDIX_TABLES:
+        return APPENDIX_TABLES[label]
+    return str(TABLE_ORDER.index(label) + 1)
+
+
+def T(label: str) -> str:
+    """An in-text reference to a table."""
+    return f"Table {table_no(label)}"
+
+
+def F(label: str) -> str:
+    """An in-text reference to a figure."""
+    return f"Figure {FIGURE_ORDER.index(label) + 1}"
 
 # --------------------------------------------------- the tuning question
 # HOW THE RECIPES WERE CHOSEN IS THE AUTHOR'S TO STATE, AND ONE SWITCH STATES
@@ -1442,6 +1544,8 @@ CONFIRM = {
                        "allowed."),
     "orcid": (True, "The corresponding author's ORCID, on the title page and "
                     "for the submission system."),
+    # Confirmed 11 October 2026 by Vincent, as proposed.
+    "credit": (True, "The CRediT roles of the AEI statement."),
 }
 
 # ----------------------------------------------------------- number helpers
@@ -1561,6 +1665,15 @@ REFS_PATH = ROOT / "literature_review" / "references.json"
 _PARTICLES = {"da", "de", "do", "dos", "das", "del", "della", "di", "du",
               "van", "von", "der", "den", "la", "le"}
 REFS = {e["key"]: e for e in json.loads(REFS_PATH.read_text())["entries"]}
+# The Zenodo deposit, once Vincent has made it. It is this study's own
+# dataset entry, so it is added here rather than resolved from a DOI that does
+# not exist yet. Set ZENODO_TITLE with the DOI, to the deposit's own title.
+if ZENODO_DOI:
+    REFS["deposit"] = {"key": "deposit", "year": ZENODO_YEAR, "csl": {
+        "type": "dataset",
+        "author": [{"family": "Dsouza", "given": "Vincent Linish"}],
+        "title": ZENODO_TITLE or REPO_URL.rsplit("/", 1)[-1],
+        "publisher": "Zenodo", "DOI": ZENODO_DOI}}
 CITED: set = set()
 
 
@@ -1730,10 +1843,15 @@ def reference_runs(key: str) -> list:
         doi = f"10.48550/arXiv.{arxiv}"
     link = f"https://doi.org/{doi}" if doi else c.get("URL", "")
     if typ in ("dataset", "software"):
+        # Elsevier marks a data reference with a leading [dataset], which
+        # reference_paragraph() writes, so the APA tag would say it twice.
         tag = "Data set" if typ == "dataset" else "Computer software"
+        if typ == "dataset" and PROFILE["dataset_marker"]:
+            tag = None
         runs.append((title, True))
         ver = f" (Version {c['version']})" if c.get("version") else ""
-        runs.append((f"{ver} [{tag}]. {c.get('publisher', '')}. ", False))
+        runs.append((f"{ver}{f' [{tag}]' if tag else ''}. "
+                     f"{c.get('publisher', '')}. ", False))
     elif typ == "book-chapter":
         eds = e["csl"].get("editor", [])
         ed_txt = f"{_editor_list(eds)}, " if eds else ""
@@ -1966,6 +2084,10 @@ def run_checks():
         raise SystemExit(f"\nCONSISTENCY CHECK FAILED: README.md does not "
                          f"state the split verification date "
                          f"{SPLIT_VERIFY_DATE} that Section 3.8 quotes.")
+    if f"{CHECKPOINTS_GB} GB" not in (ROOT / "README.md").read_text():
+        raise SystemExit(f"\nCONSISTENCY CHECK FAILED: the data availability "
+                         f"statement says the checkpoints and raw predictions "
+                         f"are {CHECKPOINTS_GB} GB, and README.md does not.")
     if REPO_LIVE:
         check_repo_live()
 
@@ -2087,19 +2209,19 @@ def check_calibration():
     two ECE means that 4.8 and 5.3 quote agree with the CSV.
     """
     if not RELIABILITY_FIG.exists():
-        raise SystemExit(f"\nCONSISTENCY CHECK FAILED: Figure 4.4 needs "
+        raise SystemExit(f"\nCONSISTENCY CHECK FAILED: {F('reliability')} needs "
                          f"{RELIABILITY_FIG.name}. Run python3 "
                          f"grid/arms/reliability_control_figure.py.")
     script = RELIABILITY_SCRIPT.read_text()
     if f"MIN_LINE_COUNT = {RELIABILITY_MIN_LINE}\n" not in script:
-        raise SystemExit("\nCONSISTENCY CHECK FAILED: Figure 4.4's caption "
+        raise SystemExit(f"\nCONSISTENCY CHECK FAILED: {F('reliability')}'s caption "
                          f"says lines join bins of at least "
                          f"{RELIABILITY_MIN_LINE} images, and "
                          f"{RELIABILITY_SCRIPT.name} draws something else.")
     table, rd = control_ece(), reliability_direction()
     for cfg, (e_in, e_cross) in table.items():
         for regime, v in (("in domain", e_in), ("cross domain", e_cross)):
-            check_equal(f"Figure 4.4 bins reproduce Table 4.13, {cfg} "
+            check_equal(f"{F('reliability')} bins reproduce {T('ece')}, {cfg} "
                         f"{regime}", rd["ece"][(cfg, regime)], v, 4)
     ctl_n, ctl_under = rd["under"]["lohictl"]
     armb_n, armb_under = rd["under"]["armb"]
@@ -2151,7 +2273,7 @@ def check_draw_counts():
     # The image level is quoted in AUROC since 8 October 2026, and its draw
     # count is checked in image_level_facts(). Only the box level is quoted
     # from this file.
-    for level, const, where in (("box", BOX_BOOTSTRAP_DRAWS, "Table 4.3"),):
+    for level, const, where in (("box", BOX_BOOTSTRAP_DRAWS, T("box_ratio")),):
         got = {int(r["resamples"]) for r in rows if r["level"] == level}
         if got != {const}:
             raise SystemExit(
@@ -2223,7 +2345,7 @@ def check_config_classes():
         cfg_state = ("excluded" if raw in d["excluded"] else
                      "verdict" if raw in d["non_defect"] else "defect")
         if cfg_state != state:
-            raise SystemExit(f"\nCONSISTENCY CHECK FAILED: Table 4.14 marks "
+            raise SystemExit(f"\nCONSISTENCY CHECK FAILED: {T('per_class')} marks "
                              f"{src} {cls} as {state}, grid/config.py makes "
                              f"it {cfg_state}.")
 
@@ -2271,10 +2393,10 @@ def recipe_table() -> dict:
     p_flip = float(flip.split("<")[1].rstrip(":").strip())
     lo, hi = (float(x) for x in bright.split("(")[1].rstrip(")").split(","))
     if t.get("lr_schedule") != "cosine" or not u.get("cos_lr"):
-        raise SystemExit("\nCONSISTENCY CHECK FAILED: Table 3.3 says both "
+        raise SystemExit(f"\nCONSISTENCY CHECK FAILED: {T('recipe')} says both "
                          "code paths decay the learning rate on a cosine.")
     if not (C.PRETRAINED and A.ARMB_SEED_IS_DRAW):
-        raise SystemExit("\nCONSISTENCY CHECK FAILED: Table 3.3 says COCO "
+        raise SystemExit(f"\nCONSISTENCY CHECK FAILED: {T('recipe')} says COCO "
                          "initialisation and a seed equal to the draw.")
     same = "as the first column"
     aug_u = (f"colour jitter of hue {u['hsv_h']}, saturation {u['hsv_s']} "
@@ -2283,7 +2405,7 @@ def recipe_table() -> dict:
              f"{u['mosaic']} switched off for the last {u['close_mosaic']} "
              f"epochs; no rotation, vertical flip or erasing")
     if (u["degrees"], u["flipud"], u["erasing"]) != (0.0, 0.0, 0.0):
-        raise SystemExit("\nCONSISTENCY CHECK FAILED: Table 3.3 says no "
+        raise SystemExit(f"\nCONSISTENCY CHECK FAILED: {T('recipe')} says no "
                          "rotation, vertical flip or erasing.")
     rows = [
         ["Optimiser", u["optimizer"], t["optimizer"], same],
@@ -2327,6 +2449,240 @@ def recipe_table() -> dict:
         "grid/yolo_dataset.py and grid/train_cell.py"]}
 
 
+# ------------------------------------------------- tables, figures, layout
+def horizontal_rules(t) -> None:
+    """Horizontal rules only: one above the header row, one below it and one
+    below the last row. No vertical rule and no shading, as both journals
+    ask. Replaces the "Light Grid Accent 1" style, which drew a full grid."""
+    tbl_pr = t._tbl.tblPr
+    for old in tbl_pr.findall(qn("w:tblBorders")):
+        tbl_pr.remove(old)
+    borders = OxmlElement("w:tblBorders")
+    for edge in ("top", "left", "bottom", "right", "insideH", "insideV"):
+        el = OxmlElement(f"w:{edge}")
+        el.set(qn("w:val"), "nil")
+        borders.append(el)
+    look = tbl_pr.find(qn("w:tblLook"))
+    if look is not None:
+        look.addprevious(borders)       # the schema puts borders before it
+    else:
+        tbl_pr.append(borders)
+
+    def rule(cell, edges):
+        tc_pr = cell._tc.get_or_add_tcPr()
+        b = tc_pr.find(qn("w:tcBorders"))
+        if b is None:
+            b = OxmlElement("w:tcBorders")
+            tc_pr.append(b)
+        for edge in ("top", "bottom"):
+            if edge in edges and b.find(qn(f"w:{edge}")) is None:
+                el = OxmlElement(f"w:{edge}")
+                for k, v in (("val", "single"), ("sz", "6"), ("space", "0"),
+                             ("color", "000000")):
+                    el.set(qn(f"w:{k}"), v)
+                b.append(el)
+
+    for c in t.rows[0].cells:
+        rule(c, ("top", "bottom"))
+    for c in t.rows[-1].cells:
+        rule(c, ("bottom",))
+
+
+# The panel order of the reliability figure, figstyle's CONFIG_ORDER.
+RELIABILITY_PANELS = ("yolo11n", "yolo11s", "rtdetr_l", "faster_rcnn")
+BOX_FIG_SOURCES = ("kaggle_v2", "lohi_weld")
+BOX_FIG_TARGETS = ("kaggle_v2", "lohi_weld", "visual", "twoclass")
+LABEL_COST_POINTS = [
+    {"source": r["source"], "target": r["target"], "family": r["family"],
+     "scenes": int(r["n_scenes"]), "recovery": float(r["recovery"]),
+     "exhausted": r["exhausted_train_split"] == "True"}
+    for r in read_csv_rows(ARMB_CSV)
+    if r["endpoint"] == "last" and r["metric"] == "box"
+    and r["recovery"] != ""]
+LABEL_COST_PAIRS = sorted({(r["source"], r["target"])
+                           for r in LABEL_COST_POINTS})
+LABEL_COST_FAMILIES = [c for c in ("yolo11n", "yolo11s", "rtdetr_l",
+                                   "faster_rcnn")
+                       if any(r["family"] == c for r in LABEL_COST_POINTS)]
+
+
+def draw_figure(label: str) -> dict:
+    """Draw one figure at the active journal's printed width, from the same
+    released values the tables use. See manuscript_figures.py."""
+    import manuscript_figures as MF
+    MF.style()
+    width = PROFILE["fig_mm"][label]
+    stem = f"Figure_{FIGURE_ORDER.index(label) + 1}"
+    if label == "control_matrix":
+        fig = MF.control_matrix(width, CONTROL_BOX, ACQ)
+    elif label == "box_heatmap":
+        cells = {(s, t): cell_mean("box_map50", s, t, "YOLO11s")
+                 for s in BOX_FIG_SOURCES for t in BOX_FIG_TARGETS}
+        fig = MF.box_heatmap(width, cells, BOX_FIG_SOURCES, BOX_FIG_TARGETS)
+    elif label == "label_cost_curve":
+        fig = MF.label_cost_curve(width, LABEL_COST_POINTS, LABEL_COST_PAIRS,
+                                  LABEL_COST_FAMILIES)
+    elif label == "reliability":
+        fig = MF.reliability(width, MF.reliability_rows(),
+                             RELIABILITY_PANELS)
+    else:
+        raise SystemExit(f"\nunknown figure {label!r}")
+    return MF.save(fig, stem, SUBMISSION, SUBMISSION / "embed")
+
+
+def check_figures(figures: dict) -> None:
+    """Each embedded figure is placed at exactly the width it was drawn at,
+    and none prints text below 7 pt. Placed width is read from the document,
+    drawn width from the PNG itself."""
+    import manuscript_figures as MF
+    from PIL import Image
+    if sorted(figures) != sorted(FIGURE_ORDER):
+        raise SystemExit(f"\nFIGURE CHECK FAILED: placed {sorted(figures)}, "
+                         f"expected {sorted(FIGURE_ORDER)}.")
+    for label, rec in figures.items():
+        with Image.open(rec["png"]) as im:
+            px = im.size[0]
+        drawn_mm = px / MF.DPI * 25.4
+        placed_mm = Emu(rec["shape"].width).mm
+        if abs(drawn_mm - placed_mm) > 25.4 / MF.DPI \
+                or abs(drawn_mm - rec["width_mm"]) > 25.4 / MF.DPI:
+            raise SystemExit(f"\nFIGURE CHECK FAILED: {F(label)} is drawn "
+                             f"{drawn_mm:.2f} mm wide and placed at "
+                             f"{placed_mm:.2f} mm.")
+        if rec["min_font_pt"] < MF.MIN_PT:
+            raise SystemExit(f"\nFIGURE CHECK FAILED: {F(label)} prints text "
+                             f"at {rec['min_font_pt']:.1f} pt.")
+    print("  figures: " + "; ".join(
+        f"{F(k)} {figures[k]['width_mm']:.0f} x "
+        f"{figures[k]['height_mm']:.0f} mm, smallest text "
+        f"{figures[k]['min_font_pt']:.1f} pt" for k in FIGURE_ORDER))
+
+
+def check_numbering(d) -> None:
+    """Tables and figures are cited in the body in numerical order, each
+    before it is placed, and placed in numerical order."""
+    paras = d.paragraphs
+    end = next((i for i, p in enumerate(paras) if p.text == "References"),
+               len(paras))
+    cites = {"Table": {}, "Figure": {}}
+    placed = {"Table": [], "Figure": []}
+    pats = {"Table": r"\bTable (\d+|[A-Z]\.\d+)\b",
+            "Figure": r"\b(?:Figure|Fig\.) (\d+)\b"}
+    for i, par in enumerate(paras[:end]):
+        if par.text.startswith("NOTE, not manuscript text"):
+            continue
+        if par.style.name == "Caption":
+            m = re.match(r"(Table|Fig\.) (\d+|[A-Z]\.\d+)", par.text)
+            if m:
+                placed["Table" if m.group(1) == "Table" else "Figure"].append(
+                    (m.group(2), i))
+                continue
+        for kind, pat in pats.items():
+            for m in re.finditer(pat, par.text):
+                cites[kind].setdefault(m.group(1), i)
+    want = {"Table": [str(n) for n in range(1, len(TABLE_ORDER) + 1)]
+            + list(APPENDIX_TABLES.values()),
+            "Figure": [str(n) for n in range(1, len(FIGURE_ORDER) + 1)]}
+    bad = []
+    for kind in ("Table", "Figure"):
+        got = [n for n, _ in placed[kind]]
+        if got != want[kind]:
+            bad.append(f"{kind}s placed in the order {got}, expected "
+                       f"{want[kind]}")
+        where = dict(placed[kind])
+        for n in want[kind]:
+            if n not in cites[kind]:
+                bad.append(f"{kind} {n} is never cited in the body text")
+            elif n in where and cites[kind][n] > where[n]:
+                bad.append(f"{kind} {n} is first cited after it is placed")
+        stray = sorted(set(cites[kind]) - set(want[kind]))
+        if stray:
+            bad.append(f"{kind} numbers cited that do not exist: {stray}")
+        main = [n for n in want[kind] if n.isdigit() and n in cites[kind]]
+        order = sorted(main, key=lambda n: cites[kind][n])
+        if order != main:
+            bad.append(f"{kind}s first cited in the order {order}")
+    if bad:
+        raise SystemExit("\nNUMBERING CHECK FAILED:\n" + "\n".join(
+            f"  {b}" for b in bad))
+    print(f"  numbering: {len(want['Table'])} tables and "
+          f"{len(want['Figure'])} figures, cited and placed in order")
+
+
+def check_tables(d) -> None:
+    """No vertical rule and no shading anywhere in a table."""
+    bad = []
+    for n, t in enumerate(d.tables, 1):
+        for el in t._tbl.iter():
+            if not isinstance(el.tag, str):
+                continue
+            tag = el.tag.split("}")[-1]
+            parent = el.getparent()
+            if tag in ("left", "right", "start", "end", "insideV") \
+                    and parent is not None \
+                    and parent.tag in (qn("w:tblBorders"), qn("w:tcBorders")) \
+                    and el.get(qn("w:val")) not in ("nil", "none"):
+                bad.append(f"table {n} has a vertical rule, {tag}")
+            if tag == "shd" and (el.get(qn("w:fill")) or "auto").upper() \
+                    not in ("AUTO", "FFFFFF"):
+                bad.append(f"table {n} has cell shading")
+        if t.style is not None and t.style.name != "Normal Table":
+            bad.append(f"table {n} uses the style {t.style.name}")
+    if bad:
+        raise SystemExit("\nTABLE CHECK FAILED:\n" + "\n".join(
+            f"  {b}" for b in sorted(set(bad))))
+    print(f"  tables: {len(d.tables)}, horizontal rules only, no shading")
+
+
+# American forms the body must not use. Reference titles keep their own
+# spelling, and the CRediT role names are fixed terms, so both are skipped.
+AMERICAN = re.compile(
+    r"\b\w+(?:ization|izations|izing|ized|izes|ize|yzed|yzes|yzing|yze)\b|"
+    r"\b(?:color|colors|colored|behavior|behaviors|center|centers|centered|"
+    r"labeled|labeling|modeled|modeling|gray|favor|favorable|honor|"
+    r"artifact|artifacts|catalog|analog|defense|fiber|toward|aluminum|"
+    r"skeptical|acknowledgment)\b|\blicense plates?\b", re.I)
+AMERICAN_OK = {"size", "sizes", "sized", "resize", "resized", "seize",
+               "prize", "capsize"}
+
+
+def body_texts(d) -> list:
+    paras = [p.text for p in d.paragraphs]
+    end = next((i for i, t in enumerate(paras) if t == "References"),
+               len(paras))
+    return [t for t in paras[:end] if t != CREDIT] + \
+        [c.text for t in d.tables for row in t.rows for c in row.cells]
+
+
+def check_british(d) -> None:
+    hits = sorted({m.group(0) for t in body_texts(d)
+                   for m in AMERICAN.finditer(t)
+                   if m.group(0).lower() not in AMERICAN_OK})
+    if hits:
+        raise SystemExit(f"\nSPELLING CHECK FAILED: American forms in the "
+                         f"body: {hits}")
+    print("  spelling: British throughout the body")
+
+
+def check_plain_text(d) -> None:
+    """No underline anywhere, and URLs as plain text rather than hyperlinks,
+    as Elsevier asks of the Word file."""
+    body = d.element.body
+    under = [u for u in body.iter(qn("w:u"))
+             if u.get(qn("w:val")) not in (None, "none")]
+    links = list(body.iter(qn("w:hyperlink")))
+    for style in d.styles:
+        font = getattr(style, "font", None)
+        if font is not None and font.underline and style.type == 1:
+            used = any(p.style.name == style.name for p in d.paragraphs)
+            if used:
+                under.append(style.name)
+    if under or links:
+        raise SystemExit(f"\nLAYOUT CHECK FAILED: {len(under)} underlined "
+                         f"runs and {len(links)} hyperlinks.")
+    print("  layout: single column, no underline, URLs as plain text")
+
+
 def check_clean_document(d) -> None:
     """The submission build must carry no drafting residue.
 
@@ -2338,8 +2694,9 @@ def check_clean_document(d) -> None:
     paras = [p.text for p in d.paragraphs]
     refs = max((k for k, t in enumerate(paras) if t == "References"),
                default=len(paras))
-    text = paras[:refs] + [c.text for t in d.tables for row in t.rows
-                           for c in row.cells]
+    # The CRediT role names are fixed terms and keep their en dash.
+    text = [t for t in paras[:refs] if t != CREDIT] + \
+        [c.text for t in d.tables for row in t.rows for c in row.cells]
     rules = {"literal markdown backtick": "`", "literal markdown bold": "**",
              "em dash": "—", "en dash": "–",
              "dash used as punctuation": " - ",
@@ -2377,16 +2734,141 @@ def check_repo_live():
                          f"would state a release that a reader cannot open.")
 
 
+# ------------------------------------------------------------- submission
+HIGHLIGHT_MAX = 85          # characters including spaces, Elsevier's limit
+
+
+def set_properties(doc, title: str) -> None:
+    cp_ = doc.core_properties
+    cp_.title, cp_.author, cp_.last_modified_by = title, AUTHOR, AUTHOR
+    cp_.comments = cp_.subject = cp_.keywords = cp_.category = ""
+
+
+def highlights(H: dict, abstract: str) -> list:
+    """The five highlights, every number from the values the abstract uses.
+    A claim made in words must also stand in the abstract, where
+    image_level_facts() asserts it."""
+    b = armb_summary()
+    claim = "no foreign detector's decision is distinguishable from chance"
+    if claim not in abstract:
+        raise SystemExit("\nHIGHLIGHTS CHECK FAILED: highlight 3's claim is "
+                         "no longer in the abstract.")
+    lines = [
+        f"{word(len(SOURCES)).capitalize()} public visible-light weld "
+        f"datasets were audited for leakage and repartitioned",
+        f"A camera change keeps {H['control'][0]} to {H['control'][1]}% of "
+        f"localisation; a dataset change keeps {H['box'][0]} to "
+        f"{H['box'][1]}%",
+        f"On the balanced target, {claim}",
+        f"Auditing for leakage lowers in-domain AUROC by "
+        f"{H['audit_auroc'][0]} on one public dataset",
+        f"{H['k_real'][0]} to {H['k_real'][1]} labelled target images recover "
+        f"{H['band'][0]} to {H['band'][1]}% of the gap in {b['in_band']} of "
+        f"{b['n']} cases",
+    ]
+    long_ = [(len(x), x) for x in lines if len(x) > HIGHLIGHT_MAX]
+    if long_ or not 3 <= len(lines) <= 5:
+        raise SystemExit(f"\nHIGHLIGHTS CHECK FAILED: {len(lines)} lines, "
+                         f"over {HIGHLIGHT_MAX} characters: {long_}")
+    print("  highlights: " + ", ".join(str(len(x)) for x in lines)
+          + f" characters, limit {HIGHLIGHT_MAX}")
+    return lines
+
+
+def write_highlights(lines: list) -> None:
+    hd = docx.Document()
+    set_properties(hd, "Highlights")
+    hd.styles["Normal"].font.name = "Calibri"
+    hd.add_heading("Highlights", 1)
+    for line in lines:
+        hd.add_paragraph(line, style="List Bullet")
+    hd.save(SUBMISSION / "Highlights.docx")
+
+
+def write_checklist(n_words: int, lines: list, figures: dict) -> None:
+    """Every upload, and the steps only the author can do."""
+    j = PROFILE["name"]
+    figs = "\n".join(
+        f"- `{figures[k]['stem']}.pdf` and `{figures[k]['stem']}.eps`: "
+        f"{F(k)}, {figures[k]['width_mm']:.0f} by "
+        f"{figures[k]['height_mm']:.0f} mm, smallest text "
+        f"{figures[k]['min_font_pt']:.1f} pt" for k in FIGURE_ORDER)
+    hl = "\n".join(f"{n}. {x} ({len(x)} characters)"
+                    for n, x in enumerate(lines, 1))
+    if JOURNAL == "aei":
+        author_steps = f"""\
+1. Run Elsevier's declarations tool for competing interests and upload the
+   Word file it produces. The manuscript's own declaration reads: "{COMPETING_ELSEVIER}"
+2. Enter the CRediT roles in the submission system as the manuscript states
+   them: "{CREDIT}"
+3. Archive the GitHub repository on Zenodo. Then set `ZENODO_DOI` and
+   `ZENODO_TITLE` in `build_results_section.py` and rebuild. The data
+   availability statement then gives the DOI and the reference list gains the
+   deposit as a dataset entry. Until then the paper cites {REPO_URL}.
+4. Choose whether to post the preprint on SSRN when the submission system
+   offers it.
+"""
+        uploads = f"""\
+- `Manuscript.docx`: the manuscript, single column, figures embedded at
+  their printed width, tables with horizontal rules only.
+- `Highlights.docx`: {len(lines)} highlights.
+{figs}
+- The declaration of competing interest from Elsevier's tool, step 1 below.
+"""
+    else:
+        author_steps = "1. Complete the journal's own declarations.\n"
+        uploads = f"- `Manuscript.docx`\n{figs}\n"
+    text = f"""\
+# {j}: submission checklist
+
+Written by `build_results_section.py --clean{'' if JOURNAL == ROOT_JOURNAL
+                                             else ' --journal ' + JOURNAL}`.
+Every file below is regenerated by that command. Do not edit them by hand.
+
+## Uploads
+
+{uploads}
+## Checks the build ran
+
+- Abstract: {n_words} words, limit {ABSTRACT_WORDS[1]}, no citation.
+- Keywords: {len(KEYWORDS)}, allowed {KEYWORD_COUNT[0]} to {KEYWORD_COUNT[1]}.
+- Tables and figures numbered in order of first citation, each cited before
+  it is placed.
+- Tables: horizontal rules only, no vertical rules, no shading, notes below
+  the table body.
+- Figures drawn at their printed width, placed at exactly that width, text
+  at 7 pt or larger, fonts embedded.
+- No underline anywhere and URLs as plain text. British spelling in the body.
+{('- Highlights, each at most ' + str(HIGHLIGHT_MAX) + ' characters:' + chr(10) + chr(10) + hl + chr(10)) if lines else ''}
+## Steps only the author can do
+
+{author_steps}"""
+    (SUBMISSION / "CHECKLIST.md").write_text(text)
+
+
 def build(clean: bool = False):
     run_checks()
-    out = ROOT / ("Weld_Transfer_Results_Section_clean.docx" if clean
-                  else "Weld_Transfer_Results_Section.docx")
+    # The target journal's builds keep their names in the project root, and
+    # the clean one is also copied into its submission folder. The fallback
+    # journal's builds go to its submission folder only.
+    if JOURNAL == ROOT_JOURNAL:
+        out = ROOT / ("Weld_Transfer_Results_Section_clean.docx" if clean
+                      else "Weld_Transfer_Results_Section.docx")
+    else:
+        out = SUBMISSION / ("Manuscript.docx" if clean
+                            else "Manuscript_draft.docx")
+    SUBMISSION.mkdir(parents=True, exist_ok=True)
     d = docx.Document()
-    # The file's own title property matches the title page.
-    d.core_properties.title = TITLE
+    # The file's own title property matches the title page, and the
+    # template's generator text is cleared.
+    set_properties(d, TITLE)
     st = d.styles["Normal"]
     st.font.name = "Calibri"
     st.font.size = Pt(11)
+    # Captions in plain black. The template's Caption style is bold and blue.
+    cs = d.styles["Caption"]
+    cs.font.size, cs.font.bold, cs.font.italic = Pt(9), False, False
+    cs.font.color.rgb = RGBColor(0, 0, 0)
 
     def h(text, level=1):
         d.add_heading(text, level=level)
@@ -2433,17 +2915,24 @@ def build(clean: bool = False):
         if not done:
             note(f"TO CONFIRM BY THE AUTHOR ({key}). {what}")
 
-    def caption(text):
-        par = d.add_paragraph()
-        r = par.add_run(text)
-        r.italic = True
-        r.font.size = Pt(9)
+    def numbered_caption(kind, number, text):
+        """Elsevier: 'Table 1. Title. Description.' Springer: 'Table 1 Title.
+        Description', the label in bold, no punctuation after the number and
+        none at the end."""
+        par = d.add_paragraph(style="Caption")
+        lead = f"{'Table' if kind == 'table' else 'Fig.'} {number}"
+        text = text.strip()
+        if PROFILE["captions"] == "elsevier":
+            par.add_run(lead + ".").bold = True
+            par.add_run(" " + text)
+        else:
+            par.add_run(lead).bold = True
+            par.add_run(" " + text.rstrip("."))
         par.alignment = WD_ALIGN_PARAGRAPH.LEFT
         return par
 
     def table(headers, rows):
         t = d.add_table(rows=1, cols=len(headers))
-        t.style = "Light Grid Accent 1"
         for i, htxt in enumerate(headers):
             cell = t.rows[0].cells[i]
             cell.text = ""
@@ -2456,15 +2945,37 @@ def build(clean: bool = False):
                 cells[i].text = ""
                 run = cells[i].paragraphs[0].add_run(str(v))
                 run.font.size = Pt(8)
+        horizontal_rules(t)
         return t
 
-    def figure(path: Path, cap: str, width=6.0):
-        if path.exists():
-            d.add_picture(str(path), width=Inches(width))
-            d.paragraphs[-1].alignment = WD_ALIGN_PARAGRAPH.CENTER
-        else:
-            p(f"[FIGURE MISSING: {path.name}]")
-        caption(cap)
+    def tcap(label, text):
+        """A table's caption, placed ABOVE the table it follows in the code,
+        with any closing 'Source: ...' moved to a note below the table body,
+        as both journals ask."""
+        src = re.search(r"\s*Source: (.+)$", text, re.S)
+        if src:
+            text = text[:src.start()]
+        par = numbered_caption("table", table_no(label), text)
+        tbl = par._p.getprevious()
+        if tbl is None or tbl.tag != qn("w:tbl"):
+            raise SystemExit(f"\nNUMBERING CHECK FAILED: the caption of "
+                             f"{T(label)} does not follow a table.")
+        tbl.addprevious(par._p)
+        if src:
+            n = d.add_paragraph()
+            r = n.add_run("Source: " + src.group(1).strip())
+            r.font.size = Pt(8)
+        return par
+
+    figures = {}
+
+    def figure(label, cap):
+        rec = draw_figure(label)
+        d.add_picture(str(rec["png"]), width=Mm(rec["width_mm"]))
+        d.paragraphs[-1].alignment = WD_ALIGN_PARAGRAPH.CENTER
+        rec["shape"] = d.inline_shapes[-1]
+        figures[label] = rec
+        numbered_caption("figure", FIGURE_ORDER.index(label) + 1, cap)
 
     H = headline()
 
@@ -2543,6 +3054,9 @@ def build(clean: bool = False):
         f"{H['band_n']} of the {H['armb_n']}",
         f"differ {PROTOCOL_AREA_FOLD}-fold"])
     n_words = len(abstract.split())
+    if re.search(r"\(\D+, \d{4}|et al\.", abstract):
+        raise SystemExit("\nCONSISTENCY CHECK FAILED: the abstract carries "
+                         "a citation, which both journals forbid.")
     if not ABSTRACT_WORDS[0] <= n_words <= ABSTRACT_WORDS[1]:
         raise SystemExit(f"\nCONSISTENCY CHECK FAILED: the abstract is "
                          f"{n_words} words and the journal allows "
@@ -2554,7 +3068,9 @@ def build(clean: bool = False):
          f"build fails if one is typed over. The image-level sentences are "
          f"asserted against the released tables by image_level_facts().")
     if not KEYWORD_COUNT[0] <= len(KEYWORDS) <= KEYWORD_COUNT[1]:
-        raise SystemExit("\nCONSISTENCY CHECK FAILED: keyword count.")
+        raise SystemExit(f"\nCONSISTENCY CHECK FAILED: {len(KEYWORDS)} "
+                         f"keywords, and {PROFILE['name']} allows "
+                         f"{KEYWORD_COUNT[0]} to {KEYWORD_COUNT[1]}.")
     labelled("Keywords", " · ".join(KEYWORDS))
     confirm_note("keywords")
 
@@ -2832,14 +3348,14 @@ def build(clean: bool = False):
       f"frame-run keys for exactly that reason.")
 
     p(f"Three results make the case sharper than a general warning. "
-      f"{ct('laroca2023')} found that on one of two license plate recognition "
+      f"{ct('laroca2023')} found that on one of two licence plate recognition "
       f"datasets, the ranking of models changed under duplicate-free splits, "
       f"which is why a leakage audit belongs in the body of a benchmark paper "
       f"rather than in a data appendix. {ct('nogueira2026')} mixed closely "
       f"related original and augmented images across splits in oral cancer "
       f"histopathology and measured the inflation directly: accuracy rose by "
       f"up to 18 percent, with a mean of 14.3 percent across 11 models, and "
-      f"they describe the gains as methodological artifacts rather than "
+      f"they describe the gains as methodological artefacts rather than "
       f"generalisation. That is the same mechanism as an export pipeline that "
       f"augments before partitioning, which Section 3 documents in two of the "
       f"sources used here. {ct('adimoolam2023')} applied perceptual hashing to "
@@ -3059,7 +3575,7 @@ def build(clean: bool = False):
     h("3.2 Datasets and their measured properties", 2)
 
     p(f"Five independently collected visible-light weld datasets form the "
-      f"study. Table 3.1 gives their shipped size, their size after the audit "
+      f"study. {T('sources')} gives their shipped size, their size after the audit "
       f"of Section 3.4, the number of distinct physical scenes they contain, "
       f"the number of leakage-safe split blocks those scenes reduce to, and "
       f"their licence. The audited tree holds {CLEAN_TREE_TOTAL:,} images.",
@@ -3083,7 +3599,7 @@ def build(clean: bool = False):
            "Split blocks", "Licence"],
           [[s, str(len(DATASET_CLASSES[s])), f"{v[0]:,}", f"{v[1]:,}",
             f"{v[2]:,}", f"{v[3]:,}", v[4]] for s, v in SOURCES.items()])
-    caption(f"Table 3.1. The five visible-light sources. The four Roboflow "
+    tcap("sources", f"The five visible-light sources. The four Roboflow "
             f"exports together ship "
             f"{sum(v[0] for k, v in SOURCES.items() if k != 'lohi_weld'):,} "
             f"files and hold "
@@ -3111,14 +3627,14 @@ def build(clean: bool = False):
       "models.")
 
     p("The annotation protocols are not interchangeable, and this is the "
-      "measurement that shapes the rest of the design. Table 3.2 gives the box "
+      f"measurement that shapes the rest of the design. {T('geometry')} gives the box "
       "geometry over each source's defect classes alone, after the audit.")
 
     table(["Source", "Boxes per image", "Median box area, percent of frame",
            "Protocol"],
           [[s, q(v[0], 2), q(v[1], 2), v[2]]
            for s, v in BOX_GEOMETRY.items()])
-    caption(f"Table 3.2. Box geometry over the defect classes alone. "
+    tcap("geometry", f"Box geometry over the defect classes alone. "
             f"weld_surface_v2 carries roughly one retained box per image "
             f"covering a fifth of the frame, which is a whole-region quality "
             f"verdict rather than a localised defect. The other four localise. "
@@ -3303,7 +3819,7 @@ def build(clean: bool = False):
     if TUNED_ON == "none":
         p("Hyperparameters were not tuned. Each family's recipe was fixed "
           "before any model was trained, with no search on any split, and "
-          "then frozen for every dataset and every arm. Table 3.3 lists it. "
+          f"then frozen for every dataset and every arm. {T('recipe')} lists it. "
           "We state this plainly because it is the choice a sceptical "
           "reviewer looks for first. It means no source's diagonal carries a "
           "tuning advantage. A tuned recipe might raise in-domain scores, and "
@@ -3311,7 +3827,7 @@ def build(clean: bool = False):
         recipe = recipe_table()
         table(["Setting", "YOLO11n, YOLO11s, RT-DETR-l", "Faster R-CNN",
                "Label cost arm, YOLO11s and RT-DETR-l"], recipe["rows"])
-        caption("Table 3.3. The frozen training recipe, one column per "
+        tcap("recipe", "The frozen training recipe, one column per "
                 "training code path. The label cost arm of Section 3.7 "
                 "fine-tunes with the first column's recipe and departs from "
                 "it only where its column says so. Exact parity of "
@@ -3366,7 +3882,7 @@ def build(clean: bool = False):
            f"threshold falls to between {q(BOX_OFFDIAG_STRICT_SPAN[0], 4)} "
            f"and {q(BOX_OFFDIAG_STRICT_SPAN[1], 4)}. Those values sit at the "
            "resolution floor of the measurement and would imply a precision "
-           "it does not have. Table 4.4 gives the diagonals at both "
+           "it does not have. Section 4.3 gives the diagonals at both "
            "thresholds.")
 
     bullet("Per-class average precision, in domain, in each source's own "
@@ -3404,7 +3920,7 @@ def build(clean: bool = False):
            f"targets hold fewer than {MIN_NEGATIVES} defect-free test images, "
            f"the evaluator's threshold for a false alarm rate. Their AUROC is "
            f"reported and flagged, together with the number of split blocks "
-           f"the defect-free images occupy (Table 4.6).")
+           f"the defect-free images occupy (Section 4.4).")
 
     p("Two definitional choices need stating once, because both are places "
       "where a reasonable alternative gives a materially different answer.")
@@ -3680,7 +4196,9 @@ def build(clean: bool = False):
       f"effect is consistent across configurations: in the high to low "
       f"direction the {word(len(CFGS))} configurations span "
       f"{q(min(CONTROL_HIGH_TO_LOW.values()), 3)} to "
-      f"{q(max(CONTROL_HIGH_TO_LOW.values()), 3)} box mAP50.")
+      f"{q(max(CONTROL_HIGH_TO_LOW.values()), 3)} box mAP50. "
+      f"{T('control')} gives the four entries and {F('control_matrix')} "
+      f"draws them.")
 
     table(
         ["Trained on", "Tested on lohi_high", "Tested on lohi_low"],
@@ -3688,7 +4206,7 @@ def build(clean: bool = False):
                 f"({q(CONTROL_BOX[(s, t)][1], 3)})"
                 for t in ("lohi_high", "lohi_low")]
          for s in ("lohi_high", "lohi_low")])
-    caption("Table 4.1. LoHi internal transfer control, defect-class mAP50 "
+    tcap("control", "LoHi internal transfer control, defect-class mAP50 "
             "under the harmonised label space, mean and standard deviation "
             "over four configurations and three seeds, 12 cells per entry. "
             "Source: lohi_control.md.")
@@ -3735,8 +4253,8 @@ def build(clean: bool = False):
       f"running under the leakage-audited splits and the same protocol as the "
       f"rest of the study, at four configurations rather than one.")
 
-    figure(ARM_FIG / "lohi_control_matrix.png",
-           "Figure 4.1. The internal acquisition control. Annotation "
+    figure("control_matrix",
+           "The internal acquisition control. Annotation "
            "protocol, annotators, class list and production line are held "
            "constant and only the camera changes. Defect-class mAP50. "
            f"Image-level AP is not shown because test splits that are "
@@ -3766,7 +4284,10 @@ def build(clean: bool = False):
       "matching is class agnostic, because kaggle_v2 carries one generic "
       "defect class while lohi_weld carries four specific types and no "
       "correspondence between them exists. Per-class values in each source's "
-      "own vocabulary are reported in domain only, in Section 4.9.")
+      "own vocabulary are reported in domain only, in Section 4.9. "
+      f"{T('box_yolo11s')} gives the matrix for YOLO11s, which "
+      f"{F('box_heatmap')} draws, and {T('box_ratio')} gives the transfer "
+      f"ratios for all four configurations.")
 
     box_targets = ("kaggle_v2", "lohi_weld", "visual", "twoclass")
     table(
@@ -3774,9 +4295,9 @@ def build(clean: bool = False):
         [[s] + [q(cell_mean("box_map50", s, t, "YOLO11s"), 3)
                 for t in box_targets]
          for s in ("kaggle_v2", "lohi_weld")])
-    caption("Table 4.2. Box-level transfer, YOLO11s, defect-class mAP50, mean "
+    tcap("box_yolo11s", "Box-level transfer, YOLO11s, defect-class mAP50, mean "
             "over three seeds. Diagonal entries are in domain. The other "
-            "three configurations are in Table 4.3. Source: "
+            f"three configurations are in {T('box_ratio')}. Source: "
             "transfer_box_yolo11s.md.")
 
     rows = []
@@ -3786,9 +4307,9 @@ def build(clean: bool = False):
                      f"{q(cfgd[c][3], 3)}]"
                      + (" w" if cfgd[c][4] else "") for c in CFGS])
     table(["Pair"] + list(CFGS), rows)
-    caption(f"Table 4.3. Box-level transfer ratio with 95 percent split-block "
+    tcap("box_ratio", f"Box-level transfer ratio with 95 percent split-block "
             f"percentile intervals, {BOX_BOOTSTRAP_DRAWS:,} draws, all four "
-            f"configurations. The AUROC intervals of Table 4.5 use "
+            f"configurations. The AUROC intervals of {T('auroc')} use "
             f"{IMAGE_LEVEL_DRAWS:,}; box level uses fewer for cost, and every "
             f"released row records its own count. "
             "T is the foreign detector's defect-class mAP50 divided by the "
@@ -3824,7 +4345,9 @@ def build(clean: bool = False):
     p("We do not attribute the remainder to a single named cause. The control "
       "isolates acquisition. The cross-dataset gap additionally mixes "
       "annotation protocol, object scale, defect vocabulary and training set "
-      "size, and this study does not separate those from one another.")
+      "size, and this study does not separate those from one another. "
+      f"{T('diagonals')} gives the two in-domain localisation diagonals at "
+      f"both IoU thresholds.")
 
     strict = [v[1] for dd in BOX_DIAG_STRICT.values() for v in dd.values()]
     table(["Diagonal", "Metric"] + list(CFGS),
@@ -3838,7 +4361,7 @@ def build(clean: bool = False):
            [q(BOX_DIAG_STRICT['lohi_weld'][c][1], 4) for c in CFGS]])
     ratio = [v[1] / v[0] for dd in BOX_DIAG_STRICT.values()
              for v in dd.values()]
-    caption(f"Table 4.4. The in-domain localisation diagonals at both IoU "
+    tcap("diagonals", f"The in-domain localisation diagonals at both IoU "
             f"thresholds. The stricter threshold retains {q(min(ratio), 2)} to "
             f"{q(max(ratio), 2)} of the mAP50 value, which is the usual ratio "
             f"for detectors of this class and indicates no unusual "
@@ -3892,8 +4415,8 @@ def build(clean: bool = False):
       f"images, against lohi_weld's {lg['train_defect_boxes']:,}, and what "
       f"fails is generalising from them.")
 
-    figure(MAIN_FIG / "transfer_box_yolo11s.png",
-           "Figure 4.2. Box-level cross-dataset transfer, YOLO11s, "
+    figure("box_heatmap",
+           "Box-level cross-dataset transfer, YOLO11s, "
            "defect-class mAP50. Two training rows, because only kaggle_v2 and "
            "lohi_weld use a localisation protocol and are large enough to "
            "train on. weld_surface_v2 is absent by protocol, not by omission. "
@@ -3919,7 +4442,8 @@ def build(clean: bool = False):
         f"{q_signed(il['constant_kaggle'], 3)} on kaggle_v2, through tie "
         f"order. We therefore report the matrix in AUROC, whose chance level "
         f"is 0.5 and which gives a constant score exactly that. The lift and "
-        f"its chance level stay as columns, so a reader can see both.")
+        f"its chance level stay as columns, so a reader can see both. "
+        f"{T('auroc')} gives the matrix.")
     p(why, bold_lead="Draft. ")
     require_phrases("4.4 why not the lift", why, [
         f"by {q_signed(ch['kaggle_v2'], 3)} on kaggle_v2",
@@ -3946,7 +4470,7 @@ def build(clean: bool = False):
     table(["Target", "Trained on", "Mean AUROC, 95 percent interval",
            "Wholly above 0.5", "Wholly below 0.5", "AP lift", "Chance lift",
            f"Under {MIN_NEGATIVES} negatives"], rows)
-    caption(f"Table 4.5. Image-level AUROC, the mean over four configurations "
+    tcap("auroc", f"Image-level AUROC, the mean over four configurations "
             f"and three seeds, with a 95 percent split-block percentile "
             f"interval of {IMAGE_LEVEL_DRAWS:,} draws, the twelve cells "
             f"averaged inside each draw. The two counts are evaluations whose "
@@ -3973,7 +4497,8 @@ def build(clean: bool = False):
         f"and {il['cross_below']} wholly below. On kaggle_v2, the one balanced "
         f"target, none of the {il['kaggle_n']} does. {inv['source']} to "
         f"{inv['target']} is inverted, at {q(fnum(inv['mean_auroc']), 3)}, "
-        f"with its whole interval below chance.")
+        f"with its whole interval below chance. {T('blocks')} counts the "
+        f"test splits behind these means in split blocks.")
     p(shows)
     require_phrases("4.4 what the matrix shows", shows, [
         f"{q(lo_in, 3)} to {q(hi_in, 3)}", f"{q(lo_x, 3)} to {q(hi_x, 3)}",
@@ -3989,7 +4514,7 @@ def build(clean: bool = False):
             f"{smp[t]['n_neg']}, {smp[t]['neg_blocks']}, "
             f"{q(fnum(smp[t]['neg_effective_blocks']), 1)}",
             smp[t]["largest_block_images"]] for t in IL_TARGET_ORDER])
-    caption("Table 4.6. The audited image-level test splits counted in split "
+    tcap("blocks", "The audited image-level test splits counted in split "
             "blocks, the unit of independence in this study. Effective blocks "
             "are defined in the text. Source: image_level_samples.csv.")
 
@@ -4100,7 +4625,8 @@ def build(clean: bool = False):
       "partitions. B holds the downloaded weights fixed and regrades them on "
       "the audited test split. All three are YOLO11s at three seeds, because "
       "the downloaded-data baseline was run at that configuration only, and "
-      "holding the configuration fixed is what makes A and C comparable.",
+      "holding the configuration fixed is what makes A and C comparable. "
+      f"{T('audit')} gives A and C.",
       bold_lead="Draft. ")
 
     au = image_level_facts()["audit"]
@@ -4116,7 +4642,7 @@ def build(clean: bool = False):
     table(["Source", "A, AUROC", "C, AUROC", "A minus C, AUROC",
            "A minus C, AP", "Defect-free test images, shipped and audited",
            "Audited test images inside downloaded train"], audit_rows)
-    caption("Table 4.7. The effect of the leakage audit, YOLO11s at three "
+    tcap("audit", "The effect of the leakage audit, YOLO11s at three "
             "seeds, in AUROC with average precision beside it. A is trained "
             "and tested on the partitions as downloaded, C on the audited "
             "partitions. They are measured on different test partitions with "
@@ -4126,7 +4652,7 @@ def build(clean: bool = False):
             "the scale that compares across them. A shipped split carries no "
             "split blocks, so A's intervals in the released table treat "
             "images as independent. Column C is the YOLO11s diagonal, while "
-            "Table 4.5 averages four configurations: for kaggle_v2 those are "
+            f"{T('auroc')} averages four configurations: for kaggle_v2 those are "
             f"{q(au['kaggle_v2']['C'], 3)} and "
             f"{q(image_level_facts()['in']['kaggle_v2'], 3)}. The last column "
             "is measured by filename and confirmed byte identical by sha256. "
@@ -4162,7 +4688,7 @@ def build(clean: bool = False):
       f"percent as the table shows. B therefore scores a model largely on "
       f"images it was trained on, and it must not be presented as a held-out "
       f"test. Its only use is to hold the weights fixed while the grading "
-      f"partition changes, so Table 4.7 does not print it. Its values are in "
+      f"partition changes, so {T('audit')} does not print it. Its values are in "
       f"image_level_audit.csv and downloaded_vs_audited.csv. Restricting B to "
       f"the genuinely unseen remainder "
       f"was considered and rejected: the remainders are {held_out[0]}, "
@@ -4203,7 +4729,8 @@ def build(clean: bool = False):
       f"and configuration combinations, with a median of "
       f"{q(A['median'], 3)}. "
       f"{word(A['in_band']).capitalize()} of the {word(A['n'])} fall between "
-      f"{q(ARMB_R250_BAND[0], 2)} and {q(ARMB_R250_BAND[1], 2)}.")
+      f"{q(ARMB_R250_BAND[0], 2)} and {q(ARMB_R250_BAND[1], 2)}. "
+      f"{T('label_cost')} gives every pair and configuration.")
 
     table(
         ["Pair", "Config", "P(0)", "k=10", "k=50", "k=250", "P_jj", "R@250"],
@@ -4212,7 +4739,7 @@ def build(clean: bool = False):
           q(k250, 4) + (f" (k={TWOCLASS_TRAIN})" if t == "twoclass"
                         else ""), q(pjj, 4), q(r, 3)]
          for s, t, cfg, p0, k10, k50, k250, pjj, r, weak in ARMB_ROWS])
-    caption("Table 4.8. Label cost curve, defect-class mAP50 at the primary "
+    tcap("label_cost", "Label cost curve, defect-class mAP50 at the primary "
             "endpoint, mean over three draws. Absolute average precision is "
             "printed beside every ratio because both terms sit near the floor "
             "in places. Recovery is the mean of the per-draw ratios, each "
@@ -4257,7 +4784,7 @@ def build(clean: bool = False):
         f"At image level, two targets clear the evaluator's rule of "
         f"{MIN_NEGATIVES} defect-free test images, kaggle_v2 and "
         f"weld_surface_v2, and weld_surface_v2's {ws['n_neg']} sit in "
-        f"{ws['neg_blocks']} blocks (Table 4.6). We therefore follow the "
+        f"{ws['neg_blocks']} blocks ({T('blocks')}). We therefore follow the "
         f"decision through fine-tuning on kaggle_v2, whose {kk['n_neg']} "
         f"defect-free test images sit in {kk['neg_blocks']} blocks. From "
         f"lohi_weld, "
@@ -4292,22 +4819,27 @@ def build(clean: bool = False):
       "that collapses on ten images is exactly what a label cost curve exists "
       "to reveal.")
 
-    p("Recovery is plotted against the realised scene count rather than "
-      "against the requested budget, and the draws are shown as points rather "
-      "than joined into a line. A split block is indivisible, so a draw that "
+    p(f"Recovery is plotted in {F('label_cost_curve')} against the realised "
+      "scene count rather than against the requested budget, and the draws "
+      "are shown as points rather than joined into a line. A split block is indivisible, so a draw that "
       "sits below the requested count can overshoot it in a single step, by "
       "up to 9.1 times at the smallest budget. The requested budget is a "
       "sampling instruction and not a measured quantity.")
 
-    figure(ARM_FIG / "armb_recovery_box_last.png",
-           "Figure 4.3. The label cost curve, defect-class mAP50 at the "
+    figure("label_cost_curve",
+           "The label cost curve, defect-class mAP50 at the "
            "primary endpoint, plotted against the realised scene count. "
            "Points are individual draws, not a mean, because on a small "
            "target the outcome varies several-fold between attempts (Section "
            "4.5.1). The detection head is "
            "reinitialised at every budget, so the smallest budgets partly "
            "measure a head that has not finished training rather than "
-           "adaptation being hard. Pre-registered schedule throughout.")
+           "adaptation being hard. Pre-registered schedule throughout. "
+           "Panels: "
+           + ", ".join(f"({chr(97 + i)}) {s_} to {t_}"
+                       for i, (s_, t_) in enumerate(LABEL_COST_PAIRS))
+           + ". Hollow markers are draws that exhausted the target's "
+           "training split.")
 
     h("4.5.1 At small budgets the outcome varies between attempts", 3)
 
@@ -4371,7 +4903,8 @@ def build(clean: bool = False):
       "drawn image within the epoch, which multiplies the steps while leaving "
       "the cosine learning-rate schedule and the mosaic window identical to "
       "the pre-registered arm. Matched-step training instead extends the "
-      "epoch count, which stretches both.")
+      "epoch count, which stretches both. "
+      f"{T('schedule')} gives both contrasts.")
 
     table(
         ["Contrast", "What it changes", "k=10", "k=50"],
@@ -4379,7 +4912,7 @@ def build(clean: bool = False):
          + [q_signed(SCHEDULE_TABLE[k][0], 4) for k in (10, 50)],
          ["Oversampled to matched step", "schedule shape only"]
          + [q_signed(SCHEDULE_TABLE[k][1], 4) for k in (10, 50)]])
-    caption("Table 4.9. Exploratory schedule controls, change in defect-class "
+    tcap("schedule", "Exploratory schedule controls, change in defect-class "
             "mAP50, kaggle_v2 to lohi_weld, mean over three draws. The step "
             "count is the consistent driver. The schedule-shape term does not "
             "hold its sign across the two budgets, so no single percentage "
@@ -4397,7 +4930,7 @@ def build(clean: bool = False):
         f"matched-step training. We quote {q(rec['oversampled_50'], 3)}, "
         f"because it changes exactly one thing against the pre-registered "
         f"arm. All three use the main grid's three-seed means for the "
-        f"zero-shot and in-domain scores, as Table 4.8 does.")
+        f"zero-shot and in-domain scores, as {T('label_cost')} does.")
     p(floor)
     require_phrases("4.5.2 recoveries", floor, [
         f"from {q(rec['fixed_50'], 3)} at", f"to {q(rec['matched_step'], 3)} "
@@ -4476,7 +5009,7 @@ def build(clean: bool = False):
         f"seeds averaged first the counts are {pl['seed_better']}, "
         f"{pl['seed_mean']} and {pl['seed_worse']} of {pl['seed_n']}. So a "
         f"pool lands between its two members more often than it beats the "
-        f"better one.")
+        f"better one. {T('pooling')} gives every fold and target.")
     p(pool_par)
     require_phrases("4.6 pooling", pool_par, [
         f"averages {q(pl['pooled'], 3)}",
@@ -4488,7 +5021,7 @@ def build(clean: bool = False):
     n_box = sum(1 for r in pool_rows if not r[5].startswith("undefined"))
     table(["Pool", "Held-out target", "Role", "AUROC, pooled",
            "AUROC, better member", "Box mAP50"], pool_rows)
-    caption(f"Table 4.10. Pooling, all {word(len(pool_rows))} fold and target "
+    tcap("pooling", f"Pooling, all {word(len(pool_rows))} fold and target "
             f"combinations, ranges over the {word(len(CFGS))} configurations "
             f"with seeds averaged within each. Image-level values are AUROC, "
             f"for the pooled model and for the better of its two members, "
@@ -4537,13 +5070,14 @@ def build(clean: bool = False):
       "label cost curve and the pooling arm, and not the zero-shot cells of "
       "the main matrix. The figures below therefore describe adapted and "
       "in-domain models rather than the zero-shot transfer of Sections 4.3 "
-      "and 4.4.")
+      f"and 4.4. {T('recall_control')} gives the internal control and "
+      f"{T('recall_cross')} the cross-dataset models of Section 4.5.")
 
     table(
         ["Trained on", "Tested on"] + [f"R at {b} FP" for b in FP_BUDGETS],
         [[s, t] + [q(v, 3) for v in RECALL_CONTROL[(s, t)]]
          for s, t in RECALL_CONTROL])
-    caption("Table 4.11. Recall at a fixed false positive budget per image, "
+    tcap("recall_control", "Recall at a fixed false positive budget per image, "
             "internal acquisition control, mean over four configurations and "
             "three seeds. Source: recall_at_fp_budget_arms.csv.")
 
@@ -4562,14 +5096,14 @@ def build(clean: bool = False):
           [[f"{s} to {t}" + (f" (w, k={TWOCLASS_TRAIN})" if t == "twoclass"
                              else ""), cfg] + [q(v, 3) for v in vals]
            for s, t, cfg, *vals in FP_ARMB_K250])
-    caption("Table 4.12. Recall at a fixed false positive budget for the "
+    tcap("recall_cross", "Recall at a fixed false positive budget for the "
             "cross-dataset models of Section 4.5, AT THE LARGEST ANNOTATION "
             "BUDGET ONLY, mean over three draws. The released summary table "
             "pools this metric over the whole budget grid, and a recall "
             "pooled across annotation budgets is not a quotable quantity, so "
             "the largest budget is reported here and the per-budget values "
             "are in the released CSV. The twoclass rows are marked exactly as "
-            "in Table 4.8: their budget is 213 rather than 250 because the "
+            f"in {T('label_cost')}: their budget is 213 rather than 250 because the "
             "draw exhausts that split, and (w) marks a weak in-domain "
             "reference. Source: recall_at_fp_budget_arms.csv.")
 
@@ -4612,13 +5146,14 @@ def build(clean: bool = False):
       f"images scores the target's defective images low, and at the smallest "
       f"budgets it can collapse onto one wrong class entirely. A practitioner "
       f"cannot threshold such a model safely, and for an inspection claim "
-      f"that matters more than the mean average precision does.")
+      f"that matters more than the mean average precision does. "
+      f"{T('ece')} gives the control's values per configuration.")
 
     ece_tab = control_ece()
     table(
         ["Configuration", "ECE in domain", "ECE cross acquisition"],
         [[cfg, q(v[0], 3), q(v[1], 3)] for cfg, v in ece_tab.items()])
-    caption("Table 4.13. Expected calibration error inside the internal "
+    tcap("ece", "Expected calibration error inside the internal "
             "acquisition control, six evaluations per entry, rounded once "
             "from the unrounded means. Read each cross-acquisition value "
             "against the in-domain value of the same configuration, not "
@@ -4652,7 +5187,7 @@ def build(clean: bool = False):
       f"{pct(r_lo, 1)} percent defective. All {ctl_n} control evaluations "
       f"are underconfident, and so are all {ARMB_CELLS} fine-tuned models: "
       f"across the bins of each, the share of images with a defect exceeds "
-      f"the score (Figure 4.4). Faster R-CNN in domain is underconfident "
+      f"the score ({F('reliability')}). Faster R-CNN in domain is underconfident "
       f"only marginally. What the bins add is informative. Under the shift "
       f"the scores fall while the share of defective images does not, and "
       f"the calibration error rises with them. For inspection this is the "
@@ -4662,9 +5197,12 @@ def build(clean: bool = False):
       f"once the camera changes. The error a carried-over threshold produces "
       f"is the missed defect that reaches a customer.")
 
-    figure(RELIABILITY_FIG,
-           f"Figure 4.4. Reliability inside the internal acquisition "
-           f"control, one panel per configuration. Each point pools one "
+    figure("reliability",
+           f"Reliability inside the internal acquisition "
+           f"control, one panel per configuration: "
+           + ", ".join(f"({chr(97 + i)}) {FAMILY_CODE[c]}"
+                       for i, c in enumerate(RELIABILITY_PANELS))
+           + f". Each point pools one "
            f"score bin over the six in-domain evaluations, or over the six "
            f"cross-acquisition evaluations, weighted by image count. Marker "
            f"area grows with the number of images in the bin, and lines join "
@@ -4673,8 +5211,7 @@ def build(clean: bool = False):
            f"the share of test images with a defect, where a score carrying "
            f"no information would place every point. Under the shift the "
            f"mass moves to lower scores while the share with a defect stays "
-           f"near one. Source: reliability_bins_arms.csv, drawn by "
-           f"grid/arms/reliability_control_figure.py.")
+           f"near one. Source: reliability_bins_arms.csv.")
 
     # ------------------------------------------------------------------- 4.9
     h("4.9 Per-class results and statistical tests", 2)
@@ -4683,7 +5220,8 @@ def build(clean: bool = False):
       "breakdown, because the defect classes are the minority and their "
       "failure is otherwise masked. Section 4.3 is a direct instance: "
       "kaggle_v2's low defect-class value sits beside two verdict classes "
-      "that the same model learns well, and only a per-class table shows it.",
+      f"that the same model learns well, and only a per-class table, "
+      f"{T('per_class')}, shows it.",
       bold_lead="Draft. ")
 
     rows = []
@@ -4700,7 +5238,7 @@ def build(clean: bool = False):
                      str(n), "thin" if thin else note_txt])
     table(["Source", "Class", "In defect space", "AP50", "Seed SD",
            "Split-block 95 percent", "Test instances", ""], rows)
-    caption("Table 4.14. In-domain per-class AP50, YOLO11s, mean over three "
+    tcap("per_class", "In-domain per-class AP50, YOLO11s, mean over three "
             "seeds, with every value carrying its test instance count. EVERY "
             "CLASS OF EVERY SOURCE IS LISTED, and the third column says which "
             "the harmonised taxonomy retains as a defect. A verdict class is "
@@ -4802,7 +5340,7 @@ def build(clean: bool = False):
       "the four configurations differ from one another, and the answer is "
       "that they are not distinguishable on these cells. The claim of this "
       "paper is about the magnitude of the transfer, which is why every "
-      "box-level ratio in Table 4.3 and every AUROC in Table 4.5 carries a "
+      f"box-level ratio in {T('box_ratio')} and every AUROC in {T('auroc')} carries a "
       "split-block bootstrap interval.")
 
     note("If a mean rank table goes into the manuscript it must carry the "
@@ -4871,7 +5409,7 @@ def build(clean: bool = False):
       f"training input size. Our figure is measured on the full audited "
       f"kaggle_v2 test split of {OUR_KAGGLE_TEST_IMAGES} images carrying "
       f"{OUR_KAGGLE_TEST_BOXES} defect boxes, with no curation and no "
-      f"cropping.")
+      f"cropping. {T('mendieta')} sets the two side by side.")
 
     lk_box = [v[0] for v in BOX_OFF[("lohi_weld", "kaggle_v2")].values()]
     table(
@@ -4887,7 +5425,7 @@ def build(clean: bool = False):
           span(lk_box, q, 3)],
          ["Training source", f"{MENDIETA['train_images']:,} SMAW images",
           "kaggle_v2 itself", "lohi_weld"]])
-    caption("Table 5.1. The one available like-for-like comparison on a "
+    tcap("mendieta", "The one available like-for-like comparison on a "
             "visible-light weld dataset. The three columns are not the same "
             "quantity and the table exists to show that. Their number is a "
             "cross-dataset result on three hand-selected images. Our "
@@ -5319,6 +5857,8 @@ def build(clean: bool = False):
     # ------------------------------------------------------------ appendix A
     d.add_page_break()
     h("Appendix A. The complete class mapping", 1)
+    p(f"{T('class_map')} gives every class of every source, the name used "
+      f"for it here and what each granularity does with it.")
     C = frozen_config()
     APPX_REASON = {
         ("weld_surface_v2", "Normal Weld-NW"):
@@ -5373,7 +5913,7 @@ def build(clean: bool = False):
                          appx_reason(tag, raw, state, d_["protocol"])])
     table(["Source", "Class as shipped", "Name used here", "Box level",
            "Image level", "Justification"], rows)
-    caption(f"Table A1. Every class of every source, {len(rows)} rows, one "
+    tcap("class_map", f"Every class of every source, {len(rows)} rows, one "
             f"per mapping decision, generated when this document is built from "
             f"the harmonisation table in grid/config.py rather than typed. At "
             f"box level every defect class collapses to one label and matching "
@@ -5390,13 +5930,15 @@ def build(clean: bool = False):
     h("Appendix B. The released file behind every reported number", 1)
     note("This mapping is what makes C5 checkable. The journal may prefer it "
          "as supplementary material rather than an appendix.")
+    p(f"{T('provenance')} names the released file behind each reported "
+      f"quantity.")
     table(
         ["Quantity", "File"],
         [["Internal control matrix and transfer ratios",
           "grid_results_arms/analysis/lohi_control.md"],
          ["Control transfer intervals",
           "grid_results_arms/analysis/lohi_control_transfer_intervals.csv"],
-         ["Box geometry of the audited tree, Table 3.2",
+         [f"Box geometry of the audited tree, {T('geometry')}",
           "clean_candidate/box_geometry.json, built by box_geometry.py"],
          ["Every cell of the main grid, per seed",
           "grid_results/analysis/tables/cells.csv"],
@@ -5408,12 +5950,12 @@ def build(clean: bool = False):
           "block counts",
           "grid_results/analysis/tables/image_level.csv, built by "
           "grid/image_level.py"],
-         ["Image-level matrix, Table 4.5, and the retained margins",
+         [f"Image-level matrix, {T('auroc')}, and the retained margins",
           "grid_results/analysis/tables/image_level_means.csv, "
           "image_level_retained_margin.csv, image_level_matrix.md"],
-         ["Test splits counted in blocks, Table 4.6",
+         [f"Test splits counted in blocks, {T('blocks')}",
           "grid_results/analysis/tables/image_level_samples.csv"],
-         ["Leakage audit in AUROC, Table 4.7",
+         [f"Leakage audit in AUROC, {T('audit')}",
           "grid_results/analysis/tables/image_level_audit.csv"],
          ["kaggle_v2 checks, exploratory",
           "grid_results/analysis/tables/image_level_kaggle_checks.csv, "
@@ -5432,7 +5974,7 @@ def build(clean: bool = False):
           "grid_results_arms/analysis/armb_recovery.csv"],
          ["Exploratory schedule controls",
           "grid_results_msc/matched_step_control.csv"],
-         ["Training recipe, Table 3.3",
+         [f"Training recipe, {T('recipe')}",
           "grid/config.py, grid/arms/config_arms.py, grid/yolo_dataset.py, "
           "grid/train_cell.py"],
          ["Pooling, every fold",
@@ -5457,7 +5999,7 @@ def build(clean: bool = False):
          ["Reference metadata, resolved by DOI",
           "literature_review/references.json, built by "
           "resolve_references.py"]])
-    caption("Table B1. The released file behind each reported quantity. When "
+    tcap("provenance", "The released file behind each reported quantity. When "
             "the manuscript is built, every table, and every number in the "
             "text that restates one, is read from these files at full "
             "precision and rounded once. The build stops if a quoted "
@@ -5465,55 +6007,106 @@ def build(clean: bool = False):
             "class lists disagree with these files, or if two files that "
             "report the same quantity disagree with each other.")
 
+    def springer_back_matter():
+        h("Statements and Declarations", 1)
+        labelled("Funding.", PROFILE["funding"])
+        confirm_note("funding")
+        labelled("Competing interests.", "The author has no relevant financial or "
+                 "non-financial interests to disclose.")
+        confirm_note("competing")
+        labelled("Author contributions.",
+                 f"{AUTHOR} is the sole author and was responsible for the "
+                 f"conceptualisation, methodology, software, data curation, formal "
+                 f"analysis, investigation, visualisation, and the writing of the "
+                 f"original draft and its revision.")
+        confirm_note("contributions")
+        labelled("Ethics approval.", "Not applicable. The study uses only publicly "
+                 "available images of welds and involves no human participants "
+                 "and no animals.")
+        labelled("Consent to participate and for publication.", "Not applicable.")
+        code_where = (f"are available at {REPO_URL}" if REPO_LIVE else
+                      "will be released in a public repository on acceptance of "
+                      "this article")
+        data_par = (
+            f"The five source datasets are available from their authors at the "
+            f"locations given in the reference list: kaggle_v2 "
+            f"{cp('wijaya2024')} under CC0 1.0; weld_surface_v2 "
+            f"{cp('welddefect2025')}, visual {cp('faza2024')} and twoclass "
+            f"{cp('kaidal2024')} under CC BY 4.0; and LoHi-WELD "
+            f"{cp('block2024')}, which its authors release for research and "
+            f"commercial use with citation at {LOHI_URL}. The twoclass project "
+            f"publishes no downloadable version, so the copy used here was "
+            f"obtained by forking it, and that fork, export version 1, is public "
+            f"at {TWOCLASS_FORK_URL}. We do not redistribute images from any "
+            f"source. That is our own choice rather than a licence constraint: "
+            f"the CC0 source's own description states that its images were "
+            f"collected from unnamed prior collections, so we treat its provenance "
+            f"as unverified and point readers at the authoritative copy rather "
+            f"than propagate a second one. The harmonised label mappings, the "
+            f"frozen split files and their sha256 hashes, and the per-cell results "
+            f"{code_where}. Every split file identifies its images by their "
+            f"original filenames, and all {SPLIT_ENTRIES_VERIFIED:,} entries were "
+            f"verified on {SPLIT_VERIFY_DATE} to resolve against untouched "
+            f"original downloads, so the partitions can be reconstructed exactly "
+            f"and checked against the published hashes.")
+        labelled("Data availability.", data_par)
+        confirm_note("twoclass_fork")
+        labelled("Code availability.",
+                 f"The audit, training, evaluation and analysis code and the "
+                 f"script that builds this manuscript {code_where}.")
+        confirm_note("repository")
+
+    def elsevier_back_matter():
+        """Elsevier's order, directly before the references: CRediT, the
+        declaration of competing interest, funding, data availability. No
+        acknowledgements, as decided on 9 October."""
+        h("CRediT authorship contribution statement", 1)
+        d.add_paragraph(CREDIT)
+        confirm_note("credit")
+        h("Declaration of competing interest", 1)
+        d.add_paragraph(COMPETING_ELSEVIER)
+        confirm_note("competing")
+        h("Funding", 1)
+        d.add_paragraph(PROFILE["funding"])
+        confirm_note("funding")
+        h("Data availability", 1)
+        if not REPO_LIVE:
+            raise SystemExit("\nCONSISTENCY CHECK FAILED: the AEI data "
+                             "availability statement names the repository, "
+                             "and REPO_LIVE is False.")
+        where = (f"{REPO_URL}, archived on Zenodo "
+                 f"{cp('deposit')} at https://doi.org/{ZENODO_DOI}"
+                 if ZENODO_DOI else REPO_URL)
+        data = (
+            f"The code, the audited split lists and their sha256 hashes, the "
+            f"harmonised label mappings, and the generated tables and figures "
+            f"are available at {where}. The repository does not hold the "
+            f"source images, which remain under their creators' licences and "
+            f"are available from the locations given in the reference list: "
+            f"kaggle_v2 {cp('wijaya2024')} under CC0 1.0; weld_surface_v2 "
+            f"{cp('welddefect2025')}, visual {cp('faza2024')} and twoclass "
+            f"{cp('kaidal2024')} under CC BY 4.0, the last through its public "
+            f"fork at {TWOCLASS_FORK_URL}, because the original publishes no "
+            f"downloadable version; and LoHi-WELD {cp('block2024')}, free to "
+            f"use with citation, at {LOHI_URL}. Not redistributing the images "
+            f"is our choice rather than a licence constraint, because the CC0 "
+            f"source's own description says its images were collected from "
+            f"unnamed prior collections. Nor does the repository hold the "
+            f"trained checkpoints and raw predictions, {CHECKPOINTS_GB} GB. "
+            f"Every split file identifies its images by their original "
+            f"filenames, and all {SPLIT_ENTRIES_VERIFIED:,} entries were "
+            f"verified on {SPLIT_VERIFY_DATE} to resolve against untouched "
+            f"original downloads, so the partitions can be reconstructed "
+            f"exactly and checked against the published hashes.")
+        d.add_paragraph(data)
+        confirm_note("repository")
+
     # ---------------------------------------------- statements and declarations
     d.add_page_break()
-    h("Statements and Declarations", 1)
-    labelled("Funding.", "No funding was received for conducting this study.")
-    confirm_note("funding")
-    labelled("Competing interests.", "The author has no relevant financial or "
-             "non-financial interests to disclose.")
-    confirm_note("competing")
-    labelled("Author contributions.",
-             f"{AUTHOR} is the sole author and was responsible for the "
-             f"conceptualisation, methodology, software, data curation, formal "
-             f"analysis, investigation, visualisation, and the writing of the "
-             f"original draft and its revision.")
-    confirm_note("contributions")
-    labelled("Ethics approval.", "Not applicable. The study uses only publicly "
-             "available images of welds and involves no human participants "
-             "and no animals.")
-    labelled("Consent to participate and for publication.", "Not applicable.")
-    code_where = (f"are available at {REPO_URL}" if REPO_LIVE else
-                  "will be released in a public repository on acceptance of "
-                  "this article")
-    data_par = (
-        f"The five source datasets are available from their authors at the "
-        f"locations given in the reference list: kaggle_v2 "
-        f"{cp('wijaya2024')} under CC0 1.0; weld_surface_v2 "
-        f"{cp('welddefect2025')}, visual {cp('faza2024')} and twoclass "
-        f"{cp('kaidal2024')} under CC BY 4.0; and LoHi-WELD "
-        f"{cp('block2024')}, which its authors release for research and "
-        f"commercial use with citation at {LOHI_URL}. The twoclass project "
-        f"publishes no downloadable version, so the copy used here was "
-        f"obtained by forking it, and that fork, export version 1, is public "
-        f"at {TWOCLASS_FORK_URL}. We do not redistribute images from any "
-        f"source. That is our own choice rather than a licence constraint: "
-        f"the CC0 source's own description states that its images were "
-        f"collected from unnamed prior collections, so we treat its provenance "
-        f"as unverified and point readers at the authoritative copy rather "
-        f"than propagate a second one. The harmonised label mappings, the "
-        f"frozen split files and their sha256 hashes, and the per-cell results "
-        f"{code_where}. Every split file identifies its images by their "
-        f"original filenames, and all {SPLIT_ENTRIES_VERIFIED:,} entries were "
-        f"verified on {SPLIT_VERIFY_DATE} to resolve against untouched "
-        f"original downloads, so the partitions can be reconstructed exactly "
-        f"and checked against the published hashes.")
-    labelled("Data availability.", data_par)
-    confirm_note("twoclass_fork")
-    labelled("Code availability.",
-             f"The audit, training, evaluation and analysis code and the "
-             f"script that builds this manuscript {code_where}.")
-    confirm_note("repository")
+    if PROFILE["back_matter"] == "elsevier":
+        elsevier_back_matter()
+    else:
+        springer_back_matter()
 
     # ------------------------------------------------------------- references
     d.add_page_break()
@@ -5524,6 +6117,10 @@ def build(clean: bool = False):
         par.paragraph_format.left_indent = Inches(0.3)
         par.paragraph_format.first_line_indent = Inches(-0.3)
         par.paragraph_format.space_after = Pt(4)
+        # Elsevier marks every data reference, AEI's Guide for Authors.
+        if PROFILE["dataset_marker"] and \
+                REFS[key]["csl"].get("type") == "dataset":
+            par.add_run("[dataset] ").font.size = Pt(10)
         for text, italic in reference_runs(key):
             r = par.add_run(text)
             r.italic = italic
@@ -5535,14 +6132,27 @@ def build(clean: bool = False):
     check_withdrawn_wording(paras[:refs] + [c.text for t in d.tables
                                             for row in t.rows
                                             for c in row.cells])
+    check_numbering(d)
+    check_tables(d)
+    check_figures(figures)
+    check_plain_text(d)
+    check_british(d)
     if clean:
         check_clean_document(d)
     d.save(out)
     kind = "CLEAN submission version" if clean else "working draft"
-    print(f"wrote {out}  [{kind}]")
+    print(f"wrote {out}  [{kind}, {PROFILE['name']}]")
     print(f"  {len(d.paragraphs)} paragraphs, {len(d.tables)} tables, "
           f"{len(d.inline_shapes)} figures, abstract {n_words} words, "
-          f"{len(REFS)} references")
+          f"{len(KEYWORDS)} keywords, {len(REFS)} references")
+    if clean:
+        lines = highlights(H, abstract) if PROFILE["highlights"] else []
+        if PROFILE["highlights"]:
+            write_highlights(lines)
+        if JOURNAL == ROOT_JOURNAL:
+            shutil.copyfile(out, SUBMISSION / "Manuscript.docx")
+        write_checklist(n_words, lines, figures)
+        print(f"  submission folder: {SUBMISSION.relative_to(ROOT)}")
     open_items = [(k, what) for k, (done, what) in CONFIRM.items() if not done]
     if open_items:
         print(f"\n  NOT YET SUBMITTABLE: {len(open_items)} items need the "

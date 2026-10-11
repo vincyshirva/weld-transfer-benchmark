@@ -906,20 +906,31 @@ def per_class_markdown(path: Path, rows):
     path.write_text("\n".join(lines) + "\n")
 
 
-def seen_in_downloaded_train() -> dict:
+def seen_in_downloaded_train(synthetic: bool = False) -> dict:
     """How much of each audited test split sits inside the downloaded train split.
 
     Measured, not assumed. The downloaded splits were partitioned by their
     original authors and the audited splits were partitioned here, so the two
     partitions are unrelated and overlap heavily. Column B is scored with those
     images in it, which is why B must never be described as a held-out test.
+
+    The overlap is read from the image folders, which are never released. A
+    run on the synthetic fixtures in a clone without them, which is how a
+    reader runs the test suite, reports it as n/a rather than borrowing the
+    real numbers: a fixture run that can reach real values is not a fixture
+    run, the project log 5p. A run on real results without them still fails.
     """
     from evaluate_cell import resolve_test_images
 
     out = {}
     for tag in C.DIRTY_SOURCES:
-        train = {p.name for p in resolve_test_images(tag, "dirty", "train")}
-        test = [p.name for p in resolve_test_images(tag, "main", "test")]
+        try:
+            train = {p.name for p in resolve_test_images(tag, "dirty", "train")}
+            test = [p.name for p in resolve_test_images(tag, "main", "test")]
+        except FileNotFoundError:
+            if synthetic:
+                continue
+            raise
         n_seen = sum(1 for n in test if n in train)
         out[tag] = {"n_test": len(test), "n_seen": n_seen,
                     "n_held_out": len(test) - n_seen,
@@ -964,12 +975,14 @@ def dirty_markdown(path: Path, rows, overlap: dict):
                 f"{ov['n_seen']} of {ov['n_test']} ({100 * ov['share_seen']:.0f}%)")
         lines.append(f"| {source} | " + " | ".join(fmt(v) for v in cells)
                      + f" | {seen} |")
-    lines += ["",
-              "Restricting B to the genuinely unseen remainder was considered and "
-              "rejected. The remainders are "
-              + ", ".join(f"{t} {overlap[t]['n_held_out']}"
-                          for t in sorted(overlap))
-              + " images, too few and too heavily one-class to carry a number."]
+    if overlap:
+        lines += ["",
+                  "Restricting B to the genuinely unseen remainder was "
+                  "considered and rejected. The remainders are "
+                  + ", ".join(f"{t} {overlap[t]['n_held_out']}"
+                              for t in sorted(overlap))
+                  + " images, too few and too heavily one-class to carry a "
+                  "number."]
     path.write_text("\n".join(lines) + "\n")
 
 
@@ -1295,7 +1308,8 @@ def main() -> None:
     write_csv(tabs / "per_class_ap.csv", per_class)
     per_class_markdown(tabs / "per_class_ap.md", per_class)
     dirty = dirty_three_number_rows(rows)
-    overlap = seen_in_downloaded_train()
+    overlap = seen_in_downloaded_train(
+        synthetic=all(r.get("FABRICATED") is True for r in records))
     for row in dirty:
         row.update({f"overlap_{k}": v
                     for k, v in overlap.get(row["source"], {}).items()})

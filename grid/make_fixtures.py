@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """
-Fabricate evaluation records with the real schema, to exercise the analysis.
+Synthetic evaluation records with the real schema, to exercise the analysis.
 
 EVERY NUMBER THESE FILES CONTAIN IS INVENTED. They exist so the figure and
 table code is finished and tested before the grid runs, which is the step that
 usually blocks people afterwards. They must never be mistaken for results, so:
 
   * they are written to grid/fixtures/, never to results/ or grid_results/
-  * every record carries "FABRICATED": true and a "warning" string
-  * the directory gets a FABRICATED_DATA_DO_NOT_CITE.txt marker
+  * every record carries "FABRICATED": true and a "warning" string. The key
+    keeps its original name because the analysis code reads it; the text a
+    reader sees says synthetic
+  * the directory gets a SYNTHETIC_DATA_DO_NOT_CITE.txt marker
   * analysis.py refuses nothing, but the manifest it writes records the flag,
     so a figure built from fixtures is identifiable after the fact
 
@@ -38,7 +40,7 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import config as C  # noqa: E402
 
-MARKER = "FABRICATED_DATA_DO_NOT_CITE.txt"
+MARKER = "SYNTHETIC_DATA_DO_NOT_CITE.txt"
 
 # Plausible in-domain image-level AP per dataset, and how hard it is to
 # transfer INTO that dataset. Invented, but ordered the way the audit suggests.
@@ -190,7 +192,7 @@ def cell_seed(cell: dict) -> int:
 def build(out_dir: Path) -> int:
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / MARKER).write_text(
-        "Every number in this directory is FABRICATED.\n\n"
+        "Every number in this directory is SYNTHETIC.\n\n"
         "These files exist only to test grid/analysis.py before the real grid\n"
         "runs. They are not measurements. Do not cite them, do not copy them\n"
         "into results/ or grid_results/, and do not let a figure built from\n"
@@ -203,7 +205,7 @@ def build(out_dir: Path) -> int:
         name = C.cell_name(cell)
         record = {
             "FABRICATED": True,
-            "warning": "fabricated fixture, not a measurement, do not cite",
+            "warning": "synthetic fixture, not a measurement, do not cite",
             "cell": cell,
             "name": name,
             "config_sha256_16": C.config_fingerprint(),
@@ -262,8 +264,8 @@ def main() -> None:
     args = ap.parse_args()
     n = build(args.out)
     k = kshot_fixture(args.out.parent / "kshot_fixture.json")
-    print(f"wrote {n} fabricated evaluation records to {args.out}")
-    print(f"wrote {k} fabricated arm B records")
+    print(f"wrote {n} synthetic evaluation records to {args.out}")
+    print(f"wrote {k} synthetic arm B records")
     print(f"marker: {args.out / MARKER}")
 
 

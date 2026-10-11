@@ -2,7 +2,7 @@
 """
 End-to-end check that analysis.py produces every manuscript artefact.
 
-Runs against the fabricated fixtures, so it can run with no GPU, no cluster
+Runs against the synthetic fixtures, so it can run with no GPU, no cluster
 and no results. Its job is to guarantee that when the real evaluations land,
 `python3 grid/analysis.py` is genuinely one command.
 
@@ -39,11 +39,11 @@ check("fixtures exist", FIXTURES.is_dir(),
       "run make_fixtures.py first" if not FIXTURES.is_dir() else "")
 if not FIXTURES.is_dir():
     raise SystemExit("no fixtures")
-check("marker file present", (FIXTURES / "FABRICATED_DATA_DO_NOT_CITE.txt").is_file())
+check("marker file present", (FIXTURES / "SYNTHETIC_DATA_DO_NOT_CITE.txt").is_file())
 check("fixtures are outside the results tree",
       "fixtures" in FIXTURES.parts and "grid_results" not in FIXTURES.parts)
 sample = json.loads(next(FIXTURES.glob("eval__*.json")).read_text())
-check("every record is flagged fabricated", sample.get("FABRICATED") is True)
+check("every record is flagged synthetic", sample.get("FABRICATED") is True)
 check("one record per cell",
       len(list(FIXTURES.glob("eval__*.json"))) == len(C.all_cells()),
       f"{len(list(FIXTURES.glob('eval__*.json')))} of {len(C.all_cells())}")
@@ -571,4 +571,4 @@ check("the kaggle_v2 filename family strips frame numbers, not names",
 print()
 if FAILURES:
     raise SystemExit(f"{len(FAILURES)} FAILED: {FAILURES}")
-print("analysis pipeline verified end to end on fabricated fixtures")
+print("analysis pipeline verified end to end on synthetic fixtures")

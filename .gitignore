@@ -83,6 +83,13 @@ __pycache__/
 # seed and names no path, so it is the same in every checkout.
 !/grid_results/bootstrap_cache.json
 
+# Journal submission folders, written by build_results_section.py --clean.
+# The manuscript, highlights, figure PDFs and EPS files and the checklist are
+# tracked as the uploads. The 1000 dpi PNGs are only what the Word file
+# embeds, and the fallback journal's draft is a working file.
+/submission/*/embed/
+/submission/*/Manuscript_draft.docx
+
 # grid/dirty/ is a 179 MB symlink farm of the ORIGINAL shipped splits, rebuilt
 # by grid/make_dirty_yaml.py. Its content hashes are recorded in the cell
 # provenance, so the farm itself is disposable.
@@ -125,6 +132,7 @@ __pycache__/
 # outputs rather than sources.
 /Weld_Transfer_Results_Section.docx
 /Weld_Transfer_Results_Section_clean.docx
+/submission/
 
 # Exploratory matched-step control, the project log 6a-xi. Checkpoints, per-cell
 # evaluation records and raw predictions are NOT tracked, exactly as for the
